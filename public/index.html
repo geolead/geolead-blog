@@ -440,6 +440,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <li><a href="#social-proof" data-i18n="nav_proof">Zaufali nam</a></li>
     <li><a href="#how" data-i18n="nav_how">Jak to działa</a></li>
     <li><a href="#glossary" data-i18n="nav_glossary">Słowniczek</a></li>
+    <li><a href="/blog/" data-i18n="nav_blog">Blog</a></li>
     <li><a href="#calc" data-i18n="nav_calc">Kalkulator</a></li>
     <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
     <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
@@ -1110,6 +1111,9 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div style="display:flex;gap:1.25rem;flex-wrap:wrap">
       <a href="#social-proof" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_proof">Zaufali nam</a>
       <a href="#how" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_how">Jak to działa</a>
+      <a href="#glossary" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_glossary">Słowniczek</a>
+      <a href="/blog/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_blog">Blog</a>
+      <a href="#calc" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_calc">Kalkulator</a>
       <a href="#faq" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_faq">FAQ</a>
       <a href="#contact" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_contact">Kontakt</a>
     </div>
@@ -1130,7 +1134,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
    ============================================================ */
 const T = {
 pl:{
-  nav_proof:"Zaufali nam",nav_how:"Jak to działa",nav_glossary:"Słowniczek",nav_calc:"Kalkulator",nav_faq:"FAQ",nav_cta:"Darmowy Audyt",
+  nav_proof:"Zaufali nam",nav_how:"Jak to działa",nav_glossary:"Słowniczek",nav_blog:"Blog",nav_calc:"Kalkulator",nav_faq:"FAQ",nav_cta:"Darmowy Audyt",
   badge_text:"Pierwsza Agencja GEO w Polsce",
   hero_t1:"Bądź pierwszym wyborem,",hero_t2:"gdy klient pyta AI.",
   hero_sub:"SEO ewoluuje w GEO. Wprowadzamy lokalne firmy na szczyt rekomendacji ChatGPT i Perplexity — tam, gdzie dziś podejmują się decyzje zakupowe.",
@@ -1227,7 +1231,7 @@ pl:{
   nav_contact:"Kontakt",sending:"Wysyłanie...",err_msg:"Błąd komunikacji. Napisz na ",
 },
 en:{
-  nav_proof:"Clients",nav_how:"How It Works",nav_glossary:"Glossary",nav_calc:"Calculator",nav_faq:"FAQ",nav_cta:"Free Audit",
+  nav_proof:"Clients",nav_how:"How It Works",nav_glossary:"Glossary",nav_blog:"Blog",nav_calc:"Calculator",nav_faq:"FAQ",nav_cta:"Free Audit",
   badge_text:"Poland's First GEO Agency",
   hero_t1:"Be the first choice",hero_t2:"when clients ask AI.",
   hero_sub:"SEO is evolving into GEO. We put local businesses at the top of ChatGPT and Perplexity recommendations — where purchasing decisions are made.",
@@ -1324,7 +1328,7 @@ en:{
   nav_contact:"Contact",sending:"Sending...",err_msg:"Communication error. Write to ",
 },
 de:{
-  nav_proof:"Referenzen",nav_how:"So funktioniert's",nav_glossary:"Glossar",nav_calc:"Rechner",nav_faq:"FAQ",nav_cta:"Kostenloses Audit",
+  nav_proof:"Referenzen",nav_how:"So funktioniert's",nav_glossary:"Glossar",nav_blog:"Blog",nav_calc:"Rechner",nav_faq:"FAQ",nav_cta:"Kostenloses Audit",
   badge_text:"Polens erste GEO-Agentur",
   hero_t1:"Seien Sie die erste Wahl,",hero_t2:"wenn Kunden KI fragen.",
   hero_sub:"SEO entwickelt sich zu GEO. Wir bringen lokale Unternehmen an die Spitze der ChatGPT- und Perplexity-Empfehlungen — dort, wo Kaufentscheidungen fallen.",
@@ -1421,7 +1425,7 @@ de:{
   nav_contact:"Kontakt",sending:"Wird gesendet...",err_msg:"Kommunikationsfehler. Schreiben Sie an ",
 },
 fr:{
-  nav_proof:"Références",nav_how:"Comment ça marche",nav_glossary:"Glossaire",nav_calc:"Calculateur",nav_faq:"FAQ",nav_cta:"Audit Gratuit",
+  nav_proof:"Références",nav_how:"Comment ça marche",nav_glossary:"Glossaire",nav_blog:"Blog",nav_calc:"Calculateur",nav_faq:"FAQ",nav_cta:"Audit Gratuit",
   badge_text:"La première agence GEO de Pologne",
   hero_t1:"Soyez le premier choix",hero_t2:"quand le client interroge l'IA.",
   hero_sub:"Le SEO évolue vers le GEO. Nous plaçons les entreprises locales en tête des recommandations ChatGPT et Perplexity — là où se prennent les décisions d'achat.",
