@@ -1,0 +1,81 @@
+---
+// ToC — sticky spis treści z anchor-linkami i scroll-spy.
+// headings: tablica z render() => [{ depth, slug, text }]
+// Pokazujemy tylko H2 i H3.
+export interface Heading { depth: number; slug: string; text: string; }
+const { headings } = Astro.props as { headings: Heading[] };
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{toc.length > 0 && (
+  <nav class="toc" aria-label="Spis treści">
+    <p class="toc-title">Na tej stronie</p>
+    <ul>
+      {toc.map((h) => (
+        <li class={h.depth === 3 ? 'toc-sub' : ''}>
+          <a href={`#${h.slug}`} data-toc-link={h.slug}>{h.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+    padding-left: 1.2rem;
+    border-left: 1px solid var(--border);
+    font-size: 0.82rem;
+  }
+  .toc-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-lo);
+    margin-bottom: 0.9rem;
+  }
+  .toc ul { list-style: none; margin: 0; padding: 0; }
+  .toc li { margin-bottom: 0.55rem; line-height: 1.4; }
+  .toc li.toc-sub { padding-left: 0.9rem; }
+  .toc a {
+    color: var(--text-lo);
+    text-decoration: none;
+    transition: color .2s;
+    display: block;
+    border-bottom: none;
+  }
+  .toc a:hover { color: var(--text-hi); }
+  .toc a.active { color: var(--f); font-weight: 600; }
+</style>
+
+<script>
+  // Scroll-spy: podświetla aktywną sekcję w ToC.
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]'));
+  if (links.length > 0) {
+    const map = new Map<string, HTMLAnchorElement>();
+    links.forEach((l) => map.set(l.dataset.tocLink!, l));
+    const targets = links
+      .map((l) => document.getElementById(l.dataset.tocLink!))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const setActive = (id: string) => {
+      links.forEach((l) => l.classList.toggle('active', l.dataset.tocLink === id));
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) setActive(visible[0].target.id);
+      },
+      { rootMargin: '-90px 0px -65% 0px', threshold: 0 }
+    );
+    targets.forEach((t) => observer.observe(t));
+  }
+</script>

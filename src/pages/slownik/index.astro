@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const terms = (await getCollection('slownik', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.term.localeCompare(b.data.term, 'pl'));
+
+const breadcrumbs = [
+  { name: 'Strona główna', href: '/' },
+  { name: 'Słownik GEO', href: '/slownik/' },
+];
+---
+
+<BaseLayout
+  title="Słownik GEO — pojęcia Generative Engine Optimization | GeoLead"
+  description="Słownik kluczowych pojęć GEO: Entity Salience, RAG, Knowledge Graph, Vector Embedding i więcej. Zrozum, jak modele AI wybierają firmy do rekomendacji."
+  keywords={['słownik GEO', 'Entity Salience', 'RAG', 'Knowledge Graph', 'Vector Embedding']}
+>
+  <div class="prose" style="padding-top:3.5rem;padding-bottom:1rem">
+    <Breadcrumbs items={breadcrumbs} />
+    <span class="article-kicker">Słownik</span>
+    <h1 class="article-title" style="margin-bottom:0.8rem">Słownik GEO</h1>
+    <p style="color:var(--text);font-size:1.05rem;max-width:560px">
+      Pojęcia, które decydują o tym, czy AI poleca Twoją firmę. Bez żargonu dla samego żargonu.
+    </p>
+  </div>
+
+  <section style="padding:2.5rem 0 4rem">
+    {terms.length === 0 ? (
+      <p style="text-align:center;color:var(--text-lo)">Hasła słownika w przygotowaniu.</p>
+    ) : (
+      <div class="blog-grid">
+        {terms.map((t) => (
+          <a href={`/slownik/${t.id.replace(/\.md$/, '')}/`} class="blog-card">
+            <span class="tag">{t.data.termCode}</span>
+            <h2>{t.data.term}</h2>
+            <p>{t.data.description.slice(0, 130)}…</p>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

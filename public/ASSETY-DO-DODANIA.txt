@@ -1,0 +1,22 @@
+═══════════════════════════════════════════════════════════
+  STATUS ASSETÓW
+═══════════════════════════════════════════════════════════
+
+✓ logo.png            — GOTOWE (wygenerowane, 512x512, ikona "GL" w gradiencie marki)
+✓ logo-wordmark.png   — GOTOWE (poziomy lockup "GeoLead" na ciemnym tle)
+✓ favicon-32.png      — GOTOWE
+
+□ og-image.jpg        — DODAJ RĘCZNIE
+   1200×630px, podgląd przy udostępnianiu w social/Slack/LinkedIn.
+   Pobierz z obecnej strony: https://geolead.pl/og-image.jpg
+   (jeśli tam też nie istnieje — daj znać, wygeneruję go tak jak logo)
+
+═══════════════════════════════════════════════════════════
+  UWAGA: logo.png było przyczyną błędu 404
+═══════════════════════════════════════════════════════════
+Twój JSON-LD Organization.logo wskazywał na https://geolead.pl/logo.png,
+który NIGDY nie istniał (404). To osłabiało entity recognition w Google
+Knowledge Graph. Teraz plik jest w public/ i zostanie wdrożony z buildem.
+
+Po deployu zweryfikuj:
+  https://geolead.pl/logo.png  → powinno pokazać ikonę, nie 404

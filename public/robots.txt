@@ -1,0 +1,30 @@
+# GeoLead — robots.txt (jeden plik dla całego hosta geolead.pl)
+# Monorepo: strona główna + /blog/ + /slownik/ serwowane z jednego origin.
+# Jawnie wpuszczamy crawlery AI (RAG) — to fundament strategii GEO.
+
+User-agent: *
+Allow: /
+
+# Crawlery modeli AI — explicite dozwolone
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://geolead.pl/sitemap-index.xml

@@ -1,0 +1,75 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+export async function getStaticPaths() {
+  const terms = await getCollection('slownik', ({ data }) => !data.draft);
+  return terms.map((term) => ({
+    params: { slug: term.id.replace(/\.md$/, '') },
+    props: { term },
+  }));
+}
+
+const { term } = Astro.props;
+const { Content } = await render(term);
+const d = term.data;
+const slug = term.id.replace(/\.md$/, '');
+
+const site = 'https://geolead.pl';
+const canonical = `${site}/slownik/${slug}/`;
+
+const breadcrumbs = [
+  { name: 'Strona główna', href: '/' },
+  { name: 'Słownik GEO', href: '/slownik/' },
+  { name: d.term, href: `/slownik/${slug}/` },
+];
+
+// JSON-LD DefinedTerm — spójny z DefinedTermSet na stronie głównej (#glossary)
+const definedTermJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${site}/#term-${slug}`,
+  name: d.term,
+  alternateName: d.alternateName,
+  termCode: d.termCode,
+  description: d.description,
+  inDefinedTermSet: `${site}/#glossary`,
+  url: canonical,
+};
+---
+
+<BaseLayout
+  title={`${d.term} — co to jest? | Słownik GEO | GeoLead`}
+  description={d.description.slice(0, 158)}
+  keywords={d.keywords}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(definedTermJsonLd)}
+  />
+
+  <article class="prose">
+    <header class="article-header">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="article-kicker">Słownik GEO</span>
+      <h1 class="article-title">{d.term}</h1>
+      {d.alternateName && (
+        <p style="color:var(--text-lo);font-size:0.95rem;margin-top:-0.4rem">
+          ({d.alternateName})
+        </p>
+      )}
+    </header>
+
+    <div class="prose-body">
+      <Content />
+    </div>
+
+    <div class="article-cta glass">
+      <h3>Chcesz wykorzystać {d.term} w swojej firmie?</h3>
+      <p>Sprawdź, jak budujemy widoczność marek w modelach AI.</p>
+      <a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Darmowy audyt GEO</a>
+    </div>
+  </article>
+</BaseLayout>

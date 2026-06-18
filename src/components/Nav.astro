@@ -1,0 +1,17 @@
+---
+// Nav — spójny ze stroną główną. Linki kierują do sekcji na geolead.pl
+const links = [
+  { href: 'https://geolead.pl/#how', label: 'Jak to działa' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/slownik/', label: 'Słownik' },
+  { href: 'https://geolead.pl/#faq', label: 'FAQ' },
+];
+---
+
+<nav class="gl-nav">
+  <a href="https://geolead.pl/" class="gl-logo">GeoLead</a>
+  <ul class="nav-links">
+    {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+  </ul>
+  <a href="https://geolead.pl/#contact" class="btn-nav">Darmowy Audyt</a>
+</nav>

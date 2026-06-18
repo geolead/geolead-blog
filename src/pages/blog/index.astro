@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const pillarLabel = { edukacja: 'Edukacja', branze: 'Branże', slownik: 'Słownik' };
+
+const breadcrumbs = [
+  { name: 'Strona główna', href: '/' },
+  { name: 'Blog', href: '/blog/' },
+];
+---
+
+<BaseLayout
+  title="Blog GeoLead — Wiedza o GEO i widoczności w AI | ChatGPT, Perplexity"
+  description="Praktyczna wiedza o Generative Engine Optimization. Jak sprawić, by ChatGPT, Perplexity i Claude polecały Twoją firmę klientom B2B."
+  keywords={['GEO', 'blog GEO', 'Generative Engine Optimization', 'AI Search', 'widoczność w ChatGPT']}
+>
+  <div class="prose" style="padding-top:3.5rem;padding-bottom:1rem">
+    <Breadcrumbs items={breadcrumbs} />
+    <span class="article-kicker">Blog</span>
+    <h1 class="article-title" style="margin-bottom:0.8rem">Wiedza o GEO</h1>
+    <p style="color:var(--text);font-size:1.05rem;max-width:560px">
+      Jak modele AI wybierają, którą firmę polecić — i jak sprawić, by wybierały Ciebie.
+    </p>
+  </div>
+
+  <section style="padding:2.5rem 0 4rem">
+    {posts.length === 0 ? (
+      <p style="text-align:center;color:var(--text-lo)">Pierwsze artykuły już w drodze.</p>
+    ) : (
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="blog-card">
+            <span class="tag">{pillarLabel[post.data.pillar]}</span>
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+// Breadcrumbs — renderuje widoczną ścieżkę ORAZ emituje JSON-LD BreadcrumbList.
+// items: [{ name, href }] — ostatni element to bieżąca strona (bez linku w schema).
+export interface Crumb { name: string; href: string; }
+const { items } = Astro.props as { items: Crumb[] };
+
+const site = 'https://geolead.pl';
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.name,
+    item: item.href.startsWith('http') ? item.href : `${site}${item.href}`,
+  })),
+};
+---
+
+<nav class="breadcrumb" aria-label="Ścieżka nawigacji">
+  {items.map((item, i) => (
+    <>
+      {i < items.length - 1 ? (
+        <a href={item.href}>{item.name}</a>
+      ) : (
+        <span aria-current="page">{item.name}</span>
+      )}
+      {i < items.length - 1 && <span class="sep">/</span>}
+    </>
+  ))}
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />

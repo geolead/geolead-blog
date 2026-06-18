@@ -1,0 +1,134 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import type { Crumb } from '../components/Breadcrumbs.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author?: string;
+  keywords?: string[];
+  image?: string;
+  imageAlt?: string;
+  breadcrumbs: Crumb[];
+  headings?: { depth: number; slug: string; text: string }[];
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author = 'GeoLead',
+  keywords = [],
+  image = '/og-image.jpg',
+  imageAlt = 'GeoLead — Agencja GEO',
+  breadcrumbs,
+  headings = [],
+} = Astro.props;
+
+const site = 'https://geolead.pl';
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = image.startsWith('http') ? image : `${site}${image}`;
+
+const published = pubDate.toISOString();
+const modified = (updatedDate ?? pubDate).toISOString();
+
+// Czytelna data PL
+const dateLabel = new Intl.DateTimeFormat('pl-PL', {
+  year: 'numeric', month: 'long', day: 'numeric',
+}).format(pubDate);
+
+// ── JSON-LD Article ──
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${canonical}#article`,
+  headline: title,
+  description: description,
+  image: ogImage,
+  datePublished: published,
+  dateModified: modified,
+  inLanguage: 'pl-PL',
+  author: {
+    '@type': 'Organization',
+    name: author,
+    url: site,
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': `${site}/#organization`,
+    name: 'GeoLead',
+    logo: { '@type': 'ImageObject', url: `${site}/logo.png` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  keywords: keywords.join(', '),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  imageAlt={imageAlt}
+  type="article"
+  publishedTime={published}
+  modifiedTime={modified}
+  keywords={keywords}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(articleJsonLd)}
+  />
+
+  <article>
+    <div class="article-shell">
+      <header class="article-header">
+        <Breadcrumbs items={breadcrumbs} />
+        <span class="article-kicker">Generative Engine Optimization</span>
+        <h1 class="article-title">{title}</h1>
+        <div class="article-meta">
+          <span>Autor: <strong style="color:var(--text-hi)">{author}</strong></span>
+          <span class="sep" style="opacity:.4">·</span>
+          <time datetime={published}>{dateLabel}</time>
+          {updatedDate && (
+            <>
+              <span class="sep" style="opacity:.4">·</span>
+              <span>Aktualizacja: {new Intl.DateTimeFormat('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' }).format(updatedDate)}</span>
+            </>
+          )}
+        </div>
+      </header>
+
+      <div class="article-grid">
+        <aside class="article-toc">
+          <TableOfContents headings={headings} />
+        </aside>
+        <div class="prose-body">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <style>
+    .article-shell { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-header { padding: 4rem 0 2.5rem; max-width: 760px; }
+    .article-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 760px);
+      gap: 3rem;
+      align-items: start;
+    }
+    .article-toc { order: -1; }
+    /* Poniżej 980px: ToC chowamy (sticky sidebar nie ma sensu na wąskim ekranie) */
+    @media (max-width: 980px) {
+      .article-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .article-toc { display: none; }
+    }
+  </style>
+</BaseLayout>
