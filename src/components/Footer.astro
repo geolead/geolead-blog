@@ -1,21 +1,87 @@
 ---
-const year = new Date().getFullYear();
+// src/components/Footer.astro
+// Footer identyczny z index.html — gradient logo, pełna nawigacja, copyright
 ---
 
-<footer class="gl-foot">
-  <p style="margin-bottom:0.8rem">
-    <a href="https://geolead.pl/" style="font-weight:800;color:white;font-size:1rem">GeoLead</a>
-  </p>
-  <p style="margin-bottom:1.2rem;max-width:480px;margin-left:auto;margin-right:auto">
-    Pierwsza w Polsce agencja GEO (Generative Engine Optimization).
-    Sprawiamy, że ChatGPT, Perplexity i Claude polecają Twoją firmę.
-  </p>
-  <p>
-    <a href="/blog/">Blog</a> &nbsp;·&nbsp;
-    <a href="/slownik/">Słownik GEO</a> &nbsp;·&nbsp;
-    <a href="https://geolead.pl/#contact">Kontakt</a>
-  </p>
-  <p style="margin-top:1.5rem;font-size:0.74rem;color:var(--text-lo)">
-    © {year} GeoLead. Wszelkie prawa zastrzeżone.
-  </p>
+<style>
+  .gl-footer {
+    background: #07071a;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 2.25rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .gl-logo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.03em;
+  }
+  .gl-logo .g-text {
+    background: linear-gradient(135deg, #e040fb, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .foot-desc {
+    font-size: 0.76rem;
+    color: #5a5a8a;
+    margin-top: 0.32rem;
+  }
+  .foot-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .foot-links a {
+    font-size: 0.76rem;
+    color: #5a5a8a;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .foot-links a:hover {
+    color: #e040fb;
+  }
+  .foot-copy {
+    font-size: 0.76rem;
+    color: #5a5a8a;
+  }
+  @media (max-width: 640px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<footer class="gl-footer" aria-label="Stopka">
+  <div class="footer-inner">
+    <div>
+      <a href="/" class="gl-logo">Geo<span class="g-text">Lead</span></a>
+      <p class="foot-desc">Pierwsza agencja GEO w Polsce.</p>
+    </div>
+
+    <ul class="foot-links">
+      <li><a href="/#social-proof">Zaufali nam</a></li>
+      <li><a href="/#how">Jak to działa</a></li>
+      <li><a href="/slownik/">Słowniczek GEO</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#calc">Kalkulator</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#contact">Kontakt</a></li>
+    </ul>
+
+    <span class="foot-copy">© 2026 GeoLead. Wszelkie prawa zastrzeżone.</span>
+  </div>
 </footer>

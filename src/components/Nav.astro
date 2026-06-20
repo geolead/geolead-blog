@@ -1,17 +1,125 @@
 ---
-// Nav — spójny ze stroną główną. Linki kierują do sekcji na geolead.pl
-const links = [
-  { href: 'https://geolead.pl/#how', label: 'Jak to działa' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/slownik/', label: 'Słownik' },
-  { href: 'https://geolead.pl/#faq', label: 'FAQ' },
-];
+// src/components/Nav.astro
+// Nawigacja identyczna z index.html — gradient logo, 7 pozycji, przełącznik języka, CTA
 ---
 
-<nav class="gl-nav">
-  <a href="https://geolead.pl/" class="gl-logo">GeoLead</a>
+<style>
+  .gl-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(7, 7, 18, 0.97);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0.85rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .gl-logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
+  }
+  .gl-logo .g-text {
+    background: linear-gradient(135deg, #e040fb, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: #a0a0c8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: white;
+  }
+  .lang-sw {
+    display: flex;
+    gap: 0.18rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 0.18rem;
+  }
+  .lb {
+    background: none;
+    border: none;
+    color: #6b6b9a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.22rem 0.46rem;
+    border-radius: 5px;
+    cursor: default;
+    letter-spacing: 0.05em;
+  }
+  .lb.on {
+    background: linear-gradient(135deg, #e040fb, #00d4ff);
+    color: #07071a;
+  }
+  .btn-nav {
+    background: linear-gradient(135deg, #e040fb, #00d4ff);
+    color: #07071a;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.48rem 1.05rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .btn-nav:hover {
+    opacity: 0.84;
+    transform: translateY(-1px);
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .lang-sw {
+      display: none;
+    }
+  }
+</style>
+
+<nav class="gl-nav" aria-label="Nawigacja główna">
+  <a href="/" class="gl-logo">Geo<span class="g-text">Lead</span></a>
+
   <ul class="nav-links">
-    {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+    <li><a href="/#social-proof">Zaufali nam</a></li>
+    <li><a href="/#how">Jak to działa</a></li>
+    <li><a href="/slownik/">Słowniczek</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#calc">Kalkulator</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="/#contact">Kontakt</a></li>
   </ul>
-  <a href="https://geolead.pl/#contact" class="btn-nav">Darmowy Audyt</a>
+
+  <div style="display:flex;align-items:center;gap:0.65rem;flex-shrink:0">
+    <div class="lang-sw">
+      <button class="lb on">PL</button>
+      <button class="lb">EN</button>
+      <button class="lb">DE</button>
+      <button class="lb">FR</button>
+    </div>
+    <a href="/#contact" class="btn-nav">Darmowy Audyt</a>
+  </div>
 </nav>
