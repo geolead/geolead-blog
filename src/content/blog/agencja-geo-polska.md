@@ -3,8 +3,23 @@ title: "Agencja GEO w Polsce — czym jest i jak wybrać właściwą"
 description: "Agencja GEO to specjalistyczna firma optymalizująca widoczność marki w odpowiedziach ChatGPT, Perplexity i Claude. Sprawdź, czym różni się od agencji SEO i jak działa GEO w polskich realiach B2B."
 pubDate: 2026-06-22
 author: "GeoLead"
-tags: ["GEO", "agencja GEO", "Generative Engine Optimization", "AI Search", "LLM SEO"]
-image: "/images/agencja-geo-polska.jpg"
+pillar: "edukacja"
+isPillar: true
+funnel: "tofu"
+keywords:
+  - "agencja GEO"
+  - "agencja GEO w Polsce"
+  - "GEO agency Polska"
+  - "Generative Engine Optimization"
+  - "LLM SEO"
+  - "AI Search Optimization"
+image: "/og-agencja-geo-polska.jpg"
+imageAlt: "Agencja GEO w Polsce — czym jest i jak wybrać właściwą"
+relatedTerms:
+  - "entity-salience"
+  - "rag"
+  - "knowledge-graph"
+  - "halucynacje-ai"
 ---
 
 Firmy, które jeszcze dwa lata temu walczyły wyłącznie o pozycję w Google, dziś tracą leady na rzecz konkurentów polecanych przez ChatGPT. Mechanizm jest prosty: klient zamiast wpisywać frazę w wyszukiwarce, zadaje pytanie modelowi AI — i dostaje jedną, konkretną rekomendację. Nie listę dziesięciu linków.
@@ -54,7 +69,7 @@ Pytanie "czy GEO zastępuje SEO?" pada na każdym spotkaniu z klientem. Odpowied
 
 Kluczowa różnica leży w intencji: użytkownik Google przegląda opcje. Użytkownik pytający AI — podejmuje decyzję. Firma polecona przez ChatGPT trafia do klienta, który już zaufał rekomendacji.
 
-SEO i GEO wzajemnie się wzmacniają: mocna obecność w [Knowledge Graph](/slownik/knowledge-graph/) pomaga zarówno w rankingach Google, jak i w widoczności w LLM-ach.
+SEO i GEO wzajemnie się wzmacniają: mocna obecność w [Knowledge Graph](/slownik/knowledge-graph/) pomaga zarówno w rankingach Google, jak i w widoczności w LLM-ach. Więcej o tej relacji w artykule [GEO vs SEO](/blog/geo-vs-seo/).
 
 ## Dla jakich firm agencja GEO ma sens?
 
@@ -63,7 +78,7 @@ GEO działa najlepiej tam, gdzie klient przed zakupem pyta o rekomendację — z
 - **Kliniki medycyny estetycznej i prywatne placówki medyczne** — pacjenci pytają AI o najlepszego specjalistę w mieście
 - **Kancelarie prawne** — klienci B2B szukają rekomendacji prawnika przez AI, nie przez Google
 - **Software house'y i firmy SaaS** — decydenci pytają ChatGPT o dostawców przed RFP
-- **Agencje marketingowe premium** — przetargi coraz częściej poprzedzone są research'em przez AI
+- **Agencje marketingowe premium** — przetargi coraz częściej poprzedzone są researchem przez AI
 - **Nieruchomości komercyjne i deweloperzy** — inwestorzy używają Perplexity do shortlistowania partnerów
 
 Jeśli Twój klient podejmuje przemyślaną decyzję zakupową i ma nawyk pytania — w Google lub znajomym — zapyta też AI.
