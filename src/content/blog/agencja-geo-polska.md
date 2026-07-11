@@ -1,6 +1,6 @@
 ---
-title: "Agencja GEO w Polsce — czym jest i jak wybrać właściwą"
-description: "Agencja GEO to specjalistyczna firma optymalizująca widoczność marki w odpowiedziach ChatGPT, Perplexity i Claude. Sprawdź, czym różni się od agencji SEO i jak działa GEO w polskich realiach B2B."
+title: "Agencja GEO Polska — GeoLead | Optymalizacja pod ChatGPT i AI"
+description: "Pierwsza agencja GEO w Polsce. Analizujemy, jak ChatGPT i Perplexity widzą Twoją markę — i naprawiamy to, zanim zrobi to konkurencja. Bezpłatny audyt →"
 pubDate: 2026-06-22
 author: "GeoLead"
 pillar: "edukacja"
