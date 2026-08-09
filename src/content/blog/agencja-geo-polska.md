@@ -20,6 +20,7 @@ relatedTerms:
   - "rag"
   - "knowledge-graph"
   - "halucynacje-ai"
+  - "llm"
 ---
 
 Firmy, które jeszcze dwa lata temu walczyły wyłącznie o pozycję w Google, dziś tracą leady na rzecz konkurentów polecanych przez ChatGPT. Mechanizm jest prosty: klient zamiast wpisywać frazę w wyszukiwarce, zadaje pytanie modelowi AI — i dostaje jedną, konkretną rekomendację. Nie listę dziesięciu linków.
@@ -28,7 +29,7 @@ Agencja GEO to podmiot, który sprawia, że tą rekomendacją jest Twoja firma.
 
 ## Czym jest agencja GEO?
 
-**Agencja GEO (Generative Engine Optimization)** to wyspecjalizowana firma marketingowo-technologiczna zajmująca się optymalizacją widoczności marki w odpowiedziach generatywnych modeli językowych — ChatGPT, Perplexity, Claude, Gemini i Microsoft Copilot.
+**Agencja GEO (Generative Engine Optimization)** to wyspecjalizowana firma marketingowo-technologiczna zajmująca się optymalizacją widoczności marki w odpowiedziach generatywnych [modeli językowych](/slownik/llm/) — ChatGPT, Perplexity, Claude, Gemini i Microsoft Copilot.
 
 W odróżnieniu od agencji SEO, która optymalizuje witrynę pod indeks wyszukiwarki Google, agencja GEO optymalizuje *encję marki* — jej reprezentację w bazach wiedzy, z których korzystają modele AI przy generowaniu odpowiedzi. Cel jest jeden: gdy potencjalny klient zapyta AI o najlepszą firmę w Twojej branży, model musi wymienić Ciebie z nazwy.
 
