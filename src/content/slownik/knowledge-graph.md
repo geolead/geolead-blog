@@ -2,27 +2,25 @@
 term: "Knowledge Graph"
 alternateName: "Graf Wiedzy"
 termCode: "KNOWLEDGE_GRAPH"
-description: "Knowledge Graph to strukturalna baza mapująca świat w relacjach między encjami. Obecność w niej to warunek konieczny, by AI traktowało Twoją firmę jako realny, weryfikowalny byt."
-pubDate: 2026-06-18
+description: "Knowledge Graph to strukturalna baza danych, z której Google i modele AI weryfikują fakty o firmach. Obecność w niej to warunek konieczny widoczności w AI Search."
+pubDate: 2026-08-09
 keywords:
   - "Knowledge Graph"
-  - "graf wiedzy"
-  - "encje"
-  - "weryfikacja faktów AI"
+  - "Graf Wiedzy"
+  - "co to jest Knowledge Graph"
+  - "widoczność AI Search"
 ---
 
-**Knowledge Graph to strukturalna baza danych, która opisuje świat nie jako zbiór stron, lecz jako sieć encji (firm, osób, miejsc, pojęć) i relacji między nimi: kto jest kim, kto z kim współpracuje, kto czym się zajmuje.** Korzystają z niej Google, Bing oraz pośrednio modele językowe — do weryfikacji faktów i budowania kontekstu odpowiedzi.
+**Knowledge Graph (Graf Wiedzy) to strukturalna baza danych mapująca świat w relacjach pomiędzy encjami: kto jest kim, kto z kim współpracuje, kto czym się zajmuje.** Wykorzystywana przez Google, Bing i pośrednio przez modele LLM do weryfikacji faktów i budowy kontekstu odpowiedzi.
 
-Mówiąc wprost: to „Wikipedia dla maszyn". Jeśli Twojej firmy w niej nie ma — dla AI w praktyce **nie istniejesz jako wiarygodny byt**. Możesz mieć świetną stronę, ale bez obecności w grafie model nie ma jak potwierdzić, że jesteś tym, za kogo się podajesz.
+To trafne uproszczenie: Knowledge Graph to gigantyczna baza faktów, z której maszyny — nie ludzie — czerpią wiedzę o świecie. Firma, której tam nie ma, dla systemów AI praktycznie nie istnieje jako jednoznaczna encja, niezależnie od tego, jak dobrze wygląda jej strona internetowa.
 
-## Dlaczego to fundament GEO
+## Dlaczego to warunek konieczny
 
-Model językowy, generując rekomendację, musi „ufać", że dana encja jest realna i opisana spójnie. Knowledge Graph dostarcza tej pewności. Firma obecna w grafie, powiązana z właściwymi pojęciami, jest dla AI kandydatem do cytowania. Firma nieobecna — ryzykiem, którego model woli nie podejmować (stąd biorą się też [halucynacje na temat marki](/slownik/halucynacje-ai/)).
+Model językowy, zanim zacytuje firmę, często weryfikuje jej istnienie i podstawowe fakty względem grafu wiedzy. Brak obecności — lub sprzeczne dane w różnych źródłach — zwiększa ryzyko, że model albo pominie firmę, albo poda o niej nieprawdziwe informacje (patrz: [Halucynacje AI](/slownik/halucynacje-ai/)).
 
-## Jak budować obecność w grafie
+## Jak sprawdzić, czy firma tam jest
 
-- **Dane strukturalne** (JSON-LD typu `Organization`, `ProfessionalService`) jednoznacznie opisujące, czym jest firma.
-- **Spójne `sameAs`** — powiązanie Twojej strony z profilami w wiarygodnych źródłach.
-- **Wzmianki w bazach referencyjnych** (branżowe katalogi, media, encyklopedie), z których graf czerpie potwierdzenie.
+Najprostszy test: wpisz nazwę firmy w Google i sprawdź, czy po prawej stronie pojawia się panel wiedzy (Knowledge Panel). Jego brak nie oznacza automatycznie braku w grafie, ale to sygnał ostrzegawczy wart audytu.
 
-Obecność w Knowledge Graph bezpośrednio podnosi [Entity Salience](/slownik/entity-salience/) — siłę, z jaką AI kojarzy Twoją markę z właściwymi pojęciami. Cały mechanizm rozkładamy w [przewodniku „Czym jest GEO"](/blog/czym-jest-geo/).
+Knowledge Graph współpracuje bezpośrednio z [Entity Salience](/slownik/entity-salience/) — im silniejsza obecność w grafie, tym wyższa wyrazistość marki w AI. [Cały mechanizm opisujemy w przewodniku „Czym jest GEO"](/blog/czym-jest-geo/).
