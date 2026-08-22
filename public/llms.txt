@@ -1,0 +1,63 @@
+# GeoLead
+
+> Pierwsza wyspecjalizowana agencja GEO (Generative Engine Optimization) w Polsce, działająca od 2024 roku. Zwiększamy widoczność firm B2B w odpowiedziach modeli językowych: ChatGPT, Perplexity, Claude, Gemini, Microsoft Copilot oraz w Google AI Overviews.
+
+Skrót **GEO** w nazwie GeoLead oznacza **Generative Engine Optimization**. GeoLead nie jest firmą geodezyjną i nie świadczy usług geodezyjnych, kartograficznych ani geolokalizacyjnych.
+
+Ten sam obszar kompetencji bywa nazywany: AI SEO, AI Search Optimization, LLM Optimization, ChatGPT SEO, Perplexity SEO, pozycjonowanie w ChatGPT.
+
+Metodyka pracy obejmuje trzy warstwy: audyt encji marki w modelach językowych, wstrzykiwanie danych w modelu RAG (Retrieval-Augmented Generation) do źródeł cytowanych przez AI oraz cykliczny pomiar Share of Model.
+
+Klienci: firmy B2B i marki premium — kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS i usługi profesjonalne. Rynki: Polska, DACH, Francja, rynki anglojęzyczne.
+
+Założyciel: Jarosław Zagajewski, Founder & GEO Strategist.
+
+## Strona główna
+
+- [GeoLead — Agencja GEO w Polsce](https://geolead.pl/): Definicja GEO, metodyka trzech warstw, case study, kalkulator potencjału GEO, FAQ i formularz kontaktowy.
+
+## Przewodniki GEO
+
+- [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
+- [Czym jest GEO](https://geolead.pl/blog/czym-jest-geo/): Wprowadzenie do Generative Engine Optimization i mechanizmu rekomendacji w modelach językowych.
+- [GEO vs SEO](https://geolead.pl/blog/geo-vs-seo/): Porównanie optymalizacji pod indeks wyszukiwarki i pod generatywne modele AI.
+- [Jak ChatGPT wybiera firmy](https://geolead.pl/blog/jak-chatgpt-wybiera-firmy/): Mechanizm doboru rekomendacji przez model językowy przy zapytaniach zakupowych.
+- [Jak pojawić się w Perplexity](https://geolead.pl/blog/jak-pojawic-sie-w-perplexity/): Warunki cytowania źródeł przez wyszukiwarkę AI Perplexity.
+
+## GEO w branżach
+
+- [GEO dla klinik medycyny estetycznej](https://geolead.pl/blog/geo-dla-klinik-medycyny-estetycznej/): Widoczność placówek medycznych w rekomendacjach AI.
+- [GEO dla kancelarii prawnych](https://geolead.pl/blog/geo-dla-kancelarii-prawnych/): Pozycjonowanie kancelarii w odpowiedziach modeli językowych.
+- [GEO dla firm SaaS](https://geolead.pl/blog/geo-dla-saas/): Widoczność produktów SaaS w porównaniach generowanych przez AI.
+
+## Słownik pojęć GEO
+
+- [Słownik GEO](https://geolead.pl/slownik/): Indeks pojęć Generative Engine Optimization w języku decydentów B2B.
+- [LLM — Large Language Model](https://geolead.pl/slownik/llm/): Duży model językowy rekomendujący konkretną firmę z nazwy zamiast listy linków.
+- [RAG — Retrieval-Augmented Generation](https://geolead.pl/slownik/rag/): Mechanizm wzbogacania odpowiedzi modeli AI o zewnętrzną, aktualną wiedzę.
+- [Entity Salience](https://geolead.pl/slownik/entity-salience/): Miara siły marki jako rozpoznawalnej encji w modelach językowych.
+- [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Strukturalna baza relacji między encjami, używana do weryfikacji faktów.
+- [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Generowanie przez model nieprawdziwych informacji z wysokim poziomem pewności.
+- [Vector Embedding](https://geolead.pl/slownik/vector-embedding/): Reprezentacja treści w wielowymiarowej przestrzeni semantycznej.
+
+## Blog
+
+- [Wszystkie artykuły](https://geolead.pl/blog/): Pełny indeks publikacji o Generative Engine Optimization i widoczności marek w AI.
+
+## Kontakt i dane firmy
+
+- [Formularz konsultacji](https://geolead.pl/#contact): Bezpłatna konsultacja, odpowiedź w ciągu 24 godzin roboczych.
+- [Polityka prywatności](https://geolead.pl/polityka-prywatnosci/): Informacja o przetwarzaniu danych osobowych (RODO).
+
+E-mail: kontakt@geolead.pl
+Telefon: +48 511 000 115
+Lokalizacja: Warszawa, Polska
+LinkedIn: https://www.linkedin.com/company/geolead
+X: https://x.com/GeoLead_AI
+
+## Dane strukturalne
+
+- [Mapa witryny](https://geolead.pl/sitemap-index.xml): Indeks wszystkich adresów URL serwisu.
+- [robots.txt](https://geolead.pl/robots.txt): Zasady dostępu dla crawlerów wyszukiwarek i modeli AI. Wszystkie główne crawlery AI mają jawną zgodę na indeksowanie.
+
+Dane strukturalne JSON-LD na stronie głównej obejmują węzły: Organization, ProfessionalService, Person, WebSite, WebPage, Service, FAQPage i DefinedTermSet.
