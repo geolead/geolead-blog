@@ -458,6 +458,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .gloss-link:hover{opacity:0.72}
 .foot-me{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border-f);transition:color .2s,border-color .2s}
 .foot-me:hover{color:var(--f);border-color:var(--f)}
+.ilink-wrap{margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--border);text-align:center}
+.ilink-lbl{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-lo);display:block;margin-bottom:0.7rem}
+.ilink-row{display:flex;flex-wrap:wrap;gap:0.55rem;justify-content:center}
+.ilink{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.79rem;font-weight:600;color:var(--text-hi);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;padding:0.42rem 0.9rem;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.ilink:hover{color:#fff;border-color:var(--border-f);background:rgba(224,64,251,0.07)}
+.ilink i{color:var(--f);font-size:0.68rem}
 
 /* ── NAV ── */
 .gl-nav{position:sticky;top:0;z-index:999;background:rgba(7,7,18,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);padding:0.85rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.7rem}
@@ -1129,6 +1135,15 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <div class="text-sm leading-relaxed" style="color:var(--text)" data-i18n="s3_p">Monitorujemy i raportujemy mierzalny wzrost rekomendacji AI. Twoja firma staje się autorytetem, który AI cytuje z własnej inicjatywy.</div>
       </div>
     </div>
+      <!-- LINKOWANIE WEWNETRZNE: homepage -> podstrony (dystrybucja mocy) -->
+    <nav class="ilink-wrap sr" aria-label="Materiały GEO">
+      <span class="ilink-lbl" data-i18n="ilink_lbl">Dowiedz się więcej</span>
+      <div class="ilink-row">
+        <a class="ilink" href="/blog/agencja-geo-polska/"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span data-i18n="ilink_1">Agencja GEO w Polsce — przewodnik</span></a>
+        <a class="ilink" href="/slownik/"><i class="fa-solid fa-book" aria-hidden="true"></i><span data-i18n="ilink_2">Słownik pojęć GEO</span></a>
+        <a class="ilink" href="/blog/"><i class="fa-solid fa-newspaper" aria-hidden="true"></i><span data-i18n="ilink_3">Wszystkie artykuły</span></a>
+      </div>
+    </nav>
   </div>
 </section>
 
@@ -1383,6 +1398,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <a href="#calc" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_calc">Kalkulator</a>
       <a href="#faq" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_faq">FAQ</a>
       <a href="#contact" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_contact">Kontakt</a>
+      <a href="/polityka-prywatnosci/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_privacy">Polityka prywatności</a>
     </div>
     <span style="font-size:0.76rem;color:var(--text-lo)" data-i18n="foot_copy">© 2026 GeoLead. Wszelkie prawa zastrzeżone.</span>
   </div>
@@ -1502,7 +1518,7 @@ pl:{
   scan_meta1:"Połączono z: ChatGPT API, Perplexity AI, Claude API",scan_meta2:"Dane nie są przechowywane",
   scan_log:[["INFO","Inicjalizacja silnika analizy encji LLM..."],["SCAN","Wyodrębnianie encji dla domeny..."],["SCAN","Sprawdzanie bazy wiedzy GPT-4o..."],["WARN","Brak ustrukturyzowanych danych JSON-LD"],["SCAN","Weryfikacja indeksu RAG w Perplexity AI..."],["FAIL","Znaleziono 0 cytowań w OpenAI Knowledge Base"],["WARN","Niska gęstość semantyczna encji marki"],["FAIL","Widoczność: krytycznie niska (12/100)"],["DONE","Raport zakończony. Generowanie wyników..."]],
   cookie_txt:"Ta strona używa plików cookies do analityki i poprawnego działania. Wybierz, czy wyrażasz zgodę.",cookie_rej:"Odrzucam",cookie_acc:"Zgoda",
-  nav_contact:"Kontakt",sending:"Wysyłanie...",err_msg:"Błąd komunikacji. Napisz na ",
+  nav_contact:"Kontakt",nav_privacy:"Polityka prywatności",ilink_lbl:"Dowiedz się więcej",ilink_1:"Agencja GEO w Polsce — przewodnik",ilink_2:"Słownik pojęć GEO",ilink_3:"Wszystkie artykuły",sending:"Wysyłanie...",err_msg:"Błąd komunikacji. Napisz na ",
 },
 en:{
   nav_proof:"Clients",nav_how:"How It Works",nav_glossary:"Glossary",nav_blog:"Blog",nav_calc:"Calculator",nav_faq:"FAQ",nav_cta:"Free Audit",
@@ -1606,7 +1622,7 @@ en:{
   scan_meta1:"Connected to: ChatGPT API, Perplexity AI, Claude API",scan_meta2:"Data is not stored",
   scan_log:[["INFO","Initialising LLM entity analysis engine..."],["SCAN","Running Entity Extraction for domain..."],["SCAN","Querying GPT-4o knowledge base..."],["WARN","No structured JSON-LD data detected"],["SCAN","Verifying RAG index in Perplexity AI..."],["FAIL","Found 0 citations in OpenAI Knowledge Base"],["WARN","Low brand entity semantic density"],["FAIL","Visibility score: critically low (12/100)"],["DONE","Report complete. Generating results..."]],
   cookie_txt:"This website uses cookies for analytics and proper operation. Choose if you consent.",cookie_rej:"Decline",cookie_acc:"Accept",
-  nav_contact:"Contact",sending:"Sending...",err_msg:"Communication error. Write to ",
+  nav_contact:"Contact",nav_privacy:"Privacy policy",ilink_lbl:"Learn more",ilink_1:"GEO agency in Poland — guide",ilink_2:"GEO glossary",ilink_3:"All articles",sending:"Sending...",err_msg:"Communication error. Write to ",
 },
 de:{
   nav_proof:"Referenzen",nav_how:"So funktioniert's",nav_glossary:"Glossar",nav_blog:"Blog",nav_calc:"Rechner",nav_faq:"FAQ",nav_cta:"Kostenloses Audit",
@@ -1710,7 +1726,7 @@ de:{
   scan_meta1:"Verbunden mit: ChatGPT API, Perplexity AI, Claude API",scan_meta2:"Daten werden nicht gespeichert",
   scan_log:[["INFO","LLM-Entitätsanalyse-Engine wird initialisiert..."],["SCAN","Entitätsextraktion für Domain läuft..."],["SCAN","GPT-4o-Wissensdatenbank wird abgefragt..."],["WARN","Keine strukturierten JSON-LD-Daten erkannt"],["SCAN","RAG-Index in Perplexity AI wird geprüft..."],["FAIL","0 Zitate in OpenAI Knowledge Base gefunden"],["WARN","Geringe semantische Dichte der Markenentität"],["FAIL","Sichtbarkeit: kritisch niedrig (12/100)"],["DONE","Bericht abgeschlossen. Ergebnisse werden generiert..."]],
   cookie_txt:"Diese Website verwendet Cookies für Analysen und den ordnungsgemäßen Betrieb.",cookie_rej:"Ablehnen",cookie_acc:"Akzeptieren",
-  nav_contact:"Kontakt",sending:"Wird gesendet...",err_msg:"Kommunikationsfehler. Schreiben Sie an ",
+  nav_contact:"Kontakt",nav_privacy:"Datenschutzerklärung",ilink_lbl:"Mehr erfahren",ilink_1:"GEO-Agentur in Polen — Leitfaden",ilink_2:"GEO-Glossar",ilink_3:"Alle Artikel",sending:"Wird gesendet...",err_msg:"Kommunikationsfehler. Schreiben Sie an ",
 },
 fr:{
   nav_proof:"Références",nav_how:"Comment ça marche",nav_glossary:"Glossaire",nav_blog:"Blog",nav_calc:"Calculateur",nav_faq:"FAQ",nav_cta:"Audit Gratuit",
@@ -1814,7 +1830,7 @@ fr:{
   scan_meta1:"Connecté à : ChatGPT API, Perplexity AI, Claude API",scan_meta2:"Les données ne sont pas stockées",
   scan_log:[["INFO","Initialisation du moteur d'analyse d'entités LLM..."],["SCAN","Extraction d'entités en cours pour le domaine..."],["SCAN","Interrogation de la base de connaissances GPT-4o..."],["WARN","Aucune donnée JSON-LD structurée détectée"],["SCAN","Vérification de l'index RAG dans Perplexity AI..."],["FAIL","0 citation trouvée dans OpenAI Knowledge Base"],["WARN","Faible densité sémantique de l'entité de marque"],["FAIL","Visibilité : critiquement faible (12/100)"],["DONE","Rapport terminé. Génération des résultats..."]],
   cookie_txt:"Ce site utilise des cookies pour l'analyse et le bon fonctionnement.",cookie_rej:"Refuser",cookie_acc:"Accepter",
-  nav_contact:"Contact",sending:"Envoi en cours...",err_msg:"Erreur de communication. Écrivez à ",
+  nav_contact:"Contact",nav_privacy:"Politique de confidentialité",ilink_lbl:"En savoir plus",ilink_1:"Agence GEO en Pologne — guide",ilink_2:"Glossaire GEO",ilink_3:"Tous les articles",sending:"Envoi en cours...",err_msg:"Erreur de communication. Écrivez à ",
 }
 };
 
@@ -2191,6 +2207,7 @@ function resetScan(){
         <i class="fa-solid fa-cookie-bite" style="color:#e040fb;font-size:0.75rem"></i>
       </div>
       <p id="glCookieTxt" style="font-size:0.79rem;color:#94a3b8;line-height:1.6;margin:0">${t.cookie_txt||''}</p>
+      <a id="glCookieLink" href="/polityka-prywatnosci/" style="font-size:0.74rem;color:#e040fb;text-decoration:none;border-bottom:1px solid rgba(224,64,251,0.35);display:inline-block;margin-top:0.35rem">${t.nav_privacy||'Polityka prywatno\u015bci'}</a>
     </div>
     <div style="display:flex;gap:0.5rem;flex-shrink:0">
       <button id="glCookieRej" onclick="glSetCookie('rejected')"
@@ -2209,7 +2226,7 @@ function resetScan(){
   document.body.appendChild(banner);
   // Sync with setLang
   const _origSL=window.setLang;
-  window.setLang=function(l){_origSL(l);const tt=T[l]||T['pl'];const b=document.getElementById('glCookieBanner');if(!b)return;const xt=document.getElementById('glCookieTxt');const xr=document.getElementById('glCookieRej');const xa=document.getElementById('glCookieAcc');if(xt)xt.textContent=tt.cookie_txt||'';if(xr)xr.textContent=tt.cookie_rej||'Odrzucam';if(xa)xa.textContent=tt.cookie_acc||'Zgoda';};
+  window.setLang=function(l){_origSL(l);const tt=T[l]||T['pl'];const b=document.getElementById('glCookieBanner');if(!b)return;const xt=document.getElementById('glCookieTxt');const xr=document.getElementById('glCookieRej');const xa=document.getElementById('glCookieAcc');if(xt)xt.textContent=tt.cookie_txt||'';if(xr)xr.textContent=tt.cookie_rej||'Odrzucam';if(xa)xa.textContent=tt.cookie_acc||'Zgoda';const xl=document.getElementById('glCookieLink');if(xl)xl.textContent=tt.nav_privacy||'Polityka prywatno\u015bci';};
 })();
 
 window.glSetCookie=function(choice){
