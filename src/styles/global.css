@@ -87,4 +87,76 @@ a:hover { color: var(--f); }
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-.article-he
+.article-header { padding: 4rem 0 2.5rem; }
+.article-kicker {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--f), var(--c));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.9rem;
+}
+.article-title {
+  font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -0.03em;
+  color: #fff; margin-bottom: 1.1rem;
+}
+.article-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+  font-size: 0.85rem; color: var(--text);
+}
+
+/* Treść artykułu / hasła słownika (Markdown -> HTML) */
+.prose-body { color: var(--text); font-size: 1.04rem; line-height: 1.8; }
+.prose-body > * + * { margin-top: 1.15rem; }
+.prose-body h2 {
+  color: #fff; font-size: 1.6rem; font-weight: 800; line-height: 1.25;
+  letter-spacing: -0.02em; margin-top: 2.8rem; scroll-margin-top: 100px;
+}
+.prose-body h3 {
+  color: var(--text-hi); font-size: 1.2rem; font-weight: 700; line-height: 1.3;
+  margin-top: 2rem; scroll-margin-top: 100px;
+}
+.prose-body h4 { color: var(--text-hi); font-size: 1rem; font-weight: 700; margin-top: 1.6rem; }
+.prose-body strong { color: var(--text-hi); font-weight: 700; }
+.prose-body em { color: var(--text-hi); }
+.prose-body a { color: var(--c); border-bottom: 1px solid rgba(0, 212, 255, 0.35); }
+.prose-body a:hover { color: var(--f); border-bottom-color: var(--f); }
+.prose-body ul, .prose-body ol { padding-left: 1.4rem; }
+.prose-body li { margin-top: 0.45rem; }
+.prose-body li::marker { color: var(--f); }
+.prose-body hr { border: 0; border-top: 1px solid var(--border); margin: 2.4rem 0; }
+.prose-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em; color: var(--c);
+  background: rgba(255, 255, 255, 0.06); padding: 0.1em 0.4em; border-radius: 5px;
+}
+.prose-body blockquote {
+  border-left: 3px solid var(--f); padding: 0.2rem 0 0.2rem 1.1rem;
+  color: var(--text-hi); font-style: italic;
+}
+.prose-body table {
+  width: 100%; border-collapse: collapse; font-size: 0.92rem;
+  display: block; overflow-x: auto;
+}
+.prose-body th, .prose-body td {
+  border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top;
+}
+.prose-body th { background: var(--bg3); color: var(--text-hi); font-weight: 700; }
+
+/* Bloki HTML używane w plikach .md */
+.takeaway {
+  background: var(--bg3); border: 1px solid var(--border-f); border-radius: 14px;
+  padding: 1.1rem 1.3rem; color: var(--text-hi);
+}
+.related {
+  border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 1.4rem;
+}
+.related h4 { margin-top: 0; }
+.related ul { list-style: none; padding-left: 0; }
+.related li { margin-top: 0.5rem; }
+
+.article-cta { padding: 2rem; margin: 3.5rem 0 5rem; text-align: center; }
+.article-cta h3 { color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem; }
+.article-cta p { margin-bottom: 1.2rem; }
