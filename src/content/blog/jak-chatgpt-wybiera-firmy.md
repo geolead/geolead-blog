@@ -11,7 +11,6 @@ keywords:
   - "jak AI poleca firmy"
   - "widoczność w ChatGPT"
   - "GEO"
-image: "/og-jak-chatgpt-wybiera-firmy.jpg"
 imageAlt: "Jak ChatGPT decyduje, którą firmę polecić"
 relatedTerms:
   - "llm"
@@ -109,5 +108,6 @@ Firma, która zaadresuje wszystkie cztery, zaczyna pojawiać się w odpowiedziac
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
 </ul>
 </div>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Nie znaleziono strony (404) | GeoLead"
+  description="Ta strona nie istnieje lub została przeniesiona. Wróć na stronę główną GeoLead, do bloga o GEO albo do słownika pojęć Generative Engine Optimization."
+  noindex={true}
+>
+  <section class="prose" style="padding-top:5rem;padding-bottom:6rem;text-align:center">
+    <span class="article-kicker">Błąd 404</span>
+    <h1 class="article-title">Nie znaleziono strony</h1>
+    <p style="max-width:520px;margin:0 auto 2rem">
+      Adres, który otworzyłeś, nie istnieje albo został przeniesiony. Poniżej najkrótsze drogi do treści GeoLead.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center">
+      <a href="/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Strona główna</a>
+      <a href="/blog/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Blog o GEO</a>
+      <a href="/slownik/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Słownik GEO</a>
+    </div>
+  </section>
+</BaseLayout>

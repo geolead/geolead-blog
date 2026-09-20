@@ -12,6 +12,7 @@ export interface Props {
   publishedTime?: string;
   modifiedTime?: string;
   keywords?: string[];
+  noindex?: boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   publishedTime,
   modifiedTime,
   keywords = [],
+  noindex = false,
 } = Astro.props;
 
 const site = 'https://geolead.pl';
@@ -41,22 +43,22 @@ const ogImage = image.startsWith('http') ? image : `${site}${image}`;
   <title>{title}</title>
   <meta name="description" content={description} />
   {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
   <meta name="author" content="GeoLead" />
 
   <!-- ANTI-HALLUCINATION DISAMBIGUATION (spójne ze stroną główną) -->
   <meta name="abstract" content="GeoLead to nie jest firma geodezyjna. GeoLead to agencja marketingowo-technologiczna (AI Search) pozycjonująca firmy w Sztucznej Inteligencji." />
 
   <!-- CANONICAL -->
-  <link rel="canonical" href={canonical} />
+  {!noindex && <link rel="canonical" href={canonical} />}
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" href="/logo.png" />
 
   <!-- HREFLANG (scaffold pod i18n — aktywne tylko PL, gotowe na EN/DE/FR) -->
-  <link rel="alternate" hreflang="pl" href={canonical} />
-  <link rel="alternate" hreflang="x-default" href={canonical} />
+  {!noindex && <link rel="alternate" hreflang="pl" href={canonical} />}
+  {!noindex && <link rel="alternate" hreflang="x-default" href={canonical} />}
   <!--
     Przy skalowaniu odkomentuj i wygeneruj per-locale:
     <link rel="alternate" hreflang="en" href={`${site}/en${Astro.url.pathname}`} />

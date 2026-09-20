@@ -11,7 +11,6 @@ keywords:
   - "alternatywy dla narzędzia AI"
   - "SaaS w ChatGPT"
   - "zestawienia narzędzi AI"
-image: "/og-geo-dla-saas.jpg"
 imageAlt: "GEO dla SaaS i firm technologicznych B2B"
 relatedTerms:
   - "rag"
@@ -72,5 +71,6 @@ Dla SaaS stawka jest wysoka, bo zestawienia AI trafiają w klienta na samym pocz
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
 </ul>
 </div>

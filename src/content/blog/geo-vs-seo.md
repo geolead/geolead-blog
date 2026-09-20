@@ -11,7 +11,6 @@ keywords:
   - "Generative Engine Optimization a SEO"
   - "pozycjonowanie w AI"
   - "GEO"
-image: "/og-geo-vs-seo.jpg"
 imageAlt: "GEO vs SEO — porównanie"
 relatedTerms:
   - "rag"
@@ -93,5 +92,6 @@ GEO i SEO to nie konkurenci, lecz dwie warstwy tego samego lejka, działające n
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/rag/">RAG — słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
 </ul>
 </div>

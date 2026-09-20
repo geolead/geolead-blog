@@ -14,7 +14,6 @@ keywords:
   - "widoczność w AI"
   - "LLM Optimization"
   - "AI Search"
-image: "/og-czym-jest-geo.jpg"
 imageAlt: "Czym jest GEO — Generative Engine Optimization"
 relatedTerms:
   - "entity-salience"
@@ -125,7 +124,7 @@ GEO zwraca się tam, gdzie spełnione są trzy warunki:
 - **Element zaufania** — usługa, w której wybór wykonawcy niesie ryzyko (medycyna, prawo, finanse, IT)
 - **Długi cykl decyzyjny** — jest czas, by AI zdążyło wpłynąć na shortlistę
 
-To opisuje dokładnie: kliniki prywatne, kancelarie prawne, software house'y, doradztwo B2B, nieruchomości premium. [Rozkładamy GEO branża po branży tutaj](/blog/geo-dla-branz/).
+To opisuje dokładnie: kliniki prywatne, kancelarie prawne, software house'y, doradztwo B2B, nieruchomości premium. Rozkładamy GEO branża po branży: [kliniki medycyny estetycznej](/blog/geo-dla-klinik-medycyny-estetycznej/), [kancelarie prawne](/blog/geo-dla-kancelarii-prawnych/), [software house'y i SaaS](/blog/geo-dla-saas/).
 
 ## Od czego zacząć — konkretnie
 
@@ -152,5 +151,6 @@ To nie jest projekt na weekend. To proces, w którym pierwsze efekty widać zwyk
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić klientowi</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
 </ul>
 </div>

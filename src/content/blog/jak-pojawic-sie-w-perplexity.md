@@ -11,7 +11,6 @@ keywords:
   - "widoczność w Perplexity"
   - "źródła Perplexity"
   - "GEO"
-image: "/og-jak-pojawic-sie-w-perplexity.jpg"
 imageAlt: "Jak sprawić, by Perplexity cytowało Twoją firmę"
 relatedTerms:
   - "rag"
@@ -93,5 +92,6 @@ Cały mechanizm, którego Perplexity jest najczystszym przykładem, rozkładamy 
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
 </ul>
 </div>

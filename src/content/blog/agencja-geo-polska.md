@@ -13,7 +13,6 @@ keywords:
   - "Generative Engine Optimization"
   - "LLM SEO"
   - "AI Search Optimization"
-image: "/og-agencja-geo-polska.jpg"
 imageAlt: "Agencja GEO w Polsce — czym jest i jak wybrać właściwą"
 relatedTerms:
   - "entity-salience"
@@ -76,9 +75,9 @@ SEO i GEO wzajemnie się wzmacniają: mocna obecność w [Knowledge Graph](/slow
 
 GEO działa najlepiej tam, gdzie klient przed zakupem pyta o rekomendację — zamiast samodzielnie porównywać oferty. W Polsce największy potencjał mają:
 
-- **Kliniki medycyny estetycznej i prywatne placówki medyczne** — pacjenci pytają AI o najlepszego specjalistę w mieście
-- **Kancelarie prawne** — klienci B2B szukają rekomendacji prawnika przez AI, nie przez Google
-- **Software house'y i firmy SaaS** — decydenci pytają ChatGPT o dostawców przed RFP
+- **[Kliniki medycyny estetycznej i prywatne placówki medyczne](/blog/geo-dla-klinik-medycyny-estetycznej/)** — pacjenci pytają AI o najlepszego specjalistę w mieście
+- **[Kancelarie prawne](/blog/geo-dla-kancelarii-prawnych/)** — klienci B2B szukają rekomendacji prawnika przez AI, nie przez Google
+- **[Software house'y i firmy SaaS](/blog/geo-dla-saas/)** — decydenci pytają ChatGPT o dostawców przed RFP
 - **Agencje marketingowe premium** — przetargi coraz częściej poprzedzone są researchem przez AI
 - **Nieruchomości komercyjne i deweloperzy** — inwestorzy używają Perplexity do shortlistowania partnerów
 
@@ -126,69 +125,10 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
-      "@id": "https://geolead.pl/blog/agencja-geo-polska/#article",
-      "headline": "Agencja GEO w Polsce — czym jest i jak wybrać właściwą",
-      "description": "Agencja GEO to specjalistyczna firma optymalizująca widoczność marki w odpowiedziach ChatGPT, Perplexity i Claude. Sprawdź, czym różni się od agencji SEO i jak działa GEO w polskich realiach B2B.",
-      "author": {
-        "@type": "Organization",
-        "@id": "https://geolead.pl/#organization",
-        "name": "GeoLead"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://geolead.pl/#organization",
-        "name": "GeoLead",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://geolead.pl/logo.png"
-        }
-      },
-      "datePublished": "2026-06-22",
-      "dateModified": "2026-06-22",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://geolead.pl/blog/agencja-geo-polska/"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Generative Engine Optimization",
-        "description": "Optymalizacja widoczności marki w odpowiedziach generatywnych modeli językowych takich jak ChatGPT, Perplexity i Claude."
-      },
-      "keywords": ["agencja GEO", "agencja GEO w Polsce", "GEO agency Polska", "Generative Engine Optimization", "LLM SEO", "AI Search Optimization"],
-      "inLanguage": "pl-PL",
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://geolead.pl/blog/"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://geolead.pl/blog/agencja-geo-polska/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Strona główna",
-          "item": "https://geolead.pl/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://geolead.pl/blog/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Agencja GEO w Polsce — czym jest i jak wybrać właściwą",
-          "item": "https://geolead.pl/blog/agencja-geo-polska/"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "@id": "https://geolead.pl/blog/agencja-geo-polska/#faq",
+      "inLanguage": "pl-PL",
+      "isPartOf": { "@id": "https://geolead.pl/blog/agencja-geo-polska/#article" },
       "mainEntity": [
         {
           "@type": "Question",
@@ -203,7 +143,7 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
           "name": "Czy GEO działa dla małych firm?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tak — pod warunkiem, że firma operuje w niszy z wyraźną intencją zakupową. Lokalna klinika, kancelaria prawna czy boutiqe software house mają często wyższy potencjał GEO niż duże korporacje, ponieważ AI łatwiej buduje precyzyjną rekomendację dla konkretnego specjalisty."
+            "text": "Tak — pod warunkiem, że firma operuje w niszy z wyraźną intencją zakupową. Lokalna klinika, kancelaria prawna czy butikowy software house mają często wyższy potencjał GEO niż duże korporacje, ponieważ AI łatwiej buduje precyzyjną rekomendację dla konkretnego specjalisty."
           }
         },
         {
