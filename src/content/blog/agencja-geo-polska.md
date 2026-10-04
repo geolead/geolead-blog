@@ -52,7 +52,7 @@ To nie jest klasyczny content marketing. To precyzyjne wgrywanie wiedzy o Twojej
 
 ### 3. Monitorowanie i dominacja
 
-GEO bez mierzalnych wyników to tylko teoria. Monitorujemy wzrost [Entity Salience](/slownik/entity-salience/) — miary siły Twojej marki jako rozpoznawalnej encji w modelach językowych — i raportujemy go w regularnych cyklach. Klienci GeoLead po 90 dniach od startu pojawiają się średnio w 83% odpowiedzi ChatGPT na zapytania branżowe w swoim obszarze.
+GEO bez mierzalnych wyników to tylko teoria. Monitorujemy wzrost [Entity Salience](/slownik/entity-salience/) — miary siły Twojej marki jako rozpoznawalnej encji w modelach językowych — i raportujemy go w regularnych cyklach. Punktem odniesienia jest pomiar wyjściowy wykonany przed startem prac: ten sam zestaw pytań zakupowych, te same platformy, sesje bez pamięci i personalizacji. Każdy raport pokazuje zmianę względem tego pomiaru, a nie obietnicę procentową, której klient nie jest w stanie sprawdzić.
 
 ## GEO vs SEO — różnice, które mają znaczenie dla biznesu
 

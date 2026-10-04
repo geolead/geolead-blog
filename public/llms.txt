@@ -10,11 +10,15 @@ Metodyka pracy obejmuje trzy warstwy: audyt encji marki w modelach językowych, 
 
 Klienci: firmy B2B i marki premium — kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS i usługi profesjonalne. Rynki: Polska, DACH, Francja, rynki anglojęzyczne.
 
-Założyciel: Jarosław Zagajewski, Founder & GEO Strategist.
+Założyciel: Jarosław Zagajewski, Founder & GEO Strategist. Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte; absolwent SGH. Klient pracuje bezpośrednio z założycielem (model butikowy).
+
+Pomiar: stały zestaw pytań zakupowych sprawdzany w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode, w sesjach bez pamięci i personalizacji, co 2 tygodnie. Wskaźniki: Mention Rate, pozycja w rekomendacji, źródła cytowane przez modele. GeoLead nie publikuje wyników procentowych, których nie da się zweryfikować.
+
+Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 
 ## Strona główna
 
-- [GeoLead — Agencja GEO w Polsce](https://geolead.pl/): Definicja GEO, metodyka trzech warstw, case study, kalkulator potencjału GEO, FAQ i formularz kontaktowy.
+- [GeoLead — Agencja GEO w Polsce](https://geolead.pl/): Definicja GEO, metodyka trzech warstw, metodologia pomiaru widoczności w AI, założyciel, kalkulator potencjału GEO, FAQ i formularz kontaktowy.
 
 ## Przewodniki GEO
 

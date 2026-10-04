@@ -202,12 +202,17 @@
       "givenName": "Jarosław",
       "additionalName": "Paweł",
       "familyName": "Zagajewski",
-      "description": "Założyciel GeoLead, pierwszej wyspecjalizowanej agencji GEO (Generative Engine Optimization) w Polsce. Specjalizuje się w audytach encji marki w modelach językowych, wstrzykiwaniu danych w modelu RAG oraz pomiarze Share of Model w ChatGPT, Perplexity i Claude.",
+      "description": "Założyciel GeoLead, pierwszej wyspecjalizowanej agencji GEO (Generative Engine Optimization) w Polsce. Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte. Specjalizuje się w audytach encji marki w modelach językowych, wstrzykiwaniu danych w modelu RAG oraz pomiarze Share of Model w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Szkoła Główna Handlowa w Warszawie",
+        "alternateName": "SGH Warsaw School of Economics"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/",
         "https://x.com/MrZagajewski"
       ],
-      "url": "https://geolead.pl/"
+      "url": "https://geolead.pl/#social-proof"
     },
     {
       "@type": "WebSite",
@@ -550,6 +555,30 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .section-pad{padding:5.5rem 2rem}
 
 /* ── SOCIAL PROOF ── */
+.mt-lead{max-width:680px;margin:0.9rem auto 0;color:var(--text);font-size:0.95rem;line-height:1.7}
+.mt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.mt-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:1.4rem 1.3rem;backdrop-filter:blur(10px);transition:border-color .25s,transform .25s}
+.mt-card:hover{border-color:rgba(224,64,251,0.35);transform:translateY(-3px)}
+.mt-ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.14));color:var(--f);margin-bottom:0.85rem}
+.mt-h{color:var(--text-hi);font-weight:700;font-size:1.05rem;letter-spacing:-0.01em;margin-bottom:0.4rem}
+.mt-p{color:var(--text);font-size:0.86rem;line-height:1.65}
+.mt-note{text-align:center;color:var(--text-lo);font-size:0.78rem;margin:1.4rem auto 3rem;max-width:760px;line-height:1.6}
+.fd-card{display:flex;gap:1.5rem;align-items:flex-start;max-width:820px;margin:0 auto;background:rgba(255,255,255,0.035);border:1px solid rgba(224,64,251,0.22);border-radius:20px;padding:1.75rem;backdrop-filter:blur(12px);box-shadow:0 0 40px rgba(224,64,251,0.06)}
+.fd-av{flex-shrink:0;width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.35rem;color:#070712;background:linear-gradient(135deg,var(--f),var(--c));box-shadow:0 0 22px rgba(224,64,251,0.35)}
+.fd-name{color:#fff;font-size:1.35rem;font-weight:800;letter-spacing:-0.02em;margin-top:0.3rem}
+.fd-role{color:var(--c);font-size:0.82rem;font-weight:600;margin:0.15rem 0 0.7rem}
+.fd-bio{color:var(--text);font-size:0.9rem;line-height:1.7;margin-bottom:0.55rem}
+.fd-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.6rem}
+.fd-links a{font-size:0.82rem;color:var(--text-hi);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:0.4rem 0.9rem;transition:border-color .2s,color .2s}
+.fd-links a:hover{border-color:var(--f);color:var(--f)}
+.ref-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.75rem;margin-top:2rem;font-size:0.86rem;color:var(--text)}
+.ref-k{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-lo);border:1px solid var(--border);border-radius:999px;padding:0.25rem 0.7rem}
+.ref-t strong{color:var(--text-hi)}
+.ind-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.6rem;margin-top:1rem}
+.ind-chip{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.8rem;color:var(--text);background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:999px;padding:0.4rem 0.85rem;transition:border-color .2s}
+.ind-chip:hover{border-color:rgba(224,64,251,0.35)}
+.ind-chip i{color:var(--f)}
+@media (max-width:768px){.mt-grid{grid-template-columns:1fr}.fd-card{flex-direction:column;padding:1.35rem}}
 .logos-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem}
 .logo-item{display:flex;align-items:center;gap:0.5rem;padding:0.7rem 1.3rem;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;font-size:0.88rem;font-weight:700;color:var(--text-lo);letter-spacing:0.02em;transition:border-color .25s,color .25s}
 .logo-item:hover{border-color:rgba(224,64,251,0.3);color:var(--text-hi)}
@@ -721,7 +750,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <nav class="gl-nav">
   <a href="#" class="gl-logo">Geo<span class="g-text">Lead</span></a>
   <ul class="nav-links">
-    <li><a href="#social-proof" data-i18n="nav_proof">Zaufali nam</a></li>
+    <li><a href="#social-proof" data-i18n="nav_proof">Metodologia</a></li>
     <li><a href="#how" data-i18n="nav_how">Jak to działa</a></li>
     <li><a href="https://geolead.pl/slownik/" data-i18n="nav_glossary">Słowniczek</a></li>
     <li><a href="/blog/" data-i18n="nav_blog">Blog</a></li>
@@ -756,7 +785,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <p class="text-lg leading-relaxed a3 max-w-xl mx-auto" style="margin-bottom:2.2rem;color:var(--text)" data-i18n="hero_sub">SEO ewoluuje w GEO. Wprowadzamy firmy B2B na szczyt rekomendacji ChatGPT, Perplexity i Claude — tam, gdzie dziś zapadają decyzje zakupowe.</p>
     <div class="flex flex-wrap gap-4 justify-center a4">
       <a href="#calc" class="btn-hp"><i class="fa-solid fa-calculator" aria-hidden="true"></i><span data-i18n="hero_btn1">Sprawdź swój potencjał</span></a>
-      <a href="#social-proof" class="btn-ho"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span data-i18n="hero_btn2">Zobacz wyniki klientów</span></a>
+      <a href="#social-proof" class="btn-ho"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span data-i18n="hero_btn2">Zobacz, jak mierzymy</span></a>
     </div>
     <!-- AI Console -->
     <div class="mt-12 a7" style="perspective:1200px">
@@ -810,68 +839,59 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   </div>
 </section>
 
-<!-- ── SOCIAL PROOF: ZAUFALI NAM ── -->
-<section id="social-proof" style="background:var(--bg2);padding:4.5rem 2rem;border-top:1px solid var(--border)">
+<!-- ── METODOLOGIA + ZAŁOŻYCIEL (GL-201/GL-202) ── -->
+<section id="social-proof" aria-labelledby="proof-h" style="background:var(--bg2);padding:4.5rem 2rem;border-top:1px solid var(--border)">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center sr" style="margin-bottom:2.5rem">
-      <span class="sect-k" data-i18n="proof_kicker">Zaufali nam</span>
-      <h2 class="sect-h" data-i18n="proof_title">Marki, które wygrywają w AI</h2>
+    <div class="text-center sr" style="margin-bottom:2.25rem">
+      <span class="sect-k" data-i18n="proof_kicker">Pomiar, nie obietnice</span>
+      <h2 class="sect-h" id="proof-h" data-i18n="proof_title">Jak mierzymy widoczność marki w AI</h2>
+      <p class="mt-lead" data-i18n="proof_lead">Nie publikujemy wyników, których nie da się sprawdzić. Każdy projekt zaczyna się od pomiaru wyjściowego, a każdy raport porównujemy z nim — na tych samych pytaniach i tych samych platformach.</p>
     </div>
-    <div class="logos-row sr" style="margin-bottom:4rem;transition-delay:0.1s">
-      <div class="logo-item"><i class="fa-solid fa-house-medical" aria-hidden="true"></i><span>MediPro Clinic</span></div>
-      <div class="logo-item"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span>LexTech Partners</span></div>
-      <div class="logo-item"><i class="fa-solid fa-city" aria-hidden="true"></i><span>UrbanEstate</span></div>
-      <div class="logo-item"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>SaaSify Hub</span></div>
-      <div class="logo-item"><i class="fa-solid fa-utensils" aria-hidden="true"></i><span>GastroGroup</span></div>
-    </div>
-    <!-- Case Study -->
-    <div class="sr" style="transition-delay:0.2s">
-      <div class="text-center" style="margin-bottom:1.75rem">
-        <span class="sect-k" data-i18n="case_kicker">Case Study</span>
-        <h3 class="text-2xl font-bold text-white" style="letter-spacing:-0.02em;margin-top:0.4rem" data-i18n="case_title">Jak MediPro Clinic zaczęło dominować w ChatGPT</h3>
+    <div class="mt-grid">
+      <div class="mt-card sr">
+        <div class="mt-ic"><i class="fa-solid fa-percent" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m1_h">Mention Rate</h3>
+        <p class="mt-p" data-i18n="m1_p">Odsetek pytań zakupowych, w których model wymienia Twoją markę z nazwy.</p>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;max-width:900px;margin:0 auto" class="case-grid-resp">
-        <div>
-          <div style="margin-bottom:1rem">
-            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
-              <div style="width:10px;height:10px;border-radius:50%;background:#ff6b6b;flex-shrink:0"></div>
-              <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--text-lo)" data-i18n="case_before">Przed GEO</span>
-            </div>
-            <p class="text-sm" style="color:var(--text);line-height:1.7" data-i18n="case_before_txt">ChatGPT nie wymieniał kliniki w żadnych odpowiedziach na zapytania o prywatną opiekę medyczną w Warszawie.</p>
-          </div>
-          <div style="height:1px;background:var(--border);margin-bottom:1rem"></div>
-          <div>
-            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
-              <div style="width:10px;height:10px;border-radius:50%;background:var(--f);flex-shrink:0;box-shadow:0 0 8px rgba(224,64,251,0.6)"></div>
-              <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--f)" data-i18n="case_after">Po 90 dniach GEO</span>
-            </div>
-            <p class="text-sm" style="color:var(--text);line-height:1.7" data-i18n="case_after_txt">Klinika pojawia się w <strong style="color:white">83% odpowiedzi</strong> ChatGPT na zapytania o specjalistów w Warszawie. Wzrost nowych rejestracji online o <strong style="color:white">+47%</strong>.</p>
-          </div>
-          <div style="margin-top:1.25rem;display:flex;gap:1.5rem">
-            <div><span class="g-text font-black text-2xl">83%</span><span class="block text-xs" style="color:var(--text-lo);margin-top:0.2rem" data-i18n="case_stat1">widoczność w AI</span></div>
-            <div><span class="g-text font-black text-2xl">+47%</span><span class="block text-xs" style="color:var(--text-lo);margin-top:0.2rem" data-i18n="case_stat2">nowych leadów</span></div>
-            <div><span class="g-text font-black text-2xl">90</span><span class="block text-xs" style="color:var(--text-lo);margin-top:0.2rem" data-i18n="case_stat3">dni do efektów</span></div>
-          </div>
-        </div>
-        <div class="case-mock">
-          <div class="case-bar">
-            <div style="display:flex;gap:4px"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
-            <div style="flex:1;text-align:center;font-size:0.65rem;font-weight:600;color:#7a7aae;letter-spacing:0.07em">ChatGPT</div>
-            <div style="font-size:0.6rem;color:#8282ae;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.4rem">GPT-4o</div>
-          </div>
-          <div class="case-body">
-            <div class="case-q"><div class="case-q-bbl" data-i18n="case_chat_q">Szukam dobrego specjalisty ortopedy w Warszawie, prywatnie. Co polecasz?</div></div>
-            <div class="case-a">
-              <div class="case-av"><i class="fa-solid fa-robot" style="font-size:0.7rem" aria-hidden="true"></i></div>
-              <div class="case-a-bbl"><span data-i18n="case_chat_a1">Zdecydowanie polecam </span><strong>MediPro Clinic</strong><span data-i18n="case_chat_a2"> — to jedna z najwyżej ocenianych prywatnych klinik w Warszawie. Specjalizują się w ortopedii i są znani z krótkich terminów oczekiwania. Warto sprawdzić ich stronę.</span></div>
-            </div>
-          </div>
-          <div class="case-inp">
-            <div class="case-inp-f" data-i18n="case_chat_ph">Zadaj pytanie...</div>
-            <div class="case-snd"><i class="fa-solid fa-arrow-up" style="color:var(--bg);font-size:0.7rem" aria-hidden="true"></i></div>
-          </div>
+      <div class="mt-card sr" style="transition-delay:0.08s">
+        <div class="mt-ic"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m2_h">Pozycja w rekomendacji</h3>
+        <p class="mt-p" data-i18n="m2_p">Czy AI wskazuje Cię jako pierwszy wybór, czy jako trzecią opcję po konkurencji.</p>
+      </div>
+      <div class="mt-card sr" style="transition-delay:0.16s">
+        <div class="mt-ic"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m3_h">Źródła cytowane</h3>
+        <p class="mt-p" data-i18n="m3_p">Domeny, z których ChatGPT, Perplexity i Gemini składają odpowiedź w Twojej kategorii. To lista celów dla działań RAG.</p>
+      </div>
+    </div>
+    <p class="mt-note sr" data-i18n="meth_note">Stały zestaw pytań zakupowych · ChatGPT, Perplexity, Claude, Gemini, Google AI Mode · sesje bez pamięci i personalizacji · pomiar co 2 tygodnie</p>
+
+    <div class="fd-card sr" itemscope itemtype="https://schema.org/Person" itemid="https://geolead.pl/#jaroslaw-zagajewski">
+      <div class="fd-av" aria-hidden="true">JZ</div>
+      <div class="fd-body">
+        <span class="sect-k" data-i18n="fd_kicker">Kto prowadzi Twój projekt</span>
+        <h3 class="fd-name"><span itemprop="name">Jarosław Zagajewski</span></h3>
+        <p class="fd-role" itemprop="jobTitle" data-i18n="fd_role">Founder &amp; GEO Strategist</p>
+        <p class="fd-bio" itemprop="description" data-i18n="fd_bio">Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte. Absolwent SGH. Do GEO wnosi dyscyplinę CFO: każdy wynik ma metodę pomiaru, punkt odniesienia i datę.</p>
+        <p class="fd-bio" data-i18n="fd_boutique">Model butikowy: pracujesz bezpośrednio z założycielem, bez przekazywania projektu juniorom.</p>
+        <div class="fd-links">
+          <a href="https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/" itemprop="sameAs" rel="me noopener" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          <a href="#contact"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> <span data-i18n="fd_cta">Umów rozmowę</span></a>
         </div>
       </div>
+    </div>
+
+    <div class="ref-row sr">
+      <span class="ref-k" data-i18n="ref_label">Wybrani klienci</span>
+      <span class="ref-t"><strong>HASBORG</strong> — <span data-i18n="ref_txt">producent maszyn dla przemysłu cukierniczego</span></span>
+    </div>
+    <div class="ind-row sr">
+      <span class="ref-k" data-i18n="ind_label">Branże</span>
+      <span class="ind-chip"><i class="fa-solid fa-house-medical" aria-hidden="true"></i><span data-i18n="ind_1">Kliniki medycyny estetycznej</span></span>
+      <span class="ind-chip"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span data-i18n="ind_2">Kancelarie prawne</span></span>
+      <span class="ind-chip"><i class="fa-solid fa-city" aria-hidden="true"></i><span data-i18n="ind_3">Nieruchomości premium</span></span>
+      <span class="ind-chip"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span data-i18n="ind_4">SaaS i software house’y</span></span>
+      <span class="ind-chip"><i class="fa-solid fa-industry" aria-hidden="true"></i><span data-i18n="ind_5">Przemysł i eksport</span></span>
     </div>
   </div>
 </section>
@@ -1428,7 +1448,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </p>
     </div>
     <div style="display:flex;gap:1.25rem;flex-wrap:wrap">
-      <a href="#social-proof" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_proof">Zaufali nam</a>
+      <a href="#social-proof" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_proof">Metodologia</a>
       <a href="#how" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_how">Jak to działa</a>
       <a href="https://geolead.pl/slownik/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_glossary">Słowniczek</a>
       <a href="/blog/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_blog">Blog</a>
@@ -1454,7 +1474,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
    ============================================================ */
 const T = {
 pl:{
-  nav_proof:"Zaufali nam",nav_how:"Jak to działa",nav_glossary:"Słowniczek",nav_blog:"Blog",nav_calc:"Kalkulator",nav_faq:"FAQ",nav_cta:"Darmowy Audyt",
+  nav_proof:"Metodologia",nav_how:"Jak to działa",nav_glossary:"Słowniczek",nav_blog:"Blog",nav_calc:"Kalkulator",nav_faq:"FAQ",nav_cta:"Darmowy Audyt",
   badge_text:"Generative Engine Optimization",
   hero_t0:"Agencja GEO w Polsce.",
   gl_more:"Pełna definicja →",
@@ -1465,16 +1485,19 @@ pl:{
   wig_p3:"Uwaga terminologiczna: skrót GEO w nazwie GeoLead oznacza Generative Engine Optimization. Nie świadczymy usług geodezyjnych, kartograficznych ani geolokalizacyjnych. Obsługujemy firmy B2B i marki premium — kliniki medycyny estetycznej, kancelarie prawne, software house’y, spółki SaaS i usługi profesjonalne — w Polsce, regionie DACH, Francji i na rynkach anglojęzycznych.",
   hero_t1:"Bądź pierwszym wyborem,",hero_t2:"gdy klient pyta AI.",
   hero_sub:"SEO ewoluuje w GEO. Wprowadzamy firmy B2B na szczyt rekomendacji ChatGPT, Perplexity i Claude — tam, gdzie dziś zapadają decyzje zakupowe.",
-  hero_btn1:"Sprawdź swój potencjał",hero_btn2:"Zobacz wyniki klientów",
+  hero_btn1:"Sprawdź swój potencjał",hero_btn2:"Zobacz, jak mierzymy",
   stat1:"więcej rekomendacji AI",stat2:"dni do wyników",stat3:"na raport widoczności AI",
-  proof_kicker:"Zaufali nam",proof_title:"Marki, które wygrywają w AI",
-  case_kicker:"Case Study",case_title:"Jak MediPro Clinic zaczęło dominować w ChatGPT",
-  case_before:"Przed GEO",case_before_txt:"ChatGPT nie wymieniał kliniki w żadnych odpowiedziach na zapytania o prywatną opiekę medyczną w Warszawie.",
-  case_after:"Po 90 dniach GEO",case_after_txt:'Klinika pojawia się w <strong style="color:white">83% odpowiedzi</strong> ChatGPT. Wzrost nowych rejestracji online o <strong style="color:white">+47%</strong>.',
-  case_stat1:"widoczność w AI",case_stat2:"nowych leadów",case_stat3:"dni do efektów",
-  case_chat_q:"Szukam dobrego specjalisty ortopedy w Warszawie, prywatnie. Co polecasz?",
-  case_chat_a1:"Zdecydowanie polecam ",case_chat_a2:" — to jedna z najwyżej ocenianych prywatnych klinik w Warszawie. Specjalizują się w ortopedii i są znani z krótkich terminów oczekiwania.",
-  case_chat_ph:"Zadaj pytanie...",
+  proof_kicker:"Pomiar, nie obietnice",proof_title:"Jak mierzymy widoczność marki w AI",
+  proof_lead:"Nie publikujemy wyników, których nie da się sprawdzić. Każdy projekt zaczyna się od pomiaru wyjściowego, a każdy raport porównujemy z nim — na tych samych pytaniach i tych samych platformach.",
+  m1_h:"Mention Rate",m1_p:"Odsetek pytań zakupowych, w których model wymienia Twoją markę z nazwy.",
+  m2_h:"Pozycja w rekomendacji",m2_p:"Czy AI wskazuje Cię jako pierwszy wybór, czy jako trzecią opcję po konkurencji.",
+  m3_h:"Źródła cytowane",m3_p:"Domeny, z których ChatGPT, Perplexity i Gemini składają odpowiedź w Twojej kategorii. To lista celów dla działań RAG.",
+  meth_note:"Stały zestaw pytań zakupowych · ChatGPT, Perplexity, Claude, Gemini, Google AI Mode · sesje bez pamięci i personalizacji · pomiar co 2 tygodnie",
+  fd_kicker:"Kto prowadzi Twój projekt",fd_role:"Founder & GEO Strategist",
+  fd_bio:"Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte. Absolwent SGH. Do GEO wnosi dyscyplinę CFO: każdy wynik ma metodę pomiaru, punkt odniesienia i datę.",
+  fd_boutique:"Model butikowy: pracujesz bezpośrednio z założycielem, bez przekazywania projektu juniorom.",fd_cta:"Umów rozmowę",
+  ref_label:"Wybrani klienci",ref_txt:"producent maszyn dla przemysłu cukierniczego",
+  ind_label:"Branże",ind_1:"Kliniki medycyny estetycznej",ind_2:"Kancelarie prawne",ind_3:"Nieruchomości premium",ind_4:"SaaS i software house’y",ind_5:"Przemysł i eksport",
   gl_kicker:"Słowniczek CEO",
   gl_title:"AI brzmi skomplikowanie? Tłumaczymy to na język biznesu.",
   gl_sub:"Trzy pojęcia, które dziś decydują, czy klient trafia do Ciebie — czy do konkurencji.",
@@ -1558,7 +1581,7 @@ pl:{
   nav_contact:"Kontakt",nav_privacy:"Polityka prywatności",ilink_lbl:"Baza wiedzy GEO",ilink_sub1:"Przewodniki",ilink_sub2:"GEO w Twojej branży",sending:"Wysyłanie...",err_msg:"Błąd komunikacji. Napisz na ",
 },
 en:{
-  nav_proof:"Clients",nav_how:"How It Works",nav_glossary:"Glossary",nav_blog:"Blog",nav_calc:"Calculator",nav_faq:"FAQ",nav_cta:"Free Audit",
+  nav_proof:"Methodology",nav_how:"How It Works",nav_glossary:"Glossary",nav_blog:"Blog",nav_calc:"Calculator",nav_faq:"FAQ",nav_cta:"Free Audit",
   badge_text:"Generative Engine Optimization",
   hero_t0:"GEO Agency in Poland.",
   gl_more:"Full definition →",
@@ -1569,16 +1592,19 @@ en:{
   wig_p3:"A note on terminology: the GEO in GeoLead stands for Generative Engine Optimization. We do not provide surveying, cartography or geolocation services. Our clients are B2B firms and premium brands — aesthetic medicine clinics, law firms, software houses, SaaS companies and professional services — in Poland, the DACH region, France and English-speaking markets.",
   hero_t1:"Be the first choice",hero_t2:"when clients ask AI.",
   hero_sub:"SEO is evolving into GEO. We put B2B companies at the top of ChatGPT, Perplexity and Claude recommendations — where purchasing decisions are made.",
-  hero_btn1:"Check your potential",hero_btn2:"See client results",
+  hero_btn1:"Check your potential",hero_btn2:"See how we measure",
   stat1:"more AI recommendations",stat2:"days to results",stat3:"for your AI visibility report",
-  proof_kicker:"Trusted by",proof_title:"Brands winning in AI",
-  case_kicker:"Case Study",case_title:"How MediPro Clinic started dominating ChatGPT",
-  case_before:"Before GEO",case_before_txt:"ChatGPT did not mention the clinic in any answers about private medical care in Warsaw.",
-  case_after:"After 90 days of GEO",case_after_txt:'The clinic appears in <strong style="color:white">83% of ChatGPT answers</strong> about specialists in Warsaw. Online bookings increased by <strong style="color:white">+47%</strong>.',
-  case_stat1:"AI visibility",case_stat2:"new leads",case_stat3:"days to results",
-  case_chat_q:"I'm looking for a good private orthopaedic specialist in Warsaw. Any recommendations?",
-  case_chat_a1:"I'd definitely recommend ",case_chat_a2:" — one of the highest-rated private clinics in Warsaw. They specialise in orthopaedics and are known for short waiting times.",
-  case_chat_ph:"Ask a question...",
+  proof_kicker:"Measurement, not promises",proof_title:"How we measure brand visibility in AI",
+  proof_lead:"We don't publish results that can't be verified. Every project starts with a baseline measurement, and every report is compared against it — same questions, same platforms.",
+  m1_h:"Mention Rate",m1_p:"Share of buying-intent questions in which the model names your brand.",
+  m2_h:"Recommendation position",m2_p:"Whether AI names you as the first choice or as the third option after your competitors.",
+  m3_h:"Cited sources",m3_p:"The domains ChatGPT, Perplexity and Gemini build answers from in your category — the target list for RAG work.",
+  meth_note:"Fixed set of buying-intent questions · ChatGPT, Perplexity, Claude, Gemini, Google AI Mode · sessions without memory or personalisation · measured every 2 weeks",
+  fd_kicker:"Who runs your project",fd_role:"Founder & GEO Strategist",
+  fd_bio:"15+ years in finance and controlling at international manufacturing companies, previously audit and due diligence at Deloitte. SGH Warsaw School of Economics graduate. Brings CFO discipline to GEO: every result has a measurement method, a baseline and a date.",
+  fd_boutique:"Boutique model: you work directly with the founder — no hand-off to juniors.",fd_cta:"Book a call",
+  ref_label:"Selected clients",ref_txt:"manufacturer of machinery for the confectionery industry",
+  ind_label:"Industries",ind_1:"Aesthetic medicine clinics",ind_2:"Law firms",ind_3:"Premium real estate",ind_4:"SaaS & software houses",ind_5:"Manufacturing & export",
   gl_kicker:"C-Level Glossary",
   gl_title:"AI sounds complex? We translate it into business language.",
   gl_sub:"Three concepts that decide today whether a client picks you — or your competitor.",
@@ -1662,7 +1688,7 @@ en:{
   nav_contact:"Contact",nav_privacy:"Privacy policy",ilink_lbl:"GEO knowledge base",ilink_sub1:"Guides",ilink_sub2:"GEO in your industry",sending:"Sending...",err_msg:"Communication error. Write to ",
 },
 de:{
-  nav_proof:"Referenzen",nav_how:"So funktioniert's",nav_glossary:"Glossar",nav_blog:"Blog",nav_calc:"Rechner",nav_faq:"FAQ",nav_cta:"Kostenloses Audit",
+  nav_proof:"Methodik",nav_how:"So funktioniert's",nav_glossary:"Glossar",nav_blog:"Blog",nav_calc:"Rechner",nav_faq:"FAQ",nav_cta:"Kostenloses Audit",
   badge_text:"Generative Engine Optimization",
   hero_t0:"GEO-Agentur in Polen.",
   gl_more:"Vollständige Definition →",
@@ -1673,16 +1699,19 @@ de:{
   wig_p3:"Terminologischer Hinweis: Das Kürzel GEO in GeoLead steht für Generative Engine Optimization. Wir erbringen keine Vermessungs-, Kartografie- oder Geolokalisierungsleistungen. Unsere Kunden sind B2B-Unternehmen und Premiummarken — Kliniken für ästhetische Medizin, Anwaltskanzleien, Software-Häuser, SaaS-Unternehmen und professionelle Dienstleister — in Polen, der DACH-Region, Frankreich und im englischsprachigen Raum.",
   hero_t1:"Seien Sie die erste Wahl,",hero_t2:"wenn Kunden KI fragen.",
   hero_sub:"SEO entwickelt sich zu GEO. Wir bringen B2B-Unternehmen an die Spitze der Empfehlungen von ChatGPT, Perplexity und Claude — dort, wo Kaufentscheidungen fallen.",
-  hero_btn1:"Potenzial prüfen",hero_btn2:"Kundenergebnisse sehen",
+  hero_btn1:"Potenzial prüfen",hero_btn2:"So messen wir",
   stat1:"mehr KI-Empfehlungen",stat2:"Tage bis zu Ergebnissen",stat3:"bis zum KI-Sichtbarkeitsbericht",
-  proof_kicker:"Vertrauen uns",proof_title:"Marken, die in der KI gewinnen",
-  case_kicker:"Fallstudie",case_title:"Wie MediPro Clinic ChatGPT dominierte",
-  case_before:"Vor GEO",case_before_txt:"ChatGPT erwähnte die Klinik in keiner Antwort zu privaten Medizindiensten in Warschau.",
-  case_after:"Nach 90 Tagen GEO",case_after_txt:'Die Klinik erscheint in <strong style="color:white">83% der ChatGPT-Antworten</strong>. Online-Buchungen stiegen um <strong style="color:white">+47%</strong>.',
-  case_stat1:"KI-Sichtbarkeit",case_stat2:"neue Leads",case_stat3:"Tage bis zu Ergebnissen",
-  case_chat_q:"Ich suche einen guten privaten Orthopäden in Warschau. Was empfehlen Sie?",
-  case_chat_a1:"Ich empfehle definitiv ",case_chat_a2:" — eine der bestbewerteten Privatkliniken in Warschau, bekannt für kurze Wartezeiten.",
-  case_chat_ph:"Frage stellen...",
+  proof_kicker:"Messung statt Versprechen",proof_title:"Wie wir die Sichtbarkeit einer Marke in KI messen",
+  proof_lead:"Wir veröffentlichen keine Ergebnisse, die sich nicht überprüfen lassen. Jedes Projekt beginnt mit einer Ausgangsmessung, und jeder Bericht wird damit verglichen — mit denselben Fragen auf denselben Plattformen.",
+  m1_h:"Mention Rate",m1_p:"Anteil der Kaufanfragen, in denen das Modell Ihre Marke namentlich nennt.",
+  m2_h:"Position in der Empfehlung",m2_p:"Ob die KI Sie als erste Wahl nennt oder als dritte Option nach dem Wettbewerb.",
+  m3_h:"Zitierte Quellen",m3_p:"Die Domains, aus denen ChatGPT, Perplexity und Gemini Antworten in Ihrer Kategorie zusammensetzen — die Zielliste für RAG-Maßnahmen.",
+  meth_note:"Fester Satz von Kaufanfragen · ChatGPT, Perplexity, Claude, Gemini, Google AI Mode · Sitzungen ohne Speicher und Personalisierung · Messung alle 2 Wochen",
+  fd_kicker:"Wer Ihr Projekt leitet",fd_role:"Founder & GEO Strategist",
+  fd_bio:"Über 15 Jahre in Finanzen und Controlling internationaler Industrieunternehmen, zuvor Prüfung und Due Diligence bei Deloitte. Absolvent der SGH Warschau. Bringt CFO-Disziplin in GEO: Jedes Ergebnis hat eine Messmethode, einen Ausgangswert und ein Datum.",
+  fd_boutique:"Boutique-Modell: Sie arbeiten direkt mit dem Gründer — keine Übergabe an Junioren.",fd_cta:"Gespräch vereinbaren",
+  ref_label:"Ausgewählte Kunden",ref_txt:"Hersteller von Maschinen für die Süßwarenindustrie",
+  ind_label:"Branchen",ind_1:"Kliniken für ästhetische Medizin",ind_2:"Anwaltskanzleien",ind_3:"Premium-Immobilien",ind_4:"SaaS & Softwarehäuser",ind_5:"Industrie & Export",
   gl_kicker:"C-Level Glossar",
   gl_title:"KI klingt kompliziert? Wir übersetzen es in die Geschäftssprache.",
   gl_sub:"Drei Begriffe, die heute entscheiden, ob ein Kunde Sie — oder Ihre Konkurrenz — wählt.",
@@ -1766,7 +1795,7 @@ de:{
   nav_contact:"Kontakt",nav_privacy:"Datenschutzerklärung",ilink_lbl:"GEO-Wissensdatenbank",ilink_sub1:"Leitfäden",ilink_sub2:"GEO in Ihrer Branche",sending:"Wird gesendet...",err_msg:"Kommunikationsfehler. Schreiben Sie an ",
 },
 fr:{
-  nav_proof:"Références",nav_how:"Comment ça marche",nav_glossary:"Glossaire",nav_blog:"Blog",nav_calc:"Calculateur",nav_faq:"FAQ",nav_cta:"Audit Gratuit",
+  nav_proof:"Méthodologie",nav_how:"Comment ça marche",nav_glossary:"Glossaire",nav_blog:"Blog",nav_calc:"Calculateur",nav_faq:"FAQ",nav_cta:"Audit Gratuit",
   badge_text:"Generative Engine Optimization",
   hero_t0:"Agence GEO en Pologne.",
   gl_more:"Définition complète →",
@@ -1777,16 +1806,19 @@ fr:{
   wig_p3:"Précision terminologique : le sigle GEO dans GeoLead signifie Generative Engine Optimization. Nous ne fournissons pas de services de géodésie, de cartographie ni de géolocalisation. Nos clients sont des entreprises B2B et des marques premium — cliniques de médecine esthétique, cabinets d'avocats, éditeurs de logiciels, sociétés SaaS et services professionnels — en Pologne, en zone DACH, en France et sur les marchés anglophones.",
   hero_t1:"Soyez le premier choix",hero_t2:"quand le client interroge l'IA.",
   hero_sub:"Le SEO évolue vers le GEO. Nous plaçons les entreprises B2B en tête des recommandations ChatGPT, Perplexity et Claude — là où se prennent les décisions d'achat.",
-  hero_btn1:"Vérifier mon potentiel",hero_btn2:"Voir les résultats clients",
+  hero_btn1:"Vérifier mon potentiel",hero_btn2:"Notre méthode de mesure",
   stat1:"plus de recommandations IA",stat2:"jours pour des résultats",stat3:"pour le rapport de visibilité IA",
-  proof_kicker:"Ils nous font confiance",proof_title:"Les marques qui gagnent dans l'IA",
-  case_kicker:"Étude de cas",case_title:"Comment MediPro Clinic a dominé ChatGPT",
-  case_before:"Avant GEO",case_before_txt:"ChatGPT ne mentionnait pas la clinique dans les réponses sur les soins médicaux privés à Varsovie.",
-  case_after:"Après 90 jours de GEO",case_after_txt:'La clinique apparaît dans <strong style="color:white">83% des réponses ChatGPT</strong>. Réservations en ligne en hausse de <strong style="color:white">+47%</strong>.',
-  case_stat1:"visibilité IA",case_stat2:"nouveaux leads",case_stat3:"jours pour des résultats",
-  case_chat_q:"Je cherche un bon orthopédiste privé à Varsovie. Qu'est-ce que vous recommandez ?",
-  case_chat_a1:"Je recommande vivement ",case_chat_a2:" — l'une des cliniques privées les mieux notées à Varsovie, reconnue pour ses délais d'attente courts.",
-  case_chat_ph:"Posez une question...",
+  proof_kicker:"Des mesures, pas des promesses",proof_title:"Comment nous mesurons la visibilité d’une marque dans l’IA",
+  proof_lead:"Nous ne publions pas de résultats invérifiables. Chaque projet commence par une mesure de référence, et chaque rapport y est comparé — mêmes questions, mêmes plateformes.",
+  m1_h:"Mention Rate",m1_p:"Part des questions d’achat dans lesquelles le modèle cite votre marque.",
+  m2_h:"Position dans la recommandation",m2_p:"L’IA vous cite-t-elle en premier choix ou en troisième option après vos concurrents ?",
+  m3_h:"Sources citées",m3_p:"Les domaines à partir desquels ChatGPT, Perplexity et Gemini construisent leurs réponses dans votre catégorie — la liste de cibles pour le travail RAG.",
+  meth_note:"Jeu fixe de questions d’achat · ChatGPT, Perplexity, Claude, Gemini, Google AI Mode · sessions sans mémoire ni personnalisation · mesure toutes les 2 semaines",
+  fd_kicker:"Qui pilote votre projet",fd_role:"Founder & GEO Strategist",
+  fd_bio:"Plus de 15 ans en finance et contrôle de gestion dans des groupes industriels internationaux, auparavant audit et due diligence chez Deloitte. Diplômé de la SGH (Varsovie). Apporte au GEO la discipline d’un CFO : chaque résultat a une méthode de mesure, une référence et une date.",
+  fd_boutique:"Modèle boutique : vous travaillez directement avec le fondateur, sans relais vers des juniors.",fd_cta:"Prendre rendez-vous",
+  ref_label:"Clients sélectionnés",ref_txt:"fabricant de machines pour l’industrie de la confiserie",
+  ind_label:"Secteurs",ind_1:"Cliniques de médecine esthétique",ind_2:"Cabinets d’avocats",ind_3:"Immobilier haut de gamme",ind_4:"SaaS et éditeurs de logiciels",ind_5:"Industrie et export",
   gl_kicker:"Glossaire C-Level",
   gl_title:"L'IA semble compliquée ? Nous la traduisons en langage business.",
   gl_sub:"Trois concepts qui décident aujourd'hui si un client vous choisit — ou votre concurrent.",
