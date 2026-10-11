@@ -138,6 +138,8 @@ Jeśli czytasz to jako decydent, a nie jako ciekawostkę, oto realna kolejność
 
 To nie jest projekt na weekend. To proces, w którym pierwsze efekty widać zwykle po 3–6 miesiącach — ale przewaga jest trwała, bo budujesz autorytet, którego konkurencja nie skopiuje w tydzień.
 
+Jeśli planujesz zlecić GEO na zewnątrz, zanim podpiszesz umowę, sprawdź, czy [agencja GEO](/blog/agencja-geo-polska/), z którą rozmawiasz, odpowie konkretnie na 7 pytań o pomiar, źródła cytowane przez AI i model rozliczeń.
+
 <div class="article-cta glass">
 <h3>Sprawdź, co AI mówi dziś o Twojej firmie</h3>
 <p>Bezpłatny audyt widoczności w ChatGPT, Perplexity i Claude. Bez zobowiązań — konkretne dane w 24h.</p>
@@ -151,6 +153,6 @@ To nie jest projekt na weekend. To proces, w którym pierwsze efekty widać zwyk
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić klientowi</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>

@@ -66,6 +66,8 @@ Jeśli prowadzisz gabinet i chcesz pojawiać się w rekomendacjach AI, kolejnoś
 
 Każdy z tych kroków zmniejsza ryzyko, że pacjent gotowy na zabieg trafi do konkurencji tylko dlatego, że AI jej zaufało bardziej. Pełny mechanizm GEO rozkładamy w [przewodniku „Czym jest GEO”](/blog/czym-jest-geo/), a sam proces decyzyjny modelu w artykule [jak ChatGPT wybiera firmy](/blog/jak-chatgpt-wybiera-firmy/).
 
+Wybierając wykonawcę dla kliniki, sprawdź, czy [agencja GEO](/blog/agencja-geo-polska/) zna wymogi YMYL dla treści medycznych i potrafi pokazać, z jakich źródeł AI czerpie wiedzę o gabinetach w Twoim mieście. Pełną listę 7 pytań kontrolnych znajdziesz w przewodniku po wyborze wykonawcy.
+
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI poleca dziś Twoją klinikę</h3>
 <p>Bezpłatny audyt: zadajemy realne pytania pacjentów i pokazujemy, czy ChatGPT i Perplexity wskazują Twój gabinet — i co o nim mówią.</p>
@@ -79,6 +81,6 @@ Każdy z tych kroków zmniejsza ryzyko, że pacjent gotowy na zabieg trafi do ko
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/halucynacje-ai/">Halucynacje AI — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>

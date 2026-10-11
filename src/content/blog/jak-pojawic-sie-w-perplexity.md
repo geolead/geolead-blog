@@ -79,6 +79,8 @@ Punkt piąty jest wyjątkowo wygodny właśnie w Perplexity — bo widzisz źró
 
 Cały mechanizm, którego Perplexity jest najczystszym przykładem, rozkładamy w [przewodniku „Czym jest GEO”](/blog/czym-jest-geo/). A jeśli chcesz zrozumieć, jak podobne decyzje podejmuje ChatGPT, zajrzyj do artykułu [jak ChatGPT wybiera firmy](/blog/jak-chatgpt-wybiera-firmy/).
 
+Jeśli zlecasz tę pracę na zewnątrz, sprawdź, czy [agencja GEO](/blog/agencja-geo-polska/) pokaże Ci listę domen, które Perplexity cytuje w Twojej kategorii. Od nich zaczyna się praca. Pełną listę 7 pytań kontrolnych znajdziesz w przewodniku po wyborze wykonawcy.
+
 <div class="article-cta glass">
 <h3>Sprawdź, czy Perplexity cytuje dziś Twoją firmę</h3>
 <p>Bezpłatny audyt: zadajemy realne pytania Twoich klientów i pokazujemy, czy pojawiasz się w źródłach — i co zrobić, by zacząć.</p>
@@ -92,6 +94,6 @@ Cały mechanizm, którego Perplexity jest najczystszym przykładem, rozkładamy 
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>

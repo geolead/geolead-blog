@@ -58,6 +58,8 @@ To znaczy, że w prawie nie wystarczy być dobrym — trzeba być **jednoznaczni
 
 W prawie autorytet zawsze był walutą — zmienia się tylko to, że teraz ocenia go również AI, i robi to na podstawie śladów, które zostawiasz w sieci. Pełny mechanizm rozkładamy w [przewodniku „Czym jest GEO”](/blog/czym-jest-geo/), a logikę rekomendacji w artykule [jak ChatGPT wybiera firmy](/blog/jak-chatgpt-wybiera-firmy/).
 
+Wybierając wykonawcę dla kancelarii, sprawdź, czy [agencja GEO](/blog/agencja-geo-polska/) mierzy obecność na realnych pytaniach klientów w Twojej specjalizacji i rozumie ograniczenia etyki zawodowej w komunikacji. Pełną listę 7 pytań kontrolnych znajdziesz w przewodniku po wyborze wykonawcy.
+
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI poleca dziś Twoją kancelarię</h3>
 <p>Bezpłatny audyt: zadajemy realne pytania klientów o ekspertów w Twojej specjalizacji i pokazujemy, czy ChatGPT i Perplexity wskazują Twoją kancelarię.</p>
@@ -71,6 +73,6 @@ W prawie autorytet zawsze był walutą — zmienia się tylko to, że teraz ocen
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>

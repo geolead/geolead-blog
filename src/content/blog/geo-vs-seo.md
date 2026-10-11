@@ -79,6 +79,8 @@ Skoro porównujemy — praktyczna przestroga. Część agencji sprzedaje stare S
 
 GEO i SEO to nie konkurenci, lecz dwie warstwy tego samego lejka, działające na różnych mechanizmach i różnych etapach decyzji klienta. SEO trzyma klasyczny ruch wyszukiwarkowy. GEO przejmuje rosnący strumień klientów rozpoczynających od AI — i dostarcza leady wyższej jakości. Dla wysokomarżowego B2B pytanie nie brzmi „GEO czy SEO”, lecz **jak rozłożyć budżet między obie warstwy**, by pokryć obie ścieżki, którymi klient dziś do Ciebie trafia. Pełny mechanizm GEO rozkładamy w [przewodniku „Czym jest GEO”](/blog/czym-jest-geo/), a sam proces decyzyjny modelu w artykule [jak ChatGPT wybiera firmy](/blog/jak-chatgpt-wybiera-firmy/).
 
+Jeśli rozmawiasz z wykonawcą, który obiecuje „SEO pod AI”, sprawdź, czy to rzeczywiście [agencja GEO](/blog/agencja-geo-polska/): zapytaj o zestaw pytań do pomiaru, listę źródeł cytowanych przez modele i to, czego agencja nie może zagwarantować. Pełną listę 7 pytań kontrolnych znajdziesz w przewodniku po wyborze wykonawcy.
+
 <div class="article-cta glass">
 <h3>Nie wiesz, ile tracisz przez brak GEO?</h3>
 <p>Bezpłatny audyt pokaże, czy AI poleca dziś Twoją firmę, czy konkurencję — i ile leadów przez to przepływa obok Ciebie.</p>
@@ -92,6 +94,6 @@ GEO i SEO to nie konkurenci, lecz dwie warstwy tego samego lejka, działające n
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/rag/">RAG — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>

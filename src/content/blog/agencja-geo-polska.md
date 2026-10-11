@@ -1,7 +1,8 @@
 ---
-title: "Agencja GEO Polska — GeoLead | Optymalizacja pod ChatGPT i AI"
-description: "Pierwsza agencja GEO w Polsce. Analizujemy, jak ChatGPT i Perplexity widzą Twoją markę — i naprawiamy to, zanim zrobi to konkurencja. Bezpłatny audyt →"
+title: "Agencja GEO w Polsce: jak wybrać? 7 pytań przed umową [2026]"
+description: "Jak wybrać agencję GEO w Polsce? 7 pytań, które oddzielą specjalistę od agencji SEO z nową nazwą: pomiar, źródła AI, ceny, terminy. Bezpłatny audyt."
 pubDate: 2026-06-22
+updatedDate: 2026-10-11
 author: "GeoLead"
 pillar: "edukacja"
 isPillar: true
@@ -9,6 +10,8 @@ funnel: "tofu"
 keywords:
   - "agencja GEO"
   - "agencja GEO w Polsce"
+  - "agencja GEO Polska"
+  - "jak wybrać agencję GEO"
   - "GEO agency Polska"
   - "Generative Engine Optimization"
   - "LLM SEO"
@@ -83,20 +86,44 @@ GEO działa najlepiej tam, gdzie klient przed zakupem pyta o rekomendację — z
 
 Jeśli Twój klient podejmuje przemyślaną decyzję zakupową i ma nawyk pytania — w Google lub znajomym — zapyta też AI.
 
-## Jak wybrać agencję GEO w Polsce?
+## Jak wybrać agencję GEO: 7 pytań przed podpisaniem umowy
 
-Rynek agencji GEO w Polsce jest młody. Większość firm SEO dopiero zaczyna dodawać GEO do oferty jako usługę dodatkową — bez specjalistycznej wiedzy o architekturze LLM, mechanizmach RAG ani metodach mierzenia Entity Salience.
+Rynek agencji GEO w Polsce jest młody. Większość firm SEO dodaje dziś GEO do oferty jako usługę dodatkową, często bez metody pomiaru i bez wiedzy o tym, skąd modele AI biorą informacje. Rozmowa ofertowa trwa godzinę. Te siedem pytań wystarczy, żeby w tym czasie oddzielić specjalistę od agencji SEO z nową nazwą.
 
-Przy wyborze agencji GEO warto zadać trzy pytania weryfikujące:
+### 1. Jak mierzysz efekty i na jakim zestawie pytań?
 
-**1. Jak mierzysz efekty?**
-Jedyną wiarygodną metodą jest systematyczne testowanie promptów — wysyłanie zapytań do modeli AI i analiza częstotliwości oraz kontekstu wzmianek marki. Jeśli agencja odpowiada "raportem z pozycji w Google" — to nie jest agencja GEO.
+Jedyna wiarygodna metoda to stały zestaw pytań zakupowych, sprawdzany cyklicznie w modelach AI w sesjach bez pamięci i personalizacji. Poproś o przykład takiej listy i o raport z pomiaru wyjściowego. Jeśli w odpowiedzi słyszysz o pozycjach w Google i ruchu organicznym, rozmawiasz z agencją SEO.
 
-**2. Czy dostarczasz structured data i JSON-LD dedykowane pod LLM?**
-Optymalizacja pod AI wymaga innego zestawu danych strukturyzowanych niż klasyczne SEO. Schema.org `Organization`, `FAQPage`, `DefinedTermSet` — to elementy, które modele AI aktywnie parsują przy budowie odpowiedzi.
+### 2. Które platformy AI obejmuje pomiar?
 
-**3. Czy masz case study z mierzalnymi wynikami cytowań AI?**
-Nie ruchem organicznym. Nie pozycjami. Cytowaniami w ChatGPT, Perplexity i Claude.
+ChatGPT, Perplexity, Gemini, Claude i tryb AI w Google korzystają z różnych źródeł i dają różne odpowiedzi. Marka obecna w Perplexity może nie istnieć w ChatGPT. Dobra agencja mierzy każdą platformę osobno i pokazuje różnice, zamiast jednej uśrednionej liczby.
+
+### 3. Pokażesz, z jakich źródeł AI składa odpowiedź w mojej branży?
+
+To najważniejsze pytanie. Modele AI odpowiadają na pytanie „kogo polecasz?” na podstawie konkretnych stron: rankingów, katalogów, artykułów branżowych, profili firm. Lista tych domen to plan pracy na kolejne miesiące. Agencja, która nie potrafi jej pokazać, nie wie, gdzie działać.
+
+### 4. Co zmienisz na stronie, a co poza nią?
+
+Na stronie: dane strukturalne JSON-LD (`Organization`, `Person`, `Service`, `FAQPage`), spójne dane firmy, treści odpowiadające na pytania klientów. Poza stroną: obecność w źródłach z pytania 3, spójność nazwy, adresu i opisu w każdym profilu, wzmianki w mediach branżowych. Jeśli plan obejmuje wyłącznie stronę, efekty w AI będą ograniczone.
+
+### 5. Kto konkretnie prowadzi mój projekt?
+
+GEO wymaga połączenia wiedzy technicznej (dane strukturalne, [Knowledge Graph](/slownik/knowledge-graph/), mechanizm [RAG](/slownik/rag/)) z rozumieniem Twojego rynku. Zapytaj, kto będzie analizował odpowiedzi modeli i przygotowywał rekomendacje, i czy to ta sama osoba, z którą rozmawiasz na etapie oferty.
+
+### 6. Jak wygląda model rozliczeń i co zostaje u mnie po audycie?
+
+Sprawdź, czy audyt jest osobnym produktem z raportem, który zostaje u Ciebie niezależnie od dalszej współpracy, oraz czy narzędzia pomiarowe działają na Twoich kontach. Zapytaj też, co dokładnie obejmuje abonament: liczbę pytań w pomiarze, częstotliwość raportów, zakres prac poza stroną.
+
+### 7. Czy gwarantujesz konkretny procent obecności w ChatGPT?
+
+To pytanie kontrolne. Rzetelna odpowiedź brzmi: nie. Odpowiedzi modeli zmieniają się z tygodnia na tydzień, zależą od wersji modelu i sformułowania pytania. Uczciwa agencja zobowiązuje się do metody i pokazuje zmianę względem pomiaru wyjściowego. Gwarancja „pierwszego miejsca w ChatGPT” to sygnał ostrzegawczy.
+
+| Sygnał | Specjalista GEO | Agencja SEO z nową nazwą |
+|---|---|---|
+| **Pomiar** | Stały zestaw pytań w kilku modelach AI, pomiar wyjściowy | Pozycje w Google, ruch organiczny |
+| **Źródła** | Lista domen cytowanych przez AI w Twojej branży | Lista fraz kluczowych |
+| **Zakres** | Strona + źródła zewnętrzne + spójność danych firmy | Głównie strona i linki |
+| **Obietnice** | Metoda i raport zmian | „Pierwsze miejsce w ChatGPT” |
 
 ## FAQ — agencja GEO w Polsce
 
@@ -104,13 +131,17 @@ Nie ruchem organicznym. Nie pozycjami. Cytowaniami w ChatGPT, Perplexity i Claud
 
 Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. Dla rynku polskiego (zasięg krajowy, branża B2B) inwestycja miesięczna zaczyna się od kilku tysięcy złotych. Dokładną wycenę generuje nasz [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
 
+### Jak sprawdzić, czy agencja GEO jest specjalistą?
+
+Poproś o trzy rzeczy: przykładowy zestaw pytań do pomiaru, raport z pomiaru wyjściowego dla innej firmy (zanonimizowany) i listę źródeł, z których modele AI składają odpowiedzi w Twojej branży. Agencja, która nie dostarczy żadnej z nich, nie prowadzi pomiaru GEO.
+
 ### Czy GEO działa dla małych firm?
 
 Tak — pod warunkiem, że firma operuje w niszy z wyraźną intencją zakupową. Lokalna klinika, kancelaria prawna czy butikowy software house mają często wyższy potencjał GEO niż duże korporacje, ponieważ AI łatwiej buduje precyzyjną rekomendację dla konkretnego specjalisty niż dla anonimowej marki zbiorowej.
 
 ### Jak długo trzeba czekać na efekty GEO?
 
-Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Pełna dominacja w rekomendacjach — definiowana jako obecność w ponad 70% odpowiedzi na kluczowe zapytania branżowe — to horyzont 3–6 miesięcy, w zależności od wyjściowego stanu entity authority marki.
+Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy. Tempo zależy od wyjściowego stanu entity authority marki i od tego, ile źródeł cytowanych przez AI trzeba zdobyć.
 
 ### Czy GEO wymaga zmian na stronie internetowej?
 
@@ -140,6 +171,14 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
         },
         {
           "@type": "Question",
+          "name": "Jak sprawdzić, czy agencja GEO jest specjalistą?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Poproś o trzy rzeczy: przykładowy zestaw pytań do pomiaru, raport z pomiaru wyjściowego dla innej firmy (zanonimizowany) i listę źródeł, z których modele AI składają odpowiedzi w Twojej branży. Agencja, która nie dostarczy żadnej z nich, nie prowadzi pomiaru GEO."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Czy GEO działa dla małych firm?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -151,7 +190,7 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
           "name": "Jak długo trzeba czekać na efekty GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Pełna dominacja w rekomendacjach to horyzont 3–6 miesięcy, w zależności od wyjściowego stanu entity authority marki."
+            "text": "Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy, w zależności od wyjściowego stanu entity authority marki."
           }
         },
         {

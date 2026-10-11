@@ -94,6 +94,8 @@ Jeśli czytasz to jako decydent, a nie z ciekawości, oto twarda konkluzja. Obec
 
 Firma, która zaadresuje wszystkie cztery, zaczyna pojawiać się w odpowiedziach AI jako zaufana opcja. Firma, która zignoruje choć jeden — pozostaje niewidoczna, niezależnie od tego, jak dobra jest naprawdę. Cały mechanizm, od podstaw, rozkładamy w [przewodniku „Czym jest GEO"](/blog/czym-jest-geo/).
 
+Jeśli chcesz, żeby te mechanizmy pracowały dla Twojej firmy, a nie dla konkurencji, sprawdź, czy [agencja GEO](/blog/agencja-geo-polska/), której to zlecisz, potrafi pokazać źródła, z których ChatGPT składa odpowiedź w Twojej branży. Pełną listę 7 pytań kontrolnych znajdziesz w przewodniku po wyborze wykonawcy.
+
 <div class="article-cta glass">
 <h3>Sprawdź, czy ChatGPT poleca dziś Twoją firmę</h3>
 <p>Bezpłatny audyt widoczności w ChatGPT, Perplexity i Claude. Konkretne dane: czy AI Cię wymienia, w jakim kontekście i jak Cię opisuje.</p>
@@ -108,6 +110,6 @@ Firma, która zaadresuje wszystkie cztery, zaczyna pojawiać się w odpowiedziac
 <li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Agencja GEO w Polsce — jak wybrać wykonawcę</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 </ul>
 </div>
