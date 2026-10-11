@@ -43,6 +43,23 @@ const ogImage = image.startsWith('http') ? image : `${site}${image}`;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
+  <!-- Google tag (gtag.js) + Consent Mode v2 (GL-208) -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-4J1CCWLDHP');
+  </script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
+
   <!-- PRIMARY META -->
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -102,5 +119,14 @@ const ogImage = image.startsWith('http') ? image : `${site}${image}`;
     <slot />
   </main>
   <Footer />
+  <script is:inline>
+    /* GL-208: kliknięcia w CTA kontaktu / telefon / e-mail z bloga i słownika */
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="#contact"],a[href^="tel:"],a[href^="mailto:"]');
+      if (!a || typeof gtag !== 'function') return;
+      var h = a.getAttribute('href') || '';
+      gtag('event', h.indexOf('#contact') > -1 ? 'cta_contact_click' : 'contact_click', { method: h.indexOf('tel:') === 0 ? 'phone' : (h.indexOf('mailto:') === 0 ? 'email' : 'cta'), page_path: location.pathname });
+    });
+  </script>
 </body>
 </html>

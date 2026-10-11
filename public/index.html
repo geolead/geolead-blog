@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
+<!-- Google tag (gtag.js) + Consent Mode v2 (GL-208) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+  try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
   gtag('js', new Date());
-
   gtag('config', 'G-4J1CCWLDHP');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -1931,6 +1938,7 @@ function _w3fFetch(payload,onSuccess,onError){
     if(!r.ok||data.success===false){throw new Error(data.message||('HTTP '+r.status));}
     return data;
   })
+  .then(d=>{try{gtag('event','generate_lead',{form_type:payload.source||'form',language:(typeof lang!=='undefined'?lang:'pl')});}catch(e){}return d;})
   .then(onSuccess)
   .catch(err=>{console.warn('[GeoLead Web3Forms error]',err.message);onError(err);});
 }
@@ -1980,6 +1988,7 @@ function runCalc(){
     return;
   }
   if(getRem()<=0){showLimit();return;}
+  try{gtag('event','calculator_run',{industry:ind,reach:reach});}catch(e){}
   const d=getRLD();d.c++;d.t=d.t||Date.now();saveRLD(d);updateDots();
   pendingInd=ind; pendingReach=reach;
   ['calcResults','gateForm'].forEach(id=>document.getElementById(id).style.display='none');
@@ -2186,6 +2195,7 @@ function startScan(){
   const url=urlInput.value.trim();
   if(!url){urlInput.style.borderColor='rgba(255,80,80,0.6)';urlInput.style.animation='shake .35s ease';setTimeout(()=>{urlInput.style.animation='';urlInput.style.borderColor='rgba(0,212,255,0.22)';},400);return;}
   scanRunning=true;
+  try{gtag('event','scanner_start');}catch(e){}
   const t=T[lang];const logLines=t.scan_log||[];
   let domain=url.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
   document.getElementById('scanInputRow').style.display='none';
@@ -2300,10 +2310,14 @@ function resetScan(){
 
 window.glSetCookie=function(choice){
   try{localStorage.setItem('gl_cookie',choice);}catch(e){}
+  try{gtag('consent','update',{analytics_storage:choice==='accepted'?'granted':'denied'});}catch(e){}
   const b=document.getElementById('glCookieBanner');if(!b)return;
   b.style.transition='opacity .35s ease,transform .35s ease';b.style.opacity='0';b.style.transform='translateX(-50%) translateY(16px)';
   setTimeout(()=>{if(b.parentNode)b.parentNode.removeChild(b);},380);
 };
+
+/* GL-208: kliknięcia w telefon / e-mail */
+document.addEventListener('click',function(e){const a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');if(!a)return;try{gtag('event','contact_click',{method:a.href.startsWith('tel:')?'phone':'email'});}catch(err){}});
 
 /* ============================================================
    INIT
