@@ -31,6 +31,17 @@ const {
 } = Astro.props;
 
 const site = 'https://geolead.pl';
+
+// ── Autor (GL-207): osoba zamiast organizacji — E-E-A-T ──
+const founder = {
+  id: `${site}/#jaroslaw-zagajewski`,
+  name: 'Jarosław Zagajewski',
+  jobTitle: 'Founder & GEO Strategist',
+  linkedin: 'https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/',
+  bio: 'Założyciel GeoLead. Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte. Absolwent SGH. Do GEO wnosi dyscyplinę CFO: każdy wynik ma metodę pomiaru, punkt odniesienia i datę.',
+};
+const isFounder = !author || author === 'GeoLead';
+const authorName = isFounder ? founder.name : author;
 const canonical = new URL(Astro.url.pathname, site).href;
 const ogImage = image.startsWith('http') ? image : `${site}${image}`;
 
@@ -53,11 +64,17 @@ const articleJsonLd = {
   datePublished: published,
   dateModified: modified,
   inLanguage: 'pl-PL',
-  author: {
-    '@type': 'Organization',
-    name: author,
-    url: site,
-  },
+  author: isFounder
+    ? {
+        '@type': 'Person',
+        '@id': founder.id,
+        name: founder.name,
+        jobTitle: founder.jobTitle,
+        url: `${site}/#social-proof`,
+        sameAs: [founder.linkedin],
+        worksFor: { '@id': `${site}/#organization` },
+      }
+    : { '@type': 'Person', name: author },
   publisher: {
     '@type': 'Organization',
     '@id': `${site}/#organization`,
@@ -78,6 +95,8 @@ const articleJsonLd = {
   publishedTime={published}
   modifiedTime={modified}
   keywords={keywords}
+  author={authorName}
+  authorUrl={isFounder ? founder.linkedin : undefined}
 >
   <script
     slot="head"
@@ -92,7 +111,9 @@ const articleJsonLd = {
         <span class="article-kicker">Generative Engine Optimization</span>
         <h1 class="article-title">{title}</h1>
         <div class="article-meta">
-          <span>Autor: <strong style="color:var(--text-hi)">{author}</strong></span>
+          <span>Autor: {isFounder
+            ? <a href={founder.linkedin} rel="author noopener" target="_blank" class="author-link"><strong>{founder.name}</strong></a>
+            : <strong style="color:var(--text-hi)">{authorName}</strong>}{isFounder && <span class="author-role">, {founder.jobTitle}</span>}</span>
           <span class="sep" style="opacity:.4">·</span>
           <time datetime={published}>{dateLabel}</time>
           {updatedDate && (
@@ -110,6 +131,21 @@ const articleJsonLd = {
         </aside>
         <div class="prose-body">
           <slot />
+          {isFounder && (
+            <aside class="author-box" aria-label="O autorze">
+              <div class="author-av" aria-hidden="true">JZ</div>
+              <div>
+                <span class="author-k">O autorze</span>
+                <p class="author-name">{founder.name}</p>
+                <p class="author-job">{founder.jobTitle}, GeoLead</p>
+                <p class="author-bio">{founder.bio}</p>
+                <div class="author-links">
+                  <a href={founder.linkedin} rel="author noopener" target="_blank">LinkedIn</a>
+                  <a href="/#contact">Umów rozmowę</a>
+                </div>
+              </div>
+            </aside>
+          )}
         </div>
       </div>
     </div>
@@ -125,6 +161,34 @@ const articleJsonLd = {
       align-items: start;
     }
     .article-toc { order: -1; }
+    .author-link { color: var(--text-hi); text-decoration: none; border-bottom: 1px solid var(--border-f); }
+    .author-link:hover { color: var(--f); }
+    .author-role { opacity: .75; }
+    .author-box {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      margin: 3rem 0 1rem; padding: 1.5rem;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border-f); border-radius: 18px;
+      backdrop-filter: blur(12px);
+    }
+    .author-av {
+      flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.2rem; color: #070712;
+      background: linear-gradient(135deg, var(--f), var(--c));
+    }
+    .author-k { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--f); }
+    .author-box p { margin: 0; }
+    .author-name { color: var(--text-hi); font-weight: 800; font-size: 1.15rem; margin-top: .2rem !important; }
+    .author-job { color: var(--c); font-size: .85rem; font-weight: 600; margin: .1rem 0 .6rem !important; }
+    .author-bio { color: var(--text); font-size: .92rem; line-height: 1.7; }
+    .author-links { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .8rem; }
+    .author-links a {
+      font-size: .82rem; color: var(--text-hi); text-decoration: none;
+      border: 1px solid var(--border); border-radius: 999px; padding: .35rem .85rem;
+    }
+    .author-links a:hover { border-color: var(--f); color: var(--f); }
+    @media (max-width: 640px) { .author-box { flex-direction: column; } }
     /* Poniżej 980px: ToC chowamy (sticky sidebar nie ma sensu na wąskim ekranie) */
     @media (max-width: 980px) {
       .article-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }

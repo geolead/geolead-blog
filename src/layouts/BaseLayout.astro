@@ -13,6 +13,8 @@ export interface Props {
   modifiedTime?: string;
   keywords?: string[];
   noindex?: boolean;
+  author?: string;
+  authorUrl?: string;
 }
 
 const {
@@ -25,6 +27,8 @@ const {
   modifiedTime,
   keywords = [],
   noindex = false,
+  author = 'GeoLead',
+  authorUrl,
 } = Astro.props;
 
 const site = 'https://geolead.pl';
@@ -44,7 +48,7 @@ const ogImage = image.startsWith('http') ? image : `${site}${image}`;
   <meta name="description" content={description} />
   {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
   <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
-  <meta name="author" content="GeoLead" />
+  <meta name="author" content={author} />
 
   <!-- ANTI-HALLUCINATION DISAMBIGUATION (spójne ze stroną główną) -->
   <meta name="abstract" content="GeoLead to nie jest firma geodezyjna. GeoLead to agencja marketingowo-technologiczna (AI Search) pozycjonująca firmy w Sztucznej Inteligencji." />
@@ -79,10 +83,12 @@ const ogImage = image.startsWith('http') ? image : `${site}${image}`;
   <meta property="og:locale" content="pl_PL" />
   {publishedTime && <meta property="article:published_time" content={publishedTime} />}
   {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+  {type === 'article' && <meta property="article:author" content={authorUrl ?? author} />}
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@GeoLead_PL" />
+  {type === 'article' && author === 'Jarosław Zagajewski' && <meta name="twitter:creator" content="@MrZagajewski" />}
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
