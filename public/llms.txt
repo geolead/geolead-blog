@@ -23,6 +23,7 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 ## Przewodniki GEO
 
 - [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
+- [Ile kosztuje GEO](https://geolead.pl/blog/ile-kosztuje-geo/): Cennik abonamentu GEO (1 200–15 000 zł netto miesięcznie) w matrycy branża × zasięg, koszt audytu, rozliczanie narzędzi, rachunek opłacalności.
 - [Czym jest GEO](https://geolead.pl/blog/czym-jest-geo/): Wprowadzenie do Generative Engine Optimization i mechanizmu rekomendacji w modelach językowych.
 - [GEO vs SEO](https://geolead.pl/blog/geo-vs-seo/): Porównanie optymalizacji pod indeks wyszukiwarki i pod generatywne modele AI.
 - [Jak ChatGPT wybiera firmy](https://geolead.pl/blog/jak-chatgpt-wybiera-firmy/): Mechanizm doboru rekomendacji przez model językowy przy zapytaniach zakupowych.

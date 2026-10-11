@@ -129,7 +129,7 @@ To pytanie kontrolne. Rzetelna odpowiedź brzmi: nie. Odpowiedzi modeli zmieniaj
 
 ### Ile kosztuje współpraca z agencją GEO?
 
-Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. Dla rynku polskiego (zasięg krajowy, branża B2B) inwestycja miesięczna zaczyna się od kilku tysięcy złotych. Dokładną wycenę generuje nasz [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
+Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie, a audyt — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
 
 ### Jak sprawdzić, czy agencja GEO jest specjalistą?
 
@@ -166,7 +166,7 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
           "name": "Ile kosztuje współpraca z agencją GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. Dla rynku polskiego (zasięg krajowy, branża B2B) inwestycja miesięczna zaczyna się od kilku tysięcy złotych. Dokładną wycenę generuje Kalkulator Potencjału GEO na geolead.pl."
+            "text": "Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie, a audyt — równowartość jednej miesięcznej opłaty. Widełki dla konkretnej firmy podaje Kalkulator Potencjału GEO na geolead.pl."
           }
         },
         {
