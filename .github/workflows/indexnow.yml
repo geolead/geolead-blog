@@ -1,0 +1,104 @@
+# GL-211 — automatyczne zgłaszanie zmienionych adresów do IndexNow (Bing, Copilot, Yandex, Seznam, Naver)
+# Uruchamia się po każdym pushu na main. Czeka na wdrożenie Cloudflare Pages, potem wysyła listę URL.
+# Klucz IndexNow jest publiczny z założenia (plik public/5d8b9c10972e40f389fcd8016006d9a0.txt).
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'public/**'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Zgłoś wszystkie adresy z sitemapy'
+        type: boolean
+        default: true
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://geolead.pl
+      HOST: geolead.pl
+      KEY: 5d8b9c10972e40f389fcd8016006d9a0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ustal zmienione adresy URL
+        id: urls
+        shell: bash
+        run: |
+          set -euo pipefail
+          ALL=false
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ALL="${{ inputs.all }}"
+            FILES=""
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              BEFORE="$(git rev-parse HEAD^)"
+            fi
+            FILES="$(git diff --name-only --diff-filter=d "$BEFORE" "${{ github.sha }}")"
+          fi
+          echo "Zmienione pliki:"; echo "$FILES"
+
+          : > urls.txt
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            case "$f" in
+              src/content/blog/*.md)
+                s="$(basename "$f" .md)"; echo "$SITE/blog/$s/" >> urls.txt; echo "$SITE/blog/" >> urls.txt ;;
+              src/content/slownik/*.md)
+                s="$(basename "$f" .md)"; echo "$SITE/slownik/$s/" >> urls.txt; echo "$SITE/slownik/" >> urls.txt ;;
+              public/index.html)
+                echo "$SITE/" >> urls.txt ;;
+              public/llms.txt)
+                echo "$SITE/llms.txt" >> urls.txt ;;
+              public/*/index.html)
+                d="$(dirname "${f#public/}")"; echo "$SITE/$d/" >> urls.txt ;;
+              src/layouts/*|src/components/*|src/pages/*|astro.config.mjs)
+                ALL=true ;;
+            esac
+          done <<< "$FILES"
+
+          if [ "$ALL" = "true" ]; then
+            echo "Zmiana szablonu lub ręczne uruchomienie: pobieram wszystkie adresy z sitemapy (po wdrożeniu)."
+          fi
+          echo "all=$ALL" >> "$GITHUB_OUTPUT"
+
+      - name: Poczekaj na wdrożenie Cloudflare Pages
+        run: sleep 180
+
+      - name: Uzupełnij listę z sitemapy (gdy potrzebne)
+        if: steps.urls.outputs.all == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          for m in $(curl -fsSL "$SITE/sitemap-index.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<\/\?loc>//g'); do
+            curl -fsSL "$m" | grep -o '<loc>[^<]*</loc>' | sed 's/<\/\?loc>//g' >> urls.txt
+          done
+          echo "$SITE/llms.txt" >> urls.txt
+
+      - name: Wyślij do IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sort -u urls.txt | grep -E "^$SITE/" > final.txt || true
+          if [ ! -s final.txt ]; then echo "Brak adresów do zgłoszenia."; exit 0; fi
+          echo "Zgłaszam:"; cat final.txt
+          python3 - <<'PY'
+          import json, os
+          urls = [l.strip() for l in open('final.txt') if l.strip()]
+          body = {"host": os.environ["HOST"], "key": os.environ["KEY"],
+                  "keyLocation": f'{os.environ["SITE"]}/{os.environ["KEY"]}.txt', "urlList": urls[:10000]}
+          json.dump(body, open('payload.json', 'w'))
+          PY
+          code=$(curl -s -o resp.txt -w '%{http_code}' -X POST "https://api.indexnow.org/indexnow" \
+            -H 'Content-Type: application/json; charset=utf-8' --data @payload.json)
+          echo "IndexNow HTTP $code"; cat resp.txt || true
+          case "$code" in 200|202) echo "OK";; *) echo "::error::IndexNow zwrócił $code"; exit 1;; esac
