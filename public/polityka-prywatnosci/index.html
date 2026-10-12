@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
+<!-- Google tag (gtag.js) + Consent Mode v2 (GL-208/GL-210) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+  try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
   gtag('js', new Date());
-
   gtag('config', 'G-4J1CCWLDHP');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -95,32 +102,26 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <header class="pp-hero">
   <span class="pp-kick">RODO / GDPR</span>
   <h1>Polityka prywatności</h1>
-  <p class="pp-meta">Ostatnia aktualizacja: 22 sierpnia 2026</p>
+  <p class="pp-meta">Ostatnia aktualizacja: 12 października 2026</p>
 </header>
 
 <main class="pp-wrap">
 
-<div class="pp-todo">
-  <strong>DO UZUPEŁNIENIA PRZED PUBLIKACJĄ.</strong> Wszystkie miejsca oznaczone
-  <code>[...]</code> wymagają wpisania rzeczywistych danych rejestrowych. Dokument jest
-  szablonem operacyjnym przygotowanym na podstawie faktycznych funkcji serwisu
-  (formularz kontaktowy, AI Entity Scanner, kalkulator, cookies) — nie jest opinią prawną.
-  Przed publikacją zleć weryfikację prawnikowi lub IOD.
-</div>
-
 <h2>1. Administrator danych osobowych</h2>
 <p>
-Administratorem Twoich danych osobowych jest <strong>[PEŁNA NAZWA FIRMY]</strong>,
-prowadząca działalność pod adresem <strong>[ULICA, KOD, MIASTO]</strong>,
-NIP <strong>[NIP]</strong>, REGON <strong>[REGON]</strong>,
-działająca w serwisie internetowym <a href="https://geolead.pl/">geolead.pl</a> (dalej: „GeoLead").
+Administratorem Twoich danych osobowych jest <strong>Paweł Zagajewski</strong>, prowadzący
+jednoosobową działalność gospodarczą pod firmą <strong>GeoLead | Paweł Zagajewski</strong>,
+z siedzibą: <strong>ul. Leszka Czarnego 13, 02-496 Warszawa</strong>,
+NIP <strong>5222300455</strong>, REGON <strong>015598980</strong>,
+działający w serwisie internetowym <a href="https://geolead.pl/">geolead.pl</a> (dalej: „GeoLead").
 </p>
 <p>
 Kontakt w sprawach ochrony danych: <a href="mailto:kontakt@geolead.pl">kontakt@geolead.pl</a>,
 tel. <strong>511 000 115</strong>.
 </p>
 <p>
-Administrator nie wyznaczył Inspektora Ochrony Danych. <strong>[Jeśli wyznaczysz IOD — wpisz dane kontaktowe.]</strong>
+Administrator nie wyznaczył Inspektora Ochrony Danych. We wszystkich sprawach dotyczących
+danych osobowych kontaktuj się bezpośrednio z Administratorem.
 </p>
 
 <h2>2. Jakie dane zbieramy i w jakim celu</h2>
@@ -135,6 +136,12 @@ Administrator nie wyznaczył Inspektora Ochrony Danych. <strong>[Jeśli wyznaczy
       <td>imię i nazwisko, adres e-mail, nazwa firmy, telefon (opcjonalnie), treść wiadomości</td>
       <td>odpowiedź na zapytanie, przygotowanie oferty, kontakt handlowy</td>
       <td>art. 6 ust. 1 lit. b (czynności przed zawarciem umowy) oraz lit. f (prawnie uzasadniony interes — obsługa zapytań)</td>
+    </tr>
+    <tr>
+      <td>Formularze w serwisie (przesyłanie wiadomości)</td>
+      <td>dane wpisane w formularz</td>
+      <td>techniczne doręczenie wiadomości z formularza na skrzynkę Administratora</td>
+      <td>art. 6 ust. 1 lit. b oraz lit. f</td>
     </tr>
     <tr>
       <td>AI Entity Scanner</td>
@@ -155,8 +162,8 @@ Administrator nie wyznaczył Inspektora Ochrony Danych. <strong>[Jeśli wyznaczy
       <td>art. 6 ust. 1 lit. f — prawnie uzasadniony interes</td>
     </tr>
     <tr>
-      <td>Analityka (po wyrażeniu zgody)</td>
-      <td>identyfikator cookie, dane o ruchu i zachowaniu w serwisie</td>
+      <td>Analityka Google Analytics 4 (po wyrażeniu zgody)</td>
+      <td>identyfikator cookie, dane o ruchu i zachowaniu w serwisie, zdarzenia (np. wysłanie formularza, użycie kalkulatora)</td>
       <td>pomiar skuteczności serwisu</td>
       <td>art. 6 ust. 1 lit. a — zgoda</td>
     </tr>
@@ -172,7 +179,7 @@ Dzielimy je na dwie kategorie:
   <li>
     <strong>Niezbędne</strong> — zapamiętanie Twojej decyzji dotyczącej cookies
     (klucz <code>gl_cookie</code>) oraz limit użyć kalkulatora (klucz <code>gl_calc_v2</code>).
-    Działają bez zgody, na podstawie art. 173 ust. 3 Prawa telekomunikacyjnego.
+    Działają bez zgody, ponieważ są niezbędne do świadczenia usługi, o którą prosisz.
   </li>
   <li>
     <strong>Analityczne</strong> — uruchamiane wyłącznie po kliknięciu „Zgoda"
@@ -183,19 +190,21 @@ Dzielimy je na dwie kategorie:
 Zgodę możesz wycofać w każdej chwili, czyszcząc dane witryny w ustawieniach przeglądarki.
 Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania sprzed jej wycofania.
 </p>
-<div class="pp-todo">
-  <strong>[DO UZUPEŁNIENIA]</strong> Jeśli używasz konkretnego narzędzia analitycznego
-  (Google Analytics 4, Plausible, Cloudflare Web Analytics) — wymień je z nazwy,
-  podaj okres przechowywania cookies i link do polityki dostawcy.
-</div>
+<p>
+Narzędziem analitycznym jest <strong>Google Analytics 4</strong> (dostawca: Google Ireland Limited).
+Serwis stosuje tryb zgody Google (Consent Mode v2): do czasu kliknięcia „Zgoda” analityczne
+pliki cookies nie są zapisywane. Zasady przetwarzania danych przez Google:
+<a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.
+</p>
 
 <h2>4. Odbiorcy danych</h2>
 <p>Twoje dane mogą być powierzone następującym kategoriom podmiotów przetwarzających:</p>
 <ul>
   <li><strong>Cloudflare, Inc.</strong> — hosting i dostarczanie treści (CDN, DNS)</li>
-  <li><strong>[DOSTAWCA POCZTY E-MAIL]</strong> — obsługa korespondencji</li>
-  <li><strong>[DOSTAWCA NARZĘDZIA ANALITYCZNEGO]</strong> — pomiar ruchu</li>
-  <li><strong>[BIURO RACHUNKOWE]</strong> — rozliczenia księgowe</li>
+  <li><strong>SeoHost.pl</strong> — hosting poczty e-mail i obsługa korespondencji</li>
+  <li><strong>Web3Forms</strong> — techniczne przesyłanie wiadomości z formularzy serwisu</li>
+  <li><strong>Google Ireland Limited</strong> — analityka Google Analytics 4 (wyłącznie po wyrażeniu zgody)</li>
+  <li><strong>podmioty świadczące usługi księgowe i podatkowe</strong> — rozliczenia</li>
 </ul>
 <p>
 Część usługodawców może przetwarzać dane poza Europejskim Obszarem Gospodarczym.
@@ -269,6 +278,7 @@ w widocznym miejscu w serwisie.
     <a href="/slownik/">Słownik GEO</a> ·
     <a href="/#contact">Kontakt</a>
   </div>
+  GeoLead | Paweł Zagajewski · ul. Leszka Czarnego 13, 02-496 Warszawa · NIP 5222300455 · REGON 015598980<br>
   © 2026 GeoLead. Wszelkie prawa zastrzeżone.
 </footer>
 
