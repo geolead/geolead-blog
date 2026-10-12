@@ -1,4 +1,4 @@
-# GL-211 — automatyczne zgłaszanie zmienionych adresów do IndexNow (Bing, Copilot, Yandex, Seznam, Naver)
+# GL-211/GL-212 — automatyczne zgłaszanie zmienionych adresów do IndexNow (Bing, Copilot, Yandex, Seznam, Naver)
 # Uruchamia się po każdym pushu na main. Czeka na wdrożenie Cloudflare Pages, potem wysyła listę URL.
 # Klucz IndexNow jest publiczny z założenia (plik public/5d8b9c10972e40f389fcd8016006d9a0.txt).
 
@@ -10,6 +10,7 @@ on:
     paths:
       - 'src/**'
       - 'public/**'
+      - 'astro.config.mjs'
   workflow_dispatch:
     inputs:
       all:
@@ -25,7 +26,7 @@ jobs:
       HOST: geolead.pl
       KEY: 5d8b9c10972e40f389fcd8016006d9a0
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
