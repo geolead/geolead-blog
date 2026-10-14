@@ -20,7 +20,7 @@ relatedTerms:
   - "llm"
 ---
 
-**Abonament GEO w GeoLead kosztuje od 1 200 do 15 000 zł netto miesięcznie.** Dolna granica to lokalna firma w branży o niskiej konkurencji. Górna to marka z branży medycznej lub prawniczej, która chce być polecana przez AI na kilku rynkach i w kilku językach. Pierwszym krokiem jest zawsze audyt — jego cena odpowiada jednej miesięcznej opłacie.
+**Abonament GEO w GeoLead kosztuje od 1 200 do 15 000 zł netto miesięcznie.** Dolna granica to lokalna firma w branży o niskiej konkurencji. Górna to marka z branży medycznej lub prawniczej, która chce być polecana przez AI na kilku rynkach i w kilku językach. Pierwszym krokiem jest zawsze audyt: [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/) albo audyt pełny w cenie jednej miesięcznej opłaty.
 
 Poniżej pełna matryca cen, czynniki, które je przesuwają, i sposób, w jaki sprawdzisz, czy ta inwestycja ma sens w Twojej firmie.
 
@@ -73,7 +73,12 @@ Mierzymy obecność w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode. Każ
 
 ## Ile kosztuje audyt GEO
 
-Audyt jest osobnym, pierwszym etapem współpracy. **Jego cena odpowiada jednej miesięcznej opłacie abonamentowej** dla wariantu z matrycy. Jeśli podpiszesz umowę abonamentową w ciągu 30 dni od audytu, jego koszt zaliczamy na poczet pierwszego miesiąca.
+Audyt jest osobnym, pierwszym etapem współpracy. Masz dwie opcje:
+
+- **[Audyt Start — 990 zł netto](/blog/audyt-widocznosci-w-ai/).** 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport z 5 priorytetami. Wynik w 5 dni roboczych.
+- **Audyt pełny — równowartość jednej miesięcznej opłaty abonamentowej** dla wariantu z matrycy. Rozszerzony zestaw pytań, powtórzenia pomiaru, pełny plan wdrożeń i wycena abonamentu.
+
+Jeśli podpiszesz umowę abonamentową w ciągu 30 dni od audytu, jego koszt zaliczamy na poczet pierwszego miesiąca.
 
 Wynikiem audytu jest raport, który zostaje u Ciebie niezależnie od dalszej współpracy: jak modele AI opisują dziś Twoją firmę, kogo polecają zamiast Ciebie, z jakich źródeł korzystają i co konkretnie blokuje Twoją widoczność.
 
@@ -118,7 +123,7 @@ W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. Cena zal
 
 ### Ile kosztuje audyt GEO?
 
-Cena audytu odpowiada jednej miesięcznej opłacie abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca.
+Audyt Start kosztuje 990 zł netto (20 pytań zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca.
 
 ### Czy ceny GEO są podawane netto?
 
@@ -141,6 +146,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
+<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI — 990 zł netto</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO — czym się różnią</a></li>
 <li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
@@ -193,7 +199,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
           "name": "Ile kosztuje audyt GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cena audytu odpowiada jednej miesięcznej opłacie abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca."
+            "text": "Audyt Start kosztuje 990 zł netto (20 pytań zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca."
           }
         },
         {
