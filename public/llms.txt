@@ -38,7 +38,7 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 
 ## Narzędzia
 
-- [Generator pytań zakupowych AI](https://geolead.pl/narzedzia/pytania-zakupowe/): Bezpłatny generator 20 pytań zakupowych (5 branż B2B, 4 języki, 45 polskich miast) do samodzielnego sprawdzenia, czy ChatGPT, Gemini i Perplexity polecają firmę. Działa w przeglądarce, bez rejestracji.
+- [Generator pytań zakupowych AI](https://geolead.pl/narzedzia/pytania-zakupowe/): Bezpłatny generator 20 pytań zakupowych (20 branż, 4 języki, 45 polskich miast) do samodzielnego sprawdzenia, czy ChatGPT, Gemini i Perplexity polecają firmę. Działa w przeglądarce, bez rejestracji.
 
 ## Słownik pojęć GEO
 
