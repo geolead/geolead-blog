@@ -36,6 +36,10 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 - [GEO dla kancelarii prawnych](https://geolead.pl/blog/geo-dla-kancelarii-prawnych/): Pozycjonowanie kancelarii w odpowiedziach modeli językowych.
 - [GEO dla firm SaaS](https://geolead.pl/blog/geo-dla-saas/): Widoczność produktów SaaS w porównaniach generowanych przez AI.
 
+## Narzędzia
+
+- [Generator pytań zakupowych AI](https://geolead.pl/narzedzia/pytania-zakupowe/): Bezpłatny generator 20 pytań zakupowych (5 branż B2B, 4 języki, 45 polskich miast) do samodzielnego sprawdzenia, czy ChatGPT, Gemini i Perplexity polecają firmę. Działa w przeglądarce, bez rejestracji.
+
 ## Słownik pojęć GEO
 
 - [Słownik GEO](https://geolead.pl/slownik/): Indeks pojęć Generative Engine Optimization w języku decydentów B2B.
