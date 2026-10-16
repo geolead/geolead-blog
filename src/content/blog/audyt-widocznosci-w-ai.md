@@ -23,6 +23,12 @@ relatedTerms:
 
 To nie jest automatyczny „wynik 0–100”. Każde pytanie zadajemy ręcznie, w sesji bez pamięci i personalizacji, a odpowiedzi zapisujemy z datą. Dostajesz dowód, nie wskaźnik.
 
+<div class="article-cta glass">
+<h3>Najpierw sprawdź sam — za darmo</h3>
+<p>Wygeneruj 20 pytań zakupowych dla swojej branży i miasta, zadaj je w ChatGPT, Gemini i Perplexity i zobacz, kogo AI poleca. Bez rejestracji.</p>
+<a href="/narzedzia/pytania-zakupowe/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Generator pytań zakupowych</a>
+</div>
+
 ## Co sprawdzamy
 
 ### 1. 20 pytań, które zadają Twoi klienci
@@ -108,6 +114,7 @@ Tak. Raport zawiera tabelę wszystkich 80 odpowiedzi z datami pomiaru i cytowany
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
+<li><a href="/narzedzia/pytania-zakupowe/">Generator pytań zakupowych AI — bezpłatne narzędzie</a></li>
 <li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO — cennik abonamentu</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
