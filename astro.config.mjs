@@ -25,8 +25,8 @@ export default defineConfig({
       // Strona główna (public/index.html) jest statyczna i niewidoczna dla
       // integracji sitemap — dodajemy ją jawnie, żeby trafiła do mapy.
       // GL-212: polityka prywatności to też statyczny plik w public/.
-      // GL-217: generator pytań zakupowych (statyczny plik w public/narzedzia/).
-      customPages: ['https://geolead.pl/', 'https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/'],
+      // GL-217: generator promptów, GL-224: skaner gotowości AI (statyczne pliki w public/narzedzia/).
+      customPages: ['https://geolead.pl/', 'https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/', 'https://geolead.pl/narzedzia/skaner-ai/'],
       // Wykluczamy strony techniczne z sitemap, jeśli powstaną w przyszłości
       filter: (page) => !page.includes('/draft/'),
       i18n: {

@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skaner gotowości AI — czy ChatGPT może zrozumieć Twoją stronę? | GeoLead</title>
+<meta name="description" content="Bezpłatny skaner gotowości AI: sprawdź robots.txt, JSON-LD, treść HTML, meta, llms.txt, sitemap i Wikidata. Wynik 0–100 i wskazówki naprawcze.">
+<link rel="canonical" href="https://geolead.pl/narzedzia/skaner-ai/">
+<meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:site_name" content="GeoLead">
+<meta property="og:title" content="Skaner gotowości AI | GeoLead"><meta property="og:description" content="Sprawdź, czy boty AI mają dostęp do Twojej strony i jak czytelne są dane firmy. 8 kontroli, ocena A–D."><meta property="og:url" content="https://geolead.pl/narzedzia/skaner-ai/">
+<meta name="theme-color" content="#070712">
+<!-- Google tag (gtag.js) + Consent Mode v2 (GL-208/GL-210) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+  try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
+  gtag('js', new Date());
+  gtag('config', 'G-4J1CCWLDHP');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/logo.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://geolead.pl/narzedzia/skaner-ai/#app","name":"Skaner gotowości AI","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://geolead.pl/narzedzia/skaner-ai/","offers":{"@type":"Offer","price":"0","priceCurrency":"PLN"},"provider":{"@id":"https://geolead.pl/#organization"},"inLanguage":["pl","en","de","fr"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy wysoki wynik oznacza, że ChatGPT poleca moją firmę?","acceptedAnswer":{"@type":"Answer","text":"Nie. Wynik dotyczy wyłącznie technicznej dostępności i czytelności strony. Faktyczne rekomendacje trzeba sprawdzić, zadając modelom konkretne pytania zakupowe."}},{"@type":"Question","name":"Czy skaner uruchamia JavaScript na mojej stronie?","acceptedAnswer":{"@type":"Answer","text":"Nie. Analizuje HTML pobrany z serwera. Dzięki temu pokazuje, ile treści pozostaje dostępnej bez uruchamiania skryptów w przeglądarce."}},{"@type":"Question","name":"Czy plik llms.txt jest obowiązkowy?","acceptedAnswer":{"@type":"Answer","text":"Nie. Jest pomocniczym sposobem opisania strony. Jego obecność nie gwarantuje indeksacji, cytowania ani rekomendacji przez modele AI."}},{"@type":"Question","name":"Dlaczego znalezienie firmy w Wikidata nie daje pewności?","acceptedAnswer":{"@type":"Answer","text":"Skaner wyszukuje encję po nazwie i odczytuje pierwszy wynik. Podobnie nazwane firmy mogą być różnymi podmiotami, dlatego dopasowanie wymaga ręcznego potwierdzenia."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Strona główna","item":"https://geolead.pl/"},{"@type":"ListItem","position":2,"name":"Skaner gotowości AI","item":"https://geolead.pl/narzedzia/skaner-ai/"}]}]}
+</script>
+<style>
+:root{--f:#e040fb;--c:#00d4ff;--bg:#070712;--bg2:#0a0a1c;--bg3:#0d0d22;--text:#94a3b8;--text-hi:#cbd5e1;--text-lo:#7d8ba1;--border:rgba(255,255,255,0.08);--border-f:rgba(224,64,251,0.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;line-height:1.65}a{color:var(--c)}a:hover{text-decoration:underline}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed;transform:none!important}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[contenteditable]:focus-visible{outline:3px solid var(--c);outline-offset:3px}.g-text{background:linear-gradient(135deg,var(--f),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}.glass{background:rgba(10,10,28,0.75);backdrop-filter:blur(28px);border:1px solid var(--border-f);border-radius:20px;box-shadow:0 0 0 1px rgba(0,212,255,0.06),0 0 50px rgba(224,64,251,0.09),inset 0 1px 0 rgba(255,255,255,0.05),0 30px 60px rgba(0,0,0,0.5)}.btn-main{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:800;border-radius:12px;padding:13px 20px;transition:opacity .2s,transform .2s}.btn-main:hover{opacity:.84;transform:translateY(-2px)}.btn-soft{border:1px solid rgba(255,255,255,.2);border-radius:11px;padding:10px 14px;color:#e2e8f0;background:rgba(255,255,255,.045);transition:background .2s}.btn-soft:hover{background:rgba(224,64,251,.14)}.field{width:100%;min-height:46px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#f1f5f9;padding:11px 13px;outline:none}.field:focus{border-color:rgba(224,64,251,.55);box-shadow:0 0 0 3px rgba(224,64,251,.1)}select.field option{background:#111126;color:#fff}.section-kicker{text-transform:uppercase;letter-spacing:.16em;color:var(--f);font-weight:700;font-size:.76rem}.label{display:block;color:#cbd5e1;font-weight:650;margin-bottom:7px;font-size:.91rem}.muted{color:var(--text)}.heading{color:#f8fafc}.nav{position:sticky;top:0;z-index:30;background:rgba(7,7,18,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(16px)}.lang-btn{min-width:39px;min-height:36px;border-radius:9px;color:#cbd5e1;font-size:.8rem;font-weight:750}.lang-btn[aria-pressed="true"]{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg)}.tag{font-size:.73rem;letter-spacing:.02em;font-weight:800;padding:4px 10px;border-radius:999px;display:inline-block}.tag-rekomendacja{background:#073e4a;color:#67e8f9}.tag-porównanie{background:#342046;color:#f0abfc}.tag-cena{background:#39310d;color:#fde68a}.tag-problem{background:#451b27;color:#fda4af}.tag-weryfikacja{background:#103b34;color:#86efac}.question-card{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:14px;padding:17px}.question-edit{display:block;width:100%;color:#edf2f7;min-height:70px;resize:vertical;line-height:1.6}.fade-up{animation:fadeUp .42s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.checkbox{accent-color:#e040fb;width:18px;height:18px}.editorial{max-width:77ch}.editorial h2{color:#f8fafc;font-size:1.55rem;line-height:1.3;font-weight:800;margin:2rem 0 .75rem}.editorial h3{color:#e2e8f0;font-size:1.12rem;font-weight:750;margin:1.3rem 0 .3rem}.editorial p{margin:0 0 1rem}.skip{position:absolute;left:-9999px;top:auto}.skip:focus{left:10px;top:10px;background:#fff;color:#000;padding:10px;z-index:99}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Rozszerzenia interfejsu skanera; bazowy CSS wzorca pozostaje bez zmian. */
+[hidden]{display:none!important}
+.scan-step{padding:10px 12px;border:1px solid rgba(255,255,255,.1);border-radius:9px;color:#cbd5e1;background:rgba(255,255,255,.025);transition:border-color .25s,background .25s}
+.scan-step i{color:#cbd5e1;width:21px}
+.scan-step.active{border-color:rgba(0,212,255,.65);background:rgba(0,212,255,.11);color:#fff;box-shadow:0 0 14px rgba(0,212,255,.08)}
+.scan-step.active i{color:#67e8f9}
+.score-box{position:relative;width:176px;height:176px;flex:none;display:grid;place-items:center}
+.score-ring{transform:rotate(-90deg)}
+.score-ring circle{fill:none;stroke-width:12}
+.score-track{stroke:#334155}
+.score-progress{stroke:#6ee7b7;stroke-linecap:round;transition:stroke-dashoffset .7s ease,stroke .3s}
+.score-number{position:absolute;text-align:center;line-height:1.2}
+.grade-badge{font-size:2rem;line-height:1;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;border:2px solid #6ee7b7;min-width:58px;min-height:58px;border-radius:15px;font-weight:900}
+.check-card{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px;background:rgba(255,255,255,.03);min-width:0}
+.check-card summary{display:block;list-style:none;cursor:pointer}
+.check-card summary::-webkit-details-marker{display:none}
+.check-card summary:focus-visible{outline:3px solid var(--c);outline-offset:4px;border-radius:5px}
+.check-card summary:hover .heading{color:#67e8f9}
+.check-chevron{font-size:.75rem;transition:transform .2s}
+.check-card details[open] .check-chevron{transform:rotate(180deg)}
+.status-ok{color:#6ee7b7}.status-warn{color:#fde68a}.status-fail{color:#fda4af}
+.status-label{font-size:.76rem;font-weight:800;border:1px solid currentColor;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.detail-list{display:grid;gap:10px;font-size:.84rem}
+.detail-row{display:grid;grid-template-columns:minmax(100px,38%) minmax(0,1fr);gap:8px;overflow-wrap:anywhere}
+.fix-number{display:inline-grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:rgba(224,64,251,.18);color:#f0abfc;font-weight:900}
+.bot-table{border-collapse:collapse;min-width:320px}
+.bot-table th,.bot-table td{padding:12px 15px;border-bottom:1px solid rgba(255,255,255,.09)}
+.bot-table thead{background:#111129;color:#f1f5f9}
+.bot-table tbody tr:last-child th,.bot-table tbody tr:last-child td{border-bottom:0}
+.bot-table tbody tr:nth-child(even){background:rgba(255,255,255,.03)}
+@media(max-width:390px){.check-card{padding:13px}.detail-row{grid-template-columns:1fr}.grade-badge{font-size:1.7rem}.bot-table th,.bot-table td{padding:10px 7px}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip" data-i18n="skip">Przejdź do narzędzia</a>
+<nav class="nav" aria-label="Main navigation" data-i18n-aria-label="navAria"><div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-3"><a href="https://geolead.pl/" class="text-2xl font-extrabold no-underline text-white" aria-label="GeoLead — strona główna" data-i18n-aria-label="logoAria">Geo<span class="g-text">Lead</span></a><div class="flex gap-1" role="group" aria-label="Language" data-i18n-aria-label="langAria"><button class="lang-btn" data-lang="pl" aria-pressed="true">PL</button><button class="lang-btn" data-lang="en" aria-pressed="false">EN</button><button class="lang-btn" data-lang="de" aria-pressed="false">DE</button><button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button></div></div></nav>
+<main id="main" class="max-w-6xl mx-auto px-4 sm:px-6">
+  <header class="text-center pt-14 pb-10">
+    <p class="section-kicker" data-i18n="kicker">Bezpłatne narzędzie GEO</p>
+    <h1 class="heading text-3xl sm:text-5xl font-extrabold leading-tight mt-4"><span data-i18n="hero1">Skaner gotowości</span> <span class="g-text" data-i18n="heroAI">AI</span></h1>
+    <p class="max-w-2xl mx-auto mt-5 text-base sm:text-lg" data-i18n="lead">Sprawdź w około 10 sekund, czy boty AI mają dostęp do Twojej strony i czy mogą zrozumieć, kim jest Twoja firma.</p>
+  </header>
+  <section class="glass p-5 sm:p-8" aria-labelledby="formTitle">
+    <p class="section-kicker" data-i18n="configure">Analiza strony</p>
+    <h2 class="heading text-2xl font-bold mt-1 mb-5" id="formTitle" data-i18n="formTitle">Sprawdź domenę swojej firmy</h2>
+    <form id="scanForm" novalidate>
+      <label class="label" for="scanUrl" data-i18n="urlLabel">Adres strony internetowej</label>
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch">
+        <input id="scanUrl" name="url" class="field flex-1 min-w-0" type="url" inputmode="url" placeholder="twojafirma.pl" data-i18n-placeholder="urlPlaceholder" autocomplete="url" autocapitalize="off" spellcheck="false" maxlength="2048" required aria-describedby="urlHint">
+        <button id="scanButton" type="submit" class="btn-main sm:min-w-48"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> <span data-i18n="scanButton">Skanuj stronę</span></button>
+      </div>
+      <p id="urlHint" class="text-sm mt-3" data-i18n="urlHint">Wystarczy domena — zeskanujemy stronę główną oraz pliki publiczne. Nie instalujesz żadnego kodu.</p>
+      <div id="formError" role="alert" class="mt-4 rounded-xl p-4 border border-red-400/60 text-red-200" hidden></div>
+      <div id="loading" class="mt-6 rounded-xl border border-fuchsia-400/30 bg-white/[.025] p-4 sm:p-5" hidden aria-live="polite" aria-atomic="false">
+        <p class="font-bold text-white mb-3"><i class="fa-solid fa-spinner fa-spin mr-2" aria-hidden="true"></i><span data-i18n="scanning">Trwa analiza techniczna…</span></p>
+        <ol class="grid sm:grid-cols-2 gap-2" id="scanSteps">
+          <li class="scan-step" data-step="0"><i class="fa-solid fa-robot" aria-hidden="true"></i> <span data-i18n="stepRobots">robots.txt — dostęp botów</span></li>
+          <li class="scan-step" data-step="1"><i class="fa-solid fa-code" aria-hidden="true"></i> <span data-i18n="stepJsonld">Dane strukturalne JSON-LD</span></li>
+          <li class="scan-step" data-step="2"><i class="fa-solid fa-align-left" aria-hidden="true"></i> <span data-i18n="stepContent">Treść bez JavaScriptu</span></li>
+          <li class="scan-step" data-step="3"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> <span data-i18n="stepLlms">Plik llms.txt i mapa witryny</span></li>
+          <li class="scan-step" data-step="4"><i class="fa-solid fa-globe" aria-hidden="true"></i> <span data-i18n="stepWikidata">Obecność w Wikidata</span></li>
+        </ol>
+        <p id="scanStatus" class="mt-3 text-sm text-slate-200" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+  <p class="mt-5 text-sm"><i class="fa-solid fa-arrow-right mr-2 text-fuchsia-300" aria-hidden="true"></i><a id="generatorLink" href="/narzedzia/pytania-zakupowe/" data-i18n="promptLink">Sprawdź też: Generator promptów zakupowych</a></p>
+
+  <section id="results" class="mt-10" aria-labelledby="resultsTitle" hidden>
+    <div class="flex flex-wrap justify-between items-start gap-4 mb-5">
+      <div><p class="section-kicker" data-i18n="yourResults">Wynik skanu</p><h2 id="resultsTitle" tabindex="-1" class="heading text-2xl sm:text-3xl font-extrabold" data-i18n="resultsTitle">Gotowość techniczna Twojej strony</h2></div>
+      <div class="flex flex-wrap gap-2"><button type="button" id="copyReport" class="btn-soft"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span data-i18n="copyReport">Kopiuj raport</span></button><button type="button" id="downloadJson" class="btn-soft"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> <span data-i18n="downloadJson">Pobierz JSON</span></button></div>
+    </div>
+    <div class="glass p-5 sm:p-7 flex flex-col sm:flex-row gap-6 sm:gap-9 items-center sm:items-start fade-up">
+      <div class="score-box" id="scoreBox" role="img" aria-label="Wynik gotowości AI">
+        <svg class="score-ring" width="176" height="176" viewBox="0 0 176 176" aria-hidden="true"><circle cx="88" cy="88" r="70" class="score-track"></circle><circle id="scoreProgress" cx="88" cy="88" r="70" class="score-progress"></circle></svg>
+        <div class="score-number"><span id="scoreValue" class="heading text-4xl font-black">0</span><span class="block text-sm text-slate-300">/ 100</span></div>
+      </div>
+      <div class="flex-1 w-full text-center sm:text-left">
+        <p class="text-sm font-semibold uppercase tracking-wide" data-i18n="scoreLabel">Wynik techniczny</p>
+        <div class="mt-1"><span id="gradeBadge" class="grade-badge">A</span><span class="heading text-xl font-extrabold ml-3" data-i18n="gradeLabel">Ocena gotowości</span></div>
+        <p id="gradeDescription" class="mt-3 text-slate-200"></p>
+        <p class="mt-4 text-sm"><span data-i18n="scannedAt">Data skanu:</span> <time id="scanDate"></time></p>
+        <p class="text-sm break-all"><span data-i18n="scannedUrl">Sprawdzona strona:</span> <span id="scanFinalUrl" class="text-slate-200"></span></p>
+      </div>
+    </div>
+
+    <h3 class="heading text-xl sm:text-2xl font-bold mt-10 mb-4" data-i18n="checksTitle">8 obszarów gotowości</h3>
+    <div id="checksGrid" class="grid md:grid-cols-2 gap-3"></div>
+
+    <section class="mt-10" aria-labelledby="fixTitle">
+      <h3 id="fixTitle" class="heading text-xl sm:text-2xl font-bold mb-4" data-i18n="fixTitle">3 rzeczy do poprawy najpierw</h3>
+      <ol id="topFixes" class="grid gap-3"></ol>
+    </section>
+
+    <section class="mt-10" aria-labelledby="robotsTitle">
+      <h3 id="robotsTitle" class="heading text-xl sm:text-2xl font-bold mb-2" data-i18n="robotsTitle">Dostęp botów AI według robots.txt</h3>
+      <p class="mb-3 text-sm" data-i18n="robotsDescription">Reguły są oceniane dla ścieżki /, z uwzględnieniem grup User-agent i pierwszeństwa bardziej szczegółowych reguł.</p>
+      <p id="robotsNotice" class="text-sm text-amber-200 mb-3" hidden></p>
+      <div class="overflow-x-auto rounded-xl border border-white/10">
+        <table class="bot-table w-full text-left text-sm">
+          <thead><tr><th scope="col" data-i18n="botColumn">Bot</th><th scope="col" data-i18n="companyColumn">Firma</th><th scope="col" data-i18n="accessColumn">Dostęp do /</th></tr></thead>
+          <tbody id="botRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="max-w-4xl text-sm mt-10 mb-5 rounded-xl border border-cyan-400/25 bg-cyan-400/[.045] p-4 text-slate-200" data-i18n="disclaimer">Wynik mierzy techniczną gotowość strony, a nie to, czy ChatGPT faktycznie poleca Twoją firmę. To sprawdza Audyt Start — 20 promptów × 4 platformy AI.</p>
+    <div id="next" class="glass p-6 sm:p-8 mt-6">
+      <p class="section-kicker" data-i18n="nextKicker">Co dalej?</p>
+      <h2 class="heading text-2xl font-bold mb-3" data-i18n="nextTitle">Sprawdź rekomendacje, nie tylko konfigurację</h2>
+      <p data-i18n="nextText">Poprawne robots.txt i JSON-LD pomagają botom odczytać stronę, ale nie pokazują, czy AI wymienia Twoją firmę w odpowiedziach zakupowych. To wymaga badania rzeczywistych odpowiedzi.</p>
+      <p class="text-white font-semibold mt-5 mb-4" data-i18n="auditOffer">Zrobimy to za Ciebie: Audyt Start — 20 promptów × 4 platformy AI, 80 odpowiedzi z dowodami, 990 zł netto.</p>
+      <div class="flex flex-wrap gap-3"><a id="auditCta" class="btn-main inline-flex items-center gap-2 no-underline" href="https://geolead.pl/blog/audyt-widocznosci-w-ai/"><span data-i18n="auditCta">Zobacz Audyt Start</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a id="consultCta" class="btn-soft inline-flex no-underline" href="https://geolead.pl/#contact" data-i18n="consultCta">Bezpłatna konsultacja</a></div>
+    </div>
+  </section>
+
+  <article class="editorial mt-12 mb-14" lang="pl" aria-label="Poradnik: gotowość strony dla AI">
+    <h2>Czym jest gotowość strony dla AI?</h2>
+    <p>Gotowość techniczna strony dla AI oznacza, że narzędzia pobierające informacje z internetu mogą dotrzeć do treści, odczytać podstawowe informacje o firmie i znaleźć uporządkowane wskazówki na temat jej działalności. Skaner oddziela techniczną dostępność od faktycznej widoczności w odpowiedziach modeli językowych.</p>
+    <p>W praktyce liczy się między innymi poprawna odpowiedź serwera, dostęp przez HTTPS, reguły robots.txt oraz czytelna treść znajdująca się bezpośrednio w kodzie HTML. Opis oferty widoczny dopiero po uruchomieniu JavaScriptu może zostać pominięty. Dlatego analizujemy liczbę słów i strukturę nagłówków w HTML dostarczonym przez serwer.</p>
+    <h2>Co dokładnie sprawdza skaner gotowości AI?</h2>
+    <p>Narzędzie wykonuje osiem testów: dostępność strony głównej, zasady dostępu siedmiu botów w robots.txt, dane strukturalne JSON-LD, widoczną treść, znaczniki meta, plik llms.txt, mapę witryny i orientacyjne dopasowanie nazwy firmy w Wikidata. Każdy test przyznaje punkty według stałych zasad; łącznie można zdobyć 100 punktów. Otrzymujesz ocenę A–D i wskazówki.</p>
+    <p>Dane schema.org pomagają nazwać organizację, powiązać ją z adresem strony, profilem marki i danymi kontaktowymi. Sitemap ułatwia odnajdywanie podstron. Plik llms.txt jest dodatkiem, nie oficjalną przepustką do systemów AI. Dopasowanie w Wikidata odbywa się po nazwie i może dotyczyć innego podmiotu — traktuj je jako sygnał do ręcznej weryfikacji.</p>
+    <h2>Czego wynik nie mówi o widoczności firmy?</h2>
+    <p>Wysoki wynik nie oznacza, że ChatGPT, Gemini lub Perplexity zna Twoją ofertę albo poleci ją klientowi. Skaner nie wysyła promptów do modeli, nie monitoruje cytowań i nie porównuje konkurentów. Potrzebny jest osobny test odpowiedzi na pytania zakupowe. Audyt Start analizuje 20 promptów na czterech platformach i dokumentuje wyniki.</p>
+    <h2>FAQ — skaner gotowości AI</h2>
+    <h3>Czy wysoki wynik oznacza, że ChatGPT poleca moją firmę?</h3>
+    <p>Nie. Wynik dotyczy wyłącznie technicznej dostępności i czytelności strony. Faktyczne rekomendacje trzeba sprawdzić, zadając modelom konkretne pytania zakupowe.</p>
+    <h3>Czy skaner uruchamia JavaScript na mojej stronie?</h3>
+    <p>Nie. Analizuje HTML pobrany z serwera. Dzięki temu pokazuje, ile treści pozostaje dostępnej bez uruchamiania skryptów w przeglądarce.</p>
+    <h3>Czy plik llms.txt jest obowiązkowy?</h3>
+    <p>Nie. Jest pomocniczym sposobem opisania strony. Jego obecność nie gwarantuje indeksacji, cytowania ani rekomendacji przez modele AI.</p>
+    <h3>Dlaczego znalezienie firmy w Wikidata nie daje pewności?</h3>
+    <p>Skaner wyszukuje encję po nazwie i odczytuje pierwszy wynik. Podobnie nazwane firmy mogą być różnymi podmiotami, dlatego dopasowanie wymaga ręcznego potwierdzenia.</p>
+  </article>
+</main>
+<footer class="border-t border-white/10 py-7 px-4 text-center text-sm"><p>GeoLead | Paweł Zagajewski · ul. Leszka Czarnego 13, 02-496 Warszawa · NIP 5222300455</p><a href="https://geolead.pl/polityka-prywatnosci/" data-i18n="privacy">Polityka prywatności</a></footer>
+<div id="toast" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 bg-slate-900 text-white border border-fuchsia-400 rounded-xl shadow-xl p-3" hidden></div>
+<script>
+'use strict';
+// Wszystkie komunikaty interfejsu są w T. Sekcja poradnikowa SEO pozostaje po polsku.
+const T = {
+  pl: {
+    skip: 'Przejdź do narzędzia', navAria: 'Nawigacja główna', logoAria: 'GeoLead — strona główna', langAria: 'Wybór języka', kicker: 'Bezpłatne narzędzie GEO', hero1: 'Skaner gotowości', heroAI: 'AI',
+    lead: 'Sprawdź w około 10 sekund, czy boty AI mają dostęp do Twojej strony i czy mogą zrozumieć, kim jest Twoja firma.',
+    configure: 'Analiza strony', formTitle: 'Sprawdź domenę swojej firmy',
+    urlLabel: 'Adres strony internetowej', urlPlaceholder: 'twojafirma.pl',
+    urlHint: 'Wystarczy domena — zeskanujemy stronę główną oraz pliki publiczne. Nie instalujesz żadnego kodu.',
+    scanButton: 'Skanuj stronę', scanning: 'Trwa analiza techniczna…',
+    stepRobots: 'robots.txt — dostęp botów', stepJsonld: 'Dane strukturalne JSON-LD',
+    stepContent: 'Treść bez JavaScriptu', stepLlms: 'Plik llms.txt i mapa witryny',
+    stepWikidata: 'Obecność w Wikidata', promptLink: 'Sprawdź też: Generator promptów zakupowych',
+    yourResults: 'Wynik skanu', resultsTitle: 'Gotowość techniczna Twojej strony',
+    copyReport: 'Kopiuj raport', downloadJson: 'Pobierz JSON', scoreLabel: 'Wynik techniczny',
+    gradeLabel: 'Ocena gotowości', scannedAt: 'Data skanu:', scannedUrl: 'Sprawdzona strona:',
+    checksTitle: '8 obszarów gotowości', fixTitle: '3 rzeczy do poprawy najpierw',
+    fixEmpty: 'Brak pilnych poprawek w zakresie testowanych sygnałów.',
+    robotsTitle: 'Dostęp botów AI według robots.txt',
+    robotsDescription: 'Reguły są oceniane dla ścieżki /, z uwzględnieniem grup User-agent i pierwszeństwa bardziej szczegółowych reguł.',
+    botColumn: 'Bot', companyColumn: 'Firma', accessColumn: 'Dostęp do /',
+    allowed: 'Dozwolony', blocked: 'Zablokowany', robotsMissing: 'Brak robots.txt — domyślnie traktujemy wszystkie boty jako dozwolone.',
+    robotsUnknown: 'Nie udało się odczytać reguł robots.txt. Status botów jest nieznany.',
+    disclaimer: 'Wynik mierzy techniczną gotowość strony, a nie to, czy ChatGPT faktycznie poleca Twoją firmę. To sprawdza Audyt Start — 20 promptów × 4 platformy AI.',
+    nextKicker: 'Co dalej?', nextTitle: 'Sprawdź rekomendacje, nie tylko konfigurację',
+    nextText: 'Poprawne robots.txt i JSON-LD pomagają botom odczytać stronę, ale nie pokazują, czy AI wymienia Twoją firmę w odpowiedziach zakupowych. To wymaga badania rzeczywistych odpowiedzi.',
+    auditOffer: 'Zrobimy to za Ciebie: Audyt Start — 20 promptów × 4 platformy AI, 80 odpowiedzi z dowodami, 990 zł netto.',
+    auditCta: 'Zobacz Audyt Start', consultCta: 'Bezpłatna konsultacja', privacy: 'Polityka prywatności',
+    copied: 'Raport skopiowany', copyFailed: 'Nie udało się skopiować. Zaznacz tekst i skopiuj ręcznie.',
+    downloaded: 'Pobrano raport JSON',
+    error_invalid_url: 'Podaj poprawną publiczną domenę, bez adresu IP i portu niestandardowego.',
+    error_unreachable: 'Nie udało się pobrać strony. Sprawdź adres i dostępność serwera.',
+    error_rate_limited: 'Za dużo skanów z tego adresu IP — spróbuj za minutę.',
+    error_server_error: 'Wystąpił błąd serwera. Spróbuj ponownie.',
+    error_method_not_allowed: 'Ta metoda żądania nie jest obsługiwana.',
+    grade_A: 'Bardzo dobra gotowość techniczna. Zweryfikuj jeszcze rzeczywiste odpowiedzi modeli AI.',
+    grade_B: 'Dobra baza techniczna. Kilka usprawnień może ułatwić botom rozpoznanie firmy.',
+    grade_C: 'Część sygnałów wymaga poprawy. Zacznij od rekomendacji poniżej.',
+    grade_D: 'Strona ma istotne braki techniczne z punktu widzenia pobierania danych.',
+    status_ok: 'OK', status_warn: 'Uwaga', status_fail: 'Problem',
+    points: 'pkt', detailsOpen: 'Rozwiń szczegóły', yes: 'Tak', no: 'Nie', none: 'Brak',
+    check_availability: 'Dostępność strony', check_robots: 'Reguły robots.txt',
+    check_jsonld: 'Dane strukturalne JSON-LD', check_visible_text: 'Treść widoczna bez JS',
+    check_meta: 'Meta i encja', check_llms: 'Plik llms.txt',
+    check_sitemap: 'Mapa witryny', check_wikidata: 'Wikidata',
+    field_finalUrl: 'Adres końcowy', field_statusCode: 'HTTP', field_ms: 'Czas odpowiedzi',
+    field_redirects: 'Przekierowania', field_robotsExists: 'Plik istnieje',
+    field_botsAllowed: 'Dozwolone boty', field_sitemaps: 'Sitemapy z robots.txt',
+    field_types: 'Typy schema.org', field_missingFields: 'Brakujące pola',
+    field_invalidBlocks: 'Błędne bloki JSON-LD', field_validBlocks: 'Poprawne bloki JSON-LD',
+    field_wordCount: 'Słowa w HTML', field_h1: 'Pierwszy H1', field_h2Count: 'Nagłówki H2',
+    field_title: 'Title', field_description: 'Meta description', field_canonical: 'Canonical',
+    field_lang: 'Język HTML', field_ogTitle: 'og:title', field_ogDescription: 'og:description',
+    field_hreflang: 'Hreflang', field_favicon: 'Favicon / apple-touch-icon',
+    field_exists: 'Plik poprawny', field_checked: 'Sprawdzone adresy', field_sitemapUrl: 'Znaleziona sitemap',
+    field_id: 'Identyfikator encji', field_label: 'Nazwa encji', field_entityDescription: 'Opis encji',
+    llmsNote: 'llms.txt to plik pomocniczy, nie gwarantuje rekomendacji.',
+    wikidataApprox: 'Dopasowanie po nazwie jest przybliżone — sprawdź, czy chodzi o Twoją firmę.',
+    lowTextMessage: 'Strona może wyglądać na pustą dla botów AI.',
+    fetch_failed: 'Nie udało się pobrać pliku.', timeout: 'Przekroczono limit 8 sekund.',
+    response_too_large: 'Treść przekracza limit 2 MB.', too_many_redirects: 'Więcej niż 3 przekierowania.',
+    invalid_redirect: 'Niebezpieczne lub nieprawidłowe przekierowanie.',
+    robots_unavailable: 'Plik robots.txt zwrócił błąd HTTP.',
+    wikidata_unavailable: 'Usługa Wikidata nie odpowiedziała prawidłowo.',
+    wikidata_invalid_json: 'Nieprawidłowa odpowiedź Wikidata.',
+    detailError: 'Błąd sprawdzenia', reportHeader: 'Raport gotowości AI — GeoLead',
+    reportBots: 'Dostęp botów:', reportFixes: 'Najważniejsze poprawki:',
+    fix_enable_https: 'Włącz HTTPS i przekieruj ruch HTTP na bezpieczny adres.',
+    fix_homepage_not_200: 'Przywróć kod HTTP 200 dla strony głównej.',
+    fix_improve_response_time: 'Skróć czas odpowiedzi serwera poniżej 2 sekund.',
+    fix_robots_unavailable: 'Napraw dostępność robots.txt i zweryfikuj reguły dla botów.',
+    fix_robots_block_gptbot: 'Sprawdź regułę blokującą GPTBot. Odblokuj go, jeśli chcesz umożliwić ten rodzaj pobierania.',
+    fix_robots_block_ai_bot: 'Przejrzyj Disallow dla botów AI i świadomie ustaw dostęp do strony.',
+    fix_jsonld_missing_org: 'Dodaj poprawny JSON-LD typu Organization lub LocalBusiness z danymi firmy.',
+    fix_jsonld_add_sameas: 'Dodaj do encji firmy pole sameAs z co najmniej dwoma autentycznymi profilami.',
+    fix_jsonld_complete_fields: 'Uzupełnij w JSON-LD nazwę, URL, logo i dane kontaktowe firmy.',
+    fix_jsonld_add_relevant_type: 'Dodaj adekwatny typ Service, FAQPage, Product lub Person w JSON-LD.',
+    fix_low_text_without_js: 'Dodaj opis oferty w HTML serwera; strona może wyglądać na pustą dla botów AI.',
+    fix_expand_visible_text: 'Rozbuduj merytoryczną treść HTML strony głównej do co najmniej 300 słów.',
+    fix_meta_complete: 'Uzupełnij tytuł, opis, canonical, język, Open Graph i ikonę strony.',
+    fix_sitemap_publish: 'Udostępnij poprawną sitemap.xml i wskaż ją w robots.txt.',
+    fix_llms_add_file: 'Rozważ dodanie pomocniczego llms.txt. Nie gwarantuje on rekomendacji.',
+    fix_wikidata_verify_entity: 'Sprawdź ręcznie obecność właściwej encji firmy w Wikidata.'
+  },
+  en: {
+    skip: 'Skip to tool', navAria: 'Main navigation', logoAria: 'GeoLead — homepage', langAria: 'Language selection', kicker: 'Free GEO tool', hero1: 'Readiness scanner for', heroAI: 'AI',
+    lead: 'Check in about 10 seconds whether AI bots can access your website and identify your business.',
+    configure: 'Website analysis', formTitle: 'Check your company domain',
+    urlLabel: 'Website address', urlPlaceholder: 'yourcompany.com',
+    urlHint: 'Just enter a domain — we scan its homepage and public files. No code to install.',
+    scanButton: 'Scan website', scanning: 'Running technical checks…',
+    stepRobots: 'robots.txt — bot access', stepJsonld: 'JSON-LD structured data',
+    stepContent: 'Content without JavaScript', stepLlms: 'llms.txt and sitemap',
+    stepWikidata: 'Wikidata presence', promptLink: 'Also try: Buyer prompt generator',
+    yourResults: 'Scan result', resultsTitle: 'Your website’s technical readiness',
+    copyReport: 'Copy report', downloadJson: 'Download JSON', scoreLabel: 'Technical score',
+    gradeLabel: 'Readiness grade', scannedAt: 'Scanned on:', scannedUrl: 'Scanned website:',
+    checksTitle: '8 readiness checks', fixTitle: '3 things to fix first',
+    fixEmpty: 'No urgent fixes among the signals tested.',
+    robotsTitle: 'AI bot access based on robots.txt',
+    robotsDescription: 'Rules are evaluated for /, including user-agent groups and precedence of more specific rules.',
+    botColumn: 'Bot', companyColumn: 'Company', accessColumn: 'Access to /',
+    allowed: 'Allowed', blocked: 'Blocked', robotsMissing: 'No robots.txt — all bots are considered allowed by default.',
+    robotsUnknown: 'Could not read robots.txt rules. Bot access is unknown.',
+    disclaimer: 'This score measures technical readiness, not whether ChatGPT actually recommends your business. Start Audit checks that using 20 prompts × 4 AI platforms.',
+    nextKicker: 'What next?', nextTitle: 'Check recommendations, not just configuration',
+    nextText: 'Valid robots.txt and JSON-LD help bots read the website, but do not show whether AI names your business in buyer answers. That requires checking actual responses.',
+    auditOffer: 'We can do it for you: Start Audit — 20 prompts × 4 AI platforms, 80 documented answers, PLN 990 net.',
+    auditCta: 'Explore Start Audit', consultCta: 'Free consultation', privacy: 'Privacy policy',
+    copied: 'Report copied', copyFailed: 'Could not copy automatically. Select the text and copy it manually.',
+    downloaded: 'JSON report downloaded',
+    error_invalid_url: 'Enter a valid public domain, not an IP address or custom port.',
+    error_unreachable: 'Could not retrieve the website. Check the address and server availability.',
+    error_rate_limited: 'Too many scans from this IP address — try again in a minute.',
+    error_server_error: 'Server error. Please try again.',
+    error_method_not_allowed: 'This request method is not supported.',
+    grade_A: 'Very good technical readiness. Verify how AI models actually respond.',
+    grade_B: 'Good technical foundation. A few changes may help bots identify your company.',
+    grade_C: 'Several signals need improvement. Start with the recommendations below.',
+    grade_D: 'The website has significant technical gaps for automated information retrieval.',
+    status_ok: 'OK', status_warn: 'Attention', status_fail: 'Issue',
+    points: 'pts', detailsOpen: 'Expand details', yes: 'Yes', no: 'No', none: 'None',
+    check_availability: 'Website availability', check_robots: 'robots.txt rules',
+    check_jsonld: 'JSON-LD structured data', check_visible_text: 'Content visible without JS',
+    check_meta: 'Metadata and entity', check_llms: 'llms.txt file',
+    check_sitemap: 'Sitemap', check_wikidata: 'Wikidata',
+    field_finalUrl: 'Final address', field_statusCode: 'HTTP', field_ms: 'Response time',
+    field_redirects: 'Redirects', field_robotsExists: 'File exists',
+    field_botsAllowed: 'Allowed bots', field_sitemaps: 'Sitemaps in robots.txt',
+    field_types: 'Schema.org types', field_missingFields: 'Missing properties',
+    field_invalidBlocks: 'Invalid JSON-LD blocks', field_validBlocks: 'Valid JSON-LD blocks',
+    field_wordCount: 'Words in HTML', field_h1: 'First H1', field_h2Count: 'H2 headings',
+    field_title: 'Title', field_description: 'Meta description', field_canonical: 'Canonical',
+    field_lang: 'HTML language', field_ogTitle: 'og:title', field_ogDescription: 'og:description',
+    field_hreflang: 'Hreflang', field_favicon: 'Favicon / apple-touch-icon',
+    field_exists: 'Valid file', field_checked: 'Addresses checked', field_sitemapUrl: 'Found sitemap',
+    field_id: 'Entity ID', field_label: 'Entity name', field_entityDescription: 'Entity description',
+    llmsNote: 'llms.txt is optional and does not guarantee recommendations.',
+    wikidataApprox: 'Name matching is approximate — verify that this is your company.',
+    lowTextMessage: 'The website may appear empty to AI bots.',
+    fetch_failed: 'Could not fetch the file.', timeout: '8-second timeout exceeded.',
+    response_too_large: 'Content exceeds the 2 MB limit.', too_many_redirects: 'More than 3 redirects.',
+    invalid_redirect: 'Unsafe or invalid redirect.', robots_unavailable: 'robots.txt returned an HTTP error.',
+    wikidata_unavailable: 'Wikidata did not respond correctly.',
+    wikidata_invalid_json: 'Invalid response from Wikidata.',
+    detailError: 'Check error', reportHeader: 'AI readiness report — GeoLead',
+    reportBots: 'Bot access:', reportFixes: 'Top fixes:',
+    fix_enable_https: 'Enable HTTPS and redirect HTTP traffic to a secure URL.',
+    fix_homepage_not_200: 'Restore HTTP 200 for the homepage.',
+    fix_improve_response_time: 'Reduce server response time to under 2 seconds.',
+    fix_robots_unavailable: 'Make robots.txt accessible and review your bot rules.',
+    fix_robots_block_gptbot: 'Review the GPTBot block. Allow it if you want to enable this type of crawling.',
+    fix_robots_block_ai_bot: 'Review Disallow rules for AI bots and set access intentionally.',
+    fix_jsonld_missing_org: 'Add valid Organization or LocalBusiness JSON-LD with company details.',
+    fix_jsonld_add_sameas: 'Add at least two genuine company profile URLs to sameAs.',
+    fix_jsonld_complete_fields: 'Complete the company name, URL, logo and contact details in JSON-LD.',
+    fix_jsonld_add_relevant_type: 'Add an appropriate Service, FAQPage, Product or Person type.',
+    fix_low_text_without_js: 'Serve offer details in HTML; the website may look empty to AI bots.',
+    fix_expand_visible_text: 'Expand useful homepage HTML content to at least 300 words.',
+    fix_meta_complete: 'Complete title, description, canonical, language, Open Graph and site icons.',
+    fix_sitemap_publish: 'Publish a valid sitemap.xml and reference it in robots.txt.',
+    fix_llms_add_file: 'Consider an optional llms.txt. It does not guarantee recommendations.',
+    fix_wikidata_verify_entity: 'Manually verify your company’s Wikidata entity.'
+  },
+  de: {
+    skip: 'Zum Tool springen', navAria: 'Hauptnavigation', logoAria: 'GeoLead — Startseite', langAria: 'Sprache wählen', kicker: 'Kostenloses GEO-Tool', hero1: 'Bereitschaftsscanner für', heroAI: 'KI',
+    lead: 'Prüfe in etwa 10 Sekunden, ob KI-Bots deine Website erreichen und dein Unternehmen erkennen können.',
+    configure: 'Website-Analyse', formTitle: 'Unternehmensdomain prüfen',
+    urlLabel: 'Website-Adresse', urlPlaceholder: 'deinefirma.de',
+    urlHint: 'Die Domain genügt — wir prüfen die Startseite und öffentliche Dateien. Keine Installation nötig.',
+    scanButton: 'Website scannen', scanning: 'Technische Analyse läuft…',
+    stepRobots: 'robots.txt — Bot-Zugriff', stepJsonld: 'Strukturierte JSON-LD-Daten',
+    stepContent: 'Inhalte ohne JavaScript', stepLlms: 'llms.txt und Sitemap',
+    stepWikidata: 'Wikidata-Eintrag', promptLink: 'Auch testen: Generator für Kaufprompts',
+    yourResults: 'Scan-Ergebnis', resultsTitle: 'Technische Bereitschaft deiner Website',
+    copyReport: 'Bericht kopieren', downloadJson: 'JSON herunterladen', scoreLabel: 'Technischer Wert',
+    gradeLabel: 'Bereitschaftsnote', scannedAt: 'Gescannt am:', scannedUrl: 'Geprüfte Website:',
+    checksTitle: '8 Bereitschaftsprüfungen', fixTitle: 'Die ersten 3 Verbesserungen',
+    fixEmpty: 'Keine dringenden Verbesserungen bei den getesteten Signalen.',
+    robotsTitle: 'KI-Bot-Zugriff laut robots.txt',
+    robotsDescription: 'Regeln werden für / ausgewertet, einschließlich User-Agent-Gruppen und der jeweils spezifischeren Regel.',
+    botColumn: 'Bot', companyColumn: 'Unternehmen', accessColumn: 'Zugriff auf /',
+    allowed: 'Erlaubt', blocked: 'Gesperrt', robotsMissing: 'Keine robots.txt — alle Bots gelten standardmäßig als erlaubt.',
+    robotsUnknown: 'robots.txt konnte nicht gelesen werden. Der Bot-Zugriff ist unbekannt.',
+    disclaimer: 'Die Punktzahl misst die technische Bereitschaft, nicht ob ChatGPT dein Unternehmen tatsächlich empfiehlt. Das prüft das Start-Audit mit 20 Prompts × 4 KI-Plattformen.',
+    nextKicker: 'Wie geht es weiter?', nextTitle: 'Empfehlungen prüfen, nicht nur Konfiguration',
+    nextText: 'Korrekte robots.txt und JSON-LD helfen Bots beim Lesen der Website, zeigen aber nicht, ob KI dein Unternehmen in Kaufantworten nennt. Dafür sind echte Modellantworten nötig.',
+    auditOffer: 'Wir übernehmen das: Start-Audit — 20 Prompts × 4 KI-Plattformen, 80 dokumentierte Antworten, 990 PLN netto.',
+    auditCta: 'Start-Audit ansehen', consultCta: 'Kostenlose Beratung', privacy: 'Datenschutzerklärung',
+    copied: 'Bericht kopiert', copyFailed: 'Automatisches Kopieren fehlgeschlagen. Text bitte manuell kopieren.',
+    downloaded: 'JSON-Bericht heruntergeladen',
+    error_invalid_url: 'Bitte eine gültige öffentliche Domain ohne IP-Adresse oder Sonderport eingeben.',
+    error_unreachable: 'Website nicht erreichbar. Adresse und Serververfügbarkeit prüfen.',
+    error_rate_limited: 'Zu viele Scans von dieser IP-Adresse — bitte in einer Minute erneut versuchen.',
+    error_server_error: 'Serverfehler. Bitte erneut versuchen.',
+    error_method_not_allowed: 'Diese Anfragemethode wird nicht unterstützt.',
+    grade_A: 'Sehr gute technische Bereitschaft. Prüfe zusätzlich die echten KI-Antworten.',
+    grade_B: 'Gute technische Grundlage. Einige Anpassungen helfen Bots bei der Unternehmenserkennung.',
+    grade_C: 'Mehrere Signale sollten verbessert werden. Beginne mit den Empfehlungen unten.',
+    grade_D: 'Die Website weist erhebliche technische Lücken beim automatischen Abruf auf.',
+    status_ok: 'OK', status_warn: 'Hinweis', status_fail: 'Problem',
+    points: 'Pkt.', detailsOpen: 'Details öffnen', yes: 'Ja', no: 'Nein', none: 'Keine',
+    check_availability: 'Erreichbarkeit der Website', check_robots: 'robots.txt-Regeln',
+    check_jsonld: 'Strukturierte JSON-LD-Daten', check_visible_text: 'Inhalt ohne JS',
+    check_meta: 'Metadaten und Entität', check_llms: 'llms.txt-Datei',
+    check_sitemap: 'Sitemap', check_wikidata: 'Wikidata',
+    field_finalUrl: 'Endgültige Adresse', field_statusCode: 'HTTP', field_ms: 'Antwortzeit',
+    field_redirects: 'Weiterleitungen', field_robotsExists: 'Datei vorhanden',
+    field_botsAllowed: 'Erlaubte Bots', field_sitemaps: 'Sitemaps aus robots.txt',
+    field_types: 'Schema.org-Typen', field_missingFields: 'Fehlende Felder',
+    field_invalidBlocks: 'Ungültige JSON-LD-Blöcke', field_validBlocks: 'Gültige JSON-LD-Blöcke',
+    field_wordCount: 'Wörter im HTML', field_h1: 'Erste H1', field_h2Count: 'H2-Überschriften',
+    field_title: 'Title', field_description: 'Meta Description', field_canonical: 'Canonical',
+    field_lang: 'HTML-Sprache', field_ogTitle: 'og:title', field_ogDescription: 'og:description',
+    field_hreflang: 'Hreflang', field_favicon: 'Favicon / apple-touch-icon',
+    field_exists: 'Gültige Datei', field_checked: 'Geprüfte Adressen', field_sitemapUrl: 'Gefundene Sitemap',
+    field_id: 'Entitäts-ID', field_label: 'Entitätsname', field_entityDescription: 'Entitätsbeschreibung',
+    llmsNote: 'llms.txt ist optional und garantiert keine Empfehlungen.',
+    wikidataApprox: 'Der Namensabgleich ist ungenau — prüfe, ob es dein Unternehmen ist.',
+    lowTextMessage: 'Die Website kann für KI-Bots leer erscheinen.',
+    fetch_failed: 'Datei konnte nicht abgerufen werden.', timeout: '8-Sekunden-Zeitlimit überschritten.',
+    response_too_large: 'Inhalt über dem 2-MB-Limit.', too_many_redirects: 'Mehr als 3 Weiterleitungen.',
+    invalid_redirect: 'Unsichere oder fehlerhafte Weiterleitung.',
+    robots_unavailable: 'robots.txt hat einen HTTP-Fehler zurückgegeben.',
+    wikidata_unavailable: 'Wikidata hat nicht korrekt geantwortet.',
+    wikidata_invalid_json: 'Ungültige Wikidata-Antwort.',
+    detailError: 'Prüffehler', reportHeader: 'KI-Bereitschaftsbericht — GeoLead',
+    reportBots: 'Bot-Zugriff:', reportFixes: 'Wichtigste Verbesserungen:',
+    fix_enable_https: 'HTTPS aktivieren und HTTP-Aufrufe auf die sichere Adresse umleiten.',
+    fix_homepage_not_200: 'HTTP-Status 200 für die Startseite wiederherstellen.',
+    fix_improve_response_time: 'Serverantwort auf unter 2 Sekunden verkürzen.',
+    fix_robots_unavailable: 'robots.txt erreichbar machen und Bot-Regeln prüfen.',
+    fix_robots_block_gptbot: 'GPTBot-Sperre prüfen und bei gewünschtem Zugriff aufheben.',
+    fix_robots_block_ai_bot: 'Disallow-Regeln für KI-Bots gezielt anpassen.',
+    fix_jsonld_missing_org: 'Gültige JSON-LD-Daten für Organization oder LocalBusiness ergänzen.',
+    fix_jsonld_add_sameas: 'Mindestens zwei echte Unternehmensprofile in sameAs angeben.',
+    fix_jsonld_complete_fields: 'Firmenname, URL, Logo und Kontaktdaten in JSON-LD ergänzen.',
+    fix_jsonld_add_relevant_type: 'Passenden Typ Service, FAQPage, Product oder Person ergänzen.',
+    fix_low_text_without_js: 'Angebot im Server-HTML ausgeben, sonst kann die Website leer erscheinen.',
+    fix_expand_visible_text: 'Informative Startseiteninhalte auf mindestens 300 Wörter ausbauen.',
+    fix_meta_complete: 'Title, Beschreibung, Canonical, Sprache, Open Graph und Icons ergänzen.',
+    fix_sitemap_publish: 'Gültige sitemap.xml bereitstellen und in robots.txt verlinken.',
+    fix_llms_add_file: 'Optional eine llms.txt ergänzen. Sie garantiert keine Empfehlungen.',
+    fix_wikidata_verify_entity: 'Wikidata-Eintrag des Unternehmens manuell prüfen.'
+  },
+  fr: {
+    skip: 'Aller à l’outil', navAria: 'Navigation principale', logoAria: 'GeoLead — accueil', langAria: 'Choix de langue', kicker: 'Outil GEO gratuit', hero1: 'Scanner de préparation', heroAI: 'IA',
+    lead: 'Vérifiez en environ 10 secondes si les robots IA peuvent accéder à votre site et identifier votre entreprise.',
+    configure: 'Analyse du site', formTitle: 'Vérifiez le domaine de votre entreprise',
+    urlLabel: 'Adresse du site', urlPlaceholder: 'votreentreprise.fr',
+    urlHint: 'Le domaine suffit — nous analysons la page d’accueil et les fichiers publics. Aucune installation.',
+    scanButton: 'Analyser le site', scanning: 'Analyse technique en cours…',
+    stepRobots: 'robots.txt — accès des robots', stepJsonld: 'Données structurées JSON-LD',
+    stepContent: 'Contenu sans JavaScript', stepLlms: 'llms.txt et sitemap',
+    stepWikidata: 'Présence sur Wikidata', promptLink: 'À essayer aussi : générateur de prompts d’achat',
+    yourResults: 'Résultat de l’analyse', resultsTitle: 'Préparation technique de votre site',
+    copyReport: 'Copier le rapport', downloadJson: 'Télécharger JSON', scoreLabel: 'Score technique',
+    gradeLabel: 'Note de préparation', scannedAt: 'Analyse du :', scannedUrl: 'Site analysé :',
+    checksTitle: '8 points de contrôle', fixTitle: '3 corrections prioritaires',
+    fixEmpty: 'Aucune correction urgente parmi les signaux contrôlés.',
+    robotsTitle: 'Accès des robots IA selon robots.txt',
+    robotsDescription: 'Les règles sont évaluées pour /, avec les groupes User-agent et la priorité des règles les plus précises.',
+    botColumn: 'Robot', companyColumn: 'Entreprise', accessColumn: 'Accès à /',
+    allowed: 'Autorisé', blocked: 'Bloqué', robotsMissing: 'Aucun robots.txt — les robots sont considérés comme autorisés par défaut.',
+    robotsUnknown: 'Lecture de robots.txt impossible. L’accès des robots est inconnu.',
+    disclaimer: 'Le score mesure la préparation technique, pas si ChatGPT recommande réellement votre entreprise. Audit Start le vérifie avec 20 prompts × 4 plateformes IA.',
+    nextKicker: 'Et ensuite ?', nextTitle: 'Vérifiez les recommandations, pas seulement la configuration',
+    nextText: 'Des fichiers robots.txt et JSON-LD corrects facilitent la lecture du site, mais ne montrent pas si l’IA cite votre entreprise dans ses réponses d’achat. Il faut examiner les réponses réelles.',
+    auditOffer: 'Nous le faisons pour vous : Audit Start — 20 prompts × 4 plateformes IA, 80 réponses documentées, 990 PLN HT.',
+    auditCta: 'Voir Audit Start', consultCta: 'Consultation gratuite', privacy: 'Politique de confidentialité',
+    copied: 'Rapport copié', copyFailed: 'Copie automatique impossible. Sélectionnez et copiez le texte manuellement.',
+    downloaded: 'Rapport JSON téléchargé',
+    error_invalid_url: 'Indiquez un domaine public valide, sans adresse IP ni port personnalisé.',
+    error_unreachable: 'Impossible de récupérer le site. Vérifiez l’adresse et le serveur.',
+    error_rate_limited: 'Trop d’analyses depuis cette adresse IP — réessayez dans une minute.',
+    error_server_error: 'Erreur du serveur. Réessayez.',
+    error_method_not_allowed: 'Cette méthode de requête n’est pas prise en charge.',
+    grade_A: 'Très bonne préparation technique. Vérifiez encore les réponses réelles des IA.',
+    grade_B: 'Bonne base technique. Quelques ajustements aideront les robots à identifier votre société.',
+    grade_C: 'Plusieurs signaux sont à améliorer. Commencez par les conseils ci-dessous.',
+    grade_D: 'Le site présente des lacunes techniques importantes pour la récupération automatique.',
+    status_ok: 'OK', status_warn: 'Attention', status_fail: 'Problème',
+    points: 'pts', detailsOpen: 'Afficher les détails', yes: 'Oui', no: 'Non', none: 'Aucun',
+    check_availability: 'Disponibilité du site', check_robots: 'Règles robots.txt',
+    check_jsonld: 'Données structurées JSON-LD', check_visible_text: 'Contenu visible sans JS',
+    check_meta: 'Métadonnées et entité', check_llms: 'Fichier llms.txt',
+    check_sitemap: 'Sitemap', check_wikidata: 'Wikidata',
+    field_finalUrl: 'Adresse finale', field_statusCode: 'HTTP', field_ms: 'Temps de réponse',
+    field_redirects: 'Redirections', field_robotsExists: 'Fichier présent',
+    field_botsAllowed: 'Robots autorisés', field_sitemaps: 'Sitemaps dans robots.txt',
+    field_types: 'Types schema.org', field_missingFields: 'Champs manquants',
+    field_invalidBlocks: 'Blocs JSON-LD invalides', field_validBlocks: 'Blocs JSON-LD valides',
+    field_wordCount: 'Mots dans le HTML', field_h1: 'Premier H1', field_h2Count: 'Titres H2',
+    field_title: 'Title', field_description: 'Meta description', field_canonical: 'Canonical',
+    field_lang: 'Langue HTML', field_ogTitle: 'og:title', field_ogDescription: 'og:description',
+    field_hreflang: 'Hreflang', field_favicon: 'Favicon / apple-touch-icon',
+    field_exists: 'Fichier valide', field_checked: 'Adresses vérifiées', field_sitemapUrl: 'Sitemap trouvé',
+    field_id: 'ID de l’entité', field_label: 'Nom de l’entité', field_entityDescription: 'Description de l’entité',
+    llmsNote: 'llms.txt est facultatif et ne garantit aucune recommandation.',
+    wikidataApprox: 'La correspondance du nom est approximative — vérifiez qu’il s’agit de votre société.',
+    lowTextMessage: 'Le site peut sembler vide pour les robots IA.',
+    fetch_failed: 'Impossible de récupérer le fichier.', timeout: 'Délai de 8 secondes dépassé.',
+    response_too_large: 'Contenu supérieur à 2 Mo.', too_many_redirects: 'Plus de 3 redirections.',
+    invalid_redirect: 'Redirection non sûre ou invalide.',
+    robots_unavailable: 'robots.txt a renvoyé une erreur HTTP.',
+    wikidata_unavailable: 'Wikidata n’a pas répondu correctement.',
+    wikidata_invalid_json: 'Réponse Wikidata invalide.',
+    detailError: 'Erreur du contrôle', reportHeader: 'Rapport de préparation IA — GeoLead',
+    reportBots: 'Accès des robots :', reportFixes: 'Corrections prioritaires :',
+    fix_enable_https: 'Activer HTTPS et rediriger HTTP vers une adresse sécurisée.',
+    fix_homepage_not_200: 'Rétablir le code HTTP 200 pour la page d’accueil.',
+    fix_improve_response_time: 'Réduire le temps de réponse du serveur à moins de 2 secondes.',
+    fix_robots_unavailable: 'Rendre robots.txt accessible et revoir les règles des robots.',
+    fix_robots_block_gptbot: 'Vérifier le blocage de GPTBot et l’autoriser si cet accès est souhaité.',
+    fix_robots_block_ai_bot: 'Réexaminer les règles Disallow pour les robots IA.',
+    fix_jsonld_missing_org: 'Ajouter du JSON-LD Organization ou LocalBusiness valide avec les données de la société.',
+    fix_jsonld_add_sameas: 'Ajouter au moins deux profils authentiques de la société dans sameAs.',
+    fix_jsonld_complete_fields: 'Compléter nom, URL, logo et coordonnées dans JSON-LD.',
+    fix_jsonld_add_relevant_type: 'Ajouter un type pertinent Service, FAQPage, Product ou Person.',
+    fix_low_text_without_js: 'Afficher l’offre dans le HTML serveur : le site peut sinon sembler vide.',
+    fix_expand_visible_text: 'Porter le contenu utile de la page d’accueil à au moins 300 mots.',
+    fix_meta_complete: 'Compléter titre, description, canonical, langue, Open Graph et icônes.',
+    fix_sitemap_publish: 'Publier un sitemap.xml valide et le déclarer dans robots.txt.',
+    fix_llms_add_file: 'Envisager un llms.txt facultatif. Il ne garantit aucune recommandation.',
+    fix_wikidata_verify_entity: 'Vérifier manuellement la fiche Wikidata de votre entreprise.'
+  }
+};
+
+const LANGS = ['pl', 'en', 'de', 'fr'];
+const $ = (id) => document.getElementById(id);
+const CHECK_IDS = ['availability', 'robots', 'jsonld', 'visible_text', 'meta', 'llms', 'sitemap', 'wikidata'];
+const STEP_KEYS = ['stepRobots', 'stepJsonld', 'stepContent', 'stepLlms', 'stepWikidata'];
+const CHECK_ICONS = {
+  availability: 'fa-globe', robots: 'fa-robot', jsonld: 'fa-code', visible_text: 'fa-align-left',
+  meta: 'fa-tags', llms: 'fa-file-lines', sitemap: 'fa-sitemap', wikidata: 'fa-database'
+};
+const COLORS = { A: '#6ee7b7', B: '#67e8f9', C: '#fde68a', D: '#fda4af' };
+let lang = 'pl';
+let report = null;
+let activeStep = 0;
+let stepTimer = null;
+let lastError = null;
+let isScanning = false;
+
+try {
+  const saved = localStorage.getItem('geolead_scanner_lang_v1');
+  if (LANGS.includes(saved)) lang = saved;
+} catch (_) {}
+const chosen = new URLSearchParams(location.search).get('lang');
+if (LANGS.includes(chosen)) lang = chosen;
+
+function track(event, params = {}) {
+  // Nigdy nie wysyłamy do GA4 pełnego skanowanego adresu.
+  try { if (typeof window.gtag === 'function') window.gtag('event', event, params); }
+  catch (_) {}
+}
+
+function translate() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const translation = T[lang][element.dataset.i18n];
+    if (typeof translation === 'string') element.textContent = translation;
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+    element.placeholder = T[lang][element.dataset.i18nPlaceholder] || '';
+  });
+  document.querySelectorAll('[data-lang]').forEach((element) => {
+    element.setAttribute('aria-pressed', String(element.dataset.lang === lang));
+  });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+    element.setAttribute('aria-label', T[lang][element.dataset.i18nAriaLabel] || '');
+  });
+  if (lastError) $('formError').textContent = T[lang]['error_' + lastError] || T[lang].error_server_error;
+  if (isScanning) updateSteps();
+  if (report) renderReport();
+}
+
+function changeLanguage(next) {
+  if (!LANGS.includes(next) || lang === next) return;
+  lang = next;
+  try { localStorage.setItem('geolead_scanner_lang_v1', lang); } catch (_) {}
+  translate();
+}
+
+function validInput(rawValue) {
+  const input = rawValue.trim();
+  if (!input || input.length > 2048 || /[\x00-\x1f\x7f\\]/.test(input) || input.startsWith('//')) return null;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(input) && !/^https?:\/\//i.test(input)) return null;
+  let parsed;
+  try { parsed = new URL(/^https?:\/\//i.test(input) ? input : 'https://' + input); }
+  catch (_) { return null; }
+  const host = parsed.hostname.toLowerCase().replace(/\.+$/, '');
+  if (!['https:', 'http:'].includes(parsed.protocol) || parsed.username || parsed.password || parsed.port ||
+      !host.includes('.') || host.includes('..') || host === 'localhost' || host.endsWith('.localhost') ||
+      host.endsWith('.local') || host.endsWith('.internal') || host.includes(':') || host.includes('[') ||
+      /^\d+(?:\.\d+)+$/.test(host) ||
+      !host.split('.').every((part) => /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(part))) return null;
+  parsed.hostname = host;
+  return parsed.origin;
+}
+
+function showError(code) {
+  lastError = T[lang]['error_' + code] ? code : 'server_error';
+  $('formError').textContent = T[lang]['error_' + lastError];
+  $('formError').hidden = false;
+  track('scan_error', { error: lastError });
+}
+
+function updateSteps() {
+  document.querySelectorAll('.scan-step').forEach((element, index) => {
+    const active = index === activeStep;
+    element.classList.toggle('active', active);
+    if (active) element.setAttribute('aria-current', 'step');
+    else element.removeAttribute('aria-current');
+  });
+  $('scanStatus').textContent = T[lang][STEP_KEYS[activeStep]];
+}
+
+function startLoading() {
+  isScanning = true;
+  activeStep = 0;
+  $('scanButton').disabled = true;
+  $('scanForm').setAttribute('aria-busy', 'true');
+  $('loading').hidden = false;
+  updateSteps();
+  clearInterval(stepTimer);
+  stepTimer = setInterval(() => {
+    activeStep = (activeStep + 1) % STEP_KEYS.length;
+    updateSteps();
+  }, 1200);
+}
+
+function stopLoading() {
+  clearInterval(stepTimer);
+  stepTimer = null;
+  isScanning = false;
+  $('loading').hidden = true;
+  $('scanButton').disabled = false;
+  $('scanForm').removeAttribute('aria-busy');
+}
+
+function toast(message) {
+  const element = $('toast');
+  element.textContent = message;
+  element.hidden = false;
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => { element.hidden = true; }, 2800);
+}
+
+function el(tag, className, content) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (content !== undefined && content !== null) element.textContent = String(content);
+  return element;
+}
+
+function formatNumber(value) {
+  return Number(value).toLocaleString(lang, { maximumFractionDigits: 2 });
+}
+
+function valueOrDash(value) {
+  if (typeof value === 'boolean') return value ? T[lang].yes : T[lang].no;
+  if (Array.isArray(value)) return value.length ? value.join(', ') : T[lang].none;
+  if (value === undefined || value === null || value === '') return '—';
+  return String(value);
+}
+
+function addDetailRow(list, nameKey, value) {
+  const row = el('div', 'detail-row');
+  row.append(el('dt', 'font-semibold text-slate-300', T[lang][nameKey] || nameKey));
+  row.append(el('dd', 'm-0 text-slate-100 break-words', valueOrDash(value)));
+  list.append(row);
+}
+
+function renderCheckDetails(root, item) {
+  const details = item.details || {};
+  const list = el('dl', 'detail-list');
+  if (details.error) {
+    addDetailRow(list, 'detailError', T[lang][details.error] || T[lang].fetch_failed);
+    root.append(list);
+    return;
+  }
+  switch (item.id) {
+    case 'availability':
+      addDetailRow(list, 'field_finalUrl', details.finalUrl);
+      addDetailRow(list, 'field_statusCode', details.statusCode);
+      addDetailRow(list, 'field_ms', typeof details.ms === 'number' ? `${details.ms} ms` : '—');
+      addDetailRow(list, 'field_redirects', details.redirects);
+      break;
+    case 'robots':
+      addDetailRow(list, 'field_robotsExists', details.robotsExists);
+      addDetailRow(list, 'field_botsAllowed', Array.isArray(details.bots) ? `${details.bots.filter((b) => b.allowed).length} / 7` : '—');
+      addDetailRow(list, 'field_sitemaps', details.sitemaps);
+      break;
+    case 'jsonld':
+      addDetailRow(list, 'field_types', details.types);
+      addDetailRow(list, 'field_missingFields', details.missingFields);
+      addDetailRow(list, 'field_validBlocks', details.validBlocks);
+      addDetailRow(list, 'field_invalidBlocks', details.invalidBlocks);
+      break;
+    case 'visible_text':
+      addDetailRow(list, 'field_wordCount', details.wordCount);
+      addDetailRow(list, 'field_h1', details.h1);
+      addDetailRow(list, 'field_h2Count', details.h2Count);
+      if (details.wordCount < 100) root.append(el('p', 'mt-3 text-red-200 font-semibold', T[lang].lowTextMessage));
+      break;
+    case 'meta':
+      for (const [field, key] of [
+        ['title', 'field_title'], ['description', 'field_description'], ['canonical', 'field_canonical'],
+        ['lang', 'field_lang'], ['ogTitle', 'field_ogTitle'], ['ogDescription', 'field_ogDescription'],
+        ['hreflang', 'field_hreflang'], ['favicon', 'field_favicon']
+      ]) addDetailRow(list, key, details[field]);
+      break;
+    case 'llms':
+      addDetailRow(list, 'field_exists', details.exists);
+      addDetailRow(list, 'field_statusCode', details.statusCode);
+      root.append(el('p', 'mt-3 text-sm text-slate-200', T[lang].llmsNote));
+      break;
+    case 'sitemap':
+      addDetailRow(list, 'field_exists', details.exists);
+      addDetailRow(list, 'field_sitemapUrl', details.sitemapUrl);
+      addDetailRow(list, 'field_checked', details.checked);
+      if (details.error) addDetailRow(list, 'detailError', T[lang][details.error] || T[lang].fetch_failed);
+      break;
+    case 'wikidata':
+      addDetailRow(list, 'field_id', details.id);
+      addDetailRow(list, 'field_label', details.label);
+      addDetailRow(list, 'field_entityDescription', details.description);
+      root.append(el('p', 'mt-3 text-sm text-amber-200', T[lang].wikidataApprox));
+      break;
+    default: break;
+  }
+  root.prepend(list);
+}
+
+function renderChecks() {
+  const root = $('checksGrid');
+  root.replaceChildren();
+  for (const id of CHECK_IDS) {
+    const item = report.checks.find((entry) => entry.id === id);
+    if (!item) continue;
+    const outer = el('div', 'check-card fade-up');
+    const details = el('details');
+    const summary = el('summary');
+    summary.setAttribute('aria-label', `${T[lang]['check_' + id]} — ${T[lang].detailsOpen}`);
+    const row = el('div', 'flex flex-wrap items-center gap-3');
+    const icon = el('i', `fa-solid ${CHECK_ICONS[id] || 'fa-circle-info'} text-lg status-${item.status}`);
+    icon.setAttribute('aria-hidden', 'true');
+    const name = el('span', 'heading font-bold flex-1 min-w-0', T[lang]['check_' + id] || id);
+    const label = el('span', `status-label status-${item.status}`, T[lang]['status_' + item.status] || item.status);
+    const points = el('span', 'font-bold text-white whitespace-nowrap', `${formatNumber(item.points)} / ${item.max} ${T[lang].points}`);
+    const chevron = el('i', 'fa-solid fa-chevron-down text-slate-300 check-chevron');
+    chevron.setAttribute('aria-hidden', 'true');
+    row.append(icon, name, label, points, chevron);
+    summary.append(row);
+    const body = el('div', 'pt-4 border-t border-white/10 mt-3');
+    renderCheckDetails(body, item);
+    details.append(summary, body);
+    outer.append(details);
+    root.append(outer);
+  }
+}
+
+function renderFixes() {
+  const root = $('topFixes');
+  root.replaceChildren();
+  if (!Array.isArray(report.topFixes) || !report.topFixes.length) {
+    root.append(el('li', 'question-card text-slate-200', T[lang].fixEmpty));
+    return;
+  }
+  report.topFixes.slice(0, 3).forEach((fix, index) => {
+    const item = el('li', 'question-card flex gap-4 items-start');
+    const ordinal = el('span', 'fix-number', index + 1);
+    const text = el('div');
+    text.append(el('p', 'text-white font-bold mb-1', T[lang]['check_' + fix.id] || fix.id));
+    text.append(el('p', 'text-slate-200', T[lang]['fix_' + fix.code] || T[lang].error_server_error));
+    item.append(ordinal, text);
+    root.append(item);
+  });
+}
+
+function renderBots() {
+  const root = $('botRows');
+  root.replaceChildren();
+  const info = report.checks.find((entry) => entry.id === 'robots')?.details || {};
+  $('robotsNotice').hidden = true;
+  if (!Array.isArray(info.bots)) {
+    const tr = el('tr');
+    const td = el('td', 'text-amber-200', T[lang].robotsUnknown);
+    td.colSpan = 3;
+    tr.append(td);
+    root.append(tr);
+    $('robotsNotice').textContent = T[lang].robotsUnknown;
+    $('robotsNotice').hidden = false;
+    return;
+  }
+  if (info.robotsExists === false) {
+    $('robotsNotice').textContent = T[lang].robotsMissing;
+    $('robotsNotice').hidden = false;
+  }
+  for (const bot of info.bots) {
+    const tr = el('tr');
+    tr.append(el('th', 'font-semibold text-slate-100', bot.bot));
+    tr.lastChild.setAttribute('scope', 'row');
+    tr.append(el('td', '', bot.company));
+    const status = el('td', bot.allowed ? 'text-emerald-200 font-bold' : 'text-red-200 font-bold',
+      bot.allowed ? T[lang].allowed : T[lang].blocked);
+    status.prepend(el('i', `fa-solid ${bot.allowed ? 'fa-circle-check' : 'fa-circle-xmark'} mr-2`));
+    status.firstChild.setAttribute('aria-hidden', 'true');
+    tr.append(status);
+    root.append(tr);
+  }
+}
+
+function renderReport() {
+  if (!report) return;
+  const score = Number(report.score) || 0;
+  const normalized = Math.max(0, Math.min(100, score));
+  $('scoreValue').textContent = formatNumber(normalized);
+  const grade = ['A', 'B', 'C', 'D'].includes(report.grade) ? report.grade : 'D';
+  const circumference = 2 * Math.PI * 70;
+  $('scoreProgress').style.stroke = COLORS[grade];
+  $('scoreProgress').style.strokeDasharray = String(circumference);
+  $('scoreProgress').style.strokeDashoffset = String(circumference * (1 - normalized / 100));
+  $('gradeBadge').textContent = grade;
+  $('gradeBadge').style.color = COLORS[grade];
+  $('gradeBadge').style.borderColor = COLORS[grade];
+  $('scoreBox').setAttribute('aria-label', `${T[lang].scoreLabel}: ${formatNumber(score)} / 100, ${T[lang].gradeLabel}: ${grade}`);
+  $('gradeDescription').textContent = T[lang]['grade_' + grade];
+  const date = new Date(report.scannedAt);
+  $('scanDate').dateTime = Number.isNaN(date.valueOf()) ? '' : date.toISOString();
+  $('scanDate').textContent = Number.isNaN(date.valueOf()) ? '—' :
+    new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
+  $('scanFinalUrl').textContent = report.finalUrl || report.url || '—';
+  renderChecks();
+  renderFixes();
+  renderBots();
+}
+
+function reportText() {
+  if (!report) return '';
+  const tr = T[lang];
+  const lines = [
+    tr.reportHeader,
+    `${tr.scannedUrl} ${report.finalUrl || report.url}`,
+    `${tr.scannedAt} ${$('scanDate').textContent}`,
+    `${tr.scoreLabel}: ${formatNumber(report.score)} / 100 (${tr.gradeLabel}: ${report.grade})`,
+    '', tr.checksTitle
+  ];
+  for (const item of report.checks) {
+    lines.push(`- ${tr['check_' + item.id] || item.id}: ${formatNumber(item.points)} / ${item.max} ${tr.points} (${tr['status_' + item.status] || item.status})`);
+  }
+  lines.push('', tr.reportFixes);
+  if (report.topFixes?.length) report.topFixes.forEach((fix, index) => {
+    lines.push(`${index + 1}. ${tr['fix_' + fix.code] || fix.code}`);
+  });
+  else lines.push(tr.fixEmpty);
+  const robots = report.checks.find((item) => item.id === 'robots')?.details?.bots;
+  if (Array.isArray(robots)) {
+    lines.push('', tr.reportBots);
+    for (const bot of robots) lines.push(`${bot.bot} (${bot.company}): ${bot.allowed ? tr.allowed : tr.blocked}`);
+  }
+  lines.push('', tr.disclaimer);
+  return lines.join('\n');
+}
+
+async function copyReport() {
+  const text = reportText();
+  if (!text) return;
+  try {
+    if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text);
+    else {
+      const temp = el('textarea');
+      temp.value = text;
+      temp.style.position = 'fixed';
+      temp.style.opacity = '0';
+      document.body.append(temp);
+      temp.select();
+      const success = document.execCommand('copy');
+      temp.remove();
+      if (!success) throw new Error('copy_failed');
+    }
+    toast(T[lang].copied);
+  } catch (_) { toast(T[lang].copyFailed); }
+}
+
+function downloadJson() {
+  if (!report) return;
+  const blob = new Blob([JSON.stringify(report, null, 2) + '\n'], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = el('a');
+  link.href = url;
+  link.download = 'geolead-skaner-ai.json';
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  toast(T[lang].downloaded);
+}
+
+async function scan(event) {
+  event.preventDefault();
+  if (isScanning) return;
+  lastError = null;
+  $('formError').hidden = true;
+  const normalized = validInput($('scanUrl').value);
+  if (!normalized) {
+    showError('invalid_url');
+    $('scanUrl').focus();
+    return;
+  }
+  $('results').hidden = true;
+  report = null;
+  startLoading();
+  // W analityce wysyłamy wyłącznie końcowy segment domeny (np. pl), nigdy URL.
+  track('scan_start', { domain_tld: new URL(normalized).hostname.split('.').pop() });
+  try {
+    const response = await fetch('/api/scan', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: normalized })
+    });
+    let data;
+    try { data = await response.json(); } catch (_) { throw new Error('server_error'); }
+    if (!response.ok || !data.ok) {
+      throw new Error(data && typeof data.error === 'string' ? data.error : 'server_error');
+    }
+    if (!Array.isArray(data.checks) || typeof data.score !== 'number') throw new Error('server_error');
+    report = data;
+    renderReport();
+    $('results').hidden = false;
+    track('scan_result', { score: report.score, grade: report.grade });
+    $('resultsTitle').focus({ preventScroll: true });
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $('results').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  } catch (error) {
+    showError(error && error.message && T[lang]['error_' + error.message] ? error.message : 'server_error');
+  } finally {
+    stopLoading();
+  }
+}
+
+$('scanForm').addEventListener('submit', scan);
+$('copyReport').addEventListener('click', copyReport);
+$('downloadJson').addEventListener('click', downloadJson);
+document.querySelectorAll('[data-lang]').forEach((button) => button.addEventListener('click', () => changeLanguage(button.dataset.lang)));
+$('auditCta').addEventListener('click', () => track('cta_click', { target: 'audyt_start' }));
+$('consultCta').addEventListener('click', () => track('cta_click', { target: 'konsultacja' }));
+$('generatorLink').addEventListener('click', () => track('cta_click', { target: 'generator_promptow' }));
+translate();
+</script>
+</body>
+</html>
