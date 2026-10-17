@@ -26,7 +26,7 @@ export default defineConfig({
       // integracji sitemap — dodajemy ją jawnie, żeby trafiła do mapy.
       // GL-212: polityka prywatności to też statyczny plik w public/.
       // GL-217: generator promptów, GL-224: skaner gotowości AI (statyczne pliki w public/narzedzia/).
-      customPages: ['https://geolead.pl/', 'https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/', 'https://geolead.pl/narzedzia/skaner-ai/'],
+      customPages: ['https://geolead.pl/', 'https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/', 'https://geolead.pl/narzedzia/skaner-ai/', 'https://geolead.pl/metodologia/'],
       // Wykluczamy strony techniczne z sitemap, jeśli powstaną w przyszłości
       filter: (page) => !page.includes('/draft/'),
       i18n: {
