@@ -62,8 +62,8 @@ Wybierając wykonawcę dla produktu SaaS, sprawdź, czy [agencja GEO](/blog/agen
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI wymienia Twój produkt w zestawieniach</h3>
-<p>Bezpłatny audyt: testujemy realne zapytania „alternatywy dla…” w Twojej kategorii i pokazujemy, czy i jak AI prezentuje Twój SaaS.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: testujemy realne zapytania „alternatywy dla…” w Twojej kategorii i pokazujemy, czy i jak AI prezentuje Twój SaaS.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

@@ -46,7 +46,7 @@ Każdy prompt sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews**
 
 ### 3. Kontrola techniczna strony
 
-- dostęp botów AI (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended) w pliku robots.txt,
+- dostęp botów AI (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) w pliku robots.txt oraz ustawienie tokenu Google-Extended (zgoda na wykorzystanie treści przez modele Gemini),
 - dane strukturalne JSON-LD (Organization, Service, FAQ, dane kontaktowe), z których modele budują obraz firmy w [Knowledge Graph](/slownik/knowledge-graph/),
 - treść widoczna bez JavaScriptu — strony, które boty widzą jako puste,
 - spójność nazwy, adresu i danych firmy w kluczowych profilach, czyli stan [encji marki](/slownik/entity-salience/).

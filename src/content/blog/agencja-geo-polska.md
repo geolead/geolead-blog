@@ -33,9 +33,9 @@ Agencja GEO to podmiot, który sprawia, że tą rekomendacją jest Twoja firma.
 
 **Agencja GEO (Generative Engine Optimization)** to wyspecjalizowana firma marketingowo-technologiczna zajmująca się optymalizacją widoczności marki w odpowiedziach generatywnych [modeli językowych](/slownik/llm/) — ChatGPT, Perplexity, Claude, Gemini i Microsoft Copilot.
 
-W odróżnieniu od agencji SEO, która optymalizuje witrynę pod indeks wyszukiwarki Google, agencja GEO optymalizuje *encję marki* — jej reprezentację w bazach wiedzy, z których korzystają modele AI przy generowaniu odpowiedzi. Cel jest jeden: gdy potencjalny klient zapyta AI o najlepszą firmę w Twojej branży, model musi wymienić Ciebie z nazwy.
+W odróżnieniu od agencji SEO, która optymalizuje witrynę pod indeks wyszukiwarki Google, agencja GEO optymalizuje *encję marki* — jej reprezentację w bazach wiedzy, z których korzystają modele AI przy generowaniu odpowiedzi. Cel jest jeden: gdy potencjalny klient zapyta AI o najlepszą firmę w Twojej branży, model ma mieć wystarczające podstawy, by wymienić Ciebie z nazwy.
 
-GeoLead jest pierwszą agencją GEO w Polsce, działającą wyłącznie w tym segmencie od 2024 roku.
+GeoLead to agencja GEO, która od 2024 roku działa wyłącznie w tym segmencie.
 
 ## Jak działa GEO? Trzy etapy procesu
 
@@ -47,15 +47,15 @@ Pierwszy etap to diagnoza: sprawdzamy, jak modele AI postrzegają Twoją markę 
 
 Wynik audytu to precyzyjna mapa: gdzie jesteś dziś i co konkretnie blokuje Twoją widoczność w AI.
 
-### 2. Wstrzykiwanie danych (RAG)
+### 2. Optymalizacja źródeł (RAG)
 
 Retrieval-Augmented Generation ([RAG](/slownik/rag/)) to mechanizm, przez który modele AI uzupełniają swoją wiedzę o zewnętrzne, aktualne źródła. Agencja GEO tworzy i dystrybuuje treści w formatach i miejscach, z których LLM-y aktywnie korzystają: strukturyzowane artykuły z JSON-LD, wpisy w branżowych bazach wiedzy, publikacje w mediach cytowanych przez modele.
 
-To nie jest klasyczny content marketing. To precyzyjne wgrywanie wiedzy o Twojej firmie do ekosystemu, z którego AI czerpie informacje w czasie rzeczywistym.
+To nie jest klasyczny content marketing. To systematyczne porządkowanie i publikowanie wiedzy o Twojej firmie w źródłach, z których AI pobiera informacje przy odpowiedzi.
 
-### 3. Monitorowanie i dominacja
+### 3. Pomiar i raportowanie
 
-GEO bez mierzalnych wyników to tylko teoria. Monitorujemy wzrost [Entity Salience](/slownik/entity-salience/) — miary siły Twojej marki jako rozpoznawalnej encji w modelach językowych — i raportujemy go w regularnych cyklach. Punktem odniesienia jest pomiar wyjściowy wykonany przed startem prac: ten sam zestaw pytań zakupowych, te same platformy, sesje bez pamięci i personalizacji. Każdy raport pokazuje zmianę względem tego pomiaru, a nie obietnicę procentową, której klient nie jest w stanie sprawdzić.
+GEO bez mierzalnych wyników to tylko teoria. Mierzymy, jak często i w jakim kontekście modele wymieniają Twoją markę (wzmianka, cytowanie, rekomendacja), i raportujemy to w regularnych cyklach; [Entity Salience](/slownik/entity-salience/) traktujemy jako pojęcie pomocnicze, nie jako miernik. Punktem odniesienia jest pomiar wyjściowy wykonany przed startem prac: ten sam zestaw pytań zakupowych, te same platformy, sesje bez pamięci i personalizacji. Każdy raport pokazuje zmianę względem tego pomiaru, a nie obietnicę procentową, której klient nie jest w stanie sprawdzić.
 
 ## GEO vs SEO — różnice, które mają znaczenie dla biznesu
 
@@ -67,7 +67,7 @@ Pytanie "czy GEO zastępuje SEO?" pada na każdym spotkaniu z klientem. Odpowied
 | **Mechanizm** | Indeksowanie stron, linki, Core Web Vitals | Entity authority, RAG, Knowledge Graph |
 | **Format wyniku** | Lista 10 linków | Jedna, konkretna odpowiedź |
 | **Intencja użytkownika** | Eksploracja | Decyzja |
-| **Czas do efektów** | 3–12 miesięcy | 4–8 tygodni (pierwsze sygnały) |
+| **Czas do efektów** | 3–12 miesięcy | kilka tygodni (pierwsze zmiany w pomiarze), bez gwarancji terminu |
 | **Mierzalność** | Pozycje, ruch organiczny | Częstotliwość cytowań, sentiment |
 
 Kluczowa różnica leży w intencji: użytkownik Google przegląda opcje. Użytkownik pytający AI — podejmuje decyzję. Firma polecona przez ChatGPT trafia do klienta, który już zaufał rekomendacji.
@@ -129,7 +129,7 @@ To pytanie kontrolne. Rzetelna odpowiedź brzmi: nie. Odpowiedzi modeli zmieniaj
 
 ### Ile kosztuje współpraca z agencją GEO?
 
-Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie, a audyt — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
+Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. Audyt Start kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
 
 ### Jak sprawdzić, czy agencja GEO jest specjalistą?
 
@@ -141,7 +141,7 @@ Tak — pod warunkiem, że firma operuje w niszy z wyraźną intencją zakupową
 
 ### Jak długo trzeba czekać na efekty GEO?
 
-Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy. Tempo zależy od wyjściowego stanu entity authority marki i od tego, ile źródeł cytowanych przez AI trzeba zdobyć.
+Pierwsze zmiany w pomiarze obserwujemy zwykle po kilku tygodniach, ale ich terminu nie gwarantujemy. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy. Tempo zależy od wyjściowego stanu entity authority marki i od tego, ile źródeł cytowanych przez AI trzeba zdobyć.
 
 ### Czy GEO wymaga zmian na stronie internetowej?
 
@@ -166,7 +166,7 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
           "name": "Ile kosztuje współpraca z agencją GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie, a audyt — równowartość jednej miesięcznej opłaty. Widełki dla konkretnej firmy podaje Kalkulator Potencjału GEO na geolead.pl."
+            "text": "Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. Audyt Start kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Widełki dla konkretnej firmy podaje Kalkulator Potencjału GEO na geolead.pl."
           }
         },
         {
@@ -190,7 +190,7 @@ Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny a
           "name": "Jak długo trzeba czekać na efekty GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pierwsze sygnały wzrostu widoczności w AI pojawiają się po 4–8 tygodniach. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy, w zależności od wyjściowego stanu entity authority marki."
+            "text": "Pierwsze zmiany w pomiarze obserwujemy zwykle po kilku tygodniach, ale ich terminu nie gwarantujemy. Stabilny wzrost obecności w odpowiedziach na kluczowe zapytania branżowe to zwykle horyzont 3–6 miesięcy, w zależności od wyjściowego stanu entity authority marki."
           }
         },
         {

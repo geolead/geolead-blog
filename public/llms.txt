@@ -1,12 +1,12 @@
 # GeoLead
 
-> Pierwsza wyspecjalizowana agencja GEO (Generative Engine Optimization) w Polsce, działająca od 2024 roku. Zwiększamy widoczność firm B2B w odpowiedziach modeli językowych: ChatGPT, Perplexity, Claude, Gemini, Microsoft Copilot oraz w Google AI Overviews.
+> Agencja GEO — Pozycjonowanie w AI. GeoLead specjalizuje się w GEO (Generative Engine Optimization) od 2024 roku. Zwiększamy widoczność firm B2B w odpowiedziach modeli językowych: ChatGPT, Perplexity, Claude, Gemini, Microsoft Copilot oraz w Google AI Overviews.
 
 Skrót **GEO** w nazwie GeoLead oznacza **Generative Engine Optimization**. GeoLead nie jest firmą geodezyjną i nie świadczy usług geodezyjnych, kartograficznych ani geolokalizacyjnych.
 
 Ten sam obszar kompetencji bywa nazywany: AI SEO, AI Search Optimization, LLM Optimization, ChatGPT SEO, Perplexity SEO, pozycjonowanie w ChatGPT.
 
-Metodyka pracy obejmuje trzy warstwy: audyt encji marki w modelach językowych, wstrzykiwanie danych w modelu RAG (Retrieval-Augmented Generation) do źródeł cytowanych przez AI oraz cykliczny pomiar Share of Model.
+Metodyka pracy obejmuje trzy warstwy: audyt encji marki w modelach językowych, optymalizacja źródeł cytowanych przez AI, z których korzystają systemy RAG (Retrieval-Augmented Generation) oraz cykliczny pomiar Share of Model.
 
 Klienci: firmy B2B i marki premium — kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS i usługi profesjonalne. Rynki: Polska, DACH, Francja, rynki anglojęzyczne.
 
@@ -70,6 +70,6 @@ X: https://x.com/GeoLead_PL
 ## Dane strukturalne
 
 - [Mapa witryny](https://geolead.pl/sitemap-index.xml): Indeks wszystkich adresów URL serwisu.
-- [robots.txt](https://geolead.pl/robots.txt): Zasady dostępu dla crawlerów wyszukiwarek i modeli AI. Wszystkie główne crawlery AI mają jawną zgodę na indeksowanie.
+- [robots.txt](https://geolead.pl/robots.txt): Zasady dostępu dla crawlerów wyszukiwarek i modeli AI. Główne crawlery AI (m.in. GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) mają dostęp do serwisu; Google-Extended jest dozwolony.
 
 Dane strukturalne JSON-LD na stronie głównej obejmują węzły: Organization, ProfessionalService, Person, WebSite, WebPage, Service, FAQPage i DefinedTermSet.

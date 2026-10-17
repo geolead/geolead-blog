@@ -83,8 +83,8 @@ Jeśli zlecasz tę pracę na zewnątrz, sprawdź, czy [agencja GEO](/blog/agencj
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy Perplexity cytuje dziś Twoją firmę</h3>
-<p>Bezpłatny audyt: zadajemy realne pytania Twoich klientów i pokazujemy, czy pojawiasz się w źródłach — i co zrobić, by zacząć.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: zadajemy realne pytania Twoich klientów i pokazujemy, czy pojawiasz się w źródłach — i co zrobić, by zacząć.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

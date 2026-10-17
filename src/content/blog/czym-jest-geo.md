@@ -21,13 +21,13 @@ relatedTerms:
   - "knowledge-graph"
 ---
 
-Twój potencjalny klient nie wpisuje już frazy w Google. Pyta ChatGPT: *„Która kancelaria w Warszawie najlepiej poprowadzi spór o znak towarowy?”* — i dostaje trzy konkretne nazwy. Jeśli Twojej firmy nie ma w tej trójce, transakcja jest stracona, zanim w ogóle dowiedziałeś się, że istniała.
+Twój potencjalny klient nie wpisuje już frazy w Google. Pyta ChatGPT: *„Która kancelaria w Warszawie najlepiej poprowadzi spór o znak towarowy?”* — i dostaje trzy konkretne nazwy. Jeśli Twojej firmy nie ma w tej trójce, tracisz szansę na tego klienta, zanim w ogóle dowiedziałeś się, że szukał.
 
 **GEO (Generative Engine Optimization) to dyscyplina, która decyduje, czy model AI wymieni Twoją firmę w odpowiedzi.** Ten przewodnik wyjaśnia, jak to działa technicznie, czym różni się od SEO i jak zacząć — bez owijania w bawełnę.
 
 <div class="takeaway">
 <strong>Definicja</strong>
-GEO (Generative Engine Optimization) to proces optymalizacji obecności marki w taki sposób, by generatywne modele językowe — ChatGPT, Perplexity, Claude, Gemini — rekomendowały firmę w odpowiedziach na zapytania użytkowników. To następca SEO w warstwie, w której decyzje zakupowe zaczynają się od rozmowy z AI, a nie od listy niebieskich linków.
+GEO (Generative Engine Optimization) to proces optymalizacji obecności marki w taki sposób, by generatywne modele językowe — ChatGPT, Perplexity, Claude, Gemini — rekomendowały firmę w odpowiedziach na zapytania użytkowników. GEO nie zastępuje SEO — uzupełnia je w warstwie, w której decyzje zakupowe coraz częściej zaczynają się od rozmowy z AI, a nie od listy niebieskich linków.
 </div>
 
 ## Dlaczego SEO przestaje wystarczać
@@ -55,7 +55,7 @@ Model językowy jest trenowany na gigantycznym korpusie tekstu z internetu. Jeś
 
 ### 2. RAG — Retrieval-Augmented Generation (to, co model doczytuje na żywo)
 
-Gdy zadajesz pytanie wymagające świeżych danych, model nie polega tylko na pamięci. Uruchamia wyszukiwanie w czasie rzeczywistym, pobiera kilka źródeł i generuje odpowiedź na ich podstawie. To jest mechanizm, który stoi za Perplexity i za trybem wyszukiwania w ChatGPT.
+Gdy zadajesz pytanie wymagające świeżych danych, model nie polega tylko na pamięci. Gdy ma włączone wyszukiwanie, może pobrać kilka aktualnych źródeł i oprzeć na nich odpowiedź. To jest mechanizm, który stoi za Perplexity i za trybem wyszukiwania w ChatGPT.
 
 **RAG to Twoja najszybsza dźwignia.** Jeśli Twoja strona jest technicznie czytelna dla crawlerów AI, ma jednoznaczne dane strukturalne i precyzyjnie odpowiada na pytania klientów — trafiasz do puli źródeł, z których model buduje odpowiedź. [Mechanizm RAG opisujemy dokładnie w słowniku](/slownik/rag/).
 
@@ -142,8 +142,8 @@ Jeśli planujesz zlecić GEO na zewnątrz, zanim podpiszesz umowę, sprawdź, cz
 
 <div class="article-cta glass">
 <h3>Sprawdź, co AI mówi dziś o Twojej firmie</h3>
-<p>Bezpłatny audyt widoczności w ChatGPT, Perplexity i Claude. Bez zobowiązań — konkretne dane w 24h.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: pokażemy, jak ChatGPT, Perplexity i Claude opisują dziś Twoją firmę. Bez zobowiązań — odpowiadamy w ciągu 24 godzin roboczych.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

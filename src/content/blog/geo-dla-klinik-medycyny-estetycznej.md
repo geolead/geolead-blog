@@ -70,8 +70,8 @@ Wybierając wykonawcę dla kliniki, sprawdź, czy [agencja GEO](/blog/agencja-ge
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI poleca dziś Twoją klinikę</h3>
-<p>Bezpłatny audyt: zadajemy realne pytania pacjentów i pokazujemy, czy ChatGPT i Perplexity wskazują Twój gabinet — i co o nim mówią.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: zadajemy realne pytania pacjentów i pokazujemy, czy ChatGPT i Perplexity wskazują Twój gabinet — i co o nim mówią.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

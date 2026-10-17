@@ -2,16 +2,16 @@
 term: "RAG"
 alternateName: "Retrieval-Augmented Generation"
 termCode: "RAG"
-description: "RAG to proces wstrzykiwania aktualnej wiedzy o firmie do modeli AI. Dzięki niemu ChatGPT, Perplexity i Claude mogą cytować dane spoza swojej wiedzy treningowej — w tym o Twojej marce."
+description: "RAG to mechanizm, w którym model AI przed odpowiedzią wyszukuje i czyta aktualne źródła. Dzięki niemu ChatGPT, Perplexity i Claude mogą cytować dane spoza swojej wiedzy treningowej — w tym o Twojej marce."
 pubDate: 2026-08-09
 keywords:
   - "RAG"
   - "Retrieval-Augmented Generation"
-  - "wstrzykiwanie danych AI"
+  - "RAG w marketingu"
   - "co to jest RAG"
 ---
 
-**RAG (Retrieval-Augmented Generation, wstrzykiwanie danych) to proces, w którym model językowy — zanim wygeneruje odpowiedź — sięga po zewnętrzne, aktualne źródła wiedzy, zamiast polegać wyłącznie na tym, czego nauczył się podczas treningu.** To mechanizm, dzięki któremu ChatGPT, Perplexity czy Claude mogą podawać aktualne, konkretne informacje o firmach.
+**RAG (Retrieval-Augmented Generation, generowanie wspomagane wyszukiwaniem) to proces, w którym model językowy — zanim wygeneruje odpowiedź — sięga po zewnętrzne, aktualne źródła wiedzy, zamiast polegać wyłącznie na tym, czego nauczył się podczas treningu.** To mechanizm, dzięki któremu ChatGPT, Perplexity czy Claude mogą podawać aktualne, konkretne informacje o firmach.
 
 To bezpośrednie rozwiązanie ograniczenia, z jakim mierzy się każdy [LLM](/slownik/llm/) — model językowy ma „wiedzę odciętą" na pewien moment w czasie (tzw. cutoff treningowy). Bez RAG nie wiedziałby nic o firmie, która powstała lub zmieniła ofertę po tym terminie.
 

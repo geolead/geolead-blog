@@ -39,13 +39,13 @@ Tu działa pojęcie, które jest sercem całej dyscypliny: [Entity Salience](/sl
 
 ### Jak model w ogóle „kojarzy" Twoją markę
 
-Pod spodem działa [Vector Embedding](/slownik/vector-embedding/) — model zamienia każde pojęcie, w tym Twoją markę, na punkt w wielowymiarowej przestrzeni znaczeń. Im bliżej ten punkt leży zapytania klienta, tym wyżej rośnie prawdopodobieństwo, że zostaniesz wymieniony. Bliskość w tej przestrzeni to bliskość znaczeniowa — i to ona, a nie gęstość słów kluczowych, decyduje o cytowaniu.
+Pod spodem działa [Vector Embedding](/slownik/vector-embedding/) — model zamienia każde pojęcie, w tym Twoją markę, na punkt w wielowymiarowej przestrzeni znaczeń. Im bliżej ten punkt leży zapytania klienta, tym wyżej rośnie prawdopodobieństwo, że zostaniesz wymieniony. Bliskość w tej przestrzeni to bliskość znaczeniowa — i to ona, a nie gęstość słów kluczowych, zwiększa szansę na cytowanie.
 
 Problem z wiedzą parametryczną jest jeden: **aktualizuje się rzadko**. Model „pamięta" stan z momentu treningu, który mógł być wiele miesięcy temu. Dlatego istnieje drugi mechanizm — i to on jest Twoją najszybszą dźwignią.
 
 ## Mechanizm 2: co model dociąga na żywo (RAG)
 
-Gdy zadajesz ChatGPT pytanie wymagające aktualnych danych — a „którą firmę polecić" takim jest — model nie polega tylko na pamięci. Uruchamia wyszukiwanie w czasie rzeczywistym, pobiera kilka źródeł i buduje odpowiedź na ich podstawie. Ten mechanizm to [RAG (Retrieval-Augmented Generation)](/slownik/rag/), i stoi za trybem wyszukiwania w ChatGPT oraz całym działaniem Perplexity.
+Gdy zadajesz ChatGPT pytanie wymagające aktualnych danych — a „którą firmę polecić" takim jest — model nie polega tylko na pamięci. Gdy ma włączone wyszukiwanie, może pobrać kilka aktualnych źródeł i zbudować odpowiedź na ich podstawie. Ten mechanizm to [RAG (Retrieval-Augmented Generation)](/slownik/rag/), i stoi za trybem wyszukiwania w ChatGPT oraz całym działaniem Perplexity.
 
 RAG działa w kilku krokach:
 
@@ -81,7 +81,7 @@ Gdy klient zadaje pytanie o rekomendację, w tle dzieje się — w uproszczeniu 
 4. Waży sygnały wiarygodności — wzmianki, opinie, spójność danych.
 5. Generuje odpowiedź, wymieniając firmy, które najlepiej spełniają wszystkie powyższe naraz.
 
-Kluczowy wniosek: **żaden pojedynczy element nie wystarczy.** Możesz mieć świetne opinie, ale jeśli Twoja strona jest niewidoczna dla crawlerów — wypadasz. Możesz mieć doskonałą stronę, ale bez obecności w Knowledge Graph model Ci nie zaufa. To system naczyń połączonych.
+Kluczowy wniosek: **żaden pojedynczy element nie wystarczy.** Możesz mieć świetne opinie, ale jeśli Twoja strona jest niewidoczna dla crawlerów — wypadasz. Możesz mieć doskonałą stronę, ale bez spójnych danych o firmie w źródłach zewnętrznych i Knowledge Graph model ma mniej podstaw, by Cię polecić. To system naczyń połączonych.
 
 ## Co z tego wynika dla Twojej firmy
 
@@ -98,8 +98,8 @@ Jeśli chcesz, żeby te mechanizmy pracowały dla Twojej firmy, a nie dla konkur
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy ChatGPT poleca dziś Twoją firmę</h3>
-<p>Bezpłatny audyt widoczności w ChatGPT, Perplexity i Claude. Konkretne dane: czy AI Cię wymienia, w jakim kontekście i jak Cię opisuje.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: sprawdzimy widoczność Twojej firmy w ChatGPT, Perplexity i Claude. Konkretnie: czy AI Cię wymienia, w jakim kontekście i jak Cię opisuje.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

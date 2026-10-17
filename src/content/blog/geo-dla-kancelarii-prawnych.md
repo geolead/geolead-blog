@@ -62,8 +62,8 @@ Wybierając wykonawcę dla kancelarii, sprawdź, czy [agencja GEO](/blog/agencja
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI poleca dziś Twoją kancelarię</h3>
-<p>Bezpłatny audyt: zadajemy realne pytania klientów o ekspertów w Twojej specjalizacji i pokazujemy, czy ChatGPT i Perplexity wskazują Twoją kancelarię.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja: zadajemy realne pytania klientów o ekspertów w Twojej specjalizacji i pokazujemy, czy ChatGPT i Perplexity wskazują Twoją kancelarię.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">

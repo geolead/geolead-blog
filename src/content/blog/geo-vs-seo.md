@@ -61,7 +61,7 @@ Dlatego dla większości firm B2B prawidłowa odpowiedź brzmi: **obie warstwy, 
 
 Jest jeszcze różnica, która umyka w technicznych porównaniach, a ma realne znaczenie dla sprzedaży B2B. **Klient, który przychodzi z rekomendacji AI, jest już podgrzany.** Model zrobił za Ciebie pierwszą selekcję i przedstawił Cię jako zaufaną opcję — z uzasadnieniem. To inna jakość kontaktu niż ktoś, kto przegląda dziesiątą zakładkę z wynikami Google i porównuje dziesięciu dostawców na zimno.
 
-Dla firm o wysokiej wartości transakcji ta różnica przekłada się wprost na koszt pozyskania i długość cyklu sprzedaży. Lead z rekomendacji AI wchodzi w rozmowę z wyższym poziomem zaufania na starcie.
+Dla firm o wysokiej wartości transakcji ta różnica przekłada się wprost na koszt pozyskania i długość cyklu sprzedaży. Lead z rekomendacji AI często wchodzi w rozmowę z wyższym poziomem zaufania na starcie.
 
 ## Kiedy GEO ma przewagę, a kiedy SEO wystarczy
 
@@ -83,8 +83,8 @@ Jeśli rozmawiasz z wykonawcą, który obiecuje „SEO pod AI”, sprawdź, czy 
 
 <div class="article-cta glass">
 <h3>Nie wiesz, ile tracisz przez brak GEO?</h3>
-<p>Bezpłatny audyt pokaże, czy AI poleca dziś Twoją firmę, czy konkurencję — i ile leadów przez to przepływa obok Ciebie.</p>
-<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów darmowy audyt</a>
+<p>Bezpłatna konsultacja pokaże, czy AI poleca dziś Twoją firmę, czy konkurencję — i w których pytaniach zakupowych Cię brakuje.</p>
+<a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Umów bezpłatną konsultację</a>
 </div>
 
 <div class="related">
