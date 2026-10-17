@@ -374,8 +374,9 @@ function metaAnalysis(html) {
   const descriptionLength = [...description].length;
   const points = (titleLength >= 10 && titleLength <= 70 ? 3 : 0) +
     (descriptionLength >= 50 && descriptionLength <= 170 ? 3 : 0) +
-    (canonical ? 2 : 0) + (lang ? 2 : 0) +
-    (ogTitle && ogDescription ? 2 : 0) + (hreflang.length ? 1 : 0) + (favicon ? 2 : 0);
+    (canonical ? 2 : 0) + (lang ? 3 : 0) +
+    // hreflang tylko raportujemy: strona jednojęzyczna nie powinna tracić punktu.
+    (ogTitle && ogDescription ? 2 : 0) + (favicon ? 2 : 0);
   return {
     check: check('meta', 15, points, {
       title, description, canonical, lang, ogTitle, ogDescription,
