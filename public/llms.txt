@@ -23,6 +23,7 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 ## Przewodniki GEO
 
 - [Metodologia pomiaru widoczności w AI](https://geolead.pl/metodologia/): Protokół pomiaru GeoLead: stały zestaw promptów zakupowych, pomiar wyjściowy, sesje bez pamięci, pomiar co 2 tygodnie; definicje wzmianki, cytowania i rekomendacji; Mention Rate; czego GeoLead nie obiecuje.
+- [Badanie: Gotowość polskich firm na wyszukiwanie w AI (2026)](https://geolead.pl/badania/gotowosc-ai-2026/): Wyniki 8 testów technicznych dla stron 120 polskich firm z 4 branż, pomiar 17.10.2026. 36% ze 117 stron bez opisu firmy (schema.org Organization/LocalBusiness) w JSON-LD, u producentów przemysłowych 69%; żadna strona nie blokowała botów AI w robots.txt. Badanie mierzy gotowość techniczną, nie rekomendacje modeli AI.
 - [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
 - [Ile kosztuje GEO](https://geolead.pl/blog/ile-kosztuje-geo/): Cennik abonamentu GEO (1 200–15 000 zł netto miesięcznie) w matrycy branża × zasięg, koszt audytu, rozliczanie narzędzi, rachunek opłacalności.
 - [Audyt widoczności w AI](https://geolead.pl/blog/audyt-widocznosci-w-ai/): Audyt Start za 990 zł netto: 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna, raport z 5 priorytetami w 5 dni roboczych; zaliczany na poczet abonamentu.
