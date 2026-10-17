@@ -1,6 +1,6 @@
 ---
 title: "Audyt widoczności w AI — 990 zł netto, raport w 5 dni roboczych"
-description: "Audyt widoczności firmy w ChatGPT, Gemini, Perplexity i Google AI Overviews za 990 zł netto. 20 pytań zakupowych, konkurenci, cytowane źródła, kontrola techniczna i 5 priorytetów."
+description: "Audyt widoczności firmy w ChatGPT, Gemini, Perplexity i Google AI Overviews za 990 zł netto. 20 promptów zakupowych, konkurenci, cytowane źródła, kontrola techniczna i 5 priorytetów."
 pubDate: 2026-10-14
 pillar: "edukacja"
 funnel: "bofu"
@@ -21,23 +21,23 @@ relatedTerms:
 
 **Audyt Start kosztuje 990 zł netto i pokazuje, czy ChatGPT, Gemini, Perplexity i Google AI Overviews polecają Twoją firmę, czy konkurencję.** Raport dostajesz w 5 dni roboczych. Jeśli w ciągu 30 dni podpiszesz umowę abonamentową, całe 990 zł odliczamy od pierwszej faktury.
 
-To nie jest automatyczny „wynik 0–100”. Każde pytanie zadajemy ręcznie, w sesji bez pamięci i personalizacji, a odpowiedzi zapisujemy z datą. Dostajesz dowód, nie wskaźnik.
+To nie jest automatyczny „wynik 0–100”. Każdy prompt wpisujemy ręcznie, w sesji bez pamięci i personalizacji, a odpowiedzi zapisujemy z datą. Dostajesz dowód, nie wskaźnik.
 
 <div class="article-cta glass">
 <h3>Najpierw sprawdź sam — za darmo</h3>
-<p>Wygeneruj 20 pytań zakupowych dla swojej branży i miasta, zadaj je w ChatGPT, Gemini i Perplexity i zobacz, kogo AI poleca. Bez rejestracji.</p>
-<a href="/narzedzia/pytania-zakupowe/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Generator pytań zakupowych</a>
+<p>Wygeneruj 20 promptów zakupowych dla swojej branży i miasta, wklej je do ChatGPT, Gemini i Perplexity i zobacz, kogo AI poleca. Bez rejestracji.</p>
+<a href="/narzedzia/pytania-zakupowe/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Generator promptów zakupowych</a>
 </div>
 
 ## Co sprawdzamy
 
-### 1. 20 pytań, które zadają Twoi klienci
+### 1. 20 promptów zakupowych — pytań, które zadają Twoi klienci
 
-Przed pomiarem uzgadniamy z Tobą listę 20 pytań zakupowych dla Twojej branży i miasta: „kogo polecasz do…”, „ile kosztuje…”, „X czy Y…”. Lista zostaje u Ciebie i służy jako punkt odniesienia przy każdym kolejnym pomiarze.
+Przed pomiarem uzgadniamy z Tobą listę 20 promptów zakupowych dla Twojej branży i miasta: „kogo polecasz do…”, „ile kosztuje…”, „X czy Y…”. Lista zostaje u Ciebie i służy jako punkt odniesienia przy każdym kolejnym pomiarze.
 
 ### 2. Cztery platformy AI
 
-Każde pytanie sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews**. To 80 odpowiedzi. Dla każdej zapisujemy:
+Każdy prompt sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews**. To 80 odpowiedzi. Dla każdej zapisujemy:
 
 - czy Twoja firma została wymieniona i na którym miejscu,
 - czy została **polecona**, czy tylko wspomniana — to dwa różne zdarzenia,
@@ -63,7 +63,7 @@ Każde pytanie sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews*
 | | Audyt Start | Audyt pełny |
 |---|---|---|
 | Cena | **990 zł netto** | równowartość jednej miesięcznej opłaty abonamentowej ([cennik](/blog/ile-kosztuje-geo/)) |
-| Pytania zakupowe | 20 | rozszerzony zestaw, kilka rynków lub języków |
+| Prompty zakupowe | 20 | rozszerzony zestaw, kilka rynków lub języków |
 | Platformy AI | 4 | 5, z Claude |
 | Powtórzenia pomiaru | 1 | kilka, żeby odsiać przypadkowe odpowiedzi |
 | Plan działań | 5 priorytetów | pełny plan wdrożeń i wycena abonamentu |
@@ -73,7 +73,7 @@ Każde pytanie sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews*
 ## Jak to przebiega
 
 1. **Zgłoszenie** — podajesz domenę, branżę i trzech konkurentów.
-2. **Lista pytań** — w ciągu 1 dnia roboczego wysyłamy propozycję 20 pytań do akceptacji.
+2. **Lista promptów** — w ciągu 1 dnia roboczego wysyłamy propozycję 20 promptów do akceptacji.
 3. **Pomiar i analiza** — 5 dni roboczych od akceptacji listy i opłacenia faktury.
 4. **Omówienie** — 30 minut online, pytania i decyzja, co dalej.
 
@@ -87,11 +87,11 @@ Każde pytanie sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews*
 
 ### Ile kosztuje audyt widoczności w AI?
 
-Audyt Start kosztuje 990 zł netto. Obejmuje 20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrolę techniczną strony, raport PDF z 5 priorytetami i 30 minut omówienia.
+Audyt Start kosztuje 990 zł netto. Obejmuje 20 promptów zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrolę techniczną strony, raport PDF z 5 priorytetami i 30 minut omówienia.
 
 ### Ile trwa audyt?
 
-5 dni roboczych od akceptacji listy pytań i opłacenia faktury. Propozycję listy wysyłamy w ciągu 1 dnia roboczego od zgłoszenia.
+5 dni roboczych od akceptacji listy promptów i opłacenia faktury. Propozycję listy wysyłamy w ciągu 1 dnia roboczego od zgłoszenia.
 
 ### Czy koszt audytu przepada, jeśli zdecyduję się na abonament?
 
@@ -107,14 +107,14 @@ Tak. Raport zawiera tabelę wszystkich 80 odpowiedzi z datami pomiaru i cytowany
 
 <div class="article-cta glass">
 <h3>Zamów Audyt Start za 990 zł netto</h3>
-<p>Podaj domenę, branżę i trzech konkurentów. Propozycję 20 pytań wyślemy w ciągu 1 dnia roboczego.</p>
+<p>Podaj domenę, branżę i trzech konkurentów. Propozycję 20 promptów wyślemy w ciągu 1 dnia roboczego.</p>
 <a href="https://geolead.pl/#contact" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów audyt</a>
 </div>
 
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/narzedzia/pytania-zakupowe/">Generator pytań zakupowych AI — bezpłatne narzędzie</a></li>
+<li><a href="/narzedzia/pytania-zakupowe/">Generator promptów zakupowych AI — bezpłatne narzędzie</a></li>
 <li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO — cennik abonamentu</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
@@ -131,7 +131,7 @@ Tak. Raport zawiera tabelę wszystkich 80 odpowiedzi z datami pomiaru i cytowany
       "@id": "https://geolead.pl/blog/audyt-widocznosci-w-ai/#service",
       "name": "Audyt Start — audyt widoczności w AI",
       "serviceType": "Audyt widoczności marki w wyszukiwarkach AI",
-      "description": "20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport PDF z 5 priorytetami i 30 minut omówienia online. Raport w 5 dni roboczych.",
+      "description": "20 promptów zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport PDF z 5 priorytetami i 30 minut omówienia online. Raport w 5 dni roboczych.",
       "provider": { "@id": "https://geolead.pl/#organization" },
       "areaServed": "PL",
       "offers": {
@@ -156,12 +156,12 @@ Tak. Raport zawiera tabelę wszystkich 80 odpowiedzi z datami pomiaru i cytowany
         {
           "@type": "Question",
           "name": "Ile kosztuje audyt widoczności w AI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Audyt Start kosztuje 990 zł netto. Obejmuje 20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrolę techniczną strony, raport PDF z 5 priorytetami i 30 minut omówienia." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Audyt Start kosztuje 990 zł netto. Obejmuje 20 promptów zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrolę techniczną strony, raport PDF z 5 priorytetami i 30 minut omówienia." }
         },
         {
           "@type": "Question",
           "name": "Ile trwa audyt?",
-          "acceptedAnswer": { "@type": "Answer", "text": "5 dni roboczych od akceptacji listy pytań i opłacenia faktury. Propozycję listy wysyłamy w ciągu 1 dnia roboczego od zgłoszenia." }
+          "acceptedAnswer": { "@type": "Answer", "text": "5 dni roboczych od akceptacji listy promptów i opłacenia faktury. Propozycję listy wysyłamy w ciągu 1 dnia roboczego od zgłoszenia." }
         },
         {
           "@type": "Question",

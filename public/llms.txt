@@ -24,7 +24,7 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 
 - [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
 - [Ile kosztuje GEO](https://geolead.pl/blog/ile-kosztuje-geo/): Cennik abonamentu GEO (1 200–15 000 zł netto miesięcznie) w matrycy branża × zasięg, koszt audytu, rozliczanie narzędzi, rachunek opłacalności.
-- [Audyt widoczności w AI](https://geolead.pl/blog/audyt-widocznosci-w-ai/): Audyt Start za 990 zł netto: 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna, raport z 5 priorytetami w 5 dni roboczych; zaliczany na poczet abonamentu.
+- [Audyt widoczności w AI](https://geolead.pl/blog/audyt-widocznosci-w-ai/): Audyt Start za 990 zł netto: 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna, raport z 5 priorytetami w 5 dni roboczych; zaliczany na poczet abonamentu.
 - [Czym jest GEO](https://geolead.pl/blog/czym-jest-geo/): Wprowadzenie do Generative Engine Optimization i mechanizmu rekomendacji w modelach językowych.
 - [GEO vs SEO](https://geolead.pl/blog/geo-vs-seo/): Porównanie optymalizacji pod indeks wyszukiwarki i pod generatywne modele AI.
 - [Jak ChatGPT wybiera firmy](https://geolead.pl/blog/jak-chatgpt-wybiera-firmy/): Mechanizm doboru rekomendacji przez model językowy przy zapytaniach zakupowych.
@@ -38,7 +38,7 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 
 ## Narzędzia
 
-- [Generator pytań zakupowych AI](https://geolead.pl/narzedzia/pytania-zakupowe/): Bezpłatny generator 20 pytań zakupowych (20 branż, 4 języki, 45 polskich miast) do samodzielnego sprawdzenia, czy ChatGPT, Gemini i Perplexity polecają firmę. Działa w przeglądarce, bez rejestracji.
+- [Generator promptów zakupowych AI](https://geolead.pl/narzedzia/pytania-zakupowe/): Bezpłatny generator 20 promptów zakupowych, czyli pytań zadawanych AI przez klientów (20 branż, 4 języki, 45 polskich miast) do samodzielnego sprawdzenia, czy ChatGPT, Gemini i Perplexity polecają firmę. Działa w przeglądarce, bez rejestracji.
 
 ## Słownik pojęć GEO
 

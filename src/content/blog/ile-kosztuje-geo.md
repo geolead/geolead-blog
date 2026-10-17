@@ -75,8 +75,8 @@ Mierzymy obecność w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode. Każ
 
 Audyt jest osobnym, pierwszym etapem współpracy. Masz dwie opcje:
 
-- **[Audyt Start — 990 zł netto](/blog/audyt-widocznosci-w-ai/).** 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport z 5 priorytetami. Wynik w 5 dni roboczych.
-- **Audyt pełny — równowartość jednej miesięcznej opłaty abonamentowej** dla wariantu z matrycy. Rozszerzony zestaw pytań, powtórzenia pomiaru, pełny plan wdrożeń i wycena abonamentu.
+- **[Audyt Start — 990 zł netto](/blog/audyt-widocznosci-w-ai/).** 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport z 5 priorytetami. Wynik w 5 dni roboczych.
+- **Audyt pełny — równowartość jednej miesięcznej opłaty abonamentowej** dla wariantu z matrycy. Rozszerzony zestaw promptów, powtórzenia pomiaru, pełny plan wdrożeń i wycena abonamentu.
 
 Jeśli podpiszesz umowę abonamentową w ciągu 30 dni od audytu, jego koszt zaliczamy na poczet pierwszego miesiąca.
 
@@ -123,7 +123,7 @@ W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. Cena zal
 
 ### Ile kosztuje audyt GEO?
 
-Audyt Start kosztuje 990 zł netto (20 pytań zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca.
+Audyt Start kosztuje 990 zł netto (20 promptów zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca.
 
 ### Czy ceny GEO są podawane netto?
 
@@ -199,7 +199,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
           "name": "Ile kosztuje audyt GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Audyt Start kosztuje 990 zł netto (20 pytań zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca."
+            "text": "Audyt Start kosztuje 990 zł netto (20 promptów zakupowych, 4 platformy AI, raport w 5 dni roboczych). Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu. Jeśli umowa abonamentowa zostanie podpisana w ciągu 30 dni od audytu, jego koszt jest zaliczany na poczet pierwszego miesiąca."
           }
         },
         {
