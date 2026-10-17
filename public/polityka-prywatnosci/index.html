@@ -102,7 +102,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <header class="pp-hero">
   <span class="pp-kick">RODO / GDPR</span>
   <h1>Polityka prywatności</h1>
-  <p class="pp-meta">Ostatnia aktualizacja: 12 października 2026</p>
+  <p class="pp-meta">Ostatnia aktualizacja: 17 października 2026</p>
 </header>
 
 <main class="pp-wrap">
@@ -150,6 +150,18 @@ danych osobowych kontaktuj się bezpośrednio z Administratorem.
       <td>art. 6 ust. 1 lit. b — świadczenie zamówionej usługi</td>
     </tr>
     <tr>
+      <td>Skaner gotowości AI (/narzedzia/skaner-ai/)</td>
+      <td>adres strony internetowej wpisany do skanowania; adres IP w postaci skrótu kryptograficznego (SHA-256) na potrzeby limitu liczby skanów</td>
+      <td>wykonanie technicznego skanu publicznie dostępnych plików wskazanej strony i wyświetlenie wyniku; ochrona przed nadużyciami (limit 5 skanów na minutę). Adres strony nie jest zapisywany w bazie ani logowany przez skaner; wynik skanu jest przechowywany w pamięci podręcznej Cloudflare przez maksymalnie 1 godzinę, a skrót IP przez maksymalnie 60 sekund. Do analityki (po wyrażeniu zgody) trafia wyłącznie końcówka domeny (np. „pl”) i wynik punktowy, nigdy pełny adres</td>
+      <td>art. 6 ust. 1 lit. f — prawnie uzasadniony interes (świadczenie bezpłatnego narzędzia, bezpieczeństwo)</td>
+    </tr>
+    <tr>
+      <td>Generator promptów zakupowych (/narzedzia/pytania-zakupowe/)</td>
+      <td>ustawienia formularza (branża, oferta, miasto, język) zapisywane wyłącznie lokalnie w przeglądarce</td>
+      <td>zapamiętanie ustawień między wizytami; prompty są generowane w przeglądarce i nie są wysyłane na serwer</td>
+      <td>art. 6 ust. 1 lit. f — prawnie uzasadniony interes</td>
+    </tr>
+    <tr>
       <td>Kalkulator Potencjału GEO</td>
       <td>dane wprowadzone w formularzu (branża, zasięg); licznik użyć przechowywany lokalnie w przeglądarce</td>
       <td>wyliczenie orientacyjnej wyceny, ograniczenie nadużyć</td>
@@ -178,7 +190,7 @@ Dzielimy je na dwie kategorie:
 <ul>
   <li>
     <strong>Niezbędne</strong> — zapamiętanie Twojej decyzji dotyczącej cookies
-    (klucz <code>gl_cookie</code>) oraz limit użyć kalkulatora (klucz <code>gl_calc_v2</code>).
+    (klucz <code>gl_cookie</code>) oraz limit użyć kalkulatora (klucz <code>gl_calc_v2</code>), ustawienia generatora promptów (klucz <code>geolead_questions_v1</code>) oraz wybrany język skanera (klucz <code>geolead_scanner_lang_v1</code>).
     Działają bez zgody, ponieważ są niezbędne do świadczenia usługi, o którą prosisz.
   </li>
   <li>

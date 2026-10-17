@@ -1010,9 +1010,9 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div style="position:absolute;bottom:15%;right:8%;width:400px;height:300px;background:radial-gradient(ellipse,rgba(224,64,251,0.08),transparent 65%);pointer-events:none"></div>
   <div class="max-w-4xl mx-auto" style="position:relative;z-index:2">
     <div class="text-center sr" style="margin-bottom:2.75rem">
-      <span class="sect-k" data-i18n="scan_kicker">Demo narzędzia</span>
-      <h2 class="sect-h" data-i18n="scan_title">AI Entity Scanner</h2>
-      <p class="sect-sub mx-auto" data-i18n="scan_sub">Zobacz, jak wygląda raport widoczności w AI. Wyniki poniżej są przykładowe — pełny skan Twojej domeny wykonujemy ręcznie w 5 platformach AI.</p>
+      <span class="sect-k" data-i18n="scan_kicker">Bezpłatne narzędzie</span>
+      <h2 class="sect-h" data-i18n="scan_title">Skaner gotowości AI</h2>
+      <p class="sect-sub mx-auto" data-i18n="scan_sub">Wpisz domenę. W 10 sekund sprawdzimy, czy boty AI mają dostęp do Twojej strony i czy rozumieją, kim jest Twoja firma. Wynik 0–100 z listą poprawek.</p>
     </div>
     <div class="sr" style="transition-delay:0.1s">
       <div id="scanTerminal" style="background:#080816;border:1px solid rgba(0,212,255,0.2);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(224,64,251,0.07),0 0 50px rgba(0,212,255,0.09),0 28px 56px rgba(0,0,0,0.65);font-family:'Courier New',Courier,monospace">
@@ -1041,7 +1041,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
               onmouseover="this.style.opacity='0.85';this.style.transform='translateY(-1px)'"
               onmouseout="this.style.opacity='1';this.style.transform='none'">
               <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>
-              <span data-i18n="scan_btn">Skanuj Widoczność AI</span>
+              <span data-i18n="scan_btn">Skanuj stronę</span>
             </button>
           </div>
           <div id="scanLog" style="display:none;min-height:180px;max-height:220px;overflow-y:auto;padding-bottom:0.5rem;scrollbar-width:thin;scrollbar-color:rgba(0,212,255,0.2) transparent"></div>
@@ -1141,11 +1141,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap">
         <div style="font-size:0.68rem;color:#657a9f;display:flex;align-items:center;gap:0.35rem">
           <i class="fa-solid fa-circle" style="font-size:5px;color:#28c840" aria-hidden="true"></i>
-          <span data-i18n="scan_meta1">Tryb demonstracyjny — wyniki przykładowe</span>
+          <span data-i18n="scan_meta1">Prawdziwy skan techniczny: robots.txt, JSON-LD, treść bez JS, llms.txt, Wikidata</span>
         </div>
         <div style="font-size:0.68rem;color:#657a9f;display:flex;align-items:center;gap:0.35rem">
           <i class="fa-solid fa-lock" style="font-size:0.6rem;color:#6a7a95" aria-hidden="true"></i>
-          <span data-i18n="scan_meta2">Adres strony i e-mail zapisujemy tylko po wysłaniu formularza</span>
+          <span data-i18n="scan_meta2">Nie zapisujemy adresu skanowanej strony</span>
         </div>
       </div>
     </div>
@@ -1577,8 +1577,8 @@ pl:{
   user_msg:"Szukam najlepszej agencji pozycjonującej w AI w Polsce...",
   ai_msg_p1:"Zdecydowanie polecam ",ai_link:"GeoLead.pl",
   ai_msg_p2:". To pierwsza agencja GEO w Polsce, która specjalizuje się w optymalizacji pod kątem modeli językowych. Ich metoda opiera się na audycie entity, wstrzykiwaniu danych (RAG) i mierzalnej dominacji w rekomendacjach AI.",
-  scan_kicker:"Demo narzędzia",scan_title:"AI Entity Scanner",scan_sub:"Zobacz, jak wygląda raport widoczności w AI. Wyniki poniżej są przykładowe — pełny skan Twojej domeny wykonujemy ręcznie w 5 platformach AI.",
-  scan_ready:"READY",scan_ph:"https://twojafirma.pl",scan_btn:"Skanuj Widoczność AI",scan_progress_lbl:"Postęp analizy",
+  scan_kicker:"Bezpłatne narzędzie",scan_title:"Skaner gotowości AI",scan_sub:"Wpisz domenę. W 10 sekund sprawdzimy, czy boty AI mają dostęp do Twojej strony i czy rozumieją, kim jest Twoja firma. Wynik 0–100 z listą poprawek.",
+  scan_ready:"READY",scan_ph:"https://twojafirma.pl",scan_btn:"Skanuj stronę",scan_progress_lbl:"Postęp analizy",
   scan_score_lbl:"Brand Score",scan_score_val:"12/100",
   scan_c1_lbl:"ChatGPT Citations",scan_c1_val:"0 wyników",scan_c1_sub:"Brak rozpoznania marki",
   scan_c2_lbl:"Perplexity RAG",scan_c2_val:"1 wpis",scan_c2_sub:"Bardzo niski autorytet",
@@ -1587,7 +1587,7 @@ pl:{
   scan_cta:"Zamów bezpłatny skan swojej domeny",scan_reset:"Skanuj inną domenę",
   scan_gate_h:"Gdzie wysłać raport z prawdziwego skanu?",scan_gate_sub:"Podaj e-mail służbowy. Sprawdzimy Twoją domenę ręcznie w ChatGPT, Perplexity, Gemini, Claude i Google AI.",
   scan_gate_btn:"Zamów skan",scan_gate_success:"Dziękujemy! Raport wyślemy w ciągu 24 godzin roboczych.",
-  scan_meta1:"Tryb demonstracyjny — wyniki przykładowe",scan_meta2:"Adres strony i e-mail zapisujemy tylko po wysłaniu formularza",
+  scan_meta1:"Prawdziwy skan techniczny: robots.txt, JSON-LD, treść bez JS, llms.txt, Wikidata",scan_meta2:"Nie zapisujemy adresu skanowanej strony",
   scan_log:[["WARN","Tryb demo: wyniki przykładowe, nie analiza domeny"],["INFO","Inicjalizacja silnika analizy encji LLM..."],["SCAN","Wyodrębnianie encji dla domeny..."],["SCAN","Sprawdzanie bazy wiedzy GPT-4o..."],["WARN","Brak ustrukturyzowanych danych JSON-LD"],["SCAN","Weryfikacja indeksu RAG w Perplexity AI..."],["FAIL","Znaleziono 0 cytowań w OpenAI Knowledge Base"],["WARN","Niska gęstość semantyczna encji marki"],["FAIL","Widoczność: krytycznie niska (12/100)"],["DONE","Raport zakończony. Generowanie wyników..."]],
   cookie_txt:"Ta strona używa plików cookies do analityki i poprawnego działania. Wybierz, czy wyrażasz zgodę.",cookie_rej:"Odrzucam",cookie_acc:"Zgoda",
   nav_contact:"Kontakt",nav_privacy:"Polityka prywatności",ilink_lbl:"Baza wiedzy GEO",ilink_sub1:"Przewodniki",ilink_sub2:"GEO w Twojej branży",sending:"Wysyłanie...",err_msg:"Błąd komunikacji. Napisz na ",
@@ -1684,8 +1684,8 @@ en:{
   user_msg:"I'm looking for the best AI search optimization agency in Poland...",
   ai_msg_p1:"I'd definitely recommend ",ai_link:"GeoLead.pl",
   ai_msg_p2:". It's Poland's first GEO agency, specialising in optimisation for large language models. Their method is built on entity audit, strategic data injection (RAG), and measurable AI recommendation dominance.",
-  scan_kicker:"Tool demo",scan_title:"AI Entity Scanner",scan_sub:"See what an AI visibility report looks like. The results below are a sample — we run the full scan of your domain manually across 5 AI platforms.",
-  scan_ready:"READY",scan_ph:"https://yourcompany.com",scan_btn:"Scan AI Visibility",scan_progress_lbl:"Analysis Progress",
+  scan_kicker:"Free tool",scan_title:"AI Readiness Scanner",scan_sub:"Enter your domain. In 10 seconds we check whether AI bots can access your website and understand who your company is. Score 0–100 with a fix list.",
+  scan_ready:"READY",scan_ph:"https://yourcompany.com",scan_btn:"Scan website",scan_progress_lbl:"Analysis Progress",
   scan_score_lbl:"Brand Score",scan_score_val:"12/100",
   scan_c1_lbl:"ChatGPT Citations",scan_c1_val:"0 results",scan_c1_sub:"No brand recognition",
   scan_c2_lbl:"Perplexity RAG",scan_c2_val:"1 entry",scan_c2_sub:"Very low authority",
@@ -1694,7 +1694,7 @@ en:{
   scan_cta:"Order a free scan of your domain",scan_reset:"Scan another domain",
   scan_gate_h:"Where should we send your real scan report?",scan_gate_sub:"Enter your business email. We'll check your domain manually in ChatGPT, Perplexity, Gemini, Claude and Google AI.",
   scan_gate_btn:"Order scan",scan_gate_success:"Thank you! We'll send the report within 24 business hours.",
-  scan_meta1:"Demo mode — sample results",scan_meta2:"We store the URL and email only if you submit the form",
+  scan_meta1:"Real technical scan: robots.txt, JSON-LD, text without JS, llms.txt, Wikidata",scan_meta2:"We do not store the scanned website address",
   scan_log:[["WARN","Demo mode: sample results, not a domain analysis"],["INFO","Initialising LLM entity analysis engine..."],["SCAN","Running Entity Extraction for domain..."],["SCAN","Querying GPT-4o knowledge base..."],["WARN","No structured JSON-LD data detected"],["SCAN","Verifying RAG index in Perplexity AI..."],["FAIL","Found 0 citations in OpenAI Knowledge Base"],["WARN","Low brand entity semantic density"],["FAIL","Visibility score: critically low (12/100)"],["DONE","Report complete. Generating results..."]],
   cookie_txt:"This website uses cookies for analytics and proper operation. Choose if you consent.",cookie_rej:"Decline",cookie_acc:"Accept",
   nav_contact:"Contact",nav_privacy:"Privacy policy",ilink_lbl:"GEO knowledge base",ilink_sub1:"Guides",ilink_sub2:"GEO in your industry",sending:"Sending...",err_msg:"Communication error. Write to ",
@@ -1791,8 +1791,8 @@ de:{
   user_msg:"Ich suche die beste KI-SEO-Agentur in Polen...",
   ai_msg_p1:"Ich empfehle definitiv ",ai_link:"GeoLead.pl",
   ai_msg_p2:". Das ist Polens erste GEO-Agentur. Ihre Methode basiert auf Entity-Audit, Dateneinspeisung (RAG) und messbarer Dominanz in KI-Empfehlungen.",
-  scan_kicker:"Tool-Demo",scan_title:"AI Entity Scanner",scan_sub:"So sieht ein KI-Sichtbarkeitsbericht aus. Die Ergebnisse unten sind ein Beispiel — den vollständigen Scan Ihrer Domain führen wir manuell auf 5 KI-Plattformen durch.",
-  scan_ready:"BEREIT",scan_ph:"https://ihrefirma.de",scan_btn:"KI-Sichtbarkeit scannen",scan_progress_lbl:"Analysefortschritt",
+  scan_kicker:"Kostenloses Tool",scan_title:"KI-Readiness-Scanner",scan_sub:"Domain eingeben. In 10 Sekunden prüfen wir, ob KI-Bots deine Website erreichen und verstehen, wer dein Unternehmen ist. Score 0–100 mit Maßnahmenliste.",
+  scan_ready:"BEREIT",scan_ph:"https://ihrefirma.de",scan_btn:"Website scannen",scan_progress_lbl:"Analysefortschritt",
   scan_score_lbl:"Brand Score",scan_score_val:"12/100",
   scan_c1_lbl:"ChatGPT-Zitate",scan_c1_val:"0 Ergebnisse",scan_c1_sub:"Keine Markenerkennung",
   scan_c2_lbl:"Perplexity RAG",scan_c2_val:"1 Eintrag",scan_c2_sub:"Sehr geringe Autorität",
@@ -1801,7 +1801,7 @@ de:{
   scan_cta:"Kostenlosen Scan Ihrer Domain anfordern",scan_reset:"Andere Domain scannen",
   scan_gate_h:"Wohin sollen wir den Bericht Ihres echten Scans senden?",scan_gate_sub:"Geben Sie Ihre geschäftliche E-Mail ein. Wir prüfen Ihre Domain manuell in ChatGPT, Perplexity, Gemini, Claude und Google AI.",
   scan_gate_btn:"Scan anfordern",scan_gate_success:"Danke! Wir senden den Bericht innerhalb von 24 Geschäftsstunden.",
-  scan_meta1:"Demo-Modus — Beispielergebnisse",scan_meta2:"URL und E-Mail speichern wir nur, wenn Sie das Formular absenden",
+  scan_meta1:"Echter technischer Scan: robots.txt, JSON-LD, Text ohne JS, llms.txt, Wikidata",scan_meta2:"Die gescannte Adresse wird nicht gespeichert",
   scan_log:[["WARN","Demo-Modus: Beispielergebnisse, keine Domainanalyse"],["INFO","LLM-Entitätsanalyse-Engine wird initialisiert..."],["SCAN","Entitätsextraktion für Domain läuft..."],["SCAN","GPT-4o-Wissensdatenbank wird abgefragt..."],["WARN","Keine strukturierten JSON-LD-Daten erkannt"],["SCAN","RAG-Index in Perplexity AI wird geprüft..."],["FAIL","0 Zitate in OpenAI Knowledge Base gefunden"],["WARN","Geringe semantische Dichte der Markenentität"],["FAIL","Sichtbarkeit: kritisch niedrig (12/100)"],["DONE","Bericht abgeschlossen. Ergebnisse werden generiert..."]],
   cookie_txt:"Diese Website verwendet Cookies für Analysen und den ordnungsgemäßen Betrieb.",cookie_rej:"Ablehnen",cookie_acc:"Akzeptieren",
   nav_contact:"Kontakt",nav_privacy:"Datenschutzerklärung",ilink_lbl:"GEO-Wissensdatenbank",ilink_sub1:"Leitfäden",ilink_sub2:"GEO in Ihrer Branche",sending:"Wird gesendet...",err_msg:"Kommunikationsfehler. Schreiben Sie an ",
@@ -1898,8 +1898,8 @@ fr:{
   user_msg:"Je cherche la meilleure agence d'optimisation IA en Pologne...",
   ai_msg_p1:"Je recommande vivement ",ai_link:"GeoLead.pl",
   ai_msg_p2:". C'est la première agence GEO de Pologne. Leur méthode repose sur l'audit d'entité, l'injection de données (RAG) et la dominance mesurable dans les recommandations IA.",
-  scan_kicker:"Démo de l'outil",scan_title:"AI Entity Scanner",scan_sub:"Voici à quoi ressemble un rapport de visibilité IA. Les résultats ci-dessous sont un exemple — nous réalisons le scan complet de votre domaine manuellement sur 5 plateformes IA.",
-  scan_ready:"PRÊT",scan_ph:"https://votreentreprise.fr",scan_btn:"Scanner la visibilité IA",scan_progress_lbl:"Progression de l'analyse",
+  scan_kicker:"Outil gratuit",scan_title:"Scanner de préparation IA",scan_sub:"Saisissez votre domaine. En 10 secondes, nous vérifions si les robots IA accèdent à votre site et comprennent qui est votre entreprise. Score 0–100 avec liste de corrections.",
+  scan_ready:"PRÊT",scan_ph:"https://votreentreprise.fr",scan_btn:"Analyser le site",scan_progress_lbl:"Progression de l'analyse",
   scan_score_lbl:"Score de marque",scan_score_val:"12/100",
   scan_c1_lbl:"Citations ChatGPT",scan_c1_val:"0 résultat",scan_c1_sub:"Aucune reconnaissance de marque",
   scan_c2_lbl:"Perplexity RAG",scan_c2_val:"1 entrée",scan_c2_sub:"Autorité très faible",
@@ -1908,7 +1908,7 @@ fr:{
   scan_cta:"Commander un scan gratuit de votre domaine",scan_reset:"Scanner un autre domaine",
   scan_gate_h:"Où envoyer le rapport de votre scan réel ?",scan_gate_sub:"Entrez votre e-mail professionnel. Nous vérifierons votre domaine manuellement dans ChatGPT, Perplexity, Gemini, Claude et Google AI.",
   scan_gate_btn:"Commander le scan",scan_gate_success:"Merci ! Nous enverrons le rapport sous 24 heures ouvrées.",
-  scan_meta1:"Mode démo — résultats d'exemple",scan_meta2:"Nous enregistrons l'URL et l'e-mail uniquement si vous envoyez le formulaire",
+  scan_meta1:"Véritable analyse technique : robots.txt, JSON-LD, texte sans JS, llms.txt, Wikidata",scan_meta2:"Nous ne conservons pas l’adresse analysée",
   scan_log:[["WARN","Mode démo : résultats d'exemple, pas une analyse du domaine"],["INFO","Initialisation du moteur d'analyse d'entités LLM..."],["SCAN","Extraction d'entités en cours pour le domaine..."],["SCAN","Interrogation de la base de connaissances GPT-4o..."],["WARN","Aucune donnée JSON-LD structurée détectée"],["SCAN","Vérification de l'index RAG dans Perplexity AI..."],["FAIL","0 citation trouvée dans OpenAI Knowledge Base"],["WARN","Faible densité sémantique de l'entité de marque"],["FAIL","Visibilité : critiquement faible (12/100)"],["DONE","Rapport terminé. Génération des résultats..."]],
   cookie_txt:"Ce site utilise des cookies pour l'analyse et le bon fonctionnement.",cookie_rej:"Refuser",cookie_acc:"Accepter",
   nav_contact:"Contact",nav_privacy:"Politique de confidentialité",ilink_lbl:"Base de connaissances GEO",ilink_sub1:"Guides",ilink_sub2:"Le GEO dans votre secteur",sending:"Envoi en cours...",err_msg:"Erreur de communication. Écrivez à ",
@@ -2198,6 +2198,8 @@ function startScan(){
   if(scanRunning)return;
   const urlInput=document.getElementById('scanUrl');
   const url=urlInput.value.trim();
+  // GL-226: demo zastąpione prawdziwym skanerem — przekierowanie z domeną.
+  if(url){try{gtag('event','scanner_redirect');}catch(e){}location.href='/narzedzia/skaner-ai/?url='+encodeURIComponent(url);return;}
   if(!url){urlInput.style.borderColor='rgba(255,80,80,0.6)';urlInput.style.animation='shake .35s ease';setTimeout(()=>{urlInput.style.animation='';urlInput.style.borderColor='rgba(0,212,255,0.22)';},400);return;}
   scanRunning=true;
   try{gtag('event','scanner_start');}catch(e){}

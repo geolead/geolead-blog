@@ -927,6 +927,15 @@ $('auditCta').addEventListener('click', () => track('cta_click', { target: 'audy
 $('consultCta').addEventListener('click', () => track('cta_click', { target: 'konsultacja' }));
 $('generatorLink').addEventListener('click', () => track('cta_click', { target: 'generator_promptow' }));
 translate();
+// GL-226: start skanu z linku /narzedzia/skaner-ai/?url=domena.pl (np. ze strony głównej).
+try {
+  const preset = new URLSearchParams(location.search).get('url');
+  if (preset && preset.length <= 2048) {
+    $('scanUrl').value = preset;
+    history.replaceState(null, '', location.pathname);
+    $('scanForm').requestSubmit();
+  }
+} catch (_) {}
 </script>
 </body>
 </html>
