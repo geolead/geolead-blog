@@ -69,7 +69,7 @@ Mierzymy obecność w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode. Każ
 - **Pomiar co 2 tygodnie** — stały zestaw pytań zakupowych, sprawdzany w sesjach bez pamięci i personalizacji. Raport pokazuje zmianę względem pomiaru wyjściowego.
 - **Prace na stronie** — dane strukturalne JSON-LD, spójne dane firmy, treści odpowiadające na pytania klientów.
 - **Prace poza stroną** — obecność w źródłach, z których modele AI składają odpowiedzi w Twojej branży, czyli zasilanie mechanizmu [RAG](/slownik/rag/).
-- **Bezpośrednia praca z założycielem** — GeoLead działa w modelu butikowym. Osoba, która przygotowuje ofertę, prowadzi projekt.
+- **Bezpośrednia praca ze współzałożycielem** — GeoLead działa w modelu butikowym. Osoba, która przygotowuje ofertę, prowadzi projekt.
 
 ## Ile kosztuje audyt GEO
 
