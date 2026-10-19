@@ -1,0 +1,202 @@
+[
+  {
+    "id": "software_house",
+    "t": "medium",
+    "n": {
+      "pl": "IT i nowe technologie",
+      "en": "IT and new technologies",
+      "de": "IT und neue Technologien",
+      "fr": "IT et nouvelles technologies"
+    }
+  },
+  {
+    "id": "ecommerce",
+    "t": "medium",
+    "n": {
+      "pl": "E-commerce i handel internetowy",
+      "en": "E-commerce and online retail",
+      "de": "E-Commerce und Onlinehandel",
+      "fr": "E-commerce et vente en ligne"
+    }
+  },
+  {
+    "id": "handel",
+    "t": "low",
+    "n": {
+      "pl": "Handel detaliczny i hurtowy",
+      "en": "Retail and wholesale trade",
+      "de": "Einzel- und Großhandel",
+      "fr": "Commerce de détail et de gros"
+    }
+  },
+  {
+    "id": "budownictwo",
+    "t": "medium",
+    "n": {
+      "pl": "Budownictwo i nieruchomości",
+      "en": "Construction and real estate",
+      "de": "Bauwirtschaft und Immobilien",
+      "fr": "Construction et immobilier"
+    }
+  },
+  {
+    "id": "finanse",
+    "t": "high",
+    "n": {
+      "pl": "Finanse i bankowość",
+      "en": "Finance and banking",
+      "de": "Finanzwesen und Bankdienstleistungen",
+      "fr": "Finance et banque"
+    }
+  },
+  {
+    "id": "ubezpieczenia",
+    "t": "high",
+    "n": {
+      "pl": "Ubezpieczenia",
+      "en": "Insurance",
+      "de": "Versicherungen",
+      "fr": "Assurance"
+    }
+  },
+  {
+    "id": "producent",
+    "t": "medium",
+    "n": {
+      "pl": "Produkcja przemysłowa",
+      "en": "Industrial manufacturing",
+      "de": "Industrielle Fertigung",
+      "fr": "Production industrielle"
+    }
+  },
+  {
+    "id": "motoryzacja",
+    "t": "medium",
+    "n": {
+      "pl": "Motoryzacja i części zamienne",
+      "en": "Automotive and spare parts",
+      "de": "Automobilbranche und Ersatzteile",
+      "fr": "Automobile et pièces détachées"
+    }
+  },
+  {
+    "id": "logistyka",
+    "t": "medium",
+    "n": {
+      "pl": "Logistyka, transport i spedycja",
+      "en": "Logistics, transport and freight forwarding",
+      "de": "Logistik, Transport und Spedition",
+      "fr": "Logistique, transport et transit"
+    }
+  },
+  {
+    "id": "energetyka",
+    "t": "medium",
+    "n": {
+      "pl": "Energetyka i odnawialne źródła energii",
+      "en": "Energy and renewable power",
+      "de": "Energiewirtschaft und erneuerbare Energien",
+      "fr": "Énergie et énergies renouvelables"
+    }
+  },
+  {
+    "id": "telekomunikacja",
+    "t": "medium",
+    "n": {
+      "pl": "Telekomunikacja i media cyfrowe",
+      "en": "Telecommunications and digital media",
+      "de": "Telekommunikation und digitale Medien",
+      "fr": "Télécommunications et médias numériques"
+    }
+  },
+  {
+    "id": "klinika",
+    "t": "high",
+    "n": {
+      "pl": "Ochrona zdrowia i opieka medyczna",
+      "en": "Healthcare and medical care",
+      "de": "Gesundheitswesen und medizinische Versorgung",
+      "fr": "Santé et soins médicaux"
+    }
+  },
+  {
+    "id": "farmacja",
+    "t": "high",
+    "n": {
+      "pl": "Farmacja i biotechnologia",
+      "en": "Pharmaceuticals and biotechnology",
+      "de": "Pharmaindustrie und Biotechnologie",
+      "fr": "Pharmacie et biotechnologie"
+    }
+  },
+  {
+    "id": "edukacja",
+    "t": "medium",
+    "n": {
+      "pl": "Edukacja i szkolenia",
+      "en": "Education and training",
+      "de": "Bildung und Weiterbildung",
+      "fr": "Éducation et formation"
+    }
+  },
+  {
+    "id": "gastronomia",
+    "t": "low",
+    "n": {
+      "pl": "Gastronomia i HoReCa",
+      "en": "Food service and hospitality",
+      "de": "Gastronomie und Hotellerie",
+      "fr": "Restauration et hôtellerie"
+    }
+  },
+  {
+    "id": "hotel",
+    "t": "low",
+    "n": {
+      "pl": "Turystyka i rekreacja",
+      "en": "Tourism and leisure",
+      "de": "Tourismus und Freizeit",
+      "fr": "Tourisme et loisirs"
+    }
+  },
+  {
+    "id": "marketing",
+    "t": "medium",
+    "n": {
+      "pl": "Marketing, reklama i PR",
+      "en": "Marketing, advertising and public relations",
+      "de": "Marketing, Werbung und PR",
+      "fr": "Marketing, publicité et relations publiques"
+    }
+  },
+  {
+    "id": "ksiegowosc",
+    "t": "high",
+    "n": {
+      "pl": "Księgowość, audyt i doradztwo podatkowe",
+      "en": "Accounting, audit and tax advisory",
+      "de": "Buchhaltung, Wirtschaftsprüfung und Steuerberatung",
+      "fr": "Comptabilité, audit et conseil fiscal"
+    }
+  },
+  {
+    "id": "kancelaria",
+    "t": "high",
+    "n": {
+      "pl": "Prawo i usługi prawne",
+      "en": "Law and legal services",
+      "de": "Recht und Rechtsdienstleistungen",
+      "fr": "Droit et services juridiques"
+    }
+  },
+  {
+    "id": "rolnictwo",
+    "t": "low",
+    "n": {
+      "pl": "Rolnictwo i przetwórstwo spożywcze",
+      "en": "Agriculture and food processing",
+      "de": "Landwirtschaft und Lebensmittelverarbeitung",
+      "fr": "Agriculture et transformation alimentaire"
+    }
+  }
+]

@@ -10,11 +10,12 @@ export default defineConfig({
   // ORAZ Googlebota bez kolejki renderowania JS.
   output: 'static',
 
-  // i18n skonfigurowane pod przyszłe skalowanie (EN/DE/FR),
-  // ale aktywne tylko dla PL. prefixDefaultLocale:false => PL bez prefixu /pl/.
+  // i18n: PL bez prefiksu (/), EN/DE/FR pod /en/, /de/, /fr/.
+  // Wersje językowe ma na razie tylko strona główna (src/pages/{en,de,fr}/index.astro);
+  // blog, słownik i strony z public/ są wyłącznie po polsku.
   i18n: {
     defaultLocale: 'pl',
-    locales: ['pl'], // docelowo: ['pl', 'en', 'de', 'fr']
+    locales: ['pl', 'en', 'de', 'fr'],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -22,19 +23,21 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      // Strona główna (public/index.html) jest statyczna i niewidoczna dla
-      // integracji sitemap — dodajemy ją jawnie, żeby trafiła do mapy.
+      // Strona główna jest teraz stroną Astro (/, /en/, /de/, /fr/) — sitemap widzi ją sama.
+      // W customPages zostają tylko statyczne pliki z public/.
       // GL-212: polityka prywatności to też statyczny plik w public/.
       // GL-217: generator promptów, GL-224: skaner gotowości AI (statyczne pliki w public/narzedzia/).
       // GL-233: strona badania /badania/gotowosc-ai-2026/ (statyczny plik w public/badania/).
-      customPages: ['https://geolead.pl/', 'https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/', 'https://geolead.pl/narzedzia/skaner-ai/', 'https://geolead.pl/metodologia/', 'https://geolead.pl/badania/gotowosc-ai-2026/'],
+      customPages: ['https://geolead.pl/polityka-prywatnosci/', 'https://geolead.pl/narzedzia/pytania-zakupowe/', 'https://geolead.pl/narzedzia/skaner-ai/', 'https://geolead.pl/metodologia/', 'https://geolead.pl/badania/gotowosc-ai-2026/'],
       // Wykluczamy strony techniczne z sitemap, jeśli powstaną w przyszłości
       filter: (page) => !page.includes('/draft/'),
       i18n: {
         defaultLocale: 'pl',
         locales: {
-          pl: 'pl-PL',
-          // en: 'en-US', de: 'de-DE', fr: 'fr-FR' — odkomentuj przy skalowaniu
+          pl: 'pl',
+          en: 'en',
+          de: 'de',
+          fr: 'fr',
         },
       },
     }),

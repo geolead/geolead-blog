@@ -1,0 +1,376 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://geolead.pl/#organization",
+      "name": "GeoLead",
+      "alternateName": [
+        "GeoLead Agencja GEO",
+        "GeoLead.pl"
+      ],
+      "legalName": "geolead.pl Paweł Zagajewski",
+      "url": "https://geolead.pl/",
+      "slogan": "Agencja GEO - Pozycjonowanie w AI",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geolead.pl/logo.png"
+      },
+      "image": "https://geolead.pl/og-image.jpg",
+      "description": "Butikowa agencja technologiczna B2B specjalizująca się w Generative Engine Optimization (GEO). Zwiększamy widoczność marek premium w odpowiedziach modeli językowych: ChatGPT, Perplexity, Claude, Gemini i Google AI Overviews.",
+      "disambiguatingDescription": "Skrót GEO w nazwie GeoLead oznacza Generative Engine Optimization — optymalizację widoczności marek w generatywnych modelach AI. GeoLead nie jest firmą geodezyjną i nie świadczy usług geodezyjnych, kartograficznych ani geolokalizacyjnych.",
+      "foundingDate": "2026-09-15",
+      "telephone": "+48511000115",
+      "email": "kontakt@geolead.pl",
+      "priceRange": "1200-15000 PLN",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Warszawa",
+        "addressRegion": "mazowieckie",
+        "addressCountry": "PL"
+      },
+      "founder": [
+        {
+          "@id": "https://geolead.pl/#pawel-zagajewski"
+        },
+        {
+          "@id": "https://geolead.pl/#jaroslaw-zagajewski"
+        }
+      ],
+      "employee": {
+        "@id": "https://geolead.pl/#jaroslaw-zagajewski"
+      },
+      "areaServed": [
+        "PL",
+        "DE",
+        "AT",
+        "CH",
+        "FR",
+        "US",
+        "GB"
+      ],
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "GEO — optymalizacja pod modele językowe",
+        "AI SEO",
+        "AI Search Optimization",
+        "LLM Optimization",
+        "Pozycjonowanie w ChatGPT",
+        "ChatGPT SEO",
+        "Perplexity SEO",
+        "Large Language Model Visibility",
+        "Claude AI brand mentions",
+        "Google AI Overviews optimization",
+        "Entity-based SEO",
+        "Knowledge Graph optimization",
+        "Entity Salience",
+        "RAG — Retrieval-Augmented Generation",
+        "Share of Model",
+        "Structured data for AI models",
+        "LLM entity optimization",
+        "AI brand authority building",
+        "B2B Lead Generation through AI",
+        "High-Ticket Client Acquisition",
+        "Premium Brand AI Positioning"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi GEO",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://geolead.pl/#how",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audyt Entity AI",
+              "description": "Pomiar tego, jak modele językowe opisują markę dziś: częstotliwość wzmianek, kontekst, halucynacje i luki wiedzy."
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://geolead.pl/#how",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optymalizacja źródeł cytowanych przez AI (RAG)",
+              "description": "Dystrybucja ustrukturyzowanych informacji o firmie do źródeł cytowanych przez modele AI."
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://geolead.pl/#contact",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Monitoring Share of Model",
+              "description": "Cykliczne testy promptów w ChatGPT, Perplexity i Claude wraz z raportowaniem udziału marki w odpowiedziach."
+            }
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "kontakt@geolead.pl",
+        "telephone": "+48511000115",
+        "availableLanguage": [
+          "Polish",
+          "English",
+          "German",
+          "French"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/geolead-pl",
+        "https://x.com/GeoLead_PL",
+        "https://www.wikidata.org/wiki/Q141756681"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://geolead.pl/#jaroslaw-zagajewski",
+      "name": "Jarosław Zagajewski",
+      "alternateName": "Jarek Zagajewski",
+      "jobTitle": "Co-founder & GEO Strategist",
+      "worksFor": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Search Optimization",
+        "Entity Salience",
+        "Retrieval-Augmented Generation",
+        "Knowledge Graph",
+        "B2B Account-Based Marketing"
+      ],
+      "givenName": "Jarosław",
+      "familyName": "Zagajewski",
+      "description": "Współzałożyciel GeoLead — agencji GEO (Generative Engine Optimization) wyspecjalizowanej w pozycjonowaniu firm w odpowiedziach AI. Ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte. Specjalizuje się w audytach encji marki w modelach językowych, optymalizacji źródeł wykorzystywanych przez systemy RAG oraz pomiarze Share of Model w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Szkoła Główna Handlowa w Warszawie",
+        "alternateName": "SGH Warsaw School of Economics"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/",
+        "https://x.com/MrZagajewski",
+        "https://medium.com/@jaroslaw.zagajewski"
+      ],
+      "url": "https://geolead.pl/#social-proof"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://geolead.pl/#pawel-zagajewski",
+      "name": "Paweł Zagajewski",
+      "givenName": "Paweł",
+      "familyName": "Zagajewski",
+      "jobTitle": "Założyciel",
+      "description": "Założyciel i właściciel GeoLead (jednoosobowa działalność gospodarcza geolead.pl Paweł Zagajewski).",
+      "worksFor": {
+        "@id": "https://geolead.pl/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://geolead.pl/#website",
+      "url": "https://geolead.pl/",
+      "name": "GeoLead — Agencja GEO",
+      "inLanguage": "pl-PL",
+      "publisher": {
+        "@id": "https://geolead.pl/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://geolead.pl/#webpage",
+      "url": "https://geolead.pl/",
+      "name": "Agencja GEO w Polsce — pozycjonowanie w ChatGPT | GeoLead",
+      "description": "GeoLead.pl | Agencja GEO - Pozycjonowanie w AI. Specjalizacja w GEO od 2024 roku. Zwiększamy widoczność firm B2B w ChatGPT, Perplexity, Claude, Gemini i Google AI Overviews.",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@id": "https://geolead.pl/#website"
+      },
+      "about": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://geolead.pl/og-image.jpg"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://geolead.pl/#service-geo",
+      "name": "Generative Engine Optimization (GEO)",
+      "serviceType": "Generative Engine Optimization",
+      "alternateName": [
+        "AI SEO",
+        "AI Search Optimization",
+        "LLM Optimization",
+        "Pozycjonowanie w ChatGPT"
+      ],
+      "description": "Optymalizacja widoczności marki w odpowiedziach generatywnych modeli AI: ChatGPT, Perplexity, Claude, Gemini, Microsoft Copilot oraz Google AI Overviews. Trzy warstwy: audyt encji, optymalizacja źródeł cytowanych przez AI (RAG) i cykliczny pomiar Share of Model.",
+      "provider": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "areaServed": [
+        "PL",
+        "DE",
+        "AT",
+        "CH",
+        "FR",
+        "US",
+        "GB"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Firmy B2B, kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS, usługi profesjonalne"
+      },
+      "isRelatedTo": {
+        "@id": "https://geolead.pl/#glossary"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://geolead.pl/#faqpage",
+      "isPartOf": {
+        "@id": "https://geolead.pl/#webpage"
+      },
+      "inLanguage": "pl-PL",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy GEO zastępuje SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie zastępuje — uzupełnia. SEO pozostaje ważne dla ruchu organicznego z wyszukiwarek. GEO to dodatkowy kanał pozyskiwania klientów: rosnąca liczba użytkowników zaczyna szukać od pytania do AI, zanim w ogóle wejdzie na Google. Klienci z GEO często przychodzą już \"podgrzani\" — z konkretną intencją zakupową."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak mierzycie efekty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prowadzimy regularne audyty oparte na testach promptów — wysyłamy dziesiątki zapytań do ChatGPT, Perplexity i Claude i mierzymy, jak często oraz w jakim kontekście pojawia się Twoja firma. Raportujemy Ci procentowy wzrost widoczności, zmianę sentymentu i monitoring przez pierwsze 3–6 miesięcy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy moja branża nadaje się do GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO działa najlepiej wszędzie tam, gdzie klienci podejmują przemyślane decyzje i pytają o rekomendacje — medycyna, prawo, finanse, nieruchomości, SaaS, usługi B2B, e-commerce premium, gastro i hotele. Jeśli Twój klient przed zakupem \"googla\" lub pyta znajomych — zapyta też AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile trwa wdrożenie i kiedy zobaczę pierwsze efekty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wdrożenie startuje w ciągu 7 dni od podpisania umowy. Na starcie robimy pomiar wyjściowy, a kolejne pomiary pokazują, czy i jak zmieniają się odpowiedzi AI. Pierwsze zmiany obserwujemy zwykle po kilku tygodniach; wyraźniejszy efekt w rekomendacjach — w zależności od branży i konkurencji — to zwykle 2–7 miesięcy. Terminów nie gwarantujemy: zależą też od aktualizacji samych modeli."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co jeśli ChatGPT zmieni algorytm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nasze działania opierają się na budowaniu trwałego autorytetu encji (entity authority) — Twojej firmy jako sprawdzonego, rozpoznawalnego podmiotu w wiedzy AI. Tego nie można \"odkreślić\" jedną aktualizacją. Monitorujemy zmiany w modelach na bieżąco i dostosowujemy strategię bez dodatkowych kosztów."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://geolead.pl/#glossary",
+      "name": "Słownik GEO — pojęcia Generative Engine Optimization",
+      "url": "https://geolead.pl/slownik/",
+      "description": "Definicje pojęć z zakresu Generative Engine Optimization przetłumaczone na język decydentów B2B: LLM, RAG, Entity Salience, Knowledge Graph, halucynacje AI i Vector Embedding.",
+      "inLanguage": "pl",
+      "publisher": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "about": {
+        "@id": "https://geolead.pl/#organization"
+      },
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-llm",
+          "name": "LLM",
+          "alternateName": "Large Language Model",
+          "termCode": "LLM",
+          "description": "Duży model językowy analizujący zapytanie klienta i rekomendujący konkretną firmę z nazwy, zamiast zwracać listę linków. Przykłady: ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Perplexity.",
+          "url": "https://geolead.pl/slownik/llm/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-rag",
+          "name": "RAG",
+          "alternateName": "Retrieval-Augmented Generation",
+          "termCode": "RAG",
+          "description": "Mechanizm wzbogacania odpowiedzi modeli AI o zewnętrzną, aktualną wiedzę. W GEO służy do wprowadzania zweryfikowanych danych o firmie do źródeł, z których ChatGPT, Perplexity i Claude korzystają przy generowaniu odpowiedzi.",
+          "url": "https://geolead.pl/slownik/rag/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-entity-salience",
+          "name": "Entity Salience",
+          "alternateName": "Wyrazistość marki w AI",
+          "termCode": "ENTITY_SALIENCE",
+          "description": "Miara siły, z jaką marka funkcjonuje jako rozpoznawalna encja w modelach językowych. Im wyższa Entity Salience, tym częściej LLM cytują firmę jako autorytet w branży, nawet bez zapytania o jej nazwę.",
+          "url": "https://geolead.pl/slownik/entity-salience/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-knowledge-graph",
+          "name": "Knowledge Graph",
+          "alternateName": "Graf wiedzy",
+          "termCode": "KNOWLEDGE_GRAPH",
+          "description": "Strukturalna baza danych mapująca relacje pomiędzy encjami: osobami, firmami, miejscami i pojęciami. Wykorzystywana przez Google i pośrednio przez modele LLM do weryfikacji faktów i budowy kontekstu odpowiedzi.",
+          "url": "https://geolead.pl/slownik/knowledge-graph/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-hallucination",
+          "name": "Halucynacja AI",
+          "alternateName": "Hallucination",
+          "termCode": "HALLUCINATION",
+          "description": "Generowanie przez model językowy nieprawdziwych informacji prezentowanych z wysokim poziomem pewności. Halucynacje dotyczące marki, takie jak błędne dane kontaktowe lub pomylenie z konkurencją, bezpośrednio obniżają konwersję.",
+          "url": "https://geolead.pl/slownik/halucynacje-ai/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://geolead.pl/#term-vector-embedding",
+          "name": "Vector Embedding",
+          "alternateName": "Reprezentacja wektorowa",
+          "termCode": "VECTOR_EMBEDDING",
+          "description": "Matematyczna reprezentacja treści w wielowymiarowej przestrzeni semantycznej, używana przez modele LLM do oceny podobieństwa znaczeń. Im bliżej embedding marki znajduje się embeddingu zapytania, tym wyższe prawdopodobieństwo cytowania.",
+          "url": "https://geolead.pl/slownik/vector-embedding/",
+          "inDefinedTermSet": {
+            "@id": "https://geolead.pl/#glossary"
+          }
+        }
+      ]
+    }
+  ]
+}

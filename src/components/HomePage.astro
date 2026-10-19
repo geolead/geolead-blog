@@ -1,0 +1,1595 @@
+---
+// Strona główna geolead.pl — wspólny szablon dla /, /en/, /de/, /fr/ (migracja i18n, GL-i18n).
+// Teksty: src/i18n/home-dict.mjs · Meta + JSON-LD: src/i18n/home-seo.mjs
+// UWAGA: wszystkie <script>/<style> są is:inline — Astro ich nie bundluje (kolejność gtag/consent/setLang bez zmian).
+import { T as DICT } from '../i18n/home-dict.mjs';
+import { LANGS, X_DEFAULT, META, OG_LOCALE, urlFor, buildJsonLd } from '../i18n/home-seo.mjs';
+import INDUSTRIES from '../i18n/home-industries.json';
+
+interface Props { lang: 'pl' | 'en' | 'de' | 'fr' }
+const { lang } = Astro.props;
+const t = DICT[lang];
+const m = META[lang];
+const url = urlFor(lang);
+const jsonLd = JSON.stringify(buildJsonLd(lang, t), null, 2).replace(/</g, '\\u003c');
+const IND = Object.fromEntries(INDUSTRIES.map((x) => [x.id, x.n[lang] || x.n.pl]));
+const clientBoot = 'window.__GL_LANG=' + JSON.stringify(lang) + ';window.__GL_T=' +
+  JSON.stringify({ [lang]: t }).replace(/</g, '\\u003c') + ';window.__GL_IND=' +
+  JSON.stringify(INDUSTRIES).replace(/</g, '\\u003c') + ';';
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+<!-- Google tag (gtag.js) + Consent Mode v2 (GL-208) -->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+  try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
+  gtag('js', new Date());
+  gtag('config', 'G-4J1CCWLDHP');
+</script>
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- PRIMARY META -->
+<title>{m.title}</title>
+<meta name="description" content={m.description}>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="GeoLead">
+<meta name="theme-color" content="#070712">
+
+<!-- BRAND DISAMBIGUATION -->
+<meta name="application-name" content="GeoLead">
+<meta name="apple-mobile-web-app-title" content="GeoLead">
+
+<!-- CANONICAL -->
+<link rel="canonical" href={url} />
+<!-- HREFLANG — klaster strony głównej (PL/EN/DE/FR), x-default = EN -->
+{LANGS.map((l) => <link rel="alternate" hreflang={l} href={urlFor(l)} />)}
+<link rel="alternate" hreflang="x-default" href={urlFor(X_DEFAULT)} />
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type"         content="website">
+<meta property="og:url"          content={url}>
+<meta property="og:title"        content={m.ogTitle}>
+<meta property="og:description"  content={m.ogDescription}>
+<meta property="og:image"        content="https://geolead.pl/og-image.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"    content="GeoLead – AI GEO Agency">
+<meta property="og:site_name"    content="GeoLead">
+<meta property="og:locale"       content={OG_LOCALE[lang]}>
+{LANGS.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={OG_LOCALE[l]} />)}
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@GeoLead_PL">
+<meta name="twitter:creator"     content="@MrZagajewski">
+<meta name="twitter:title"       content={m.ogTitle}>
+<meta name="twitter:description" content={m.twDescription}>
+<meta name="twitter:image"       content="https://geolead.pl/og-image.jpg">
+
+<!-- SCHEMA.ORG JSON-LD — dane encji dla modeli AI -->
+<script type="application/ld+json" is:inline set:html={jsonLd}></script>
+
+<!-- ASSETS -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<!-- Font Awesome poza sciezka krytyczna renderowania -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<style is:inline>
+:root{
+  --f:#e040fb;--c:#00d4ff;
+  --bg:#070712;--bg2:#0a0a1c;--bg3:#0d0d22;
+  --text:#94a3b8;--text-hi:#cbd5e1;--text-lo:#7d8ba1;
+  --border:rgba(255,255,255,0.08);--border-f:rgba(224,64,251,0.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;overflow-x:hidden;line-height:1.6}
+.g-text{background:linear-gradient(135deg,var(--f),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.g-bg{background:linear-gradient(135deg,var(--f),var(--c))}
+.glass{background:rgba(10,10,28,0.75);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid var(--border-f);border-radius:20px;box-shadow:0 0 0 1px rgba(0,212,255,0.06),0 0 50px rgba(224,64,251,0.09),inset 0 1px 0 rgba(255,255,255,0.05),0 30px 60px rgba(0,0,0,0.5)}
+
+/* ============================================================
+   TAILWIND UTILITY SUBSET - skompilowany lokalnie (zero CDN)
+   Zawiera WYLACZNIE klasy realnie uzyte w tym pliku.
+   ============================================================ */
+.block{display:block}.flex{display:flex}.grid{display:grid}.relative{position:relative}
+.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}
+.justify-center{justify-content:center}.justify-between{justify-content:space-between}
+.text-left{text-align:left}.text-center{text-align:center}
+.uppercase{text-transform:uppercase}.tracking-widest{letter-spacing:0.1em}
+.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}
+.font-semibold{font-weight:600}.font-bold{font-weight:700}.font-black{font-weight:900}
+.text-white{color:#e8edf5}
+.text-xs{font-size:0.75rem;line-height:1rem}
+.text-sm{font-size:0.875rem;line-height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.mx-auto{margin-left:auto;margin-right:auto}
+.mt-12{margin-top:3rem}
+.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}
+.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}
+.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-10{gap:2.5rem}
+.max-w-xl{max-width:36rem}.max-w-3xl{max-width:48rem}
+.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}
+.z-10{z-index:10}
+@media(min-width:768px){
+  .md\:text-6xl{font-size:3.75rem;line-height:1}
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* -- GEO ENTITY BLOCK + linki slownika -- */
+.hl{color:#fff;font-weight:700}
+.h1-lead{display:block;font-size:clamp(1rem,2.1vw,1.35rem);font-weight:700;letter-spacing:0.01em;color:var(--text-hi);margin-bottom:0.6rem}
+.wig-body{max-width:820px;color:var(--text);font-size:0.94rem;line-height:1.8;text-align:left}
+.wig-body p{margin-bottom:1.15rem}
+.wig-body p:last-child{margin-bottom:0}
+.gloss-link{display:inline-block;margin-top:0.9rem;font-size:0.76rem;font-weight:700;letter-spacing:0.03em;color:var(--f);text-decoration:none;transition:opacity .2s}
+.gloss-link:hover{opacity:0.72}
+.foot-me{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border-f);transition:color .2s,border-color .2s}
+.foot-me:hover{color:var(--f);border-color:var(--f)}
+.ilink-wrap{margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--border);text-align:center}
+.ilink-lbl{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-lo);display:block;margin-bottom:0.7rem}
+.ilink-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.7rem;max-width:780px;margin:0 auto;text-align:left}
+.ilink-col{display:flex;flex-direction:column;gap:0.42rem}
+.ilink-sub{display:block;font-size:0.64rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--f);margin-bottom:0.55rem}
+.ilink{display:flex;align-items:center;gap:0.55rem;font-size:0.79rem;font-weight:600;color:var(--text-hi);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;padding:0.42rem 0.9rem;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.ilink:hover{color:#fff;border-color:var(--border-f);background:rgba(224,64,251,0.07)}
+.ilink i{color:var(--f);font-size:0.72rem;width:1rem;text-align:center;flex-shrink:0}
+@media(max-width:640px){.ilink-grid{grid-template-columns:1fr;gap:1.4rem}}
+
+/* ── NAV ── */
+.gl-nav{position:sticky;top:0;z-index:999;background:rgba(7,7,18,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);padding:0.85rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.7rem}
+.gl-logo{font-size:1.3rem;font-weight:800;color:white;text-decoration:none;letter-spacing:-0.03em;flex-shrink:0}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{color:var(--text);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:white}
+.lang-sw{display:flex;gap:0.18rem;background:rgba(255,255,255,0.06);border-radius:8px;padding:0.18rem}
+.lb{background:none;border:none;color:#7e7ea6;font-size:0.7rem;font-weight:700;padding:0.22rem 0.46rem;border-radius:5px;cursor:pointer;letter-spacing:0.05em;transition:all .2s}
+.lb:hover{color:white}
+a.lb{text-decoration:none;display:inline-block}
+.lb.on{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg)}
+.btn-nav{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.78rem;padding:0.48rem 1.05rem;border-radius:8px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:opacity .2s,transform .2s;white-space:nowrap}
+.btn-nav:hover{opacity:0.84;transform:translateY(-1px)}
+
+/* ── HERO ── */
+.gl-hero{position:relative;padding:7rem 2rem 5.5rem;text-align:center;overflow:hidden;background:linear-gradient(180deg,var(--bg),#0c0c22)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(224,64,251,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.05) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,black 30%,transparent 100%)}
+.hero-glow{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:900px;height:500px;background:radial-gradient(ellipse,rgba(224,64,251,0.12),rgba(0,212,255,0.06),transparent 70%);pointer-events:none}
+.gl-badge{display:inline-flex;align-items:center;gap:0.42rem;background:rgba(224,64,251,0.1);border:1px solid rgba(224,64,251,0.28);color:var(--f);font-size:0.68rem;font-weight:700;padding:0.32rem 0.88rem;border-radius:100px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem}
+.ai-pill{display:inline-flex;align-items:center;gap:0.38rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:7px;padding:0.38rem 0.82rem;font-size:0.75rem;font-weight:600;color:var(--text)}
+.btn-hp{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.92rem;padding:0.82rem 1.85rem;border-radius:10px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:opacity .2s,transform .2s}
+.btn-hp:hover{opacity:0.84;transform:translateY(-2px)}
+.btn-ho{background:transparent;color:white;font-weight:500;font-size:0.92rem;padding:0.82rem 1.85rem;border-radius:10px;border:1px solid rgba(255,255,255,0.18);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:all .2s}
+.btn-ho:hover{border-color:rgba(224,64,251,0.5);background:rgba(224,64,251,0.07)}
+
+/* ── AI CONSOLE ── */
+.ai-con{background:#0d0d1e;border:1px solid rgba(224,64,251,0.25);border-radius:15px;overflow:hidden;max-width:640px;margin:0 auto;box-shadow:0 0 0 1px rgba(224,64,251,0.07),0 0 35px rgba(224,64,251,0.13),0 20px 45px rgba(0,0,0,0.6);transform:rotateX(2deg);transition:transform .4s,box-shadow .4s}
+.ai-con:hover{transform:rotateX(0);box-shadow:0 0 0 1px rgba(224,64,251,0.18),0 0 60px rgba(224,64,251,0.2),0 28px 60px rgba(0,0,0,0.7)}
+.con-bar{background:#111126;padding:0.7rem 0.95rem;display:flex;align-items:center;gap:0.55rem;border-bottom:1px solid var(--border)}
+.dot{width:9px;height:9px;border-radius:50%}
+.dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
+.con-ttl{flex:1;text-align:center;font-size:0.68rem;font-weight:600;color:#7a7aae;letter-spacing:0.07em}
+.con-mdl{font-size:0.63rem;color:#8282ae;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:0.18rem 0.45rem;display:flex;align-items:center;gap:0.28rem}
+.con-body{padding:1.1rem 1.1rem 0.45rem;min-height:175px;display:flex;flex-direction:column;gap:0.9rem}
+.msg-u{display:flex;justify-content:flex-end}
+.bbl-u{background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.12));border:1px solid rgba(224,64,251,0.2);border-radius:13px 13px 3px 13px;padding:0.65rem 0.95rem;max-width:78%;font-size:0.845rem;color:#d0d0f0;line-height:1.55;text-align:left;opacity:0;transform:translateY(7px);transition:opacity .4s,transform .4s}
+.bbl-u.show{opacity:1;transform:translateY(0)}
+.msg-a{display:flex;align-items:flex-start;gap:0.6rem}
+.ai-av{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--f),var(--c));display:flex;align-items:center;justify-content:center;color:var(--bg);box-shadow:0 0 12px rgba(224,64,251,0.4);opacity:0;transform:scale(0.7);transition:opacity .35s,transform .35s}
+.ai-av.show{opacity:1;transform:scale(1)}
+.bbl-a{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:3px 13px 13px 13px;padding:0.65rem 0.95rem;max-width:82%;font-size:0.845rem;color:#c8c8e8;line-height:1.65;text-align:left;min-height:2.4rem;opacity:0;transform:translateY(5px);transition:opacity .35s,transform .35s}
+.bbl-a.show{opacity:1;transform:translateY(0)}
+.cursor-blink{display:inline-block;width:2px;height:1em;background:var(--f);margin-left:2px;vertical-align:text-bottom;border-radius:1px;animation:blink 0.9s ease-in-out infinite;box-shadow:0 0 6px rgba(224,64,251,0.8)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.tyd{display:flex;gap:4px;padding:0.22rem 0;align-items:center}
+.tyd span{width:6px;height:6px;border-radius:50%;background:var(--f);opacity:0.5;animation:tdot 1.2s ease-in-out infinite}
+.tyd span:nth-child(2){animation-delay:.2s}
+.tyd span:nth-child(3){animation-delay:.4s}
+@keyframes tdot{0%,100%{transform:translateY(0);opacity:0.5}50%{transform:translateY(-4px);opacity:1}}
+.ai-lnk{color:var(--c);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(0,212,255,0.35)}
+.con-inp{border-top:1px solid var(--border);padding:0.7rem 0.95rem;display:flex;align-items:center;gap:0.55rem;margin-top:0.45rem}
+.con-inp-f{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:7px;padding:0.45rem 0.8rem;font-size:0.78rem;color:var(--text-lo);font-family:inherit;pointer-events:none}
+.con-snd{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,var(--f),var(--c));border:none;display:flex;align-items:center;justify-content:center}
+.rpl-btn{display:none;margin:0.45rem auto 0;background:none;border:1px solid rgba(224,64,251,0.25);color:var(--f);font-size:0.7rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:6px;cursor:pointer;letter-spacing:0.05em;transition:all .2s;align-items:center;gap:0.38rem;font-family:inherit}
+.rpl-btn:hover{background:rgba(224,64,251,0.1)}
+.rpl-btn.show{display:inline-flex}
+
+/* ── SHARED ── */
+.sect-k{display:inline-block;font-size:0.67rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--f);margin-bottom:0.7rem}
+.sect-h{font-size:clamp(1.7rem,3.5vw,2.65rem);font-weight:800;color:#e8edf5;letter-spacing:-0.025em;line-height:1.17;margin-bottom:0.9rem}
+.sect-sub{font-size:0.92rem;color:var(--text);line-height:1.75;max-width:500px}
+.section-pad{padding:5.5rem 2rem}
+
+/* ── SOCIAL PROOF ── */
+.mt-lead{max-width:680px;margin:0.9rem auto 0;color:var(--text);font-size:0.95rem;line-height:1.7}
+.mt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.mt-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:1.4rem 1.3rem;backdrop-filter:blur(10px);transition:border-color .25s,transform .25s}
+.mt-card:hover{border-color:rgba(224,64,251,0.35);transform:translateY(-3px)}
+.mt-ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.14));color:var(--f);margin-bottom:0.85rem}
+.mt-h{color:var(--text-hi);font-weight:700;font-size:1.05rem;letter-spacing:-0.01em;margin-bottom:0.4rem}
+.mt-p{color:var(--text);font-size:0.86rem;line-height:1.65}
+.mt-note{text-align:center;color:var(--text-lo);font-size:0.78rem;margin:1.4rem auto 3rem;max-width:760px;line-height:1.6}
+.fd-card{display:flex;gap:1.5rem;align-items:flex-start;max-width:820px;margin:0 auto;background:rgba(255,255,255,0.035);border:1px solid rgba(224,64,251,0.22);border-radius:20px;padding:1.75rem;backdrop-filter:blur(12px);box-shadow:0 0 40px rgba(224,64,251,0.06)}
+.fd-av{flex-shrink:0;width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.35rem;color:#070712;background:linear-gradient(135deg,var(--f),var(--c));box-shadow:0 0 22px rgba(224,64,251,0.35)}
+.fd-name{color:#fff;font-size:1.35rem;font-weight:800;letter-spacing:-0.02em;margin-top:0.3rem}
+.fd-role{color:var(--c);font-size:0.82rem;font-weight:600;margin:0.15rem 0 0.7rem}
+.fd-bio{color:var(--text);font-size:0.9rem;line-height:1.7;margin-bottom:0.55rem}
+.fd-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.6rem}
+.fd-links a{font-size:0.82rem;color:var(--text-hi);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:0.4rem 0.9rem;transition:border-color .2s,color .2s}
+.fd-links a:hover{border-color:var(--f);color:var(--f)}
+.ref-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.75rem;margin-top:2rem;font-size:0.86rem;color:var(--text)}
+.ref-k{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-lo);border:1px solid var(--border);border-radius:999px;padding:0.25rem 0.7rem}
+.ref-t strong{color:var(--text-hi)}
+.ind-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.6rem;margin-top:1rem}
+.ind-chip{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.8rem;color:var(--text);background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:999px;padding:0.4rem 0.85rem;transition:border-color .2s}
+.ind-chip:hover{border-color:rgba(224,64,251,0.35)}
+.ind-chip i{color:var(--f)}
+@media (max-width:768px){.mt-grid{grid-template-columns:1fr}.fd-card{flex-direction:column;padding:1.35rem}}
+.logos-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem}
+.logo-item{display:flex;align-items:center;gap:0.5rem;padding:0.7rem 1.3rem;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;font-size:0.88rem;font-weight:700;color:var(--text-lo);letter-spacing:0.02em;transition:border-color .25s,color .25s}
+.logo-item:hover{border-color:rgba(224,64,251,0.3);color:var(--text-hi)}
+.logo-item i{color:var(--f);font-size:1.1rem}
+
+/* Case study mock */
+.case-mock{background:#0b0b1f;border:1px solid rgba(224,64,251,0.2);border-radius:16px;overflow:hidden;max-width:560px;margin:0 auto;box-shadow:0 0 40px rgba(224,64,251,0.1),0 20px 40px rgba(0,0,0,0.5)}
+.case-bar{background:#111126;padding:0.65rem 0.9rem;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid var(--border)}
+.case-body{padding:1rem 1rem 0.6rem;display:flex;flex-direction:column;gap:0.75rem}
+.case-q{display:flex;justify-content:flex-end}
+.case-q-bbl{background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.12));border:1px solid rgba(224,64,251,0.2);border-radius:12px 12px 3px 12px;padding:0.55rem 0.85rem;font-size:0.815rem;color:#d0d0f0;line-height:1.5;max-width:80%}
+.case-a{display:flex;align-items:flex-start;gap:0.5rem}
+.case-av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--f),var(--c));display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--bg);flex-shrink:0;box-shadow:0 0 10px rgba(224,64,251,0.4)}
+.case-a-bbl{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:3px 12px 12px 12px;padding:0.55rem 0.85rem;font-size:0.815rem;color:#c8c8e8;line-height:1.6;max-width:85%}
+.case-a-bbl strong{color:var(--f)}
+.case-inp{border-top:1px solid var(--border);padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.5rem}
+.case-inp-f{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.75rem;font-size:0.76rem;color:var(--text-lo);pointer-events:none;font-family:inherit}
+.case-snd{width:26px;height:26px;border-radius:6px;background:linear-gradient(135deg,var(--f),var(--c));border:none;display:flex;align-items:center;justify-content:center}
+
+/* ── GLOSSARY (Bento / Glassmorphism) ── */
+.gloss-wrap{padding:5.5rem 2rem;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden}
+.gloss-wrap::before{content:"";position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:80%;height:60%;background:radial-gradient(ellipse,rgba(224,64,251,0.06),transparent 65%);pointer-events:none;filter:blur(40px)}
+.gloss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.gloss-card{position:relative;background:rgba(13,13,34,0.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid var(--border);border-radius:20px;padding:1.95rem 1.7rem;overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .45s;box-shadow:0 1px 0 rgba(255,255,255,0.04) inset,0 20px 40px rgba(0,0,0,0.35)}
+.gloss-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,rgba(224,64,251,0.12),transparent 55%);opacity:0;transition:opacity .4s ease;pointer-events:none}
+.gloss-card::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(224,64,251,0.45),rgba(0,212,255,0.35),transparent);opacity:0;transition:opacity .4s ease}
+.gloss-card:hover{transform:translateY(-6px) scale(1.018);border-color:rgba(224,64,251,0.42);box-shadow:0 1px 0 rgba(255,255,255,0.06) inset,0 28px 55px rgba(0,0,0,0.55),0 0 35px rgba(224,64,251,0.14)}
+.gloss-card:hover::before{opacity:1}
+.gloss-card:hover::after{opacity:1}
+.gloss-card:hover .gloss-ico{transform:scale(1.12) rotate(-4deg);box-shadow:0 0 32px rgba(224,64,251,0.55),0 0 12px rgba(0,212,255,0.3);border-color:rgba(224,64,251,0.65)}
+.gloss-card:hover .gloss-ico i{filter:brightness(1.4) drop-shadow(0 0 8px rgba(224,64,251,0.6))}
+.gloss-ico{width:56px;height:56px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.1));border:1px solid rgba(224,64,251,0.32);border-radius:14px;margin-bottom:1.3rem;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s,border-color .35s;position:relative;z-index:1}
+.gloss-ico i{font-size:1.4rem;background:linear-gradient(135deg,var(--f),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:filter .35s}
+.gloss-term{font-size:1.5rem;font-weight:800;color:white;letter-spacing:-0.025em;line-height:1.1;margin-bottom:0.3rem;position:relative;z-index:1}
+.gloss-sub{font-size:0.7rem;font-weight:700;color:var(--f);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;display:block;position:relative;z-index:1}
+.gloss-desc{font-size:0.88rem;color:var(--text);line-height:1.7;position:relative;z-index:1}
+@media(max-width:1024px){.gloss-grid{grid-template-columns:repeat(2,1fr);gap:1.15rem}}
+@media(max-width:880px){.gloss-grid{grid-template-columns:1fr;gap:1rem}.gloss-card{padding:1.6rem 1.4rem}}
+@media(max-width:768px){.nav-links{gap:1.1rem}.nav-links a{font-size:0.8rem}}
+
+/* ── PROCESS STEPS ── */
+.gl-step{background:rgba(255,255,255,0.022);border:1px solid var(--border);border-radius:16px;padding:1.85rem 1.5rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.gl-step:hover{border-color:rgba(224,64,251,0.3);transform:translateY(-4px)}
+.gl-step::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0 0,rgba(224,64,251,0.06),transparent 60%);pointer-events:none}
+.step-num{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,rgba(224,64,251,0.18),rgba(0,212,255,0.18));border:1px solid rgba(224,64,251,0.3);display:flex;align-items:center;justify-content:center;font-size:0.95rem;font-weight:800;color:white;margin-bottom:1rem;position:relative;z-index:1}
+
+/* ── PS CARDS ── */
+.ps-card{background:rgba(255,255,255,0.022);border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:transform .3s}
+.ps-card:hover{transform:translateY(-4px)}
+.ps-card.prob{border:1px solid rgba(255,80,80,0.15)}
+.ps-card.prob::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,80,80,0.65),transparent)}
+.ps-card.sol{border:1px solid var(--border-f)}
+.ps-card.sol::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(224,64,251,0.8),rgba(0,212,255,0.8),transparent)}
+.ps-tp{display:inline-flex;align-items:center;gap:0.38rem;font-size:0.66rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.6rem;border-radius:5px;margin-bottom:1.2rem}
+.ps-tp.p{background:rgba(255,70,70,0.1);color:#ff7070;border:1px solid rgba(255,70,70,0.2)}
+.ps-tp.s{background:rgba(224,64,251,0.1);color:var(--f);border:1px solid rgba(224,64,251,0.22)}
+.check-li{display:flex;align-items:flex-start;gap:0.55rem;font-size:0.855rem;color:var(--text);line-height:1.55;margin-bottom:0.55rem}
+.check-li i{flex-shrink:0;margin-top:0.18rem;font-size:0.72rem;width:15px;text-align:center}
+
+/* ── CALCULATOR ── */
+.calc-section{padding:6rem 2rem;background:linear-gradient(180deg,var(--bg),#090915 50%,var(--bg));position:relative;overflow:hidden}
+.calc-section::before{content:'';position:absolute;top:25%;left:15%;width:650px;height:450px;background:radial-gradient(ellipse,rgba(224,64,251,0.08),rgba(0,212,255,0.04),transparent 70%);pointer-events:none}
+.calc-glass{position:relative;padding:2.5rem 2.25rem 2rem}
+.calc-glass::before{content:'';position:absolute;top:-1px;left:32px;width:80px;height:2px;background:linear-gradient(90deg,var(--f),var(--c))}
+.calc-glass::after{content:'';position:absolute;top:-1px;right:32px;width:80px;height:2px;background:linear-gradient(270deg,var(--f),var(--c))}
+.calc-bdot{width:8px;height:8px;border-radius:50%;background:var(--f);box-shadow:0 0 8px rgba(224,64,251,0.7);animation:pdot 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pdot{0%,100%{box-shadow:0 0 8px rgba(224,64,251,0.7)}50%{box-shadow:0 0 18px rgba(224,64,251,1),0 0 30px rgba(224,64,251,0.4)}}
+.calc-select,.form-input,.form-textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:10px;color:var(--text-hi);font-size:0.875rem;padding:0.75rem 1rem;font-family:inherit;cursor:pointer;transition:border-color .25s,box-shadow .25s,background .25s;appearance:none}
+.calc-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e040fb' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-color:rgba(255,255,255,0.05);padding-right:2.4rem}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-lo)}
+.form-textarea{resize:vertical;min-height:120px;cursor:text}
+.calc-select:focus,.form-input:focus,.form-textarea:focus{outline:none;border-color:rgba(224,64,251,0.55);box-shadow:0 0 0 3px rgba(224,64,251,0.1),0 0 20px rgba(224,64,251,0.08);background:rgba(255,255,255,0.07)}
+.calc-select option{background:#111128;color:var(--text-hi)}
+.btn-primary{width:100%;background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.95rem;padding:0.9rem 2rem;border-radius:12px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.6rem;transition:opacity .2s,transform .2s,box-shadow .2s;font-family:inherit;letter-spacing:0.01em;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.12);opacity:0;transition:opacity .2s}
+.btn-primary:hover{opacity:0.88;transform:translateY(-2px);box-shadow:0 8px 30px rgba(224,64,251,0.35)}
+.btn-primary:hover::before{opacity:1}
+.btn-primary:active{transform:translateY(0)}
+.btn-primary:disabled{opacity:0.45;cursor:not-allowed;transform:none;box-shadow:none}
+.load-bar-wrap{height:3px;background:rgba(255,255,255,0.07);border-radius:100px;overflow:hidden;margin-bottom:0.6rem}
+.load-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--f),var(--c));border-radius:100px;transition:width 0.05s linear}
+.spin{width:13px;height:13px;border:2px solid rgba(224,64,251,0.25);border-top-color:var(--f);border-radius:50%;animation:spin 0.8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* Gate form */
+.gate-form{display:none;margin-top:1.4rem}
+.gate-label{font-size:0.72rem;font-weight:700;color:var(--text-lo);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:0.38rem;margin-bottom:0.45rem}
+.gate-label i{color:var(--f);font-size:0.65rem}
+/* Results */
+.calc-results{display:none;margin-top:1.4rem}
+.res-head-row{font-size:0.67rem;font-weight:700;color:#7272b9;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.5rem}
+.res-head-row::after{content:'';flex:1;height:1px;background:var(--border)}
+.res-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:13px;padding:1.1rem;text-align:center;position:relative;overflow:hidden;transition:transform .3s}
+.res-card:hover{transform:translateY(-3px)}
+.res-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(224,64,251,0.4),rgba(0,212,255,0.3),transparent)}
+.res-lbl{font-size:0.65rem;font-weight:700;color:#7272b9;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem}
+.res-val{font-size:0.98rem;font-weight:700;color:white;line-height:1.3}
+.pot-badge{display:inline-block;padding:0.22rem 0.7rem;border-radius:6px;font-size:0.8rem;font-weight:700}
+.pot-critical{background:rgba(255,70,70,0.15);color:#ff7070;border:1px solid rgba(255,70,70,0.3)}
+.pot-high{background:rgba(224,64,251,0.15);color:var(--f);border:1px solid rgba(224,64,251,0.3)}
+.pot-moderate{background:rgba(0,212,255,0.12);color:var(--c);border:1px solid rgba(0,212,255,0.28)}
+.pot-standard{background:rgba(255,255,255,0.07);color:#9090c0;border:1px solid rgba(255,255,255,0.12)}
+/* Usage dots */
+.udot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.1);transition:background .3s;display:inline-block}
+.udot.used{background:var(--f);box-shadow:0 0 6px rgba(224,64,251,0.5)}
+.udot.warn{background:#febc2e;box-shadow:0 0 6px rgba(254,188,46,0.5)}
+
+/* ── FAQ ── */
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-btn{width:100%;background:none;border:none;color:var(--text-hi);font-size:0.95rem;font-weight:600;padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;text-align:left;font-family:inherit;transition:color .2s;line-height:1.45}
+.faq-btn:hover{color:white}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:rgba(224,64,251,0.1);border:1px solid rgba(224,64,251,0.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,transform .3s,border-color .25s}
+.faq-icon i{color:var(--f);font-size:0.65rem;transition:transform .3s}
+.faq-btn.open .faq-icon{background:rgba(224,64,251,0.18);border-color:rgba(224,64,251,0.45)}
+.faq-btn.open .faq-icon i{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height 0.38s ease,padding 0.38s ease}
+.faq-body.open{max-height:300px;padding-bottom:1.25rem}
+.faq-body p{font-size:0.9rem;color:var(--text);line-height:1.75}
+.faq-body strong{color:var(--text-hi)}
+
+/* ── CONTACT FORM ── */
+.contact-section{padding:6rem 2rem;background:var(--bg2);border-top:1px solid var(--border);position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:450px;background:radial-gradient(ellipse,rgba(224,64,251,0.14),rgba(0,212,255,0.07),transparent 70%);pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:3.5rem;max-width:1000px;margin:0 auto;align-items:start;position:relative;z-index:2}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}}
+.contact-info-item{display:flex;align-items:center;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid var(--border);font-size:0.875rem;color:var(--text)}
+.contact-info-item:last-child{border-bottom:none}
+.contact-info-item i{width:32px;height:32px;border-radius:8px;background:rgba(224,64,251,0.1);border:1px solid rgba(224,64,251,0.2);display:flex;align-items:center;justify-content:center;color:var(--f);font-size:0.8rem;flex-shrink:0}
+.form-success{display:none;text-align:center;padding:2rem;animation:fadeUp .5s ease both}
+.form-success i{font-size:2.5rem;color:var(--f);margin-bottom:0.75rem;display:block}
+.form-success h3{font-size:1.15rem;font-weight:700;color:white;margin-bottom:0.5rem}
+.form-success p{font-size:0.875rem;color:var(--text)}
+
+/* ── ANIMATIONS & UTILS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.a1{animation:fadeUp .55s ease both}
+.a2{animation:fadeUp .55s ease .1s both}
+.a3{animation:fadeUp .55s ease .2s both}
+.a4{animation:fadeUp .55s ease .3s both}
+.a5{animation:fadeUp .55s ease .5s both}
+.a6{animation:fadeUp .55s ease .65s both}
+.a7{animation:fadeUp .7s ease .55s both}
+.sr{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.sr.vis{opacity:1;transform:translateY(0)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .gl-hero{padding:5rem 1.25rem 4rem}
+  .calc-glass{padding:1.75rem 1.25rem 1.5rem}
+  .calc-glass::before,.calc-glass::after{width:50px;left:20px}
+  .calc-glass::after{right:20px;left:auto}
+  .section-pad{padding:4rem 1.25rem}
+}
+@media(max-width:560px){
+  .calc-form-grid{grid-template-columns:1fr!important}
+  .logos-row{gap:0.85rem}
+  .logo-item{font-size:0.78rem;padding:0.6rem 1rem}
+}
+@media(min-width:769px){.mobile-menu-btn{display:none!important}}
+.hero-scan-wrap{margin:-3.5rem 0 2.4rem}.hero-scan{display:inline-flex;align-items:center;gap:.75rem;padding:.95rem 1.7rem .95rem .95rem;border-radius:999px;background:linear-gradient(135deg,rgba(224,64,251,.16),rgba(0,212,255,.12));border:1px solid rgba(0,212,255,.45);color:#fff;font-weight:700;font-size:1.12rem;text-decoration:none;box-shadow:0 0 28px rgba(0,212,255,.18);transition:transform .2s,box-shadow .2s}.hero-scan:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(224,64,251,.3);text-decoration:none}.hero-scan .fa-satellite-dish{color:var(--c)}.hs-new{background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:.32rem .75rem;border-radius:999px}.hs-arr{transition:transform .2s}.hero-scan:hover .hs-arr{transform:translateX(3px)}@media(max-width:640px){.hero-scan-wrap{margin:-2rem 0 1.8rem}.hero-scan{font-size:.86rem;padding:.6rem 1rem .6rem .6rem;gap:.5rem}}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="gl-nav">
+  <a href="#" class="gl-logo">Geo<span class="g-text">Lead</span></a>
+  <ul class="nav-links">
+    <li><a href="/metodologia/" data-i18n="nav_proof" set:html={t["nav_proof"]}></a></li>
+    <li><a href="#how" data-i18n="nav_how" set:html={t["nav_how"]}></a></li>
+    <li><a href="https://geolead.pl/slownik/" data-i18n="nav_glossary" set:html={t["nav_glossary"]}></a></li>
+    <li><a href="/blog/" data-i18n="nav_blog" set:html={t["nav_blog"]}></a></li>
+    <li><a href="#calc" data-i18n="nav_calc" set:html={t["nav_calc"]}></a></li>
+    <li><a href="/narzedzia/pytania-zakupowe/" data-i18n="nav_tool" set:html={t["nav_tool"]}></a></li>
+    <li><a href="/narzedzia/skaner-ai/" data-i18n="nav_scan" set:html={t["nav_scan"]}></a></li>
+    <li><a href="#faq" data-i18n="nav_faq" set:html={t["nav_faq"]}></a></li>
+    <li><a href="#contact" data-i18n="nav_contact" set:html={t["nav_contact"]}></a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:0.65rem;flex-shrink:0">
+    <div class="lang-sw">
+      {LANGS.map((l) => <a class={l === lang ? 'lb on' : 'lb'} href={l === 'pl' ? '/' : `/${l}/`} hreflang={l} lang={l} aria-current={l === lang ? 'page' : undefined}>{l.toUpperCase()}</a>)}
+    </div>
+    <a href="#contact" class="btn-nav" data-i18n="nav_cta" set:html={t["nav_cta"]}></a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ── HERO ── -->
+<section class="gl-hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <div class="a1 hero-scan-wrap"><a href="/narzedzia/skaner-ai/" class="hero-scan" onclick="try{gtag('event','cta_click',{target:'hero_skaner'})}catch(e){}"><span class="hs-new" data-i18n="hero_scan_new" set:html={t["hero_scan_new"]}></span><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i><span data-i18n="hero_scan" set:html={t["hero_scan"]}></span><i class="fa-solid fa-arrow-right hs-arr" aria-hidden="true"></i></a></div>
+    <div class="gl-badge a1"><i class="fa-solid fa-brain" aria-hidden="true"></i><span data-i18n="badge_text" set:html={t["badge_text"]}></span></div>
+    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight a2" style="letter-spacing:-0.035em;margin-bottom:1.3rem">
+      <span class="h1-lead" data-i18n="hero_t0" set:html={t["hero_t0"]}></span>
+      <span data-i18n="hero_t1" set:html={t["hero_t1"]}></span><br>
+      <span class="g-text" data-i18n="hero_t2" set:html={t["hero_t2"]}></span>
+    </h1>
+    <p class="text-lg leading-relaxed a3 max-w-xl mx-auto" style="margin-bottom:2.2rem;color:var(--text)" data-i18n="hero_sub" set:html={t["hero_sub"]}></p>
+    <div class="flex flex-wrap gap-4 justify-center a4">
+      <a href="#calc" class="btn-hp"><i class="fa-solid fa-calculator" aria-hidden="true"></i><span data-i18n="hero_btn1" set:html={t["hero_btn1"]}></span></a>
+      <a href="#social-proof" class="btn-ho"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span data-i18n="hero_btn2" set:html={t["hero_btn2"]}></span></a>
+    </div>
+    <!-- AI Console -->
+    <div class="mt-12 a7" style="perspective:1200px">
+      <div class="ai-con">
+        <div class="con-bar">
+          <div style="display:flex;gap:5px"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <div class="con-ttl" data-i18n="console_title" aria-hidden="true" set:html={t["console_title"]}></div>
+          <div class="con-mdl"><i class="fa-solid fa-circle" style="font-size:6px;color:var(--f)" aria-hidden="true"></i><span>GPT-4o</span></div>
+        </div>
+        <div class="con-body">
+          <div class="msg-u"><div class="bbl-u" id="bubbleUser"></div></div>
+          <div class="msg-a" id="msgAi" style="display:none">
+            <div class="ai-av" id="aiAvatar"><i class="fa-solid fa-robot" style="font-size:0.8rem" aria-hidden="true"></i></div>
+            <div class="bbl-a" id="bubbleAi"><div class="tyd" id="typingDots"><span></span><span></span><span></span></div></div>
+          </div>
+        </div>
+        <div class="con-inp">
+          <div class="con-inp-f" data-i18n="console_placeholder" set:html={t["console_placeholder"]}></div>
+          <div class="con-snd"><i class="fa-solid fa-arrow-up" style="color:var(--bg);font-size:0.72rem" aria-hidden="true"></i></div>
+        </div>
+      </div>
+      <button class="rpl-btn" id="replayBtn" onclick="replayConsole()"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i><span data-i18n="replay_btn" set:html={t["replay_btn"]}></span></button>
+    </div>
+    <!-- AI logos & Stats -->
+    <div class="flex flex-wrap gap-3 justify-center a5" style="margin-top:2rem">
+      <div class="ai-pill"><i class="fa-solid fa-robot" aria-hidden="true"></i><span>ChatGPT</span></div>
+      <div class="ai-pill"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Perplexity</span></div>
+      <div class="ai-pill"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span>Claude</span></div>
+      <div class="ai-pill"><i class="fa-solid fa-gem" aria-hidden="true"></i><span>Gemini</span></div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10 a6" style="margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border)">
+      <div class="text-center"><span class="g-text block text-4xl font-black" style="line-height:1;margin-bottom:0.3rem">5</span><span class="text-xs uppercase tracking-widest" style="color:var(--text-lo)" data-i18n="stat1" set:html={t["stat1"]}></span></div>
+      <div class="text-center"><span class="g-text block text-4xl font-black" style="line-height:1;margin-bottom:0.3rem">14</span><span class="text-xs uppercase tracking-widest" style="color:var(--text-lo)" data-i18n="stat2" set:html={t["stat2"]}></span></div>
+      <div class="text-center"><span class="g-text block text-4xl font-black" style="line-height:1;margin-bottom:0.3rem">24h</span><span class="text-xs uppercase tracking-widest" style="color:var(--text-lo)" data-i18n="stat3" set:html={t["stat3"]}></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GEO ENTITY DEFINITION — warstwa dla crawlerow AI ══ -->
+<section id="what-is-geo" aria-labelledby="what-is-geo-h" style="background:var(--bg);padding:5rem 2rem;border-top:1px solid var(--border)">
+  <div class="max-w-4xl mx-auto">
+    <div class="sr">
+      <span class="sect-k" data-i18n="wig_kicker" set:html={t["wig_kicker"]}></span>
+      <h2 class="sect-h" id="what-is-geo-h" data-i18n="wig_title" set:html={t["wig_title"]}></h2>
+      <div class="wig-body">
+        <p data-i18n="wig_p1" set:html={t["wig_p1"]}></p>
+        <p data-i18n="wig_p2" set:html={t["wig_p2"]}></p>
+        <p data-i18n="wig_p3" set:html={t["wig_p3"]}></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── METODOLOGIA + ZAŁOŻYCIEL (GL-201/GL-202) ── -->
+<section id="social-proof" aria-labelledby="proof-h" style="background:var(--bg2);padding:4.5rem 2rem;border-top:1px solid var(--border)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center sr" style="margin-bottom:2.25rem">
+      <span class="sect-k" data-i18n="proof_kicker" set:html={t["proof_kicker"]}></span>
+      <h2 class="sect-h" id="proof-h" data-i18n="proof_title" set:html={t["proof_title"]}></h2>
+      <p class="mt-lead" data-i18n="proof_lead" set:html={t["proof_lead"]}></p>
+    </div>
+    <div class="mt-grid">
+      <div class="mt-card sr">
+        <div class="mt-ic"><i class="fa-solid fa-percent" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m1_h" set:html={t["m1_h"]}></h3>
+        <p class="mt-p" data-i18n="m1_p" set:html={t["m1_p"]}></p>
+      </div>
+      <div class="mt-card sr" style="transition-delay:0.08s">
+        <div class="mt-ic"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m2_h" set:html={t["m2_h"]}></h3>
+        <p class="mt-p" data-i18n="m2_p" set:html={t["m2_p"]}></p>
+      </div>
+      <div class="mt-card sr" style="transition-delay:0.16s">
+        <div class="mt-ic"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+        <h3 class="mt-h" data-i18n="m3_h" set:html={t["m3_h"]}></h3>
+        <p class="mt-p" data-i18n="m3_p" set:html={t["m3_p"]}></p>
+      </div>
+    </div>
+    <p class="mt-note sr" data-i18n="meth_note" set:html={t["meth_note"]}></p>
+
+    <div class="fd-card sr" itemscope itemtype="https://schema.org/Person" itemid="https://geolead.pl/#jaroslaw-zagajewski">
+      <div class="fd-av" aria-hidden="true">JZ</div>
+      <div class="fd-body">
+        <span class="sect-k" data-i18n="fd_kicker" set:html={t["fd_kicker"]}></span>
+        <h3 class="fd-name"><span itemprop="name">Jarosław Zagajewski</span></h3>
+        <p class="fd-role" itemprop="jobTitle" data-i18n="fd_role" set:html={t["fd_role"]}></p>
+        <p class="fd-bio" itemprop="description" data-i18n="fd_bio" set:html={t["fd_bio"]}></p>
+        <p class="fd-bio" data-i18n="fd_boutique" set:html={t["fd_boutique"]}></p>
+        <div class="fd-links">
+          <a href="https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/" itemprop="sameAs" rel="me noopener" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          <a href="#contact"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> <span data-i18n="fd_cta" set:html={t["fd_cta"]}></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-row sr">
+      <span class="ref-k" data-i18n="ref_label" set:html={t["ref_label"]}></span>
+      <span class="ref-t"><strong>HASBORG</strong> — <span data-i18n="ref_txt" set:html={t["ref_txt"]}></span></span>
+    </div>
+    <div class="ind-row sr">
+      <span class="ref-k" data-i18n="ind_label" set:html={t["ind_label"]}></span>
+      <span class="ind-chip"><i class="fa-solid fa-house-medical" aria-hidden="true"></i><span data-i18n="ind_1" set:html={t["ind_1"]}></span></span>
+      <span class="ind-chip"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span data-i18n="ind_2" set:html={t["ind_2"]}></span></span>
+      <span class="ind-chip"><i class="fa-solid fa-city" aria-hidden="true"></i><span data-i18n="ind_3" set:html={t["ind_3"]}></span></span>
+      <span class="ind-chip"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span data-i18n="ind_4" set:html={t["ind_4"]}></span></span>
+      <span class="ind-chip"><i class="fa-solid fa-industry" aria-hidden="true"></i><span data-i18n="ind_5" set:html={t["ind_5"]}></span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ── GLOSSARY: Słowniczek C-Level (Bento Box + Schema.org DefinedTerm Microdata) ── -->
+<!-- Encja DefinedTermSet zdefiniowana WYLACZNIE w JSON-LD (patrz <head>).
+     Mikrodane usuniete swiadomie: itemprop="@id" nie istnieje w slowniku schema.org,
+     wiec generowal drugi, anonimowy wezel DefinedTermSet = rozmycie encji. -->
+<section id="glossary" class="gloss-wrap">
+  <div class="max-w-5xl mx-auto" style="position:relative;z-index:1">
+    <div class="text-center sr" style="margin-bottom:3rem">
+      <span class="sect-k" data-i18n="gl_kicker" set:html={t["gl_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="gl_title" set:html={t["gl_title"]}></h2>
+      <p class="sect-sub" style="margin:0.5rem auto 0" data-i18n="gl_sub" set:html={t["gl_sub"]}></p>
+    </div>
+    <div class="gloss-grid">
+
+      <!-- Karta 1: LLM -->
+      <article class="gloss-card sr" style="transition-delay:0.08s">
+        <div class="gloss-ico"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c1_term" set:html={t["gl_c1_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c1_sub" set:html={t["gl_c1_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c1_desc" set:html={t["gl_c1_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/llm/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+      <!-- Karta 2: RAG -->
+      <article class="gloss-card sr" style="transition-delay:0.18s">
+        <div class="gloss-ico"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c2_term" set:html={t["gl_c2_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c2_sub" set:html={t["gl_c2_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c2_desc" set:html={t["gl_c2_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/rag/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+      <!-- Karta 3: Entity Salience -->
+      <article class="gloss-card sr" style="transition-delay:0.28s">
+        <div class="gloss-ico"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c3_term" set:html={t["gl_c3_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c3_sub" set:html={t["gl_c3_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c3_desc" set:html={t["gl_c3_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/entity-salience/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+      <!-- Karta 4: Knowledge Graph -->
+      <article class="gloss-card sr" style="transition-delay:0.38s">
+        <div class="gloss-ico"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c4_term" set:html={t["gl_c4_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c4_sub" set:html={t["gl_c4_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c4_desc" set:html={t["gl_c4_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/knowledge-graph/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+      <!-- Karta 5: Hallucination -->
+      <article class="gloss-card sr" style="transition-delay:0.48s">
+        <div class="gloss-ico"><i class="fa-solid fa-ghost" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c5_term" set:html={t["gl_c5_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c5_sub" set:html={t["gl_c5_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c5_desc" set:html={t["gl_c5_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/halucynacje-ai/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+      <!-- Karta 6: Vector Embedding -->
+      <article class="gloss-card sr" style="transition-delay:0.58s">
+        <div class="gloss-ico"><i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i></div>
+        <h3 class="gloss-term"><span data-i18n="gl_c6_term" set:html={t["gl_c6_term"]}></span></h3>
+        <span class="gloss-sub" data-i18n="gl_c6_sub" set:html={t["gl_c6_sub"]}></span>
+        <p class="gloss-desc" data-i18n="gl_c6_desc" set:html={t["gl_c6_desc"]}></p>
+        <a class="gloss-link" href="https://geolead.pl/slownik/vector-embedding/" data-i18n="gl_more" set:html={t["gl_more"]}></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM / SOLUTION ── -->
+<section id="services" style="background:var(--bg);padding:5.5rem 2rem;border-top:1px solid var(--border)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center sr" style="margin-bottom:3rem">
+      <span class="sect-k" data-i18n="ps_kicker" set:html={t["ps_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="ps_title" set:html={t["ps_title"]}></h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="ps-card prob sr">
+        <div class="ps-tp p"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><span data-i18n="prob_tag" set:html={t["prob_tag"]}></span></div>
+        <h3 class="text-xl font-bold text-white mb-3" style="letter-spacing:-0.02em" data-i18n="prob_h" set:html={t["prob_h"]}></h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text)" data-i18n="prob_p" set:html={t["prob_p"]}></p>
+        <div class="check-li"><i class="fa-solid fa-arrow-right" style="color:#ff7070"></i><span data-i18n="pb1" set:html={t["pb1"]}></span></div>
+        <div class="check-li"><i class="fa-solid fa-arrow-right" style="color:#ff7070"></i><span data-i18n="pb2" set:html={t["pb2"]}></span></div>
+        <div class="check-li"><i class="fa-solid fa-arrow-right" style="color:#ff7070"></i><span data-i18n="pb3" set:html={t["pb3"]}></span></div>
+      </div>
+      <div class="ps-card sol sr" style="transition-delay:0.14s">
+        <div class="ps-tp s"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span data-i18n="sol_tag" set:html={t["sol_tag"]}></span></div>
+        <h3 class="text-xl font-bold text-white mb-3" style="letter-spacing:-0.02em" data-i18n="sol_h" set:html={t["sol_h"]}></h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text)" data-i18n="sol_p" set:html={t["sol_p"]}></p>
+        <div class="check-li"><i class="fa-solid fa-check" style="color:var(--f)"></i><span data-i18n="sb1" set:html={t["sb1"]}></span></div>
+        <div class="check-li"><i class="fa-solid fa-check" style="color:var(--f)"></i><span data-i18n="sb2" set:html={t["sb2"]}></span></div>
+        <div class="check-li"><i class="fa-solid fa-check" style="color:var(--f)"></i><span data-i18n="sb3" set:html={t["sb3"]}></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LIVE AI ENTITY SCANNER ── -->
+<section id="scanner" style="background:var(--bg);padding:5.5rem 2rem;border-top:1px solid var(--border);position:relative;overflow:hidden">
+  <div style="position:absolute;top:20%;left:10%;width:500px;height:350px;background:radial-gradient(ellipse,rgba(0,212,255,0.07),transparent 70%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:15%;right:8%;width:400px;height:300px;background:radial-gradient(ellipse,rgba(224,64,251,0.08),transparent 65%);pointer-events:none"></div>
+  <div class="max-w-4xl mx-auto" style="position:relative;z-index:2">
+    <div class="text-center sr" style="margin-bottom:2.75rem">
+      <span class="sect-k" data-i18n="scan_kicker" set:html={t["scan_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="scan_title" set:html={t["scan_title"]}></h2>
+      <p class="sect-sub mx-auto" data-i18n="scan_sub" set:html={t["scan_sub"]}></p>
+    </div>
+    <div class="sr" style="transition-delay:0.1s">
+      <div id="scanTerminal" style="background:#080816;border:1px solid rgba(0,212,255,0.2);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(224,64,251,0.07),0 0 50px rgba(0,212,255,0.09),0 28px 56px rgba(0,0,0,0.65);font-family:'Courier New',Courier,monospace">
+        <!-- Title bar -->
+        <div style="background:#0f0f24;padding:0.7rem 1rem;display:flex;align-items:center;gap:0.55rem;border-bottom:1px solid rgba(255,255,255,0.07)">
+          <div style="display:flex;gap:5px">
+            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#28c840"></div>
+          </div>
+          <div style="flex:1;text-align:center;font-size:0.68rem;font-weight:600;color:#6a7a95;letter-spacing:0.1em;font-family:inherit">GeoLead.AI — Entity Analysis Engine v1.4</div>
+          <div style="display:flex;align-items:center;gap:0.35rem;font-size:0.6rem;color:#657a9f;font-family:inherit">
+            <div id="scanStatusDot" style="width:6px;height:6px;border-radius:50%;background:#28c840;box-shadow:0 0 6px #28c840"></div>
+            <span id="scanStatusTxt" data-i18n="scan_ready" set:html={t["scan_ready"]}></span>
+          </div>
+        </div>
+        <!-- Body -->
+        <div style="padding:1.35rem 1.35rem 0">
+          <div id="scanInputRow" style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1.1rem;flex-wrap:wrap">
+            <span style="color:#00d4ff;font-size:0.8rem;flex-shrink:0;user-select:none">$&gt;</span>
+            <input id="scanUrl" type="url" data-i18n-ph="scan_ph" placeholder={t["scan_ph"]}
+              style="flex:1;min-width:180px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,212,255,0.22);border-radius:8px;padding:0.58rem 0.85rem;font-size:0.83rem;color:#a0aec0;font-family:inherit;outline:none;transition:border-color .25s"
+              onfocus="this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.borderColor='rgba(0,212,255,0.22)'">
+            <button id="scanBtn" onclick="startScan()"
+              style="background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.8rem;padding:0.58rem 1.2rem;border-radius:8px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity .2s,transform .2s;display:flex;align-items:center;gap:0.4rem"
+              onmouseover="this.style.opacity='0.85';this.style.transform='translateY(-1px)'"
+              onmouseout="this.style.opacity='1';this.style.transform='none'">
+              <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>
+              <span data-i18n="scan_btn" set:html={t["scan_btn"]}></span>
+            </button>
+          </div>
+          <div id="scanLog" style="display:none;min-height:180px;max-height:220px;overflow-y:auto;padding-bottom:0.5rem;scrollbar-width:thin;scrollbar-color:rgba(0,212,255,0.2) transparent"></div>
+          <div id="scanProgressWrap" style="display:none;margin:0.9rem 0 0.4rem">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem">
+              <span style="font-size:0.68rem;color:#6a7a95;letter-spacing:0.08em;text-transform:uppercase" data-i18n="scan_progress_lbl" set:html={t["scan_progress_lbl"]}></span>
+              <span id="scanPct" style="font-size:0.7rem;font-weight:700;color:#00d4ff;font-family:inherit">0%</span>
+            </div>
+            <div style="height:3px;background:rgba(255,255,255,0.07);border-radius:100px;overflow:hidden">
+              <div id="scanProgressBar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--f),var(--c));border-radius:100px;transition:width 0.12s linear"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Results -->
+        <div id="scanResults" style="display:none;padding:0 1.35rem 1.35rem;animation:fadeUp .5s ease both">
+          <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,255,0.2),rgba(224,64,251,0.2),transparent);margin:0.5rem 0 1.1rem"></div>
+          <div style="display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0.85rem;margin-bottom:1.1rem" class="scan-grid-r">
+            <div style="background:rgba(255,50,50,0.07);border:1px solid rgba(255,80,80,0.22);border-radius:13px;padding:1rem 1.25rem;text-align:center;display:flex;flex-direction:column;justify-content:center;min-width:96px">
+              <div style="font-size:0.62rem;font-weight:700;color:#fc8181;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem" data-i18n="scan_score_lbl" set:html={t["scan_score_lbl"]}></div>
+              <div style="font-size:2rem;font-weight:800;color:#fc8181;line-height:1;font-family:inherit" data-i18n="scan_score_val" set:html={t["scan_score_val"]}></div>
+            </div>
+            <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:0.85rem;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(255,80,80,0.7),transparent)"></div>
+              <div style="font-size:0.6rem;font-weight:700;color:#718096;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem" data-i18n="scan_c1_lbl" set:html={t["scan_c1_lbl"]}></div>
+              <div style="font-size:1.1rem;font-weight:700;color:#fc8181;font-family:inherit" data-i18n="scan_c1_val" set:html={t["scan_c1_val"]}></div>
+              <div style="font-size:0.68rem;color:#6a7a95;margin-top:0.25rem" data-i18n="scan_c1_sub" set:html={t["scan_c1_sub"]}></div>
+            </div>
+            <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:0.85rem;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(254,188,46,0.7),transparent)"></div>
+              <div style="font-size:0.6rem;font-weight:700;color:#718096;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem" data-i18n="scan_c2_lbl" set:html={t["scan_c2_lbl"]}></div>
+              <div style="font-size:1.1rem;font-weight:700;color:#febc2e;font-family:inherit" data-i18n="scan_c2_val" set:html={t["scan_c2_val"]}></div>
+              <div style="font-size:0.68rem;color:#6a7a95;margin-top:0.25rem" data-i18n="scan_c2_sub" set:html={t["scan_c2_sub"]}></div>
+            </div>
+            <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:0.85rem;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(255,80,80,0.6),transparent)"></div>
+              <div style="font-size:0.6rem;font-weight:700;color:#718096;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem" data-i18n="scan_c3_lbl" set:html={t["scan_c3_lbl"]}></div>
+              <div style="font-size:1.1rem;font-weight:700;color:#fc8181;font-family:inherit" data-i18n="scan_c3_val" set:html={t["scan_c3_val"]}></div>
+              <div style="font-size:0.68rem;color:#6a7a95;margin-top:0.25rem" data-i18n="scan_c3_sub" set:html={t["scan_c3_sub"]}></div>
+            </div>
+          </div>
+          <div style="background:rgba(255,50,50,0.05);border:1px solid rgba(255,80,80,0.2);border-radius:11px;padding:0.9rem 1rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:0.65rem">
+            <i class="fa-solid fa-triangle-exclamation" style="color:#fc8181;flex-shrink:0;margin-top:0.1rem;font-size:0.9rem" aria-hidden="true"></i>
+            <p style="font-size:0.83rem;color:#fc8181;line-height:1.6;margin:0" data-i18n="scan_verdict" set:html={t["scan_verdict"]}></p>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.85rem;flex-wrap:wrap">
+            <button onclick="openScanGate()"
+              style="background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.875rem;padding:0.75rem 1.5rem;border-radius:10px;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:0.5rem;transition:opacity .2s,transform .2s"
+              onmouseover="this.style.opacity='0.85';this.style.transform='translateY(-1px)'"
+              onmouseout="this.style.opacity='1';this.style.transform='none'">
+              <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+              <span data-i18n="scan_cta" set:html={t["scan_cta"]}></span>
+            </button>
+            <button onclick="resetScan()"
+              style="background:transparent;color:#6a7a95;font-size:0.75rem;font-weight:600;padding:0.5rem 0.8rem;border-radius:8px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;font-family:inherit;transition:all .2s;display:flex;align-items:center;gap:0.35rem"
+              onmouseover="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='#718096'"
+              onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#6a7a95'">
+              <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+              <span data-i18n="scan_reset" set:html={t["scan_reset"]}></span>
+            </button>
+          </div>
+        </div>
+        <!-- Scan Gate Form -->
+        <div id="scanGateWrap" style="display:none;padding:0 1.35rem 1.35rem;animation:fadeUp .45s ease both">
+          <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,255,0.2),rgba(224,64,251,0.2),transparent);margin:0.5rem 0 1.1rem"></div>
+          <div style="background:rgba(224,64,251,0.06);border:1px solid rgba(224,64,251,0.18);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:0.65rem">
+            <i class="fa-solid fa-file-waveform" style="color:var(--f);flex-shrink:0;margin-top:0.1rem" aria-hidden="true"></i>
+            <div>
+              <p style="font-size:0.83rem;font-weight:600;color:white;margin-bottom:0.2rem" data-i18n="scan_gate_h" set:html={t["scan_gate_h"]}></p>
+              <p style="font-size:0.78rem;color:var(--text);margin:0" data-i18n="scan_gate_sub" set:html={t["scan_gate_sub"]}></p>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:0.75rem">
+            <input id="scanGateEmail" type="email" data-i18n-ph="gate_email_ph" placeholder={t["gate_email_ph"]}
+              style="flex:1;min-width:180px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:9px;padding:0.65rem 0.9rem;font-size:0.83rem;color:var(--text-hi);font-family:inherit;outline:none;transition:border-color .25s"
+              onfocus="this.style.borderColor='rgba(224,64,251,0.55)'"
+              onblur="this.style.borderColor='rgba(255,255,255,0.12)'">
+            <button id="scanGateBtn" onclick="submitScanGate()"
+              style="background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:9px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center;gap:0.4rem;transition:opacity .2s"
+              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <i class="fa-solid fa-paper-plane" id="scanGateBtnIcon" aria-hidden="true"></i>
+              <span id="scanGateBtnTxt" data-i18n="scan_gate_btn" set:html={t["scan_gate_btn"]}></span>
+            </button>
+          </div>
+          <div id="scanGateError" style="display:none;font-size:0.78rem;color:#fc8181;margin-bottom:0.4rem">
+            <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> <span id="scanGateErrTxt"></span>
+          </div>
+          <div id="scanGateSuccess" style="display:none;font-size:0.82rem;color:#68d391;margin-top:0.4rem;align-items:center;gap:0.45rem">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <span data-i18n="scan_gate_success" set:html={t["scan_gate_success"]}></span>
+          </div>
+          <p style="font-size:0.68rem;color:#6a7a95;margin-top:0.65rem"><i class="fa-solid fa-lock" style="margin-right:0.25rem;font-size:0.6rem" aria-hidden="true"></i><span data-i18n="gate_privacy" set:html={t["gate_privacy"]}></span></p>
+        </div>
+        <div style="height:0.4rem"></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap">
+        <div style="font-size:0.68rem;color:#657a9f;display:flex;align-items:center;gap:0.35rem">
+          <i class="fa-solid fa-circle" style="font-size:5px;color:#28c840" aria-hidden="true"></i>
+          <span data-i18n="scan_meta1" set:html={t["scan_meta1"]}></span>
+        </div>
+        <div style="font-size:0.68rem;color:#657a9f;display:flex;align-items:center;gap:0.35rem">
+          <i class="fa-solid fa-lock" style="font-size:0.6rem;color:#6a7a95" aria-hidden="true"></i>
+          <span data-i18n="scan_meta2" set:html={t["scan_meta2"]}></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style is:inline>
+  .scan-grid-r{grid-template-columns:auto 1fr 1fr 1fr}
+  @media(max-width:640px){.scan-grid-r{grid-template-columns:1fr 1fr;row-gap:0.65rem}}
+  @media(max-width:380px){.scan-grid-r{grid-template-columns:1fr}}
+  #scanLog::-webkit-scrollbar{width:4px}
+  #scanLog::-webkit-scrollbar-thumb{background:rgba(0,212,255,0.18);border-radius:10px}
+</style>
+
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how" style="background:var(--bg2);padding:5.5rem 2rem;border-top:1px solid var(--border)">
+  <div class="max-w-5xl mx-auto text-center">
+    <span class="sect-k sr" data-i18n="how_kicker" set:html={t["how_kicker"]}></span>
+    <h2 class="sect-h sr" data-i18n="how_title" set:html={t["how_title"]}></h2>
+    <p class="sect-sub sr mx-auto" data-i18n="how_sub" set:html={t["how_sub"]}></p>
+    <div class="grid md:grid-cols-3 gap-5 mt-12">
+      <div class="gl-step text-left sr">
+        <div class="step-num">01</div>
+        <div class="text-2xl mb-3" style="color:var(--f)"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+        <div class="font-bold text-white mb-2 text-base" style="letter-spacing:-0.015em" data-i18n="s1_t" set:html={t["s1_t"]}></div>
+        <div class="text-sm leading-relaxed" style="color:var(--text)" data-i18n="s1_p" set:html={t["s1_p"]}></div>
+      </div>
+      <div class="gl-step text-left sr" style="transition-delay:0.11s">
+        <div class="step-num">02</div>
+        <div class="text-2xl mb-3" style="color:var(--f)"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+        <div class="font-bold text-white mb-2 text-base" style="letter-spacing:-0.015em" data-i18n="s2_t" set:html={t["s2_t"]}></div>
+        <div class="text-sm leading-relaxed" style="color:var(--text)" data-i18n="s2_p" set:html={t["s2_p"]}></div>
+      </div>
+      <div class="gl-step text-left sr" style="transition-delay:0.22s">
+        <div class="step-num">03</div>
+        <div class="text-2xl mb-3" style="color:var(--f)"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+        <div class="font-bold text-white mb-2 text-base" style="letter-spacing:-0.015em" data-i18n="s3_t" set:html={t["s3_t"]}></div>
+        <div class="text-sm leading-relaxed" style="color:var(--text)" data-i18n="s3_p" set:html={t["s3_p"]}></div>
+      </div>
+    </div>
+    <!-- LINKOWANIE WEWNETRZNE: homepage -> 10 podstron (zrodlo: sitemap-0.xml)
+         Tytuly artykulow celowo BEZ data-i18n - strony docelowe sa po polsku,
+         tlumaczenie etykiety linku do polskiej tresci wprowadzaloby w blad. -->
+    <nav class="ilink-wrap sr" aria-label={t.ilink_lbl}>
+      <span class="ilink-lbl" data-i18n="ilink_lbl" set:html={t["ilink_lbl"]}></span>
+      <div class="ilink-grid">
+        <div class="ilink-col">
+          <span class="ilink-sub" data-i18n="ilink_sub1" set:html={t["ilink_sub1"]}></span>
+          <a class="ilink" href="/blog/agencja-geo-polska/" hreflang="pl"><i class="fa-solid fa-building" aria-hidden="true"></i>Agencja GEO w Polsce{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/czym-jest-geo/" hreflang="pl"><i class="fa-solid fa-brain" aria-hidden="true"></i>Czym jest GEO{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-vs-seo/" hreflang="pl"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>GEO vs SEO{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/jak-chatgpt-wybiera-firmy/" hreflang="pl"><i class="fa-solid fa-robot" aria-hidden="true"></i>Jak ChatGPT wybiera firmy{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/jak-pojawic-sie-w-perplexity/" hreflang="pl"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>Jak pojawić się w Perplexity{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+        </div>
+        <div class="ilink-col">
+          <span class="ilink-sub" data-i18n="ilink_sub2" set:html={t["ilink_sub2"]}></span>
+          <a class="ilink" href="/blog/geo-dla-klinik-medycyny-estetycznej/" hreflang="pl"><i class="fa-solid fa-house-medical" aria-hidden="true"></i>Kliniki medycyny estetycznej{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-dla-kancelarii-prawnych/" hreflang="pl"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>Kancelarie prawne{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-dla-saas/" hreflang="pl"><i class="fa-solid fa-microchip" aria-hidden="true"></i>Firmy SaaS{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/slownik/" hreflang="pl"><i class="fa-solid fa-book" aria-hidden="true"></i>Słownik pojęć GEO{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/" hreflang="pl"><i class="fa-solid fa-newspaper" aria-hidden="true"></i>Wszystkie artykuły{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<!-- ── CALCULATOR ── -->
+<section id="calc" class="calc-section">
+  <div class="max-w-3xl mx-auto" style="position:relative;z-index:2">
+    <div class="text-center sr" style="margin-bottom:2.75rem">
+      <span class="sect-k" data-i18n="calc_kicker" set:html={t["calc_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="calc_title" set:html={t["calc_title"]}></h2>
+      <p class="sect-sub mx-auto" data-i18n="calc_sub" set:html={t["calc_sub"]}></p>
+    </div>
+    <div class="glass calc-glass sr" style="transition-delay:0.1s">
+      <!-- Badge + usage -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.6rem;flex-wrap:wrap;gap:0.75rem">
+        <div style="display:flex;align-items:center;gap:0.65rem;flex:1;min-width:180px;padding:0.6rem 1rem;background:rgba(224,64,251,0.07);border:1px solid rgba(224,64,251,0.15);border-radius:10px">
+          <div class="calc-bdot"></div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--f);letter-spacing:0.08em;text-transform:uppercase">
+            <span data-i18n="calc_badge" set:html={t["calc_badge"]}></span>
+            <span style="color:var(--text-lo);font-weight:400;text-transform:none;letter-spacing:0;margin-left:0.4rem;font-size:0.65rem">v2.1</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.7rem;color:var(--text-lo)">
+          <span id="usageTxt" data-i18n="usage_left_3" set:html={t["usage_left_3"]}></span>
+          <div style="display:flex;gap:0.28rem"><div class="udot" id="ud1"></div><div class="udot" id="ud2"></div><div class="udot" id="ud3"></div></div>
+        </div>
+      </div>
+      <!-- Selects -->
+      <div class="grid md:grid-cols-2 gap-5 calc-form-grid" style="margin-bottom:1.4rem">
+        <div>
+          <label class="gate-label"><i class="fa-solid fa-building" aria-hidden="true"></i><span data-i18n="calc_ind_lbl" set:html={t["calc_ind_lbl"]}></span></label>
+          <select class="calc-select" id="calcIndustry" aria-label={t.calc_ind_lbl}>
+            <option value="" disabled selected data-i18n="calc_ind_ph" set:html={t["calc_ind_ph"]}></option>
+            <option value="software_house">{IND["software_house"]}</option>
+            <option value="ecommerce">{IND["ecommerce"]}</option>
+            <option value="handel">{IND["handel"]}</option>
+            <option value="budownictwo">{IND["budownictwo"]}</option>
+            <option value="finanse">{IND["finanse"]}</option>
+            <option value="ubezpieczenia">{IND["ubezpieczenia"]}</option>
+            <option value="producent">{IND["producent"]}</option>
+            <option value="motoryzacja">{IND["motoryzacja"]}</option>
+            <option value="logistyka">{IND["logistyka"]}</option>
+            <option value="energetyka">{IND["energetyka"]}</option>
+            <option value="telekomunikacja">{IND["telekomunikacja"]}</option>
+            <option value="klinika">{IND["klinika"]}</option>
+            <option value="farmacja">{IND["farmacja"]}</option>
+            <option value="edukacja">{IND["edukacja"]}</option>
+            <option value="gastronomia">{IND["gastronomia"]}</option>
+            <option value="hotel">{IND["hotel"]}</option>
+            <option value="marketing">{IND["marketing"]}</option>
+            <option value="ksiegowosc">{IND["ksiegowosc"]}</option>
+            <option value="kancelaria">{IND["kancelaria"]}</option>
+            <option value="rolnictwo">{IND["rolnictwo"]}</option>
+          </select>
+        </div>
+        <div>
+          <label class="gate-label"><i class="fa-solid fa-earth-europe" aria-hidden="true"></i><span data-i18n="calc_reach_lbl" set:html={t["calc_reach_lbl"]}></span></label>
+          <select class="calc-select" id="calcReach" aria-label={t.calc_reach_lbl}>
+            <option value="" disabled selected data-i18n="calc_reach_ph" set:html={t["calc_reach_ph"]}></option>
+            <option value="local" data-i18n="reach_local" set:html={t["reach_local"]}></option>
+            <option value="national" data-i18n="reach_national" set:html={t["reach_national"]}></option>
+            <option value="global" data-i18n="reach_global" set:html={t["reach_global"]}></option>
+          </select>
+        </div>
+      </div>
+      <div style="height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin-bottom:1.4rem"></div>
+      <button class="btn-primary" id="calcBtn" onclick="runCalc()">
+        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+        <span data-i18n="calc_btn" set:html={t["calc_btn"]}></span>
+      </button>
+      <!-- Loading -->
+      <div id="calcLoading" style="display:none;margin-top:1.25rem">
+        <div class="load-bar-wrap"><div class="load-bar" id="loadBar"></div></div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.45rem;font-size:0.75rem;color:var(--text-lo)"><div class="spin"></div><span data-i18n="calc_loading" set:html={t["calc_loading"]}></span></div>
+      </div>
+      <!-- GATE FORM: shown after loading, before results -->
+      <div class="gate-form" id="gateForm">
+        <div style="padding:1.35rem;background:rgba(224,64,251,0.06);border:1px solid rgba(224,64,251,0.18);border-radius:14px;margin-bottom:1.15rem;display:flex;align-items:flex-start;gap:0.75rem">
+          <div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(224,64,251,0.2),rgba(0,212,255,0.15));border:1px solid rgba(224,64,251,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid fa-file-waveform" style="color:var(--f);font-size:0.9rem" aria-hidden="true"></i></div>
+          <div><p class="font-semibold text-white text-sm" style="margin-bottom:0.2rem" data-i18n="gate_ready" set:html={t["gate_ready"]}></p><p class="text-sm" style="color:var(--text)" data-i18n="gate_sub" set:html={t["gate_sub"]}></p></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4" style="margin-bottom:1rem">
+          <div>
+            <label class="gate-label" for="gateEmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="gate_email_lbl" set:html={t["gate_email_lbl"]}></span></label>
+            <input class="form-input" type="email" id="gateEmail" data-i18n-ph="gate_email_ph" placeholder={t["gate_email_ph"]}>
+          </div>
+          <div>
+            <label class="gate-label" for="gateWebsite"><i class="fa-solid fa-globe" aria-hidden="true"></i><span data-i18n="gate_www_lbl" set:html={t["gate_www_lbl"]}></span></label>
+            <input class="form-input" type="url" id="gateWebsite" data-i18n-ph="gate_www_ph" placeholder={t["gate_www_ph"]}>
+          </div>
+        </div>
+        <button class="btn-primary" id="gateBtn" onclick="submitGate()">
+          <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+          <span data-i18n="gate_btn" set:html={t["gate_btn"]}></span>
+        </button>
+        <p style="text-align:center;font-size:0.72rem;color:var(--text-lo);margin-top:0.75rem"><i class="fa-solid fa-lock" style="margin-right:0.3rem;font-size:0.65rem"></i><span data-i18n="gate_privacy" set:html={t["gate_privacy"]}></span></p>
+      </div>
+      <!-- Results -->
+      <div class="calc-results" id="calcResults">
+        <div class="res-head-row" data-i18n="res_head" set:html={t["res_head"]}></div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="res-card"><div style="font-size:1.3rem;margin-bottom:0.5rem">🎯</div><div class="res-lbl" data-i18n="res_pot_lbl" set:html={t["res_pot_lbl"]}></div><div class="res-val" id="resPot">—</div></div>
+          <div class="res-card"><div style="font-size:1.3rem;margin-bottom:0.5rem">⏱</div><div class="res-lbl" data-i18n="res_time_lbl" set:html={t["res_time_lbl"]}></div><div class="res-val" id="resTime">—</div></div>
+          <div class="res-card"><div style="font-size:1.3rem;margin-bottom:0.5rem">💶</div><div class="res-lbl" data-i18n="res_price_lbl" set:html={t["res_price_lbl"]}></div><div class="res-val" id="resPrice">—</div></div>
+        </div>
+        <div style="margin-top:1rem;padding:1rem 1.1rem;background:rgba(224,64,251,0.06);border:1px solid rgba(224,64,251,0.14);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div style="font-size:0.82rem;color:var(--text);line-height:1.5"><strong class="text-white block text-sm" style="margin-bottom:0.15rem" data-i18n="res_cta_head" set:html={t["res_cta_head"]}></strong><span data-i18n="res_cta_sub" set:html={t["res_cta_sub"]}></span></div>
+          <a href="#contact" style="background:linear-gradient(135deg,var(--f),var(--c));color:var(--bg);font-weight:700;font-size:0.78rem;padding:0.5rem 1.1rem;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;white-space:nowrap;transition:opacity .2s"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span data-i18n="res_cta_btn" set:html={t["res_cta_btn"]}></span></a>
+        </div>
+      </div>
+      <!-- Rate limit -->
+      <div id="calcLimit" style="display:none;margin-top:1.25rem;padding:1.25rem 1.35rem;background:rgba(255,50,50,0.06);border:1px solid rgba(255,70,70,0.22);border-radius:13px;animation:fadeUp .4s ease both">
+        <div style="font-size:1.3rem;color:#ff7070;margin-bottom:0.6rem"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+        <div style="font-size:0.875rem;color:#ff9090;line-height:1.65;margin-bottom:0.9rem" data-i18n="limit_msg" set:html={t["limit_msg"]}></div>
+        <a href="#contact" style="background:transparent;color:#ff7070;font-weight:700;font-size:0.82rem;padding:0.5rem 1.1rem;border-radius:8px;border:1px solid rgba(255,70,70,0.35);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:all .2s" data-i18n="limit_btn" set:html={t["limit_btn"]}></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" style="background:var(--bg2);padding:5.5rem 2rem;border-top:1px solid var(--border)">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center sr" style="margin-bottom:3rem">
+      <span class="sect-k" data-i18n="faq_kicker" set:html={t["faq_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="faq_title" set:html={t["faq_title"]}></h2>
+    </div>
+    <div class="sr" style="transition-delay:0.1s">
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq_q1" set:html={t["faq_q1"]}></span>
+          <span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a1" set:html={t["faq_a1"]}></p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq_q2" set:html={t["faq_q2"]}></span>
+          <span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a2" set:html={t["faq_a2"]}></p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq_q3" set:html={t["faq_q3"]}></span>
+          <span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a3" set:html={t["faq_a3"]}></p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq_q4" set:html={t["faq_q4"]}></span>
+          <span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a4" set:html={t["faq_a4"]}></p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq_q5" set:html={t["faq_q5"]}></span>
+          <span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a5" set:html={t["faq_a5"]}></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT FORM ── -->
+<section id="contact" class="contact-section">
+  <div class="contact-grid">
+    <!-- Left: info -->
+    <div class="sr">
+      <span class="sect-k" data-i18n="contact_kicker" set:html={t["contact_kicker"]}></span>
+      <h2 class="sect-h" data-i18n="contact_title" set:html={t["contact_title"]}></h2>
+      <p class="sect-sub" style="margin-bottom:2rem" data-i18n="contact_sub" set:html={t["contact_sub"]}></p>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-clock" style="font-size:0.85rem"></i>
+        <span data-i18n="ci_time" set:html={t["ci_time"]}></span>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-shield-halved" style="font-size:0.85rem"></i>
+        <span data-i18n="ci_nospam" set:html={t["ci_nospam"]}></span>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-chart-bar" style="font-size:0.85rem"></i>
+        <span data-i18n="ci_audit" set:html={t["ci_audit"]}></span>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-envelope" style="font-size:0.85rem"></i>
+        <a href="mailto:kontakt@geolead.pl"
+           style="color:var(--f);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(224,64,251,0.35);transition:color .2s,border-color .2s"
+           onmouseover="this.style.color='var(--c)';this.style.borderColor='rgba(0,212,255,0.6)'"
+           onmouseout="this.style.color='var(--f)';this.style.borderColor='rgba(224,64,251,0.35)'">
+          kontakt@geolead.pl
+        </a>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-phone" style="font-size:0.85rem"></i>
+        <a href="tel:+48511000115"
+           style="color:var(--f);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(224,64,251,0.35);transition:color .2s,border-color .2s"
+           onmouseover="this.style.color='var(--c)';this.style.borderColor='rgba(0,212,255,0.6)'"
+           onmouseout="this.style.color='var(--f)';this.style.borderColor='rgba(224,64,251,0.35)'">
+          +48 511 000 115
+        </a>
+      </div>
+    </div>
+    <!-- Right: form -->
+    <div class="glass sr" style="padding:2rem;transition-delay:0.12s;position:relative">
+      <div id="contactFormWrap">
+        <div class="grid md:grid-cols-2 gap-4" style="margin-bottom:1.1rem">
+          <div>
+            <label class="gate-label" for="cfName"><i class="fa-solid fa-user" aria-hidden="true"></i><span data-i18n="cf_name_lbl" set:html={t["cf_name_lbl"]}></span></label>
+            <input class="form-input" type="text" id="cfName" data-i18n-ph="cf_name_ph" placeholder={t["cf_name_ph"]}>
+          </div>
+          <div>
+            <label class="gate-label" for="cfEmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="cf_email_lbl" set:html={t["cf_email_lbl"]}></span></label>
+            <input class="form-input" type="email" id="cfEmail" data-i18n-ph="cf_email_ph" placeholder={t["cf_email_ph"]}>
+          </div>
+        </div>
+        <div style="margin-bottom:1.1rem">
+          <label class="gate-label" for="cfCompany"><i class="fa-solid fa-building" aria-hidden="true"></i><span data-i18n="cf_company_lbl" set:html={t["cf_company_lbl"]}></span></label>
+          <input class="form-input" type="text" id="cfCompany" data-i18n-ph="cf_company_ph" placeholder={t["cf_company_ph"]}>
+        </div>
+        <div style="margin-bottom:1.4rem">
+          <label class="gate-label" for="cfMsg"><i class="fa-solid fa-message" aria-hidden="true"></i><span data-i18n="cf_msg_lbl" set:html={t["cf_msg_lbl"]}></span></label>
+          <textarea class="form-textarea" id="cfMsg" rows="4" data-i18n-ph="cf_msg_ph" placeholder={t["cf_msg_ph"]}></textarea>
+        </div>
+        <button class="btn-primary" onclick="submitContact()">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          <span data-i18n="cf_btn" set:html={t["cf_btn"]}></span>
+        </button>
+        <p style="text-align:center;font-size:0.72rem;color:var(--text-lo);margin-top:0.75rem"><i class="fa-solid fa-lock" style="margin-right:0.3rem;font-size:0.65rem" aria-hidden="true"></i><span data-i18n="cf_privacy" set:html={t["cf_privacy"]}></span></p>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <i class="fa-solid fa-circle-check" style="color:var(--f)"></i>
+        <h3 class="text-white font-bold text-lg mb-1" data-i18n="cf_success_h" set:html={t["cf_success_h"]}></h3>
+        <p style="color:var(--text)" data-i18n="cf_success_p" set:html={t["cf_success_p"]}></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer style="background:var(--bg);border-top:1px solid var(--border);padding:2.25rem 2rem">
+  <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+    <div>
+      <a href="#" class="gl-logo" style="font-size:1.1rem">Geo<span class="g-text">Lead</span></a>
+      <p style="font-size:0.76rem;color:var(--text-lo);margin-top:0.32rem" data-i18n="foot_desc" set:html={t["foot_desc"]}></p>
+      <p style="font-size:0.73rem;color:var(--text-lo);margin-top:0.3rem">
+        <span data-i18n="foot_founder" set:html={t["foot_founder"]}></span>: Paweł Zagajewski · <span data-i18n="foot_cofounder" set:html={t["foot_cofounder"]}></span>: <a class="foot-me" href="https://www.linkedin.com/in/jaroslaw-pawel-zagajewski-3b6748363/" rel="me noopener" target="_blank">Jarosław Zagajewski</a>
+      </p>
+      <p style="font-size:0.7rem;color:var(--text-lo);margin-top:0.3rem">geolead.pl Paweł Zagajewski · ul. Leszka Czarnego 13, 02-496 Warszawa · NIP 5222300455 · REGON 015598980</p>
+    </div>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap">
+      <a href="/metodologia/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_proof" set:html={t["nav_proof"]}></a>
+      <a href="#how" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_how" set:html={t["nav_how"]}></a>
+      <a href="https://geolead.pl/slownik/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_glossary" set:html={t["nav_glossary"]}></a>
+      <a href="/blog/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_blog" set:html={t["nav_blog"]}></a>
+      <a href="#calc" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_calc" set:html={t["nav_calc"]}></a>
+      <a href="/narzedzia/pytania-zakupowe/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_tool" set:html={t["nav_tool"]}></a>
+      <a href="/narzedzia/skaner-ai/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_scan" set:html={t["nav_scan"]}></a>
+      <a href="#faq" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_faq" set:html={t["nav_faq"]}></a>
+      <a href="#contact" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_contact" set:html={t["nav_contact"]}></a>
+      <a href="/polityka-prywatnosci/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_privacy" set:html={t["nav_privacy"]}></a>
+    </div>
+    <span style="font-size:0.76rem;color:var(--text-lo)" data-i18n="foot_copy" set:html={t["foot_copy"]}></span>
+  </div>
+</footer>
+
+<style is:inline>
+@media(max-width:680px){
+  .case-grid-resp{grid-template-columns:1fr!important}
+  .case-mock{margin-top:1.5rem}
+}
+</style>
+
+<script is:inline set:html={clientBoot}></script>
+<script is:inline>
+/* ============================================================
+   TRANSLATIONS
+   ============================================================ */
+const T = window.__GL_T; // słownik bieżącego języka (src/i18n/home-dict.mjs)
+
+/* ============================================================
+   FORMS API CONFIG
+   ────────────────────────────────────────────────────────────
+   Web3Forms — darmowe do 250 maili/mies., zero backendu:
+     1. Wejdź na https://web3forms.com → wpisz e-mail → kliknij "Create Access Key"
+     2. Skopiuj klucz i wklej go w FORMS_API_KEY poniżej
+   Alternatywa — Formspree: podmień FORMS_ENDPOINT na swój URL
+   ============================================================ */
+  const FORMS_API_KEY  = 'd3be610b-de09-436b-99c7-cf466f349c31';
+  const FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
+/* ============================================================
+   FORMS — centralny fetch + walidacja klucza
+   ============================================================ */
+function _checkApiKey(){
+  if(FORMS_API_KEY.includes('TUTAJ_WKLEJ')){
+    alert('BŁĄD KONFIGURACJI: Nie podałeś własnego klucza Web3Forms!');
+    return false;
+  }
+  return true;
+}
+function _w3fFetch(payload,onSuccess,onError){
+  fetch(FORMS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+  .then(async r=>{
+    let data; try{data=await r.json();}catch(e){data={};}
+    if(!r.ok||data.success===false){throw new Error(data.message||('HTTP '+r.status));}
+    return data;
+  })
+  .then(d=>{try{gtag('event','generate_lead',{form_type:payload.source||'form',language:(typeof lang!=='undefined'?lang:'pl')});}catch(e){}return d;})
+  .then(onSuccess)
+  .catch(err=>{console.warn('[GeoLead Web3Forms error]',err.message);onError(err);});
+}
+
+/* ============================================================
+   CALC MATRIX (PLN base prices)
+   ============================================================ */
+const MATRIX = {
+  'high,local':    {pot:'high',     mLo:3,mHi:4, pLo:3000, pHi:6000},
+  'high,national': {pot:'critical', mLo:4,mHi:5, pLo:5500, pHi:9500},
+  'high,global':   {pot:'critical', mLo:5,mHi:7, pLo:9000, pHi:15000},
+  'medium,local':  {pot:'moderate', mLo:2,mHi:3, pLo:1800, pHi:3500},
+  'medium,national':{pot:'high',   mLo:3,mHi:4, pLo:3500, pHi:6500},
+  'medium,global': {pot:'critical', mLo:4,mHi:6, pLo:6000, pHi:11000},
+  'low,local':     {pot:'standard', mLo:2,mHi:3, pLo:1200, pHi:2500},
+  'low,national':  {pot:'moderate', mLo:3,mHi:4, pLo:2500, pHi:4500},
+  'low,global':    {pot:'high',     mLo:3,mHi:5, pLo:4500, pHi:8000},
+};
+const POT_CLASS = {critical:'pot-critical',high:'pot-high',moderate:'pot-moderate',standard:'pot-standard'};
+
+/* ============================================================
+   RATE LIMITING
+   ============================================================ */
+const RL_KEY='gl_calc_v2', MAX_USES=3, WIN=864e5;
+function getRLD(){try{const r=localStorage.getItem(RL_KEY);if(!r)return{c:0,t:Date.now()};const d=JSON.parse(r);return Date.now()-d.t>WIN?{c:0,t:Date.now()}:d;}catch{return window._rld||(window._rld={c:0,t:Date.now()})}}
+function saveRLD(d){try{localStorage.setItem(RL_KEY,JSON.stringify(d));}catch{window._rld=d}}
+function getRem(){return Math.max(0,MAX_USES-getRLD().c)}
+function updateDots(){
+  const rem=getRem(),t=T[lang];
+  ['ud1','ud2','ud3'].forEach((id,i)=>{const el=document.getElementById(id);el.className='udot';if(i<rem)el.classList.add(rem===1?'warn':'used');});
+  const ut=document.getElementById('usageTxt');
+  if(ut&&t['usage_left_'+rem])ut.textContent=t['usage_left_'+rem];
+}
+
+/* ============================================================
+   CALCULATOR STATE
+   ============================================================ */
+const CALC_IND=window.__GL_IND; // src/i18n/home-industries.json
+const IND_TIER=Object.fromEntries(CALC_IND.map(x=>[x.id,x.t]));
+let calcTimer=null, pendingInd='', pendingReach='';
+
+function runCalc(){
+  const ind=document.getElementById('calcIndustry').value;
+  const reach=document.getElementById('calcReach').value;
+  if(!ind||!reach){
+    const b=document.getElementById('calcBtn');
+    b.style.animation='shake .35s ease';
+    setTimeout(()=>b.style.animation='',400);
+    return;
+  }
+  if(getRem()<=0){showLimit();return;}
+  try{gtag('event','calculator_run',{industry:ind,reach:reach});}catch(e){}
+  const d=getRLD();d.c++;d.t=d.t||Date.now();saveRLD(d);updateDots();
+  pendingInd=ind; pendingReach=reach;
+  ['calcResults','gateForm'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('calcLimit').style.display='none';
+  document.getElementById('calcBtn').disabled=true;
+  const loading=document.getElementById('calcLoading'), lb=document.getElementById('loadBar');
+  loading.style.display='block'; lb.style.width='0%';
+  let pct=0;
+  if(calcTimer)clearInterval(calcTimer);
+  calcTimer=setInterval(()=>{pct=Math.min(pct+(Math.random()*4+1.5),97);lb.style.width=pct+'%';},55);
+  setTimeout(()=>{
+    clearInterval(calcTimer);lb.style.width='100%';
+    setTimeout(()=>{
+      loading.style.display='none';
+      document.getElementById('calcBtn').disabled=false;
+      showGate();
+    },250);
+  },1600);
+}
+
+function showGate(){
+  const gf=document.getElementById('gateForm');
+  gf.style.display='block';
+  gf.style.animation='none'; void gf.offsetWidth; gf.style.animation='fadeUp .5s ease both';
+  gf.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function submitGate(){
+  if(!_checkApiKey())return;
+  const email=document.getElementById('gateEmail').value.trim();
+  const website=document.getElementById('gateWebsite').value.trim();
+  const emailRx=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRx.test(email)||!website){
+    const b=document.getElementById('gateBtn');
+    b.style.animation='shake .35s ease';
+    setTimeout(()=>b.style.animation='',400);
+    return;
+  }
+  const gBtn=document.getElementById('gateBtn');
+  gBtn.disabled=true;
+  gBtn.innerHTML='<div class="spin" style="width:14px;height:14px;border:2px solid rgba(7,7,18,0.25);border-top-color:#070712;border-radius:50%;animation:spin .8s linear infinite"></div>';
+  const prevErr=gBtn.parentNode.querySelector('.gl-form-err');if(prevErr)prevErr.remove();
+  const payload={access_key:FORMS_API_KEY,subject:'GeoLead — Nowy Lead (Kalkulator GEO)',from_name:'GeoLead Kalkulator',email,website,industry:pendingInd,reach:pendingReach,lang,source:'calculator_gate',timestamp:new Date().toISOString()};
+  _w3fFetch(payload,
+    ()=>{document.getElementById('gateForm').style.display='none';showResults(pendingInd,pendingReach,T[lang]);},
+    (err)=>{gBtn.disabled=false;gBtn.innerHTML='<i class="fa-solid fa-unlock"></i> <span>'+T[lang].gate_btn+'</span>';const el=document.createElement('p');el.className='gl-form-err';el.style.cssText='font-size:0.78rem;color:#fc8181;margin-top:0.5rem';el.innerHTML=(T[lang].err_msg||'Błąd komunikacji. Napisz na ')+'<a href="mailto:kontakt@geolead.pl" style="color:#ffb0b0;text-decoration:underline">kontakt@geolead.pl</a><br><span style="font-size:0.7rem;opacity:0.7">'+err.message+'</span>';gBtn.parentNode.appendChild(el);}
+  );
+}
+
+function showResults(ind,reach,t){
+  const m=MATRIX[(IND_TIER[ind]||ind)+','+reach]; if(!m)return;
+  document.getElementById('resPot').innerHTML='<span class="pot-badge '+POT_CLASS[m.pot]+'">'+(t['pot_'+m.pot]||m.pot)+'</span>';
+  document.getElementById('resTime').textContent=m.mLo+'\u2013'+m.mHi+(t.months_suffix||' mies.');
+  const r=t.curr_lo||1, lo=Math.round(m.pLo*r/100)*100, hi=Math.round(m.pHi*r/100)*100, sym=t.curr_sym||'z\u0142';
+  document.getElementById('resPrice').textContent=lang==='pl'
+    ?'od '+lo.toLocaleString('pl-PL')+' do '+hi.toLocaleString('pl-PL')+' z\u0142/mies.'
+    :sym+lo.toLocaleString()+'\u2013'+sym+hi.toLocaleString()+(t.price_suffix||'/mies.');
+  const res=document.getElementById('calcResults');
+  res.style.display='block'; res.style.animation='none'; void res.offsetWidth; res.style.animation='fadeUp .5s ease both';
+}
+
+function showLimit(){
+  const l=document.getElementById('calcLimit');
+  l.style.display='block'; l.style.animation='none'; void l.offsetWidth; l.style.animation='fadeUp .4s ease both';
+}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+function toggleFaq(btn){
+  const body=btn.nextElementSibling;
+  const isOpen=body.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-body').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.faq-btn').forEach(b=>b.classList.remove('open'));
+  if(!isOpen){body.classList.add('open');btn.classList.add('open');btn.setAttribute('aria-expanded','true');}
+  else{btn.setAttribute('aria-expanded','false');}
+}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+function submitContact(){
+  if(!_checkApiKey())return;
+  const name=document.getElementById('cfName').value.trim();
+  const email=document.getElementById('cfEmail').value.trim();
+  const company=document.getElementById('cfCompany').value.trim();
+  const msg=document.getElementById('cfMsg').value.trim();
+  const emailRx=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const btn=document.querySelector('#contactFormWrap .btn-primary');
+  if(!name||!emailRx.test(email)||!company){
+    btn.style.animation='shake .35s ease';
+    setTimeout(()=>btn.style.animation='',400);
+    return;
+  }
+  const cfBtn=document.querySelector('#contactFormWrap .btn-primary');
+  const prevErr=cfBtn.parentNode.querySelector('.gl-form-err');if(prevErr)prevErr.remove();
+  cfBtn.disabled=true;cfBtn.innerHTML='<div class="spin" style="width:14px;height:14px;border:2px solid rgba(7,7,18,0.25);border-top-color:#070712;border-radius:50%;animation:spin .8s linear infinite;margin-right:0.5rem"></div>'+(T[lang].sending||'Wysyłanie...');
+  const cfPayload={access_key:FORMS_API_KEY,subject:'GeoLead — Nowa wiadomość z formularza kontaktowego',from_name:name,email,company,message:msg||'(bez wiadomości)',lang,source:'contact_form',timestamp:new Date().toISOString()};
+  _w3fFetch(cfPayload,
+    ()=>{document.getElementById('contactFormWrap').style.display='none';const s=document.getElementById('formSuccess');s.style.display='block';s.style.animation='none';void s.offsetWidth;s.style.animation='fadeUp .5s ease both';},
+    (err)=>{cfBtn.disabled=false;cfBtn.innerHTML='<i class="fa-solid fa-calendar-check"></i> '+(T[lang].cf_btn||'Zarezerwuj');const ep=document.createElement('p');ep.className='gl-form-err';ep.style.cssText='font-size:0.78rem;color:#fc8181;margin-top:0.5rem';ep.innerHTML=(T[lang].err_msg||'Błąd komunikacji. Napisz na ')+'<a href="mailto:kontakt@geolead.pl" style="color:#ffb0b0;text-decoration:underline">kontakt@geolead.pl</a><br><span style="font-size:0.7rem;opacity:0.7">'+err.message+'</span>';cfBtn.parentNode.appendChild(ep);}
+  );
+}
+
+/* ============================================================
+   I18N
+   ============================================================ */
+let lang=window.__GL_LANG, twTimer=null;
+
+function setLang(l){
+  lang=l; const t=T[l];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined) el.innerHTML=t[k]; // use innerHTML for bold tags in translations
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const k=el.getAttribute('data-i18n-ph');
+    if(t[k]!==undefined) el.placeholder=t[k];
+  });
+  // Rebuild selects
+  const ind=document.getElementById('calcIndustry');
+  const reach=document.getElementById('calcReach');
+  if(ind){if(ind.options[0])ind.options[0].textContent=t.calc_ind_ph||'';CALC_IND.forEach((x,i)=>{if(ind.options[i+1])ind.options[i+1].textContent=x.n[l]||x.n.pl;});}
+  if(reach){[['calc_reach_ph',''],['reach_local','local'],['reach_national','national'],['reach_global','global']].forEach(([k,v],i)=>{if(reach.options[i])reach.options[i].textContent=t[k]||'';});}
+  document.querySelectorAll('.lb').forEach(b=>b.classList.toggle('on',b.textContent.trim()===l.toUpperCase()));
+  document.documentElement.lang=l;
+  updateDots();
+  replayConsole();
+}
+
+/* ============================================================
+   TYPEWRITER CONSOLE
+   ============================================================ */
+function replayConsole(){
+  const t=T[lang];
+  if(twTimer){clearInterval(twTimer);twTimer=null;}
+  const bU=document.getElementById('bubbleUser'),mA=document.getElementById('msgAi'),
+        aA=document.getElementById('aiAvatar'),bA=document.getElementById('bubbleAi'),
+        rB=document.getElementById('replayBtn');
+  bU.textContent=''; bU.classList.remove('show');
+  mA.style.display='none'; aA.classList.remove('show');
+  bA.innerHTML='<div class="tyd" id="typingDots"><span></span><span></span><span></span></div>';
+  bA.classList.remove('show'); rB.classList.remove('show');
+
+  setTimeout(()=>{
+    bU.classList.add('show');
+    let i=0;
+    twTimer=setInterval(()=>{
+      if(i<t.user_msg.length){bU.textContent+=t.user_msg[i++];}
+      else{
+        clearInterval(twTimer); twTimer=null;
+        setTimeout(()=>{
+          mA.style.display='flex';
+          setTimeout(()=>{aA.classList.add('show');bA.classList.add('show');},60);
+          setTimeout(()=>{
+            const td=document.getElementById('typingDots'); if(td)td.remove();
+            const tS=document.createElement('span'); bA.appendChild(tS);
+            const cur=document.createElement('span'); cur.className='cursor-blink'; bA.appendChild(cur);
+            const full=t.ai_msg_p1+t.ai_link+t.ai_msg_p2;
+            const p1l=t.ai_msg_p1.length, lkl=t.ai_link.length; let ci=0;
+            const at=setInterval(()=>{
+              if(ci<full.length){
+                const ch=full[ci++];
+                if(ci<=p1l){tS.textContent+=ch;}
+                else if(ci===p1l+1){const lk=document.createElement('a');lk.href='https://geolead.pl';lk.className='ai-lnk';lk.textContent=ch;bA.insertBefore(lk,cur);}
+                else if(ci<=p1l+lkl){const lk=bA.querySelector('.ai-lnk');if(lk)lk.textContent+=ch;}
+                else{let tr=bA.querySelector('.trail');if(!tr){tr=document.createElement('span');tr.className='trail';bA.insertBefore(tr,cur);}tr.textContent+=ch;}
+              } else {
+                clearInterval(at); cur.remove();
+                setTimeout(()=>rB.classList.add('show'),400);
+              }
+            },22);
+          },1400);
+        },360);
+      }
+    },38);
+  },800);
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target);}});
+},{threshold:0.07});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+
+/* Inject shake keyframes */
+const sk=document.createElement('style');
+sk.textContent='@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}';
+document.head.appendChild(sk);
+
+
+/* ============================================================
+   LIVE AI ENTITY SCANNER JS
+   ============================================================ */
+const SCAN_LOG_COLORS={'INFO':'#68d391','SCAN':'#63b3ed','WARN':'#f6e05e','FAIL':'#fc8181','DONE':'#e040fb'};
+let scanRunning=false;
+
+function startScan(){
+  if(scanRunning)return;
+  const urlInput=document.getElementById('scanUrl');
+  const url=urlInput.value.trim();
+  // GL-226: demo zastąpione prawdziwym skanerem — przekierowanie z domeną.
+  if(url){try{gtag('event','scanner_redirect');}catch(e){}location.href='/narzedzia/skaner-ai/?url='+encodeURIComponent(url);return;}
+  if(!url){urlInput.style.borderColor='rgba(255,80,80,0.6)';urlInput.style.animation='shake .35s ease';setTimeout(()=>{urlInput.style.animation='';urlInput.style.borderColor='rgba(0,212,255,0.22)';},400);return;}
+  scanRunning=true;
+  try{gtag('event','scanner_start');}catch(e){}
+  const t=T[lang];const logLines=t.scan_log||[];
+  let domain=url.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
+  document.getElementById('scanInputRow').style.display='none';
+  ['scanResults','scanGateWrap'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
+  const logEl=document.getElementById('scanLog');logEl.style.display='block';logEl.innerHTML='';
+  document.getElementById('scanProgressWrap').style.display='block';
+  document.getElementById('scanProgressBar').style.width='0%';
+  document.getElementById('scanPct').textContent='0%';
+  document.getElementById('scanStatusDot').style.cssText='width:6px;height:6px;border-radius:50%;background:#e040fb;box-shadow:0 0 8px #e040fb';
+  document.getElementById('scanStatusTxt').textContent='SCANNING...';
+  const totalLines=logLines.length;
+  logLines.forEach(([tag,msg],i)=>{
+    const delay=280+i*360+Math.random()*100;
+    setTimeout(()=>{
+      const color=SCAN_LOG_COLORS[tag]||'#68d391';
+      const line=document.createElement('div');
+      line.style.cssText='font-size:0.77rem;line-height:1.7;display:flex;gap:0.45rem;align-items:baseline';
+      const ts=new Date().toTimeString().slice(0,8);
+      line.innerHTML=`<span style="color:#6a7a95;flex-shrink:0;font-size:0.65rem">${ts}</span><span style="color:${color};font-weight:700;font-size:0.68rem;flex-shrink:0">[${tag}]</span><span style="color:${(tag==='FAIL'||tag==='WARN')?color:'#718096'}">${msg.replace('domeny...',domain+'...')}</span>`;
+      logEl.appendChild(line);logEl.scrollTop=logEl.scrollHeight;
+      const pct=Math.round(((i+1)/totalLines)*100);
+      document.getElementById('scanProgressBar').style.width=pct+'%';
+      document.getElementById('scanPct').textContent=pct+'%';
+      if(i===totalLines-1)setTimeout(showScanResults,650);
+    },delay);
+  });
+}
+
+function showScanResults(){
+  document.getElementById('scanStatusDot').style.cssText='width:6px;height:6px;border-radius:50%;background:#fc8181;box-shadow:0 0 8px #fc8181';
+  document.getElementById('scanStatusTxt').textContent='COMPLETE';
+  const res=document.getElementById('scanResults');
+  res.style.display='block';res.style.animation='none';void res.offsetWidth;res.style.animation='fadeUp .5s ease both';
+}
+
+function openScanGate(){
+  document.getElementById('scanResults').style.display='none';
+  const gate=document.getElementById('scanGateWrap');
+  gate.style.display='block';gate.style.animation='none';void gate.offsetWidth;gate.style.animation='fadeUp .45s ease both';
+  document.getElementById('scanGateEmail').focus();
+}
+
+function submitScanGate(){
+  if(!_checkApiKey())return;
+  const email=document.getElementById('scanGateEmail').value.trim();
+  const emailRx=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const errBox=document.getElementById('scanGateError');
+  const btn=document.getElementById('scanGateBtn');
+  errBox.style.display='none';
+  if(!emailRx.test(email)){document.getElementById('scanGateEmail').style.animation='shake .35s ease';setTimeout(()=>document.getElementById('scanGateEmail').style.animation='',400);return;}
+  btn.disabled=true;
+  document.getElementById('scanGateBtnIcon').className='spin';
+  document.getElementById('scanGateBtnTxt').textContent=T[lang].sending||'Wysyłanie...';
+  const payload={access_key:FORMS_API_KEY,subject:'GeoLead — Nowy Lead (AI Entity Scanner)',from_name:'GeoLead Scanner',email,scanned_url:document.getElementById('scanUrl').value.trim(),lang,source:'entity_scanner',timestamp:new Date().toISOString()};
+  _w3fFetch(payload,
+    ()=>{btn.style.display='none';document.getElementById('scanGateEmail').style.display='none';const s=document.getElementById('scanGateSuccess');s.style.display='flex';s.style.animation='none';void s.offsetWidth;s.style.animation='fadeUp .4s ease both';},
+    (err)=>{document.getElementById('scanGateErrTxt').innerHTML=(T[lang].err_msg||'Błąd. Napisz na ')+'<a href="mailto:kontakt@geolead.pl" style="color:#ffb0b0;text-decoration:underline">kontakt@geolead.pl</a><span style="display:block;font-size:0.7rem;opacity:0.75;margin-top:0.2rem">'+err.message+'</span>';errBox.style.display='block';btn.disabled=false;document.getElementById('scanGateBtnIcon').className='fa-solid fa-paper-plane';document.getElementById('scanGateBtnTxt').textContent=T[lang].scan_gate_btn||'Wyślij raport';}
+  );
+}
+
+function resetScan(){
+  scanRunning=false;
+  ['scanLog','scanProgressWrap','scanResults','scanGateWrap'].forEach(id=>{const el=document.getElementById(id);if(el){el.style.display='none';if(id==='scanLog')el.innerHTML='';}});
+  const gs=document.getElementById('scanGateSuccess');if(gs)gs.style.display='none';
+  const ge=document.getElementById('scanGateEmail');if(ge){ge.value='';ge.style.display='';}
+  const gb=document.getElementById('scanGateBtn');if(gb){gb.style.display='';gb.disabled=false;}
+  document.getElementById('scanGateBtnIcon').className='fa-solid fa-paper-plane';
+  document.getElementById('scanGateBtnTxt').textContent=T[lang].scan_gate_btn||'Wyślij raport';
+  document.getElementById('scanGateError').style.display='none';
+  document.getElementById('scanInputRow').style.display='flex';
+  document.getElementById('scanUrl').value='';
+  document.getElementById('scanStatusDot').style.cssText='width:6px;height:6px;border-radius:50%;background:#28c840;box-shadow:0 0 6px #28c840';
+  document.getElementById('scanStatusTxt').textContent=T[lang].scan_ready||'READY';
+}
+
+/* ============================================================
+   COOKIE / RODO BANNER
+   ============================================================ */
+(function initCookieBanner(){
+  try{if(localStorage.getItem('gl_cookie'))return;}catch(e){}
+  const t=T[lang]||T['pl'];
+  const banner=document.createElement('div');
+  banner.id='glCookieBanner';
+  banner.setAttribute('role','dialog');banner.setAttribute('aria-label','Cookie consent');
+  banner.innerHTML=`
+    <div style="display:flex;align-items:flex-start;gap:0.65rem;flex:1;min-width:180px">
+      <div style="width:28px;height:28px;border-radius:8px;background:rgba(224,64,251,0.12);border:1px solid rgba(224,64,251,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <i class="fa-solid fa-cookie-bite" style="color:#e040fb;font-size:0.75rem"></i>
+      </div>
+      <p id="glCookieTxt" style="font-size:0.79rem;color:#94a3b8;line-height:1.6;margin:0">${t.cookie_txt||''}</p>
+      <a id="glCookieLink" href="/polityka-prywatnosci/" style="font-size:0.74rem;color:#e040fb;text-decoration:none;border-bottom:1px solid rgba(224,64,251,0.35);display:inline-block;margin-top:0.35rem">${t.nav_privacy||'Polityka prywatno\u015bci'}</a>
+    </div>
+    <div style="display:flex;gap:0.5rem;flex-shrink:0">
+      <button id="glCookieRej" onclick="glSetCookie('rejected')"
+        style="background:transparent;color:#cbd5e1;font-size:0.76rem;font-weight:600;padding:0.46rem 0.95rem;border-radius:8px;border:1px solid rgba(255,255,255,0.18);cursor:pointer;font-family:inherit;white-space:nowrap;transition:border-color .2s,color .2s"
+        onmouseover="this.style.borderColor='rgba(255,255,255,0.38)';this.style.color='white'"
+        onmouseout="this.style.borderColor='rgba(255,255,255,0.18)';this.style.color='#cbd5e1'"
+      >${t.cookie_rej||'Odrzucam'}</button>
+      <button id="glCookieAcc" onclick="glSetCookie('accepted')"
+        style="background:linear-gradient(135deg,#e040fb,#00d4ff);color:#070712;font-size:0.76rem;font-weight:700;padding:0.46rem 1rem;border-radius:8px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity .2s,transform .2s"
+        onmouseover="this.style.opacity='0.85';this.style.transform='translateY(-1px)'"
+        onmouseout="this.style.opacity='1';this.style.transform='none'"
+      >${t.cookie_acc||'Zgoda'}</button>
+    </div>`;
+  Object.assign(banner.style,{position:'fixed',bottom:'1rem',left:'50%',transform:'translateX(-50%)',zIndex:'9998',width:'calc(100% - 2rem)',maxWidth:'780px',background:'rgba(8,8,22,0.93)',backdropFilter:'blur(22px)',WebkitBackdropFilter:'blur(22px)',border:'1px solid rgba(224,64,251,0.2)',borderRadius:'14px',padding:'0.85rem 1.1rem',display:'flex',alignItems:'center',gap:'0.9rem',flexWrap:'wrap',boxShadow:'0 0 0 1px rgba(0,212,255,0.06),0 0 35px rgba(224,64,251,0.1),0 12px 35px rgba(0,0,0,0.6)',animation:'cookiePop .4s cubic-bezier(.22,.68,0,1.15) both'});
+  if(!document.getElementById('glCookieStyle')){const s=document.createElement('style');s.id='glCookieStyle';s.textContent='@keyframes cookiePop{from{opacity:0;transform:translateX(-50%) translateY(18px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}';document.head.appendChild(s);}
+  document.body.appendChild(banner);
+  // Sync with setLang
+  const _origSL=window.setLang;
+  window.setLang=function(l){_origSL(l);const tt=T[l]||T['pl'];const b=document.getElementById('glCookieBanner');if(!b)return;const xt=document.getElementById('glCookieTxt');const xr=document.getElementById('glCookieRej');const xa=document.getElementById('glCookieAcc');if(xt)xt.textContent=tt.cookie_txt||'';if(xr)xr.textContent=tt.cookie_rej||'Odrzucam';if(xa)xa.textContent=tt.cookie_acc||'Zgoda';const xl=document.getElementById('glCookieLink');if(xl)xl.textContent=tt.nav_privacy||'Polityka prywatno\u015bci';};
+})();
+
+window.glSetCookie=function(choice){
+  try{localStorage.setItem('gl_cookie',choice);}catch(e){}
+  try{gtag('consent','update',{analytics_storage:choice==='accepted'?'granted':'denied'});}catch(e){}
+  const b=document.getElementById('glCookieBanner');if(!b)return;
+  b.style.transition='opacity .35s ease,transform .35s ease';b.style.opacity='0';b.style.transform='translateX(-50%) translateY(16px)';
+  setTimeout(()=>{if(b.parentNode)b.parentNode.removeChild(b);},380);
+};
+
+/* GL-208: kliknięcia w telefon / e-mail */
+document.addEventListener('click',function(e){const a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');if(!a)return;try{gtag('event','contact_click',{method:a.href.startsWith('tel:')?'phone':'email'});}catch(err){}});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+updateDots();
+(function initLang(){
+  // D5: stare adresy ?lang=xx -> /xx/ (wersje językowe mają własne URL-e)
+  try{
+    var q=new URLSearchParams(location.search).get('lang');
+    q=q&&q.toLowerCase();
+    if(q&&['pl','en','de','fr'].indexOf(q)>-1&&q!==lang){location.replace(q==='pl'?'/':'/'+q+'/');return;}
+  }catch(e){}
+  setLang(lang);
+})();
+</script>
+</body>
+</html>

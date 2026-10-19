@@ -1,6 +1,8 @@
 ---
 // src/components/Nav.astro
-// Nawigacja identyczna z index.html — gradient logo, 7 pozycji, przełącznik języka, CTA
+// Nawigacja spójna ze stroną główną (HomePage.astro) — 9 pozycji, przełącznik języka, CTA.
+// Strony Astro (blog, słownik) są tylko po polsku: przełącznik prowadzi do strony głównej w danym języku.
+const LANGS = ['pl', 'en', 'de', 'fr'];
 ---
 
 <style>
@@ -58,6 +60,8 @@
     padding: 0.18rem;
   }
   .lb {
+    text-decoration: none;
+    display: inline-block;
     background: none;
     border: none;
     color: #6b6b9a;
@@ -65,8 +69,12 @@
     font-weight: 700;
     padding: 0.22rem 0.46rem;
     border-radius: 5px;
-    cursor: default;
+    cursor: pointer;
     letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+  .lb:not(.on):hover {
+    color: white;
   }
   .lb.on {
     background: linear-gradient(135deg, #e040fb, #00d4ff);
@@ -104,21 +112,22 @@
   <a href="/" class="gl-logo">Geo<span class="g-text">Lead</span></a>
 
   <ul class="nav-links">
-    <li><a href="/#social-proof">Metodologia</a></li>
+    <li><a href="/metodologia/">Metodologia</a></li>
     <li><a href="/#how">Jak to działa</a></li>
     <li><a href="/slownik/">Słowniczek</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#calc">Kalkulator</a></li>
+    <li><a href="/narzedzia/pytania-zakupowe/">Generator promptów</a></li>
+    <li><a href="/narzedzia/skaner-ai/">Skaner AI</a></li>
     <li><a href="/#faq">FAQ</a></li>
     <li><a href="/#contact">Kontakt</a></li>
   </ul>
 
   <div style="display:flex;align-items:center;gap:0.65rem;flex-shrink:0">
     <div class="lang-sw">
-      <button class="lb on">PL</button>
-      <button class="lb">EN</button>
-      <button class="lb">DE</button>
-      <button class="lb">FR</button>
+      {LANGS.map((l) => (
+        <a class={l === 'pl' ? 'lb on' : 'lb'} href={l === 'pl' ? '/' : `/${l}/`} hreflang={l} lang={l} aria-current={l === 'pl' ? 'page' : undefined}>{l.toUpperCase()}</a>
+      ))}
     </div>
     <a href="/#contact" class="btn-nav">Bezpłatna konsultacja</a>
   </div>

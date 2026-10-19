@@ -20,6 +20,14 @@ Wybrani klienci: HASBORG — producent maszyn dla przemysłu cukierniczego.
 
 - [GeoLead — Agencja GEO w Polsce](https://geolead.pl/): Definicja GEO, metodyka trzech warstw, metodologia pomiaru widoczności w AI, założyciel, kalkulator potencjału GEO, FAQ i formularz kontaktowy.
 
+## Wersje językowe strony głównej
+
+Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki anglojęzyczne). Blog, słownik i narzędzia są wyłącznie po polsku.
+
+- [GeoLead — GEO Agency (English)](https://geolead.pl/en/): Generative Engine Optimization for B2B companies — getting recommended by ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews.
+- [GeoLead — GEO-Agentur (Deutsch)](https://geolead.pl/de/): Generative Engine Optimization für B2B-Unternehmen — Empfehlungen in ChatGPT, Perplexity, Claude, Gemini und Google AI Overviews.
+- [GeoLead — Agence GEO (Français)](https://geolead.pl/fr/): Generative Engine Optimization pour les entreprises B2B — être recommandé par ChatGPT, Perplexity, Claude, Gemini et Google AI Overviews.
+
 ## Przewodniki GEO
 
 - [Metodologia pomiaru widoczności w AI](https://geolead.pl/metodologia/): Protokół pomiaru GeoLead: stały zestaw promptów zakupowych, pomiar wyjściowy, sesje bez pamięci, pomiar co 2 tygodnie; definicje wzmianki, cytowania i rekomendacji; Mention Rate; czego GeoLead nie obiecuje.
