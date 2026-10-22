@@ -102,7 +102,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <header class="pp-hero">
   <span class="pp-kick">RODO / GDPR</span>
   <h1>Polityka prywatności</h1>
-  <p class="pp-meta">Ostatnia aktualizacja: 17 października 2026</p>
+  <p class="pp-meta">Ostatnia aktualizacja: 22 października 2026</p>
 </header>
 
 <main class="pp-wrap">
@@ -152,7 +152,7 @@ danych osobowych kontaktuj się bezpośrednio z Administratorem.
     <tr>
       <td>Skaner gotowości AI (/narzedzia/skaner-ai/)</td>
       <td>adres strony internetowej wpisany do skanowania; adres IP w postaci skrótu kryptograficznego (SHA-256) na potrzeby limitu liczby skanów</td>
-      <td>wykonanie technicznego skanu publicznie dostępnych plików wskazanej strony i wyświetlenie wyniku; ochrona przed nadużyciami (limit 5 skanów na minutę). Adres strony nie jest zapisywany w bazie ani logowany przez skaner; wynik skanu jest przechowywany w pamięci podręcznej Cloudflare przez maksymalnie 1 godzinę, a skrót IP przez maksymalnie 60 sekund. Do analityki (po wyrażeniu zgody) trafia wyłącznie końcówka domeny (np. „pl”) i wynik punktowy, nigdy pełny adres</td>
+      <td>wykonanie technicznego skanu publicznie dostępnych plików wskazanej strony i wyświetlenie wyniku; ochrona przed nadużyciami (limit 5 skanów na minutę). Adres skanowanej strony (sama domena, bez ścieżki), data skanu i wynik punktowy są zapisywane w rejestrze skanów w bazie Cloudflare D1, bez adresu IP i bez danych osoby wpisującej; zestawienie z rejestru trafia raz w tygodniu na skrzynkę Administratora. Wynik skanu jest przechowywany w pamięci podręcznej Cloudflare przez maksymalnie 1 godzinę, a skrót IP przez maksymalnie 60 sekund. Do analityki (po wyrażeniu zgody) trafia wyłącznie końcówka domeny (np. „pl”) i wynik punktowy, nigdy pełny adres</td>
       <td>art. 6 ust. 1 lit. f — prawnie uzasadniony interes (świadczenie bezpłatnego narzędzia, bezpieczeństwo)</td>
     </tr>
     <tr>
@@ -215,6 +215,7 @@ pliki cookies nie są zapisywane. Zasady przetwarzania danych przez Google:
   <li><strong>Cloudflare, Inc.</strong> — hosting i dostarczanie treści (CDN, DNS)</li>
   <li><strong>SeoHost.pl</strong> — hosting poczty e-mail i obsługa korespondencji</li>
   <li><strong>Web3Forms</strong> — techniczne przesyłanie wiadomości z formularzy serwisu</li>
+  <li><strong>Resend</strong> — techniczna wysyłka cotygodniowego zestawienia z rejestru skanów na skrzynkę Administratora</li>
   <li><strong>Google Ireland Limited</strong> — analityka Google Analytics 4 (wyłącznie po wyrażeniu zgody)</li>
   <li><strong>podmioty świadczące usługi księgowe i podatkowe</strong> — rozliczenia</li>
 </ul>
@@ -230,6 +231,7 @@ Komisję Europejską lub decyzji stwierdzającej odpowiedni stopień ochrony (m.
   <li><strong>Dane związane z umową</strong> — przez czas jej trwania, a następnie przez okres przedawnienia roszczeń</li>
   <li><strong>Dokumentacja księgowa</strong> — 5 lat od końca roku podatkowego</li>
   <li><strong>Logi serwera</strong> — zgodnie z polityką retencji dostawcy hostingu</li>
+  <li><strong>Rejestr skanów skanera gotowości AI</strong> — 12 miesięcy od daty skanu, potem wpisy są automatycznie usuwane</li>
   <li><strong>Cookies analityczne</strong> — do czasu wycofania zgody lub wygaśnięcia pliku</li>
 </ul>
 

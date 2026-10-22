@@ -655,7 +655,20 @@ async function hitRateLimit(cache, request) {
   return false;
 }
 
-export async function onRequestPost({ request }) {
+// GL-238: rejestr skanów w Cloudflare D1 (binding DB). Zapisujemy wyłącznie origin strony,
+// czas i wynik. Bez IP i bez danych osoby. Brak bindingu = cichy brak zapisu.
+function logScan(env, waitUntil, origin, status, score) {
+  if (!env || !env.DB) return;
+  try {
+    const task = env.DB.prepare(
+      'INSERT INTO scans (url, scanned_at, status, score) VALUES (?1, ?2, ?3, ?4)'
+    ).bind(origin, new Date().toISOString(), status, Number.isFinite(score) ? score : null)
+      .run().catch(() => { /* Awaria bazy nie blokuje skanu. */ });
+    if (typeof waitUntil === 'function') waitUntil(task);
+  } catch (_) { /* Awaria bazy nie blokuje skanu. */ }
+}
+
+export async function onRequestPost({ request, env, waitUntil }) {
   const cache = typeof caches !== 'undefined' ? caches.default : null;
   try {
     // Rate limit obowiązuje również odpowiedzi zwracane z cache wyników.
@@ -678,7 +691,10 @@ export async function onRequestPost({ request }) {
         const hit = await cache.match(cacheKey);
         if (hit) {
           const cached = await hit.json();
-          if (cached?.ok && Array.isArray(cached.checks)) return jsonResponse(cached);
+          if (cached?.ok && Array.isArray(cached.checks)) {
+            logScan(env, waitUntil, origin, 'cached', cached.score);
+            return jsonResponse(cached);
+          }
         }
       } catch (_) { /* Awaria cache nie uniemożliwia skanowania. */ }
     }
@@ -688,6 +704,7 @@ export async function onRequestPost({ request }) {
     catch (error) {
       // 422 = błąd pobrania strony; 500 = nieoczekiwany błąd naszej logiki.
       const unreachable = error instanceof ScanIssue;
+      logScan(env, waitUntil, origin, unreachable ? 'unreachable' : 'error', null);
       return jsonResponse({ ok: false, error: unreachable ? 'unreachable' : 'server_error' }, unreachable ? 422 : 500);
     }
 
@@ -700,6 +717,7 @@ export async function onRequestPost({ request }) {
         }));
       } catch (_) { /* Nie blokujemy działającego skanu przez cache. */ }
     }
+    logScan(env, waitUntil, origin, 'ok', report.score);
     return jsonResponse(report);
   } catch (_) {
     return jsonResponse({ ok: false, error: 'server_error' }, 500);
