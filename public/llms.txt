@@ -31,7 +31,7 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 ## Przewodniki GEO
 
 - [Metodologia pomiaru widoczności w AI](https://geolead.pl/metodologia/): Protokół pomiaru GeoLead: stały zestaw promptów zakupowych, pomiar wyjściowy, sesje bez pamięci, pomiar co 2 tygodnie; definicje wzmianki, cytowania i rekomendacji; Mention Rate; czego GeoLead nie obiecuje.
-- [Badanie: Gotowość polskich firm na wyszukiwanie w AI (2026)](https://geolead.pl/badania/gotowosc-ai-2026/): Wyniki 8 testów technicznych dla stron 120 polskich firm z 4 branż, pomiar 17.10.2026. 36% ze 117 stron bez opisu firmy (schema.org Organization/LocalBusiness) w JSON-LD, u producentów przemysłowych 69%; żadna strona nie blokowała botów AI w robots.txt. Badanie mierzy gotowość techniczną, nie rekomendacje modeli AI. Dane i raport (EN): https://doi.org/10.5281/zenodo.23439924
+- [Badanie: Gotowość polskich firm na wyszukiwanie w AI (2026)](https://geolead.pl/badania/gotowosc-ai-2026/): Wyniki 8 testów technicznych dla stron 120 polskich firm z 4 branż, pomiar 17.10.2026. 36% ze 117 stron bez opisu firmy (schema.org Organization/LocalBusiness) w JSON-LD, u producentów przemysłowych 69%; żadna strona nie blokowała botów AI w robots.txt. Badanie mierzy gotowość techniczną, nie rekomendacje modeli AI. Dane i raport (EN): https://doi.org/10.5281/zenodo.23439924. Komunikat prasowy (EN, openPR, 19.10.2026): https://www.openpr.com/news/4665038.html
 - [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
 - [Ile kosztuje GEO](https://geolead.pl/blog/ile-kosztuje-geo/): Cennik abonamentu GEO (1 200–15 000 zł netto miesięcznie) w matrycy branża × zasięg, koszt audytu, rozliczanie narzędzi, rachunek opłacalności.
 - [Audyt widoczności w AI](https://geolead.pl/blog/audyt-widocznosci-w-ai/): Audyt Start za 990 zł netto: 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna, raport z 5 priorytetami w 5 dni roboczych; zaliczany na poczet abonamentu.
@@ -54,12 +54,12 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 ## Słownik pojęć GEO
 
 - [Słownik GEO](https://geolead.pl/slownik/): Indeks pojęć Generative Engine Optimization w języku decydentów B2B.
-- [LLM — Large Language Model](https://geolead.pl/slownik/llm/): Duży model językowy rekomendujący konkretną firmę z nazwy zamiast listy linków.
+- [LLM — Large Language Model](https://geolead.pl/slownik/llm/): Duży model językowy (ChatGPT, Claude, Gemini); dwa źródła wiedzy: dane treningowe i wyszukiwanie w czasie odpowiedzi.
 - [RAG — Retrieval-Augmented Generation](https://geolead.pl/slownik/rag/): Mechanizm wzbogacania odpowiedzi modeli AI o zewnętrzną, aktualną wiedzę.
-- [Entity Salience](https://geolead.pl/slownik/entity-salience/): Miara siły marki jako rozpoznawalnej encji w modelach językowych.
-- [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Strukturalna baza relacji między encjami, używana do weryfikacji faktów.
+- [Entity Salience](https://geolead.pl/slownik/entity-salience/): Miara tego, jak centralne miejsce zajmuje encja (np. firma) w tekście; w GEO pojęcie pomocnicze przy redakcji treści, nie wskaźnik widoczności.
+- [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Baza faktów o encjach i relacjach (Google Knowledge Graph, Wikidata); skąd bierze dane o firmach i jak to sprawdzić.
 - [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Generowanie przez model nieprawdziwych informacji z wysokim poziomem pewności.
-- [Vector Embedding](https://geolead.pl/slownik/vector-embedding/): Reprezentacja treści w wielowymiarowej przestrzeni semantycznej.
+- [Vector Embedding](https://geolead.pl/slownik/vector-embedding/): Zapis znaczenia tekstu jako wektora; podstawa wyszukiwania semantycznego w systemach RAG i wniosków dla pisania treści.
 
 ## Blog
 

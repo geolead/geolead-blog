@@ -82,5 +82,7 @@ Wybierając wykonawcę dla kliniki, sprawdź, czy [agencja GEO](/blog/agencja-ge
 <li><a href="/slownik/halucynacje-ai/">Halucynacje AI — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
 </ul>
 </div>

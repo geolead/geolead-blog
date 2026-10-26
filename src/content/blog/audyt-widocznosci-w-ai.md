@@ -119,6 +119,8 @@ Tak. Raport zawiera tabelę wszystkich 80 odpowiedzi z datami pomiaru i cytowany
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO — czym się różnią</a></li>
+<li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
+<li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
 </ul>
 </div>
 

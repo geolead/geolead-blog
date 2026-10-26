@@ -151,6 +151,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO — czym się różnią</a></li>
 <li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
+<li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
 </ul>
 </div>
 

@@ -129,7 +129,7 @@ To pytanie kontrolne. Rzetelna odpowiedź brzmi: nie. Odpowiedzi modeli zmieniaj
 
 ### Ile kosztuje współpraca z agencją GEO?
 
-Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. Audyt Start kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
+Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. [Audyt Start](/blog/audyt-widocznosci-w-ai/) kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
 
 ### Jak sprawdzić, czy agencja GEO jest specjalistą?
 

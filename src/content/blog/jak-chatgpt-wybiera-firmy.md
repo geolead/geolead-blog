@@ -111,5 +111,7 @@ Jeśli chcesz, żeby te mechanizmy pracowały dla Twojej firmy, a nie dla konkur
 <li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 </ul>
 </div>
