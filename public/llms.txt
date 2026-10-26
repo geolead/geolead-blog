@@ -32,6 +32,7 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 
 - [Metodologia pomiaru widoczności w AI](https://geolead.pl/metodologia/): Protokół pomiaru GeoLead: stały zestaw promptów zakupowych, pomiar wyjściowy, sesje bez pamięci, pomiar co 2 tygodnie; definicje wzmianki, cytowania i rekomendacji; Mention Rate; czego GeoLead nie obiecuje.
 - [Badanie: Gotowość polskich firm na wyszukiwanie w AI (2026)](https://geolead.pl/badania/gotowosc-ai-2026/): Wyniki 8 testów technicznych dla stron 120 polskich firm z 4 branż, pomiar 17.10.2026. 36% ze 117 stron bez opisu firmy (schema.org Organization/LocalBusiness) w JSON-LD, u producentów przemysłowych 69%; żadna strona nie blokowała botów AI w robots.txt. Badanie mierzy gotowość techniczną, nie rekomendacje modeli AI. Dane i raport (EN): https://doi.org/10.5281/zenodo.23439924. Komunikat prasowy (EN, openPR, 19.10.2026): https://www.openpr.com/news/4665038.html
+- [Pomiar widoczności w AI na własnej marce](https://geolead.pl/blog/pomiar-widocznosci-geolead-w-ai/): Wyniki pomiarów GeoLead z października 2026 (ręcznie: Perplexity, Google AI Mode, ChatGPT; automatycznie: 30 pytań, 4 systemy, 166 odpowiedzi, 14% wzmianek), błędy pomiaru i wprowadzone zmiany.
 - [Agencja GEO w Polsce — czym jest i jak wybrać właściwą](https://geolead.pl/blog/agencja-geo-polska/): Definicja agencji GEO, różnice wobec agencji SEO, kryteria wyboru, branże o największym potencjale.
 - [Ile kosztuje GEO](https://geolead.pl/blog/ile-kosztuje-geo/): Cennik abonamentu GEO (1 200–15 000 zł netto miesięcznie) w matrycy branża × zasięg, koszt audytu, rozliczanie narzędzi, rachunek opłacalności.
 - [Audyt widoczności w AI](https://geolead.pl/blog/audyt-widocznosci-w-ai/): Audyt Start za 990 zł netto: 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna, raport z 5 priorytetami w 5 dni roboczych; zaliczany na poczet abonamentu.
@@ -44,6 +45,7 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 
 - [GEO dla klinik medycyny estetycznej](https://geolead.pl/blog/geo-dla-klinik-medycyny-estetycznej/): Widoczność placówek medycznych w rekomendacjach AI.
 - [GEO dla kancelarii prawnych](https://geolead.pl/blog/geo-dla-kancelarii-prawnych/): Pozycjonowanie kancelarii w odpowiedziach modeli językowych.
+- [GEO dla producentów przemysłowych B2B](https://geolead.pl/blog/geo-dla-producentow-przemyslowych/): Jak producent B2B może być wskazywany przez asystentów AI jako dostawca; dane z badania 2026 (69% stron producentów bez opisu firmy w JSON-LD), plan w 7 krokach.
 - [GEO dla firm SaaS](https://geolead.pl/blog/geo-dla-saas/): Widoczność produktów SaaS w porównaniach generowanych przez AI.
 
 ## Narzędzia
