@@ -55,3 +55,38 @@ W wyszukiwaniu semantycznym dokładne słowa mają mniejsze znaczenie niż sens.
 Od listy pytań, które zadają Twoi klienci. Przygotuje ją bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Potem sprawdź, czy na każde pytanie na Twojej stronie jest akapit z jasną odpowiedzią. To, które fragmenty i źródła faktycznie trafiają do odpowiedzi AI, pokazuje [Audyt Start](/blog/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [Czym jest GEO](/blog/czym-jest-geo/).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://geolead.pl/slownik/vector-embedding/#faq",
+  "inLanguage": "pl-PL",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy muszę sam liczyć embeddingi swojej strony?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Robią to systemy wyszukiwania. Twoim zadaniem jest pisanie fragmentów, które dobrze odpowiadają na konkretne pytania klientów."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy embeddingi zastąpiły słowa kluczowe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "W wyszukiwaniu semantycznym dokładne słowa mają mniejsze znaczenie niż sens. Słowa klientów dalej się liczą, bo pomagają trafić w znaczenie pytania. Upychanie fraz nie pomaga."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Od czego zacząć?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Od listy pytań, które zadają Twoi klienci. Przygotuje ją bezpłatnie Generator pytań zakupowych. Potem sprawdź, czy na każde pytanie na Twojej stronie jest akapit z jasną odpowiedzią. To, które fragmenty i źródła faktycznie trafiają do odpowiedzi AI, pokazuje Audyt Start."
+      }
+    }
+  ]
+}
+</script>

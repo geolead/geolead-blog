@@ -63,3 +63,38 @@ Nie bezpośrednio. Modele nie udostępniają takiego wskaźnika. Można natomias
 Od strony głównej i strony najważniejszej usługi: nazwa firmy, usługa, miasto i grupa klientów w pierwszym akapicie oraz kompletny opis firmy w JSON-LD. Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/), a to, co odpowiadają modele, pokazuje [Audyt Start](/blog/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/) i [Jak ChatGPT decyduje, którą firmę polecić](/blog/jak-chatgpt-wybiera-firmy/).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://geolead.pl/slownik/entity-salience/#faq",
+  "inLanguage": "pl-PL",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy Entity Salience to to samo co Domain Authority?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Domain Authority to wskaźnik narzędzi SEO oparty na linkach do domeny. Entity Salience dotyczy tego, jak wyraźnie tekst mówi o danej encji. To inne zjawiska i nie należy ich przeliczać jedno na drugie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy da się zmierzyć Entity Salience marki w ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie bezpośrednio. Modele nie udostępniają takiego wskaźnika. Można natomiast mierzyć skutek: jak często i w jakim kontekście marka pojawia się w odpowiedziach na ustalony zestaw pytań."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Od czego zacząć?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Od strony głównej i strony najważniejszej usługi: nazwa firmy, usługa, miasto i grupa klientów w pierwszym akapicie oraz kompletny opis firmy w JSON-LD. Stan techniczny strony sprawdzisz bezpłatnie Skanerem gotowości AI, a to, co odpowiadają modele, pokazuje Audyt Start."
+      }
+    }
+  ]
+}
+</script>

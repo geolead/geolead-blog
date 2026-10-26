@@ -59,3 +59,38 @@ Potrzebuje przede wszystkim spójnych danych. Dla firmy lokalnej najważniejsze 
 W [Audycie Start](/blog/audyt-widocznosci-w-ai/) kontrolujemy dane strukturalne i spójność danych firmy w kluczowych profilach. Stan techniczny strony sprawdzisz też bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/).
 
 Powiązane pojęcia: [Entity Salience](/slownik/entity-salience/), [RAG](/slownik/rag/). Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://geolead.pl/slownik/knowledge-graph/#faq",
+  "inLanguage": "pl-PL",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy można „dodać” firmę do Google Knowledge Graph?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie ma formularza zgłoszeniowego. Google buduje graf z dostępnych źródeł. Można natomiast zadbać o źródła: dane strukturalne, zweryfikowaną wizytówkę Google, spójne profile i niezależne wzmianki. Gdy panel wiedzy już się pojawi, właściciel może go zweryfikować i zgłaszać poprawki."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy mała firma potrzebuje grafu wiedzy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Potrzebuje przede wszystkim spójnych danych. Dla firmy lokalnej najważniejsze są wizytówka Google, dane w rejestrze i opis firmy w JSON-LD. Wpis w Wikipedii nie jest konieczny i dla większości firm nie spełni zasad encyklopedyczności."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak to sprawdzamy w GeoLead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "W Audycie Start kontrolujemy dane strukturalne i spójność danych firmy w kluczowych profilach. Stan techniczny strony sprawdzisz też bezpłatnie Skanerem gotowości AI."
+      }
+    }
+  ]
+}
+</script>

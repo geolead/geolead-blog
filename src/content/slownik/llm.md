@@ -56,3 +56,38 @@ Treści samej odpowiedzi nie da się kupić. Jeśli asystent wyświetla reklamy,
 Samodzielnie: [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/) przygotuje listę pytań dla Twojej branży. Wklej je do kilku asystentów w czacie bez historii. Z dowodami i analizą źródeł: [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/), 20 pytań w 4 systemach AI.
 
 Szerszy kontekst: [Jak ChatGPT decyduje, którą firmę polecić](/blog/jak-chatgpt-wybiera-firmy/) i [Czym jest GEO](/blog/czym-jest-geo/).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://geolead.pl/slownik/llm/#faq",
+  "inLanguage": "pl-PL",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy ChatGPT, Claude i Gemini odpowiadają tak samo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Różnią się danymi treningowymi, sposobem wyszukiwania i doborem źródeł. Firma może być polecana w jednym systemie i nieobecna w drugim, dlatego mierzymy każdy osobno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy można zapłacić za miejsce w odpowiedzi LLM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treści samej odpowiedzi nie da się kupić. Jeśli asystent wyświetla reklamy, są one oznaczone i oddzielone od odpowiedzi. Wpływ na to, co model mówi o firmie, daje praca nad źródłami, z których korzysta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak sprawdzić, co LLM mówi o mojej firmie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samodzielnie: Generator pytań zakupowych przygotuje listę pytań dla Twojej branży. Wklej je do kilku asystentów w czacie bez historii. Z dowodami i analizą źródeł: Audyt Start za 990 zł netto, 20 pytań w 4 systemach AI."
+      }
+    }
+  ]
+}
+</script>
