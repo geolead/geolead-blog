@@ -1463,10 +1463,9 @@ function startScan(){
   const urlInput=document.getElementById('scanUrl');
   const url=urlInput.value.trim();
   // GL-226: demo zastąpione prawdziwym skanerem — przekierowanie z domeną.
-  if(url){try{gtag('event','scanner_redirect');}catch(e){}location.href='/narzedzia/skaner-ai/?url='+encodeURIComponent(url);return;}
+  if(url){try{gtag('event','cta_click',{target:'home_scanner_form'});}catch(e){}location.href='/narzedzia/skaner-ai/?url='+encodeURIComponent(url);return;}
   if(!url){urlInput.style.borderColor='rgba(255,80,80,0.6)';urlInput.style.animation='shake .35s ease';setTimeout(()=>{urlInput.style.animation='';urlInput.style.borderColor='rgba(0,212,255,0.22)';},400);return;}
   scanRunning=true;
-  try{gtag('event','scanner_start');}catch(e){}
   const t=T[lang];const logLines=t.scan_log||[];
   let domain=url.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
   document.getElementById('scanInputRow').style.display='none';

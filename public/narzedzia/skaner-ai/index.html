@@ -30,7 +30,12 @@
       if (glFlag) localStorage.setItem('gl_internal', glFlag[1]);
       glInternal = localStorage.getItem('gl_internal') === '1';
     } catch (e) {}
-    gtag('config', 'G-4J1CCWLDHP', glInternal ? { traffic_type: 'internal' } : {});
+    // GL-244: page_location bez parametru ?url= — skanowana domena nie trafia do GA4.
+  var glLoc = location.href;
+  try { var glU = new URL(location.href); glU.searchParams.delete('url'); glLoc = glU.toString(); } catch (e) {}
+  var glCfg = { page_location: glLoc };
+  if (glInternal) glCfg.traffic_type = 'internal';
+  gtag('config', 'G-4J1CCWLDHP', glCfg);
   }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
@@ -538,7 +543,11 @@ try {
 const chosen = new URLSearchParams(location.search).get('lang');
 if (LANGS.includes(chosen)) lang = chosen;
 
+// GL-244: skąd wystartował skan — formularz na stronie skanera, formularz na stronie głównej lub link z ?url=.
+let scanEntry = 'form';   // źródło następnego skanu
+let activeEntry = 'form'; // źródło skanu w toku (scan_start/result/error)
 function track(event, params = {}) {
+  if (/^scan_/.test(event)) params = Object.assign({ scan_entry: activeEntry }, params);
   // Nigdy nie wysyłamy do GA4 pełnego skanowanego adresu.
   try { if (typeof window.gtag === 'function') window.gtag('event', event, params); }
   catch (_) {}
@@ -901,6 +910,8 @@ async function scan(event) {
   $('results').hidden = true;
   report = null;
   startLoading();
+  activeEntry = scanEntry;
+  scanEntry = 'form';
   // W analityce wysyłamy wyłącznie końcowy segment domeny (np. pl), nigdy URL.
   track('scan_start', { domain_tld: new URL(normalized).hostname.split('.').pop() });
   try {
@@ -940,6 +951,9 @@ translate();
 try {
   const preset = new URLSearchParams(location.search).get('url');
   if (preset && preset.length <= 2048) {
+    let fromHome = false;
+    try { fromHome = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (_) {}
+    scanEntry = fromHome ? 'home_form' : 'link';
     $('scanUrl').value = preset;
     history.replaceState(null, '', location.pathname);
     $('scanForm').requestSubmit();
