@@ -33,7 +33,16 @@ const clientBoot = 'window.__GL_LANG=' + JSON.stringify(lang) + ';window.__GL_T=
   });
   try { if (localStorage.getItem('gl_cookie') === 'accepted') { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
   gtag('js', new Date());
-  gtag('config', 'G-4J1CCWLDHP');
+  // GA tylko na domenie produkcyjnej; ?gl_internal=1 / ?gl_internal=0 oznacza przeglądarkę jako ruch wewnętrzny (GA4 traffic_type)
+  if (/^(www\.)?geolead\.pl$/.test(location.hostname)) {
+    var glInternal = false;
+    try {
+      var glFlag = location.search.match(/[?&]gl_internal=([01])(?:&|$)/);
+      if (glFlag) localStorage.setItem('gl_internal', glFlag[1]);
+      glInternal = localStorage.getItem('gl_internal') === '1';
+    } catch (e) {}
+    gtag('config', 'G-4J1CCWLDHP', glInternal ? { traffic_type: 'internal' } : {});
+  }
 </script>
 <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4J1CCWLDHP"></script>
 <meta charset="UTF-8">
