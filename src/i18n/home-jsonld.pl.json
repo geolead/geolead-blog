@@ -8,11 +8,18 @@
       ],
       "@id": "https://geolead.pl/#organization",
       "name": "GeoLead",
+      "legalName": "geolead.pl Paweł Zagajewski",
+      "taxID": "5222300455",
+      "vatID": "PL5222300455",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "REGON",
+        "value": "015598980"
+      },
       "alternateName": [
         "GeoLead Agencja GEO",
         "GeoLead.pl"
       ],
-      "legalName": "geolead.pl Paweł Zagajewski",
       "url": "https://geolead.pl/",
       "slogan": "Agencja GEO - Pozycjonowanie w AI",
       "logo": {
@@ -28,6 +35,8 @@
       "priceRange": "1200-15000 PLN",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "ul. Leszka Czarnego 13",
+        "postalCode": "02-496",
         "addressLocality": "Warszawa",
         "addressRegion": "mazowieckie",
         "addressCountry": "PL"
