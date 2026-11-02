@@ -57,7 +57,7 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 
 - [Słownik GEO](https://geolead.pl/slownik/): Indeks pojęć Generative Engine Optimization w języku decydentów B2B.
 - [LLM — Large Language Model](https://geolead.pl/slownik/llm/): Duży model językowy (ChatGPT, Claude, Gemini); dwa źródła wiedzy: dane treningowe i wyszukiwanie w czasie odpowiedzi.
-- [RAG — Retrieval-Augmented Generation](https://geolead.pl/slownik/rag/): Mechanizm wzbogacania odpowiedzi modeli AI o zewnętrzną, aktualną wiedzę.
+- [RAG — Retrieval-Augmented Generation](https://geolead.pl/slownik/rag/): Co to jest RAG, jak działa w 4 krokach (wyszukiwanie, uzupełnienie, generowanie), model z RAG vs bez RAG i jak przygotować treści firmy.
 - [Entity Salience](https://geolead.pl/slownik/entity-salience/): Miara tego, jak centralne miejsce zajmuje encja (np. firma) w tekście; w GEO pojęcie pomocnicze przy redakcji treści, nie wskaźnik widoczności.
 - [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Baza faktów o encjach i relacjach (Google Knowledge Graph, Wikidata); skąd bierze dane o firmach i jak to sprawdzić.
 - [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Pewnie brzmiące, nieprawdziwe odpowiedzi modeli o firmach (ceny, adresy, oferta, właściciele); typy, przyczyny i 6 sposobów ograniczenia ryzyka.
