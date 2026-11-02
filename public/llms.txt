@@ -60,7 +60,7 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 - [RAG — Retrieval-Augmented Generation](https://geolead.pl/slownik/rag/): Mechanizm wzbogacania odpowiedzi modeli AI o zewnętrzną, aktualną wiedzę.
 - [Entity Salience](https://geolead.pl/slownik/entity-salience/): Miara tego, jak centralne miejsce zajmuje encja (np. firma) w tekście; w GEO pojęcie pomocnicze przy redakcji treści, nie wskaźnik widoczności.
 - [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Baza faktów o encjach i relacjach (Google Knowledge Graph, Wikidata); skąd bierze dane o firmach i jak to sprawdzić.
-- [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Generowanie przez model nieprawdziwych informacji z wysokim poziomem pewności.
+- [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Pewnie brzmiące, nieprawdziwe odpowiedzi modeli o firmach (ceny, adresy, oferta, właściciele); typy, przyczyny i 6 sposobów ograniczenia ryzyka.
 - [Vector Embedding](https://geolead.pl/slownik/vector-embedding/): Zapis znaczenia tekstu jako wektora; podstawa wyszukiwania semantycznego w systemach RAG i wniosków dla pisania treści.
 
 ## Blog

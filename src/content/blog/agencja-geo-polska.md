@@ -1,7 +1,7 @@
 ---
 title: "Agencja GEO w Polsce: jak wybrać? 7 pytań przed umową [2026]"
-seoTitle: "Agencja GEO w Polsce: 7 pytań przed umową | GeoLead"
-description: "Jak wybrać agencję GEO w Polsce? 7 pytań o pomiar, źródła AI, rozliczenia i gwarancje, które oddzielą specjalistę od agencji SEO z nową nazwą."
+seoTitle: "Agencja GEO w Polsce: jak wybrać, ceny od 1 200 zł | GeoLead"
+description: "Szukasz agencji GEO w Polsce? 7 pytań, które oddzielą specjalistę od agencji SEO z nową nazwą. Abonament od 1 200 zł netto, Audyt Start 990 zł."
 pubDate: 2026-06-22
 updatedDate: 2026-10-11
 author: "GeoLead"
