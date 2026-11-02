@@ -100,7 +100,7 @@ Stała lista 20-30 pytań, które zadają Twoi klienci, sprawdzana w kilku syste
 
 Kroki 1-5 dotyczą Twojej strony i zależą tylko od Ciebie. Efekt w systemach AI z wyszukiwaniem zwykle pojawia się szybciej niż w wiedzy samego modelu, która zmienia się z nowymi wersjami (patrz [LLM](/slownik/llm/)). Krok 6 trwa dłużej, bo zależy od innych stron.
 
-Nikt uczciwy nie zagwarantuje miejsca w odpowiedzi konkretnego modelu. Można natomiast usunąć przeszkody, które dziś sprawiają, że producent w ogóle nie ma szans trafić do odpowiedzi, i mierzyć, jak zmienia się jego obecność.
+Nikt uczciwy nie zagwarantuje miejsca w odpowiedzi konkretnego modelu. Można natomiast usunąć przeszkody, które dziś sprawiają, że producent w ogóle nie ma szans trafić do odpowiedzi, i mierzyć, jak zmienia się jego obecność. Jeśli oddajesz tę pracę na zewnątrz, [sprawdź wykonawcę przed podpisaniem umowy](/blog/agencja-geo-polska/).
 
 ## FAQ: GEO dla producentów
 

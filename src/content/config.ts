@@ -5,6 +5,7 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(), // GL-245: <title> i og:title; bez tego pola = title (H1)
     description: z.string(), // meta description, 150–160 znaków
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),

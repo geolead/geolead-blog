@@ -123,6 +123,8 @@ a:hover { color: var(--f); }
 .prose-body em { color: var(--text-hi); }
 .prose-body a { color: var(--c); border-bottom: 1px solid rgba(0, 212, 255, 0.35); }
 .prose-body a:hover { color: var(--f); border-bottom-color: var(--f); }
+/* GL-248: przycisk CTA w treści artykułu zachowuje ciemny tekst na gradiencie */
+.prose-body a.btn-nav, .prose-body a.btn-nav:hover { color: var(--bg); border-bottom: 0; }
 .prose-body ul, .prose-body ol { padding-left: 1.4rem; }
 .prose-body li { margin-top: 0.45rem; }
 .prose-body li::marker { color: var(--f); }

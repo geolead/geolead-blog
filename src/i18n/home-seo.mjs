@@ -11,31 +11,31 @@ export const OG_LOCALE = { pl: 'pl_PL', en: 'en_GB', de: 'de_DE', fr: 'fr_FR' };
 export const META = {
   pl: {
     title: 'Agencja GEO w Polsce — pozycjonowanie w ChatGPT | GeoLead',
-    description: 'GeoLead — agencja GEO dla B2B. Zwiększamy widoczność firm w ChatGPT, Perplexity, Claude, Gemini i Google AI Overviews. Bezpłatny audyt widoczności AI.',
+    description: 'GeoLead — agencja GEO dla B2B. Zwiększamy widoczność firm w ChatGPT, Perplexity, Claude, Gemini i Google AI Overviews. Bezpłatny skaner gotowości AI.',
     ogTitle: 'GeoLead – Bądź pierwszym wyborem, gdy klient pyta AI',
     ogDescription: 'Agencja GEO - Pozycjonowanie w AI. Zwiększamy widoczność firm w ChatGPT, Perplexity, Claude i Google AI — tam, gdzie klienci pytają AI o rekomendacje.',
-    twDescription: 'Zwiększ widoczność swojej firmy w ChatGPT, Perplexity, Claude i Google AI. Sprawdź bezpłatny audyt AI Visibility.',
+    twDescription: 'Zwiększ widoczność swojej firmy w ChatGPT, Perplexity, Claude i Google AI. Sprawdź stronę bezpłatnym skanerem gotowości AI.',
   },
   en: {
     title: 'GEO Agency — Get Recommended by ChatGPT and AI Search | GeoLead',
-    description: 'GeoLead is a B2B GEO agency. We make ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews recommend your company by name. Free AI visibility audit.',
+    description: 'GeoLead is a B2B GEO agency. We make ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews recommend your company by name. Free AI Readiness Scanner.',
     ogTitle: 'GeoLead – Be the first choice when clients ask AI',
     ogDescription: 'GEO agency (Generative Engine Optimization). We increase your company’s visibility in ChatGPT, Perplexity, Claude and Google AI — where clients ask AI for recommendations.',
-    twDescription: 'Increase your company’s visibility in ChatGPT, Perplexity, Claude and Google AI. Get a free AI visibility audit.',
+    twDescription: 'Increase your company’s visibility in ChatGPT, Perplexity, Claude and Google AI. Check your website with the free AI Readiness Scanner.',
   },
   de: {
     title: 'GEO-Agentur — Sichtbarkeit in ChatGPT und KI-Suche | GeoLead',
-    description: 'GEO-Agentur für B2B: Wir sorgen dafür, dass ChatGPT, Perplexity, Claude, Gemini und Google AI Overviews Ihr Unternehmen empfehlen. Kostenloser KI-Sichtbarkeitscheck.',
+    description: 'GEO-Agentur für B2B: Wir sorgen dafür, dass ChatGPT, Perplexity, Claude, Gemini und Google AI Overviews Ihr Unternehmen empfehlen. Kostenloser KI-Readiness-Scanner.',
     ogTitle: 'GeoLead – Seien Sie die erste Wahl, wenn Kunden KI fragen',
     ogDescription: 'GEO-Agentur (Generative Engine Optimization). Wir steigern die Sichtbarkeit Ihres Unternehmens in ChatGPT, Perplexity, Claude und Google AI — dort, wo Kunden die KI nach Empfehlungen fragen.',
-    twDescription: 'Steigern Sie die Sichtbarkeit Ihres Unternehmens in ChatGPT, Perplexity, Claude und Google AI. Kostenloser KI-Sichtbarkeitscheck.',
+    twDescription: 'Steigern Sie die Sichtbarkeit Ihres Unternehmens in ChatGPT, Perplexity, Claude und Google AI. Prüfen Sie Ihre Website mit dem kostenlosen KI-Readiness-Scanner.',
   },
   fr: {
     title: 'Agence GEO — Visibilité dans ChatGPT et la recherche IA | GeoLead',
-    description: 'Agence GEO pour le B2B : nous faisons en sorte que ChatGPT, Perplexity, Claude, Gemini et Google AI Overviews recommandent votre entreprise. Audit de visibilité IA gratuit.',
+    description: 'Agence GEO pour le B2B : nous faisons en sorte que ChatGPT, Perplexity, Claude, Gemini et Google AI Overviews recommandent votre entreprise. Scanner de préparation IA gratuit.',
     ogTitle: 'GeoLead – Soyez le premier choix quand vos clients interrogent l’IA',
     ogDescription: 'Agence GEO (Generative Engine Optimization). Nous augmentons la visibilité de votre entreprise dans ChatGPT, Perplexity, Claude et Google AI — là où vos clients demandent des recommandations à l’IA.',
-    twDescription: 'Augmentez la visibilité de votre entreprise dans ChatGPT, Perplexity, Claude et Google AI. Audit de visibilité IA gratuit.',
+    twDescription: 'Augmentez la visibilité de votre entreprise dans ChatGPT, Perplexity, Claude et Google AI. Analysez votre site avec le Scanner de préparation IA gratuit.',
   },
 };
 

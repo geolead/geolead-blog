@@ -1,6 +1,7 @@
 ---
 title: "Agencja GEO w Polsce: jak wybrać? 7 pytań przed umową [2026]"
-description: "Jak wybrać agencję GEO w Polsce? 7 pytań, które oddzielą specjalistę od agencji SEO z nową nazwą: pomiar, źródła AI, ceny, terminy. Bezpłatny audyt."
+seoTitle: "Agencja GEO w Polsce: 7 pytań przed umową | GeoLead"
+description: "Jak wybrać agencję GEO w Polsce? 7 pytań o pomiar, źródła AI, rozliczenia i gwarancje, które oddzielą specjalistę od agencji SEO z nową nazwą."
 pubDate: 2026-06-22
 updatedDate: 2026-10-11
 author: "GeoLead"
@@ -28,6 +29,12 @@ relatedTerms:
 Firmy, które jeszcze dwa lata temu walczyły wyłącznie o pozycję w Google, dziś tracą leady na rzecz konkurentów polecanych przez ChatGPT. Mechanizm jest prosty: klient zamiast wpisywać frazę w wyszukiwarce, zadaje pytanie modelowi AI — i dostaje jedną, konkretną rekomendację. Nie listę dziesięciu linków.
 
 Agencja GEO to podmiot, który sprawia, że tą rekomendacją jest Twoja firma.
+
+<div class="article-cta glass" style="margin:2rem 0 2.5rem">
+<p><strong>Najpierw sprawdź, kogo AI poleca w Twojej branży</strong></p>
+<p>Audyt Start: 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i cytowanych źródeł. Raport w 5 dni roboczych, 990 zł netto.</p>
+<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zobacz zakres audytu</a>
+</div>
 
 ## Czym jest agencja GEO?
 
@@ -149,7 +156,12 @@ Częściowo. Optymalizacja pod LLM-y wymaga wdrożenia odpowiednich danych struk
 
 ---
 
-Chcesz sprawdzić, jak modele AI postrzegają Twoją firmę dziś? [Bezpłatny audyt widoczności AI](https://geolead.pl/#contact) — odpowiedź w 24 godziny robocze.
+<div class="article-cta glass">
+<p><strong>Zadaj te 7 pytań także nam</strong></p>
+<p>Audyt Start pokaże, czy ChatGPT, Gemini, Perplexity i Google AI Overviews polecają Twoją firmę, czy konkurencję. 990 zł netto, raport w 5 dni roboczych. Jeśli w ciągu 30 dni podpiszesz umowę abonamentową, całą kwotę odliczamy od pierwszej faktury.</p>
+<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<p style="margin:1rem 0 0;font-size:0.9rem">Wolisz najpierw porozmawiać? <a href="https://geolead.pl/#contact">Bezpłatna konsultacja</a>: odpowiedź w 24 godziny robocze.</p>
+</div>
 
 <script type="application/ld+json">
 {

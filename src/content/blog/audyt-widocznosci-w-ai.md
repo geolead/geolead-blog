@@ -83,6 +83,8 @@ Każdy prompt sprawdzamy w **ChatGPT, Gemini, Perplexity i Google AI Overviews**
 - **Efektu samego pliku llms.txt.** Sprawdzamy, czy istnieje, ale nie sprzedajemy go jako skrótu do rekomendacji AI.
 - **Liczby klientów z AI.** Mierzymy obecność marki w odpowiedziach, nie to, kto po nich zadzwonił.
 
+Jeśli inna oferta obiecuje więcej, sprawdź ją [siedmioma pytaniami do agencji GEO](/blog/agencja-geo-polska/).
+
 ## FAQ — audyt widoczności w AI
 
 ### Ile kosztuje audyt widoczności w AI?

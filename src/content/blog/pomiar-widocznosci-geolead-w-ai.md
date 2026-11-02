@@ -88,7 +88,7 @@ Efekt tych zmian zmierzymy na tym samym zestawie pytań i dopiszemy go do tego a
 3. Zapisuj pełną odpowiedź, listę źródeł i datę. Odróżniaj wzmiankę od rekomendacji.
 4. Powtarzaj pomiar na tym samym zestawie pytań. Zmieniaj pytania tylko świadomie i z adnotacją.
 
-Pełny protokół jest w [metodologii](/metodologia/). Jeśli wolisz gotowy wynik z analizą źródeł i konkurentów, to właśnie robi [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Pełny protokół jest w [metodologii](/metodologia/). Tego samego poziomu dowodów wymagaj przy [wyborze agencji GEO w Polsce](/blog/agencja-geo-polska/). Jeśli wolisz gotowy wynik z analizą źródeł i konkurentów, to właśnie robi [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Zmierz, czy AI poleca Twoją firmę</h3>

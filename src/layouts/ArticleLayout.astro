@@ -6,6 +6,7 @@ import type { Crumb } from '../components/Breadcrumbs.astro';
 
 export interface Props {
   title: string;
+  seoTitle?: string;
   description: string;
   pubDate: Date;
   updatedDate?: Date;
@@ -19,6 +20,7 @@ export interface Props {
 
 const {
   title,
+  seoTitle,
   description,
   pubDate,
   updatedDate,
@@ -87,7 +89,7 @@ const articleJsonLd = {
 ---
 
 <BaseLayout
-  title={title}
+  title={seoTitle ?? title}
   description={description}
   image={image}
   imageAlt={imageAlt}

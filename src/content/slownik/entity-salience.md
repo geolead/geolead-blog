@@ -38,7 +38,7 @@ Dla systemów AI, które wycinają ze strony krótkie fragmenty i wklejają je d
 
 ## Czego Entity Salience nie mówi
 
-Wysoka istotność encji na Twojej stronie nie gwarantuje, że [model językowy](/slownik/llm/) poleci firmę. Model składa odpowiedź z wielu źródeł, a Twoja strona jest tylko jednym z nich. Dlatego w pracy dla klientów mierzymy to, co da się sprawdzić: czy marka pojawia się w odpowiedziach na konkretne pytania zakupowe, w jakim kontekście i obok kogo. Opis pomiaru jest w [metodologii](/metodologia/).
+Wysoka istotność encji na Twojej stronie nie gwarantuje, że [model językowy](/slownik/llm/) poleci firmę. Model składa odpowiedź z wielu źródeł, a Twoja strona jest tylko jednym z nich. Dlatego w pracy dla klientów mierzymy to, co da się sprawdzić: czy marka pojawia się w odpowiedziach na konkretne pytania zakupowe, w jakim kontekście i obok kogo. Opis pomiaru jest w [metodologii](/metodologia/). Jeśli agencja pokazuje Entity Salience jako miernik efektu, [zapytaj, na jakim zestawie pytań mierzy wyniki](/blog/agencja-geo-polska/).
 
 ## Jak sprawdzić to samodzielnie
 

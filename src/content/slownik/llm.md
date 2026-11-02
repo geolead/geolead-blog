@@ -32,7 +32,7 @@ Coraz więcej odpowiedzi o firmach powstaje w drugim trybie. Dlatego widocznoś�
 
 ## Dlaczego odpowiedzi się zmieniają
 
-LLM generuje tekst z elementem losowości. To samo pytanie zadane kilka razy może dać różne listy firm i różne źródła. W naszym pomiarze własnej marki z października 2026 r. (30 pytań, 4 systemy AI, 166 odpowiedzi) GeoLead pojawił się średnio w 14% odpowiedzi, ale w pytaniach typu „kto w Polsce robi optymalizację pod wyszukiwarki AI” w 50%. Pojedynczy zrzut ekranu nie jest więc pomiarem. Rzetelny pomiar wymaga stałego zestawu pytań, sesji bez historii i powtórzeń. Opisujemy to w [metodologii](/metodologia/).
+LLM generuje tekst z elementem losowości. To samo pytanie zadane kilka razy może dać różne listy firm i różne źródła. W naszym pomiarze własnej marki z października 2026 r. (30 pytań, 4 systemy AI, 166 odpowiedzi) GeoLead pojawił się średnio w 14% odpowiedzi, ale w pytaniach typu „kto w Polsce robi optymalizację pod wyszukiwarki AI” w 50%. Pojedynczy zrzut ekranu nie jest więc pomiarem. Rzetelny pomiar wymaga stałego zestawu pytań, sesji bez historii i powtórzeń. Opisujemy to w [metodologii](/metodologia/). Z tego samego powodu [gwarancja miejsca w ChatGPT](/blog/agencja-geo-polska/) to sygnał ostrzegawczy przy wyborze wykonawcy.
 
 ## Co LLM potrzebuje, żeby polecić firmę
 
