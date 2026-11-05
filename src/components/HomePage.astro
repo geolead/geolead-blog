@@ -160,6 +160,10 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .gloss-link:hover{opacity:0.72}
 .foot-me{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border-f);transition:color .2s,border-color .2s}
 .foot-me:hover{color:var(--f);border-color:var(--f)}
+.foot-media{display:flex;flex-direction:column;gap:.3rem;padding:.8rem 1rem;border:1px solid var(--border-f);border-radius:12px;background:rgba(224,64,251,.05);text-decoration:none;transition:border-color .2s,background .2s}
+.foot-media:hover{border-color:var(--f);background:rgba(224,64,251,.1)}
+.foot-media-k{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+.foot-media-t{font-size:.8rem;color:#e2e8f0}
 .ilink-wrap{margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--border);text-align:center}
 .ilink-lbl{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-lo);display:block;margin-bottom:0.7rem}
 .ilink-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.7rem;max-width:780px;margin:0 auto;text-align:left}
@@ -1147,6 +1151,10 @@ a.lb{text-decoration:none;display:inline-block}
       </p>
       <p style="font-size:0.7rem;color:var(--text-lo);margin-top:0.3rem">geolead.pl Paweł Zagajewski · ul. Leszka Czarnego 13, 02-496 Warszawa · NIP 5222300455 · REGON 015598980</p>
     </div>
+    <a href="/media/" hreflang="pl" class="foot-media" data-track-target="footer_media">
+      <span class="foot-media-k" data-i18n="foot_media" set:html={t["foot_media"]}></span>
+      <span class="foot-media-t">Marketing przy Kawie · 11.2026 →</span>
+    </a>
     <div style="display:flex;gap:1.25rem;flex-wrap:wrap">
       <a href="/metodologia/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_proof" set:html={t["nav_proof"]}></a>
       <a href="#how" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_how" set:html={t["nav_how"]}></a>
