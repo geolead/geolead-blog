@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// GL-250: strona „GeoLead w mediach” — publikacje redakcyjne i materiały źródłowe.
+// Zasada: publikacje redakcyjne osobno od materiałów własnych (bez zawyżania „napisali o nas”).
+
+const breadcrumbs = [
+  { name: 'Strona główna', href: 'https://geolead.pl/' },
+  { name: 'GeoLead w mediach', href: '/media/' },
+];
+
+const MPK_URL = 'https://marketingprzykawie.pl/artykuly/na-wyszukiwanie-przez-ai-polskie-firmy-przygotowaly-sie-tylko-czesciowo-wyniki-badania/';
+const MPK_TITLE = 'Boty AI mają wstęp, ale nie wiedzą, z kim rozmawiają. Co strony 117 polskich firm mówią o sobie maszynom – wyniki badania';
+
+const media = [
+  {
+    outlet: 'Marketing przy Kawie',
+    date: '4 listopada 2026',
+    title: MPK_TITLE,
+    url: MPK_URL,
+    desc: 'Artykuł Jarosława Zagajewskiego o wynikach badania gotowości 117 stron polskich firm na wyszukiwanie w AI: wyniki według branż i wielkości firm oraz lista elementów do samodzielnego sprawdzenia.',
+  },
+];
+
+const own = [
+  {
+    label: 'Zbiór danych i raport (EN)',
+    where: 'Zenodo, DOI 10.5281/zenodo.23439924, CC BY 4.0',
+    url: 'https://doi.org/10.5281/zenodo.23439924',
+    lang: 'en',
+  },
+  {
+    label: 'Komunikat prasowy (EN)',
+    where: 'openPR, 19 października 2026',
+    url: 'https://www.openpr.com/news/4665038.html',
+    lang: 'en',
+  },
+  {
+    label: 'AI crawlers get in, but they can’t tell who you are (EN)',
+    where: 'Medium, artykuł autorski',
+    url: 'https://medium.com/@jaroslaw.zagajewski/ai-crawlers-get-in-but-they-cant-tell-who-you-are-what-120-polish-company-websites-reveal-957ba2eb31ec',
+    lang: 'en',
+  },
+  {
+    label: 'Co trzecia firma nie przedstawia się sztucznej inteligencji',
+    where: 'LinkedIn, artykuł autorski',
+    url: 'https://www.linkedin.com/pulse/co-trzecia-firma-nie-przedstawia-si%C4%99-sztucznej-5-do-na-zagajewski-kasof/',
+    lang: 'pl',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://geolead.pl/media/#webpage',
+      url: 'https://geolead.pl/media/',
+      name: 'GeoLead w mediach',
+      inLanguage: 'pl-PL',
+      isPartOf: { '@id': 'https://geolead.pl/#website' },
+      about: { '@id': 'https://geolead.pl/#organization' },
+      publisher: { '@id': 'https://geolead.pl/#organization' },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://geolead.pl/#organization',
+      subjectOf: [
+        {
+          '@type': 'Article',
+          name: MPK_TITLE,
+          url: MPK_URL,
+          datePublished: '2026-11-04',
+          inLanguage: 'pl-PL',
+          author: { '@type': 'Person', name: 'Jarosław Zagajewski' },
+          publisher: { '@type': 'Organization', name: 'Marketing przy Kawie', url: 'https://marketingprzykawie.pl/' },
+          about: { '@id': 'https://geolead.pl/badania/gotowosc-ai-2026/#dataset' },
+        },
+      ],
+    }
+  ],
+};
+---
+
+<BaseLayout
+  title="GeoLead w mediach — publikacje i materiały źródłowe | GeoLead"
+  description="Publikacje redakcyjne o badaniach GeoLead i materiały źródłowe: dane z identyfikatorem DOI, komunikaty i artykuły autorskie o widoczności firm w wyszukiwarkach AI."
+  keywords={['GeoLead w mediach', 'badanie gotowości AI', 'GEO', 'publikacje']}
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+
+  <div style="max-width:1080px;margin:0 auto;padding:4rem 1.5rem 2rem">
+    <Breadcrumbs items={breadcrumbs} />
+    <span class="article-kicker">Media</span>
+    <h1 class="article-title" style="margin-bottom:0.8rem">GeoLead w mediach</h1>
+    <p style="color:var(--text);font-size:1.05rem;max-width:640px;margin:0">
+      Publikacje o badaniach GeoLead w mediach branżowych oraz materiały źródłowe, na których się opierają. Każda liczba ma źródło.
+    </p>
+  </div>
+
+  <section style="max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem" aria-labelledby="media-redakcyjne">
+    <h2 id="media-redakcyjne" class="md-h2">Publikacje w mediach</h2>
+    <div class="md-list">
+      {media.map((m) => (
+        <article class="md-card">
+          <p class="md-meta">{m.outlet} · {m.date}</p>
+          <h3 class="md-title"><a href={m.url} data-track-target="media_mpk">{m.title}</a></h3>
+          <p class="md-desc">{m.desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section style="max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem" aria-labelledby="media-zrodla">
+    <h2 id="media-zrodla" class="md-h2">Badania i materiały źródłowe</h2>
+    <p class="md-lead">Pełne wyniki i metodologia: <a href="/badania/gotowosc-ai-2026/">Gotowość polskich firm na wyszukiwanie w AI (2026)</a>.</p>
+    <ul class="md-own">
+      {own.map((o) => (
+        <li><a href={o.url} hreflang={o.lang}>{o.label}</a><span> — {o.where}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section style="max-width:1080px;margin:0 auto;padding:0 1.5rem 5rem" aria-labelledby="media-kontakt">
+    <h2 id="media-kontakt" class="md-h2">Dla redakcji</h2>
+    <p class="md-lead">Dane z badań udostępniamy na licencji CC BY 4.0. Komentarz ekspercki, wykresy i dane źródłowe: <a href="mailto:kontakt@geolead.pl">kontakt@geolead.pl</a>, tel. <a href="tel:+48511000115">+48 511 000 115</a>.</p>
+  </section>
+
+  <style>
+    .md-h2 { font-size: 1.35rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.02em; margin: 0 0 1.1rem; }
+    .md-lead { color: var(--text, rgba(255,255,255,0.7)); margin: 0 0 1rem; max-width: 75ch; }
+    .md-list { display: grid; gap: 1.1rem; }
+    .md-card {
+      padding: 1.5rem 1.4rem;
+      border-radius: 14px;
+      border: 1px solid rgba(224,64,251,0.28);
+      background: rgba(224,64,251,0.06);
+      backdrop-filter: blur(6px);
+    }
+    .md-meta { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,212,255,0.75); margin: 0 0 0.5rem; }
+    .md-title { font-size: 1.12rem; line-height: 1.4; margin: 0 0 0.55rem; }
+    .md-title a { color: #fff; text-decoration: none; }
+    .md-title a:hover { color: #e040fb; }
+    .md-desc { font-size: 0.9rem; color: var(--text, rgba(255,255,255,0.65)); margin: 0; line-height: 1.6; }
+    .md-own { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+    .md-own li { padding: 0.85rem 1rem; border-radius: 11px; border: 1px solid rgba(0,212,255,0.2); background: rgba(0,212,255,0.04); font-size: 0.92rem; }
+    .md-own a { color: #00d4ff; font-weight: 650; }
+    .md-own span { color: var(--text-lo, #7d8ba1); }
+  </style>
+</BaseLayout>
