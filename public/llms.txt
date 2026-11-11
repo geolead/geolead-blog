@@ -62,6 +62,12 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 - [Knowledge Graph](https://geolead.pl/slownik/knowledge-graph/): Baza faktów o encjach i relacjach (Google Knowledge Graph, Wikidata); skąd bierze dane o firmach i jak to sprawdzić.
 - [Halucynacje AI](https://geolead.pl/slownik/halucynacje-ai/): Pewnie brzmiące, nieprawdziwe odpowiedzi modeli o firmach (ceny, adresy, oferta, właściciele); typy, przyczyny i 6 sposobów ograniczenia ryzyka.
 - [Vector Embedding](https://geolead.pl/slownik/vector-embedding/): Zapis znaczenia tekstu jako wektora; podstawa wyszukiwania semantycznego w systemach RAG i wniosków dla pisania treści.
+- [Encja](https://geolead.pl/slownik/encja/): Jednoznacznie rozpoznawalny obiekt (firma, osoba, miejsce); z czego składa się encja firmy i dlaczego kilka wariantów nazwy szkodzi widoczności w AI.
+- [JSON-LD](https://geolead.pl/slownik/json-ld/): Format danych strukturalnych Schema.org; jak opisać firmę dla maszyn i najczęstsze błędy w badaniu 117 stron polskich firm.
+- [llms.txt](https://geolead.pl/slownik/llms-txt/): Plik z opisem serwisu dla modeli językowych; co wpisać i uczciwa ocena, czy duzi dostawcy AI go używają.
+- [Query fan-out](https://geolead.pl/slownik/query-fan-out/): Rozbijanie pytania na wiele wyszukiwań przez AI (AI Mode, ChatGPT); ślady w Google Search Console i wnioski dla treści.
+- [AI Overviews](https://geolead.pl/slownik/ai-overviews/): Przeglądy od AI w Google; różnice wobec AI Mode, jak Google wybiera źródła i jak mierzyć obecność.
+- [Share of Voice w AI](https://geolead.pl/slownik/share-of-voice-ai/): Udział marki w odpowiedziach asystentów AI; wzory, przykład z pomiaru GeoLead i błędy pomiaru.
 
 ## Blog
 
