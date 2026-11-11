@@ -47,6 +47,9 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 - [GEO dla kancelarii prawnych](https://geolead.pl/blog/geo-dla-kancelarii-prawnych/): Pozycjonowanie kancelarii w odpowiedziach modeli językowych.
 - [GEO dla producentów przemysłowych B2B](https://geolead.pl/blog/geo-dla-producentow-przemyslowych/): Jak producent B2B może być wskazywany przez asystentów AI jako dostawca; dane z badania 2026 (69% stron producentów bez opisu firmy w JSON-LD), plan w 7 krokach.
 - [GEO dla firm SaaS](https://geolead.pl/blog/geo-dla-saas/): Widoczność produktów SaaS w porównaniach generowanych przez AI.
+- [GEO dla firm budowlanych](https://geolead.pl/blog/geo-dla-firm-budowlanych/): Jak wykonawca, deweloper B2B i dostawca materiałów budowlanych mogą trafić do odpowiedzi asystentów AI; pytania inwestorów w trzech segmentach, typy źródeł, plan w 7 krokach.
+- [GEO dla automatyki przemysłowej](https://geolead.pl/blog/geo-dla-automatyki-przemyslowej/): Widoczność integratorów automatyki i robotyki w odpowiedziach AI; pytania według ról w zakładzie, przyczyny braku w odpowiedziach, trzy etapy prac.
+- [GEO dla hoteli i turystyki](https://geolead.pl/blog/geo-dla-hoteli-i-turystyki/): Hotele, SPA i obiekty konferencyjne w odpowiedziach AI; test na własnym obiekcie, źródła pośredników, fakty do zapisania tekstem.
 
 ## Narzędzia
 
@@ -68,6 +71,12 @@ Ta sama strona główna w językach rynków docelowych (DACH, Francja, rynki ang
 - [Query fan-out](https://geolead.pl/slownik/query-fan-out/): Rozbijanie pytania na wiele wyszukiwań przez AI (AI Mode, ChatGPT); ślady w Google Search Console i wnioski dla treści.
 - [AI Overviews](https://geolead.pl/slownik/ai-overviews/): Przeglądy od AI w Google; różnice wobec AI Mode, jak Google wybiera źródła i jak mierzyć obecność.
 - [Share of Voice w AI](https://geolead.pl/slownik/share-of-voice-ai/): Udział marki w odpowiedziach asystentów AI; wzory, przykład z pomiaru GeoLead i błędy pomiaru.
+- [AI Mode](https://geolead.pl/slownik/ai-mode/): Tryb AI w wyszukiwarce Google; jak działa, czego Google wymaga od strony i jak mierzyć obecność.
+- [Grounding](https://geolead.pl/slownik/grounding/): Oparcie odpowiedzi AI na źródłach wyszukanych w chwili pytania; przykład Gemini i grounding queries w Bing Webmaster Tools.
+- [E-E-A-T](https://geolead.pl/slownik/e-e-a-t/): Doświadczenie, ekspertyza, autorytet i wiarygodność według Google; czym E-E-A-T nie jest i jak ma się do odpowiedzi AI.
+- [sameAs](https://geolead.pl/slownik/same-as/): Właściwość Schema.org łącząca stronę firmy z jej oficjalnymi profilami; co wpisać i dane z badania 117 stron polskich firm.
+- [Cytowanie w AI](https://geolead.pl/slownik/cytowanie-w-ai/): Podanie strony jako źródła w odpowiedzi AI; różnica między wzmianką, cytowaniem i rekomendacją, gdzie sprawdzić cytowania.
+- [AEO (Answer Engine Optimization)](https://geolead.pl/slownik/aeo/): Optymalizacja pod systemy odpowiadające wprost; AEO a GEO i SEO, stanowisko Google i praktyczne różnice w pracy.
 
 ## Blog
 
