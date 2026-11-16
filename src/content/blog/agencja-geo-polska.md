@@ -99,7 +99,7 @@ Rynek agencji GEO w Polsce jest młody. Większość firm SEO dodaje dziś GEO d
 
 ### 1. Jak mierzysz efekty i na jakim zestawie pytań?
 
-Jedyna wiarygodna metoda to stały zestaw pytań zakupowych, sprawdzany cyklicznie w modelach AI w sesjach bez pamięci i personalizacji. Poproś o przykład takiej listy i o raport z pomiaru wyjściowego. Jeśli w odpowiedzi słyszysz o pozycjach w Google i ruchu organicznym, rozmawiasz z agencją SEO.
+Jedyna wiarygodna metoda to stały zestaw pytań zakupowych, sprawdzany cyklicznie w modelach AI w sesjach bez pamięci i personalizacji. Poproś o przykład takiej listy i o raport z pomiaru wyjściowego. Jeśli w odpowiedzi słyszysz o pozycjach w Google i ruchu organicznym, rozmawiasz z agencją SEO. Jakie wskaźniki powinien zawierać taki raport i czego oczekiwać w kolejnych miesiącach, opisujemy w tekście [Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić](/blog/pozycjonowanie-w-chatgpt/).
 
 ### 2. Które platformy AI obejmuje pomiar?
 
