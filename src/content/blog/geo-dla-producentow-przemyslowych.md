@@ -132,6 +132,8 @@ Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzi
 <li><a href="/badania/gotowosc-ai-2026/">Badanie: gotowość polskich firm na wyszukiwanie w AI (2026)</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO: czym się różnią</a></li>
+<li><a href="/blog/geo-dla-automatyki-przemyslowej/">GEO dla automatyki przemysłowej</a></li>
+<li><a href="/blog/geo-dla-firm-budowlanych/">GEO dla firm budowlanych</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>

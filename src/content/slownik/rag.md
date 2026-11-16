@@ -69,6 +69,9 @@ Ogranicza je, ale nie eliminuje. Jeśli wyszukane źródła są nieaktualne albo
 
 Perplexity, ChatGPT z wyszukiwaniem i Google AI Overviews pokazują listę źródeł pod odpowiedzią. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Zestawienie źródeł cytowanych w odpowiedziach na 20 pytań w 4 systemach AI zawiera [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
 
+Powiązane hasła: [Grounding](/slownik/grounding/), [Query fan-out](/slownik/query-fan-out/) i [Cytowanie w AI](/slownik/cytowanie-w-ai/).
+
+
 Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/) i [Jak pojawić się w Perplexity](/blog/jak-pojawic-sie-w-perplexity/).
 
 <script type="application/ld+json">

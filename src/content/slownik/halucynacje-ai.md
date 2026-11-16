@@ -63,6 +63,9 @@ Systemy z wyszukiwaniem (ChatGPT z wyszukiwaniem, Perplexity, Google AI Overview
 
 Zadaj kilku asystentom pytania o swoją firmę w czacie bez historii i porównaj odpowiedzi z faktami. Listę pytań zakupowych przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą błędów i źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
 
+Powiązane hasła: [JSON-LD](/slownik/json-ld/), [sameAs](/slownik/same-as/) i [Grounding](/slownik/grounding/).
+
+
 Szerszy kontekst: [Jak ChatGPT decyduje, którą firmę polecić](/blog/jak-chatgpt-wybiera-firmy/) i [Czym jest GEO](/blog/czym-jest-geo/).
 
 <script type="application/ld+json">

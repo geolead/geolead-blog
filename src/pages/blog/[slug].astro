@@ -15,6 +15,13 @@ const { Content, headings } = await render(post);
 const d = post.data;
 const slug = post.id.replace(/\.md$/, '');
 
+// GL-256: relatedTerms -> nazwy haseł ze słownika
+const glossary = await getCollection('slownik', ({ data }) => !data.draft);
+const relatedTerms = (d.relatedTerms ?? [])
+  .map((s) => glossary.find((t) => t.id.replace(/\.md$/, '') === s))
+  .filter(Boolean)
+  .map((t) => ({ slug: t!.id.replace(/\.md$/, ''), term: t!.data.term }));
+
 const breadcrumbs = [
   { name: 'Strona główna', href: '/' },
   { name: 'Blog', href: '/blog/' },
@@ -34,6 +41,7 @@ const breadcrumbs = [
   imageAlt={d.imageAlt}
   breadcrumbs={breadcrumbs}
   headings={headings}
+  relatedTerms={relatedTerms}
 >
   <Content />
 </ArticleLayout>

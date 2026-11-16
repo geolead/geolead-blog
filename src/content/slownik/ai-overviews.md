@@ -63,6 +63,9 @@ Przy pytaniach informacyjnych często tak, bo użytkownik dostaje odpowiedź od 
 
 Zadaj w Google pytania, które zadają Twoi klienci, w oknie prywatnym i spisz wyniki. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w Google AI Overviews, ChatGPT, Gemini i Perplexity to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
 
+Powiązane hasła: [AI Mode](/slownik/ai-mode/), [Cytowanie w AI](/slownik/cytowanie-w-ai/) i [AEO](/slownik/aeo/).
+
+
 Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [Jak pojawić się w Perplexity](/blog/jak-pojawic-sie-w-perplexity/).
 
 <script type="application/ld+json">

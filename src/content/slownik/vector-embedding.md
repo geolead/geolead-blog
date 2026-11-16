@@ -54,6 +54,9 @@ W wyszukiwaniu semantycznym dokładne słowa mają mniejsze znaczenie niż sens.
 
 Od listy pytań, które zadają Twoi klienci. Przygotuje ją bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Potem sprawdź, czy na każde pytanie na Twojej stronie jest akapit z jasną odpowiedzią. To, które fragmenty i źródła faktycznie trafiają do odpowiedzi AI, pokazuje [Audyt Start](/blog/audyt-widocznosci-w-ai/).
 
+Powiązane hasła: [Query fan-out](/slownik/query-fan-out/) i [Grounding](/slownik/grounding/).
+
+
 Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [Czym jest GEO](/blog/czym-jest-geo/).
 
 <script type="application/ld+json">

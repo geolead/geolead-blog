@@ -16,6 +16,7 @@ export interface Props {
   imageAlt?: string;
   breadcrumbs: Crumb[];
   headings?: { depth: number; slug: string; text: string }[];
+  relatedTerms?: { slug: string; term: string }[];
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   imageAlt = 'GeoLead — Agencja GEO',
   breadcrumbs,
   headings = [],
+  relatedTerms = [],
 } = Astro.props;
 
 const site = 'https://geolead.pl';
@@ -133,6 +135,16 @@ const articleJsonLd = {
         </aside>
         <div class="prose-body">
           <slot />
+          {relatedTerms.length > 0 && (
+            <nav class="related-terms" aria-label="Pojęcia ze słownika GEO">
+              <span class="author-k">Pojęcia ze słownika GEO</span>
+              <ul>
+                {relatedTerms.map((t) => (
+                  <li><a href={`/slownik/${t.slug}/`}>{t.term}</a></li>
+                ))}
+              </ul>
+            </nav>
+          )}
           {isFounder && (
             <aside class="author-box" aria-label="O autorze">
               <div class="author-av" aria-hidden="true">JZ</div>
@@ -190,6 +202,14 @@ const articleJsonLd = {
       border: 1px solid var(--border); border-radius: 999px; padding: .35rem .85rem;
     }
     .author-links a:hover { border-color: var(--f); color: var(--f); }
+    .related-terms { margin: 2.5rem 0 0; }
+    .related-terms ul { list-style: none; padding: 0; margin: .6rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+    .related-terms a {
+      display: inline-block; font-size: .85rem; color: var(--text-hi); text-decoration: none;
+      border: 1px solid rgba(0,212,255,0.3); background: rgba(0,212,255,0.06);
+      border-radius: 999px; padding: .35rem .9rem;
+    }
+    .related-terms a:hover { border-color: var(--c); color: var(--c); }
     @media (max-width: 640px) { .author-box { flex-direction: column; } }
     /* Poniżej 980px: ToC chowamy (sticky sidebar nie ma sensu na wąskim ekranie) */
     @media (max-width: 980px) {

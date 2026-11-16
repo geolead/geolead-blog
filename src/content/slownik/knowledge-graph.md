@@ -58,7 +58,7 @@ Potrzebuje przede wszystkim spójnych danych. Dla firmy lokalnej najważniejsze 
 
 W [Audycie Start](/blog/audyt-widocznosci-w-ai/) kontrolujemy dane strukturalne i spójność danych firmy w kluczowych profilach. Stan techniczny strony sprawdzisz też bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/).
 
-Powiązane pojęcia: [Entity Salience](/slownik/entity-salience/), [RAG](/slownik/rag/). Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/).
+Powiązane pojęcia: [Encja](/slownik/encja/), [sameAs](/slownik/same-as/), [Entity Salience](/slownik/entity-salience/), [RAG](/slownik/rag/). Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/).
 
 <script type="application/ld+json">
 {

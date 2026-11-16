@@ -98,5 +98,7 @@ Jeśli rozmawiasz z wykonawcą, który obiecuje „SEO pod AI”, sprawdź, czy 
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
+<li><a href="/slownik/aeo/">AEO (Answer Engine Optimization): słownik GEO</a></li>
+<li><a href="/slownik/query-fan-out/">Query fan-out: słownik GEO</a></li>
 </ul>
 </div>
