@@ -1,7 +1,9 @@
 ---
 title: "Ile kosztuje GEO? Ceny pozycjonowania w AI w Polsce [2026]"
+seoTitle: "Ile kosztuje GEO? Cena pozycjonowania w AI i ChatGPT [2026]"
 description: "Ile kosztuje GEO w Polsce? Abonament od 1 200 do 15 000 zł netto miesięcznie. Co wpływa na cenę, ile kosztuje audyt i jak policzyć zwrot z inwestycji."
 pubDate: 2026-10-11
+updatedDate: 2026-11-17
 pillar: "edukacja"
 funnel: "bofu"
 keywords:
@@ -12,7 +14,7 @@ keywords:
   - "ile kosztuje pozycjonowanie w AI"
   - "cena agencji GEO"
   - "Generative Engine Optimization cena"
-imageAlt: "Ile kosztuje GEO — ceny pozycjonowania w AI w Polsce"
+imageAlt: "Ile kosztuje GEO: ceny pozycjonowania w AI w Polsce"
 relatedTerms:
   - "entity-salience"
   - "rag"
@@ -20,7 +22,7 @@ relatedTerms:
   - "llm"
 ---
 
-**Abonament GEO w GeoLead kosztuje od 1 200 do 15 000 zł netto miesięcznie.** Dolna granica to lokalna firma w branży o niskiej konkurencji. Górna to marka z branży medycznej lub prawniczej, która chce być polecana przez AI na kilku rynkach i w kilku językach. Pierwszym krokiem jest zawsze audyt: [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/) albo audyt pełny w cenie jednej miesięcznej opłaty.
+**Abonament GEO w GeoLead kosztuje od 1 200 do 15 000 zł netto miesięcznie.** Dolna granica to lokalna firma w branży o niskiej konkurencji. Górna to marka z branży medycznej lub prawniczej, która chce być polecana przez AI na kilku rynkach i w kilku językach. Pierwszym krokiem jest zawsze audyt: [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/) albo audyt pełny w cenie jednej miesięcznej opłaty.
 
 Poniżej pełna matryca cen, czynniki, które je przesuwają, i sposób, w jaki sprawdzisz, czy ta inwestycja ma sens w Twojej firmie.
 
@@ -45,6 +47,27 @@ Orientacyjny horyzont stabilnych efektów w tych samych wariantach:
 | **Niska** | 2–3 mies. | 3–4 mies. | 3–5 mies. |
 
 Producenci i eksporterzy B2B rzadko mieszczą się w jednej komórce tabeli. Liczba rynków, języków i domen firmy zmienia zakres pracy na tyle, że wycenę podajemy dopiero po audycie.
+
+## Ile kosztuje pozycjonowanie w ChatGPT
+
+Pozycjonowanie w ChatGPT nie ma w GeoLead osobnego cennika. Jest częścią abonamentu GEO, który kosztuje od 1 200 do 15 000 zł netto miesięcznie. O miejscu w tych widełkach decydują te same dwie zmienne co w matrycy wyżej: konkurencja w branży i zasięg.
+
+Dwa przykłady z matrycy. Firma lokalna w branży o niskiej konkurencji płaci od 1 200 do 2 500 zł netto miesięcznie. Klinika lub kancelaria o zasięgu krajowym płaci od 5 500 do 9 500 zł netto miesięcznie.
+
+Powód jednej ceny jest praktyczny. Klient, który pyta ChatGPT o dostawcę, często zadaje to samo pytanie w innym systemie AI, a każda platforma korzysta z innych źródeł. Praca nad samym ChatGPT zostawia resztę odpowiedzi konkurencji. Co dokładnie wchodzi w zakres i jak sprawdzić wykonanie, opisujemy w artykule [Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić](/blog/pozycjonowanie-w-chatgpt/).
+
+## Pozycjonowanie w AI: cena abonamentu a cena audytu
+
+To dwa różne zakupy. Audyt jest jednorazową diagnozą. Abonament jest stałą pracą nad widocznością i pomiarem jej zmian.
+
+| | Audyt Start | Audyt pełny | Abonament GEO |
+|---|---|---|---|
+| Cena | 990 zł netto | równowartość jednej miesięcznej opłaty abonamentowej | od 1 200 do 15 000 zł netto miesięcznie |
+| Rozliczenie | jednorazowo | jednorazowo | co miesiąc |
+| Co kupujesz | odpowiedź, czy problem istnieje, i 5 priorytetów | pełny plan wdrożeń i wycenę abonamentu | prace na stronie i poza nią oraz pomiar co 2 tygodnie |
+| Zaliczenie na poczet abonamentu | tak, przy umowie w ciągu 30 dni | tak, przy umowie w ciągu 30 dni | nie dotyczy |
+
+Kolejność jest stała: najpierw audyt, potem wycena abonamentu. Dzięki zaliczeniu audyt nie podnosi łącznego kosztu, jeśli zdecydujesz się na współpracę w ciągu 30 dni. Zakres Audytu Start opisuje strona [Audyt widoczności w AI](/audyt-widocznosci-w-ai/).
 
 ## Co wpływa na cenę GEO
 
@@ -75,7 +98,7 @@ Mierzymy obecność w ChatGPT, Perplexity, Claude, Gemini i Google AI Mode. Każ
 
 Audyt jest osobnym, pierwszym etapem współpracy. Masz dwie opcje:
 
-- **[Audyt Start — 990 zł netto](/blog/audyt-widocznosci-w-ai/).** 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport z 5 priorytetami. Wynik w 5 dni roboczych.
+- **[Audyt Start — 990 zł netto](/audyt-widocznosci-w-ai/).** 20 promptów zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna strony, raport z 5 priorytetami. Wynik w 5 dni roboczych.
 - **Audyt pełny — równowartość jednej miesięcznej opłaty abonamentowej** dla wariantu z matrycy. Rozszerzony zestaw promptów, powtórzenia pomiaru, pełny plan wdrożeń i wycena abonamentu.
 
 Jeśli podpiszesz umowę abonamentową w ciągu 30 dni od audytu, jego koszt zaliczamy na poczet pierwszego miesiąca.
@@ -84,9 +107,9 @@ Wynikiem audytu jest raport, który zostaje u Ciebie niezależnie od dalszej wsp
 
 Przed audytem możesz skorzystać z bezpłatnej konsultacji — odpowiadamy w ciągu 24 godzin roboczych.
 
-## Koszty dodatkowe: narzędzia
+## Narzędzia do pomiaru: w cenie abonamentu
 
-Narzędzia do pomiaru widoczności w AI rozliczamy **po kosztach, bez marży**, najlepiej na kontach należących do klienta. Dane i historia pomiarów zostają u Ciebie, nawet jeśli zakończysz współpracę.
+Platforma do pomiaru widoczności w AI jest **wliczona w abonament**. Pracujemy na jednym koncie agencyjnym GeoLead, w osobnej przestrzeni dla każdego klienta. Wyeksportowane dane odpowiedzi AI należą do Ciebie i zostają u Ciebie także po zakończeniu współpracy. Narzędzie na Twoim własnym koncie ustawiamy na życzenie.
 
 ## Czego nie obejmuje żadna cena
 
@@ -110,12 +133,32 @@ Drugą stroną rachunku jest koszt zaniechania. Klient, który pyta AI o rekomen
 
 - **Cena pakietu SEO z dopiskiem „AI”.** Jeśli oferta nie zawiera pomiaru w modelach AI ani listy źródeł cytowanych przez nie, kupujesz pozycjonowanie pod nową nazwą. Różnice opisujemy w artykule [GEO vs SEO](/blog/geo-vs-seo/).
 - **Gwarancja procentowej obecności.** Nikt nie kontroluje odpowiedzi modeli. Gwarancja to sygnał, że wynik będzie mierzony w sposób, którego nie da się sprawdzić.
-- **Narzędzia na kontach agencji.** Po zakończeniu współpracy tracisz historię pomiarów.
+- **Brak eksportu danych.** Jeśli oferta nie przewiduje przekazania zapisanych odpowiedzi AI, po zakończeniu współpracy tracisz historię pomiarów.
 - **Brak osobnego audytu.** Wycena abonamentu bez diagnozy oznacza, że zakres prac jest szablonem, a nie odpowiedzią na problem Twojej firmy.
 
 Pełną listę pytań kontrolnych przed podpisaniem umowy znajdziesz w przewodniku [jak wybrać agencję GEO](/blog/agencja-geo-polska/).
 
-## FAQ — ile kosztuje GEO
+## Jak porównać cenniki agencji
+
+Dwie oferty z tą samą kwotą miesięczną mogą oznaczać zupełnie inny zakres. Zanim porównasz ceny, sprowadź oferty do tych samych siedmiu kryteriów.
+
+| Kryterium | O co zapytać | Jak jest w GeoLead |
+|---|---|---|
+| Netto czy brutto | Czy kwota zawiera VAT? | kwoty netto, VAT doliczany osobno |
+| Audyt | Czy jest osobnym etapem, ile kosztuje i czy jest zaliczany na poczet abonamentu? | osobny etap; zaliczany przy umowie w ciągu 30 dni |
+| Pomiar | Jak często, na jakim zestawie pytań i w jakich warunkach? | co 2 tygodnie, stały zestaw pytań zakupowych, sesje bez pamięci i personalizacji |
+| Platformy AI | Ile platform obejmuje pomiar i które? | liczba platform jest jednym z czynników ceny |
+| Narzędzia i dane | Czy narzędzia są w cenie i czy dostaniesz eksport zapisanych odpowiedzi? | platforma pomiarowa w cenie abonamentu; eksport danych należy do klienta |
+| Zakres prac | Co jest robione na stronie, a co poza nią? | dane strukturalne i treści na stronie; obecność w źródłach, z których korzystają modele AI |
+| Kto prowadzi projekt | Czy osoba z rozmowy handlowej będzie pracować nad projektem? | osoba, która przygotowuje ofertę, prowadzi projekt |
+
+Trzy zasady przy samym porównaniu:
+
+1. **Porównuj koszt pierwszych 12 miesięcy, nie stawkę miesięczną.** Dolicz audyt, narzędzia i wszystko, co oferta wymienia jako płatne osobno.
+2. **Porównuj ten sam wariant.** Cena dla jednego miasta i cena dla kilku rynków to dwa różne projekty.
+3. **Odrzuć ofertę, której wyniku nie da się sprawdzić.** Jeśli agencja nie pokaże zestawu pytań i zapisanych odpowiedzi, nie masz czego porównywać.
+
+## FAQ: ile kosztuje GEO
 
 ### Ile kosztuje GEO miesięcznie?
 
@@ -131,11 +174,27 @@ Tak. Wszystkie kwoty są cenami netto, do których doliczamy VAT według obowią
 
 ### Czy narzędzia do pomiaru są wliczone w cenę?
 
-Narzędzia rozliczamy po kosztach, bez marży, najlepiej na kontach klienta. Dzięki temu dane i historia pomiarów zostają w firmie klienta.
+Tak. Platforma pomiarowa jest wliczona w abonament i działa na koncie agencyjnym GeoLead, w osobnej przestrzeni dla każdego klienta. Wyeksportowane dane odpowiedzi należą do klienta. Narzędzie na koncie klienta ustawiamy na życzenie.
 
 ### Po jakim czasie widać efekty GEO?
 
 Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lokalnym do 5–7 miesięcy przy wysokiej konkurencji i zasięgu wielojęzycznym. Tempo zależy od stanu encji marki na starcie i liczby źródeł, które trzeba zdobyć.
+
+### Ile kosztuje pozycjonowanie w ChatGPT miesięcznie?
+
+W GeoLead od 1 200 do 15 000 zł netto miesięcznie. Pozycjonowanie w ChatGPT nie ma osobnej ceny: jest częścią abonamentu GEO, a kwota zależy od konkurencji w branży i zasięgu.
+
+### Czy jest opłata wdrożeniowa?
+
+Zależy od projektu. Jeśli wdrożenie wymaga osobnych prac, ich koszt podajemy w wycenie po audycie, zanim podpiszesz umowę. Pierwszym etapem jest zawsze audyt: Audyt Start za 990 zł netto albo audyt pełny w cenie jednej miesięcznej opłaty abonamentowej, zaliczany na poczet abonamentu przy umowie w ciągu 30 dni.
+
+### Ile kosztuje audyt widoczności w AI?
+
+Audyt Start kosztuje 990 zł netto i obejmuje 20 promptów zakupowych na 4 platformach AI oraz raport z 5 priorytetami w 5 dni roboczych. Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu z matrycy.
+
+### Od jakiego budżetu GEO ma sens?
+
+Najniższy abonament to 1 200 zł netto miesięcznie, a sprawdzenie stanu wyjściowego w Audycie Start kosztuje 990 zł netto. O sensie decyduje jednak marża, nie budżet: GEO opłaca się tam, gdzie jeden nowy klient jest wart wielokrotność miesięcznej opłaty. Jeśli marża na kliencie to kilkaset złotych, a decyzja zakupowa zapada impulsywnie, pieniądze lepiej wydać na inne kanały.
 
 <div class="article-cta glass">
 <h3>Sprawdź, ile kosztuje GEO w Twojej branży</h3>
@@ -146,7 +205,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: 990 zł netto</a></li>
 <li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO: czym się różnią</a></li>
@@ -217,7 +276,7 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
           "name": "Czy narzędzia do pomiaru są wliczone w cenę?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Narzędzia są rozliczane po kosztach, bez marży, najlepiej na kontach klienta. Dzięki temu dane i historia pomiarów zostają w firmie klienta."
+            "text": "Tak. Platforma pomiarowa jest wliczona w abonament i działa na koncie agencyjnym GeoLead, w osobnej przestrzeni dla każdego klienta. Wyeksportowane dane odpowiedzi należą do klienta. Narzędzie na koncie klienta ustawiamy na życzenie."
           }
         },
         {
@@ -226,6 +285,38 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lokalnym do 5–7 miesięcy przy wysokiej konkurencji i zasięgu wielojęzycznym. Tempo zależy od stanu encji marki na starcie i liczby źródeł, które trzeba zdobyć."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje pozycjonowanie w ChatGPT miesięcznie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "W GeoLead od 1 200 do 15 000 zł netto miesięcznie. Pozycjonowanie w ChatGPT nie ma osobnej ceny: jest częścią abonamentu GEO, a kwota zależy od konkurencji w branży i zasięgu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy jest opłata wdrożeniowa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zależy od projektu. Jeśli wdrożenie wymaga osobnych prac, ich koszt podajemy w wycenie po audycie, zanim podpiszesz umowę. Pierwszym etapem jest zawsze audyt: Audyt Start za 990 zł netto albo audyt pełny w cenie jednej miesięcznej opłaty abonamentowej, zaliczany na poczet abonamentu przy umowie w ciągu 30 dni."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje audyt widoczności w AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Audyt Start kosztuje 990 zł netto i obejmuje 20 promptów zakupowych na 4 platformach AI oraz raport z 5 priorytetami w 5 dni roboczych. Audyt pełny kosztuje równowartość jednej miesięcznej opłaty abonamentowej dla danego wariantu z matrycy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Od jakiego budżetu GEO ma sens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Najniższy abonament to 1 200 zł netto miesięcznie, a sprawdzenie stanu wyjściowego w Audycie Start kosztuje 990 zł netto. O sensie decyduje jednak marża, nie budżet: GEO opłaca się tam, gdzie jeden nowy klient jest wart wielokrotność miesięcznej opłaty. Jeśli marża na kliencie to kilkaset złotych, a decyzja zakupowa zapada impulsywnie, pieniądze lepiej wydać na inne kanały."
           }
         }
       ]

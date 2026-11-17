@@ -61,7 +61,7 @@ Nie. Słowo kluczowe to ciąg znaków wpisany przez użytkownika. Encja to obiek
 
 ### Skąd wiadomo, czy moja firma jest rozpoznawana jako encja?
 
-Pośrednie sygnały to panel wiedzy w Google, wpis w Wikidata i poprawne odpowiedzi asystentów AI na pytania o firmę. Bezpłatny [Skaner AI](/narzedzia/skaner-ai/) sprawdza dane strukturalne na stronie. To, jak systemy AI opisują firmę w odpowiedziach, mierzy [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Pośrednie sygnały to panel wiedzy w Google, wpis w Wikidata i poprawne odpowiedzi asystentów AI na pytania o firmę. Bezpłatny [Skaner AI](/narzedzia/skaner-ai/) sprawdza dane strukturalne na stronie. To, jak systemy AI opisują firmę w odpowiedziach, mierzy [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/) i [Jak ChatGPT decyduje, którą firmę polecić](/blog/jak-chatgpt-wybiera-firmy/).
 

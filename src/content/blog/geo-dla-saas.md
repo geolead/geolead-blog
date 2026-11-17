@@ -78,7 +78,7 @@ Wybierając wykonawcę dla produktu SaaS, sprawdź, czy [agencja GEO](/blog/agen
 <li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
 <li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO: cennik pozycjonowania w AI</a></li>
 <li><a href="/blog/geo-dla-automatyki-przemyslowej/">GEO dla automatyki przemysłowej</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 </ul>
 </div>

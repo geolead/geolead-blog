@@ -1,0 +1,41 @@
+---
+// src/layouts/ServiceLayout.astro (GL-260)
+// Szablon stron usług (np. /audyt-widocznosci-w-ai/): strona ofertowa, nie artykuł bloga.
+// Używany przez strony Markdown w src/pages/ (frontmatter: title, description, h1, kicker, updated).
+// JSON-LD usługi i FAQ siedzi inline w treści strony (tak jak w artykułach bloga).
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const { frontmatter } = Astro.props;
+const fm = frontmatter ?? {};
+const path = Astro.url.pathname;
+
+const breadcrumbs = [
+  { name: 'Strona główna', href: '/' },
+  { name: fm.breadcrumb ?? fm.h1 ?? fm.title, href: path },
+];
+---
+
+<BaseLayout
+  title={fm.title}
+  description={fm.description}
+  imageAlt={fm.imageAlt ?? 'GeoLead | Agencja GEO'}
+  keywords={fm.keywords ?? []}
+>
+  <article class="prose">
+    <header class="article-header">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="article-kicker">{fm.kicker ?? 'Usługa GeoLead'}</span>
+      <h1 class="article-title">{fm.h1 ?? fm.title}</h1>
+      {fm.updated && (
+        <p style="color:var(--text-lo);font-size:0.85rem;margin-top:-0.4rem">
+          Aktualizacja: {fm.updated}
+        </p>
+      )}
+    </header>
+
+    <div class="prose-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

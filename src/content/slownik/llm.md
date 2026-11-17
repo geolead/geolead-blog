@@ -53,7 +53,7 @@ Treści samej odpowiedzi nie da się kupić. Jeśli asystent wyświetla reklamy,
 
 ### Jak sprawdzić, co LLM mówi o mojej firmie?
 
-Samodzielnie: [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/) przygotuje listę pytań dla Twojej branży. Wklej je do kilku asystentów w czacie bez historii. Z dowodami i analizą źródeł: [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/), 20 pytań w 4 systemach AI.
+Samodzielnie: [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/) przygotuje listę pytań dla Twojej branży. Wklej je do kilku asystentów w czacie bez historii. Z dowodami i analizą źródeł: [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/), 20 pytań w 4 systemach AI.
 
 Powiązane hasła: [Grounding](/slownik/grounding/), [AI Mode](/slownik/ai-mode/) i [Halucynacje AI](/slownik/halucynacje-ai/).
 

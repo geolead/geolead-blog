@@ -56,7 +56,7 @@ Potrzebuje przede wszystkim spójnych danych. Dla firmy lokalnej najważniejsze 
 
 ### Jak to sprawdzamy w GeoLead?
 
-W [Audycie Start](/blog/audyt-widocznosci-w-ai/) kontrolujemy dane strukturalne i spójność danych firmy w kluczowych profilach. Stan techniczny strony sprawdzisz też bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/).
+W [Audycie Start](/audyt-widocznosci-w-ai/) kontrolujemy dane strukturalne i spójność danych firmy w kluczowych profilach. Stan techniczny strony sprawdzisz też bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/).
 
 Powiązane pojęcia: [Encja](/slownik/encja/), [sameAs](/slownik/same-as/), [Entity Salience](/slownik/entity-salience/), [RAG](/slownik/rag/). Szerszy kontekst: [Czym jest GEO](/blog/czym-jest-geo/).
 

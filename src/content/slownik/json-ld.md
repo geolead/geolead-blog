@@ -75,7 +75,7 @@ Narzędziem Google „Test wyników z elementami rozszerzonymi”, walidatorem v
 
 Często generuje poprawną podstawę, ale bez telefonu, adresu i `sameAs`, a czasem z błędnym typem firmy. Warto sprawdzić wynik i uzupełnić brakujące pola.
 
-Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <script type="application/ld+json">
 {

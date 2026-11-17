@@ -91,7 +91,7 @@ Google tego nie obiecuje. sameAs jest właściwością zalecaną w opisie organi
 
 ### Jak sprawdzić, czy moja strona ma sameAs?
 
-Bezpłatny [Skaner gotowości AI](/narzedzia/skaner-ai/) sprawdza opis firmy w JSON-LD, w tym powiązane profile. To, jak systemy AI opisują firmę w odpowiedziach, mierzy [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Bezpłatny [Skaner gotowości AI](/narzedzia/skaner-ai/) sprawdza opis firmy w JSON-LD, w tym powiązane profile. To, jak systemy AI opisują firmę w odpowiedziach, mierzy [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [Knowledge Graph](/slownik/knowledge-graph/) i [E-E-A-T](/slownik/e-e-a-t/).
 

@@ -67,7 +67,7 @@ Nie. Google podaje, że optymalizacja pod wyszukiwanie z generatywną AI to nada
 
 ### Jak mierzyć efekty AEO?
 
-Stałą listą pytań klientów zadawaną w kilku systemach AI, w powtórzeniach, z zapisem wzmianek, cytowań i rekomendacji. Pomiar wyjściowy 20 pytań w 4 systemach AI to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Stałą listą pytań klientów zadawaną w kilku systemach AI, w powtórzeniach, z zapisem wzmianek, cytowań i rekomendacji. Pomiar wyjściowy 20 pytań w 4 systemach AI to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [GEO vs SEO](/blog/geo-vs-seo/) i [E-E-A-T](/slownik/e-e-a-t/).
 

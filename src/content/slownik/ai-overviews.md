@@ -61,7 +61,7 @@ Przy pytaniach informacyjnych często tak, bo użytkownik dostaje odpowiedź od 
 
 ### Jak sprawdzić, czy moja firma pojawia się w AI Overviews?
 
-Zadaj w Google pytania, które zadają Twoi klienci, w oknie prywatnym i spisz wyniki. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w Google AI Overviews, ChatGPT, Gemini i Perplexity to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Zadaj w Google pytania, które zadają Twoi klienci, w oknie prywatnym i spisz wyniki. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w Google AI Overviews, ChatGPT, Gemini i Perplexity to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 Powiązane hasła: [AI Mode](/slownik/ai-mode/), [Cytowanie w AI](/slownik/cytowanie-w-ai/) i [AEO](/slownik/aeo/).
 

@@ -119,12 +119,12 @@ Nie warto na nich polegać. Część systemów czyta PDF-y, ale najważniejsze i
 
 ### Jak sprawdzić, czy AI wskazuje moją firmę jako dostawcę?
 
-Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/). Listę pytań dla swojej branży przygotuje [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/). Listę pytań dla swojej branży przygotuje [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI wskazuje Twoją firmę jako dostawcę</h3>
 <p>Audyt Start: 20 pytań kupujących w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i źródeł, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">
@@ -137,7 +137,7 @@ Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzi
 <li><a href="/blog/geo-dla-firm-budowlanych/">GEO dla firm budowlanych</a></li>
 <li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 </ul>
 </div>
 

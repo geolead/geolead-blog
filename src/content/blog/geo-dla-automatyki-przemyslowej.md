@@ -107,12 +107,12 @@ Warto podać przynajmniej czynniki, od których zależy cena, albo widełki dla 
 
 ### Jak sprawdzić, czy AI wskazuje moją firmę jako integratora?
 
-Listę pytań dla swojej specjalizacji przygotujesz w bezpłatnym [Generatorze pytań zakupowych](/narzedzia/pytania-zakupowe/), a stan techniczny strony sprawdzisz [Skanerem gotowości AI](/narzedzia/skaner-ai/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Listę pytań dla swojej specjalizacji przygotujesz w bezpłatnym [Generatorze pytań zakupowych](/narzedzia/pytania-zakupowe/), a stan techniczny strony sprawdzisz [Skanerem gotowości AI](/narzedzia/skaner-ai/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI wskazuje Twoją firmę jako integratora</h3>
 <p>Audyt Start: 20 pytań klientów w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i źródeł, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">
@@ -123,7 +123,7 @@ Listę pytań dla swojej specjalizacji przygotujesz w bezpłatnym [Generatorze p
 <li><a href="/blog/pomiar-widocznosci-geolead-w-ai/">Pomiar widoczności w AI na własnej marce</a></li>
 <li><a href="/slownik/cytowanie-w-ai/">Cytowanie w AI: słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 </ul>
 </div>
 

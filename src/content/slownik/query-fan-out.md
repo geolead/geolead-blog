@@ -51,7 +51,7 @@ Nie. Podzapytania to wciąż wyszukiwania. Zmienia się to, że jedno pytanie u�
 
 ### Jak sprawdzić, które podpytania wygrywa konkurencja?
 
-Trzeba zadać pytania zakupowe w kilku systemach AI i spisać cytowane źródła. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pełne zestawienie źródeł i konkurentów to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Trzeba zadać pytania zakupowe w kilku systemach AI i spisać cytowane źródła. Listę pytań przygotuje bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pełne zestawienie źródeł i konkurentów to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 Szerszy kontekst: [Jak ChatGPT decyduje, którą firmę polecić](/blog/jak-chatgpt-wybiera-firmy/) i [Pomiar widoczności w AI na własnej marce](/blog/pomiar-widocznosci-geolead-w-ai/).
 

@@ -70,7 +70,7 @@ W Bing Webmaster Tools, w raporcie AI Performance, który zlicza cytowania w Mic
 
 Nie. Microsoft zastrzega, że dane pokazują, jak często strony są cytowane, a nie ich znaczenie, ranking ani miejsce w odpowiedzi.
 
-Szerszy kontekst: [Share of Voice w AI](/slownik/share-of-voice-ai/) i [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/), który zawiera listę źródeł cytowanych w odpowiedziach na 20 pytań.
+Szerszy kontekst: [Share of Voice w AI](/slownik/share-of-voice-ai/) i [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/), który zawiera listę źródeł cytowanych w odpowiedziach na 20 pytań.
 
 <script type="application/ld+json">
 {

@@ -33,7 +33,7 @@ Agencja GEO to podmiot, który sprawia, że tą rekomendacją jest Twoja firma.
 <div class="article-cta glass" style="margin:2rem 0 2.5rem">
 <p><strong>Najpierw sprawdź, kogo AI poleca w Twojej branży</strong></p>
 <p>Audyt Start: 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i cytowanych źródeł. Raport w 5 dni roboczych, 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zobacz zakres audytu</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zobacz zakres audytu</a>
 </div>
 
 ## Czym jest agencja GEO?
@@ -136,7 +136,7 @@ To pytanie kontrolne. Rzetelna odpowiedź brzmi: nie. Odpowiedzi modeli zmieniaj
 
 ### Ile kosztuje współpraca z agencją GEO?
 
-Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. [Audyt Start](/blog/audyt-widocznosci-w-ai/) kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
+Koszt zależy od branży, zasięgu geograficznego i poziomu konkurencji w AI. W GeoLead abonament kosztuje od 1 200 do 15 000 zł netto miesięcznie. [Audyt Start](/audyt-widocznosci-w-ai/) kosztuje 990 zł netto, a audyt pełny — równowartość jednej miesięcznej opłaty. Pełną matrycę cen opisujemy w artykule [Ile kosztuje GEO](/blog/ile-kosztuje-geo/), a widełki dla Twojej firmy poda [Kalkulator Potencjału GEO](https://geolead.pl/#calc) — bezpłatnie, w 30 sekund.
 
 ### Jak sprawdzić, czy agencja GEO jest specjalistą?
 
@@ -159,7 +159,7 @@ Częściowo. Optymalizacja pod LLM-y wymaga wdrożenia odpowiednich danych struk
 <div class="article-cta glass">
 <p><strong>Zadaj te 7 pytań także nam</strong></p>
 <p>Audyt Start pokaże, czy ChatGPT, Gemini, Perplexity i Google AI Overviews polecają Twoją firmę, czy konkurencję. 990 zł netto, raport w 5 dni roboczych. Jeśli w ciągu 30 dni podpiszesz umowę abonamentową, całą kwotę odliczamy od pierwszej faktury.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 <p style="margin:1rem 0 0;font-size:0.9rem">Wolisz najpierw porozmawiać? <a href="https://geolead.pl/#contact">Bezpłatna konsultacja</a>: odpowiedź w 24 godziny robocze.</p>
 </div>
 

@@ -54,7 +54,7 @@ Ułatwiają skalę i powtarzalność. Warto sprawdzić, w jakim języku są pyta
 
 ### Od czego zacząć?
 
-Od listy pytań zakupowych. Przygotuje ją bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/). Pełny protokół opisuje [metodologia GeoLead](/metodologia/).
+Od listy pytań zakupowych. Przygotuje ją bezpłatnie [Generator pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i źródeł to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/). Pełny protokół opisuje [metodologia GeoLead](/metodologia/).
 
 <script type="application/ld+json">
 {

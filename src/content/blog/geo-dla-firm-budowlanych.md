@@ -131,12 +131,12 @@ Nie. Katalog pomaga w pytaniach o listę firm z regionu, ale zwykle nie zawiera 
 
 ### Jak sprawdzić, czy AI wskazuje moją firmę jako wykonawcę?
 
-Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Sprawdź, czy AI wskazuje Twoją firmę jako wykonawcę</h3>
 <p>Audyt Start: 20 pytań inwestorów w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i źródeł, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">
@@ -147,7 +147,7 @@ Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzi
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/query-fan-out/">Query fan-out: słownik GEO</a></li>
 <li><a href="/slownik/encja/">Encja: słownik GEO</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 </ul>
 </div>
 

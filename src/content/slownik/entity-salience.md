@@ -60,7 +60,7 @@ Nie bezpośrednio. Modele nie udostępniają takiego wskaźnika. Można natomias
 
 ### Od czego zacząć?
 
-Od strony głównej i strony najważniejszej usługi: nazwa firmy, usługa, miasto i grupa klientów w pierwszym akapicie oraz kompletny opis firmy w JSON-LD. Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/), a to, co odpowiadają modele, pokazuje [Audyt Start](/blog/audyt-widocznosci-w-ai/).
+Od strony głównej i strony najważniejszej usługi: nazwa firmy, usługa, miasto i grupa klientów w pierwszym akapicie oraz kompletny opis firmy w JSON-LD. Stan techniczny strony sprawdzisz bezpłatnie [Skanerem gotowości AI](/narzedzia/skaner-ai/), a to, co odpowiadają modele, pokazuje [Audyt Start](/audyt-widocznosci-w-ai/).
 
 Powiązane hasła: [Encja](/slownik/encja/), [Cytowanie w AI](/slownik/cytowanie-w-ai/) i [Share of Voice w AI](/slownik/share-of-voice-ai/).
 

@@ -158,7 +158,7 @@ Jeśli planujesz zlecić GEO na zewnątrz, zanim podpiszesz umowę, sprawdź, cz
 <li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
 <li><a href="/slownik/aeo/">AEO (Answer Engine Optimization): słownik GEO</a></li>
 <li><a href="/slownik/share-of-voice-ai/">Share of Voice w AI: słownik GEO</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 </ul>

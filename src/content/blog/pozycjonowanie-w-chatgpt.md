@@ -122,7 +122,7 @@ Pierwsze sygnały, takie jak cytowania strony, mogą pojawić się w miesiącach
 <div class="article-cta glass">
 <h3>Sprawdź, czy ChatGPT wymienia Twoją firmę</h3>
 <p>Audyt Start: 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">

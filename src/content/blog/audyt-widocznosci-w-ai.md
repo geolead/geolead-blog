@@ -4,6 +4,7 @@ description: "Audyt widoczności firmy w ChatGPT, Gemini, Perplexity i Google AI
 pubDate: 2026-10-14
 pillar: "edukacja"
 funnel: "bofu"
+draft: true # GL-260: strona przeniesiona na /audyt-widocznosci-w-ai/ (301 w functions/_middleware.js)
 keywords:
   - "audyt widoczności w AI"
   - "audyt widoczności w ChatGPT"

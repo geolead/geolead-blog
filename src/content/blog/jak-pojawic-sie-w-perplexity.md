@@ -97,7 +97,7 @@ Jeśli zlecasz tę pracę na zewnątrz, sprawdź, czy [agencja GEO](/blog/agencj
 <li><a href="/slownik/cytowanie-w-ai/">Cytowanie w AI: słownik GEO</a></li>
 <li><a href="/slownik/grounding/">Grounding: słownik GEO</a></li>
 <li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>
 </ul>

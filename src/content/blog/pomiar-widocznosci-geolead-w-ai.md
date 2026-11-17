@@ -76,7 +76,7 @@ W dwóch pytaniach, „kto w Polsce robi optymalizację pod wyszukiwarki AI” i
 |---|---|---|
 | 11.10 | publiczny [cennik GEO](/blog/ile-kosztuje-geo/) | modele pisały „brak cennika publicznego” |
 | 12-13.10 | dane firmy w stopce i polityce prywatności, usunięte niesprawdzalne twierdzenia | modele wskazywały brak danych o firmie i podważały liczby bez źródła |
-| 14.10 | strona [Audytu Start](/blog/audyt-widocznosci-w-ai/) z ceną stałą | na pytania o audyt modele cytowały wyłącznie strony z konkretną ceną |
+| 14.10 | strona [Audytu Start](/audyt-widocznosci-w-ai/) z ceną stałą | na pytania o audyt modele cytowały wyłącznie strony z konkretną ceną |
 | 17.10 | [badanie 120 stron polskich firm](/badania/gotowosc-ai-2026/) z danymi w otwartym repozytorium | własne dane to źródło, które inni mogą cytować |
 | 26.10 | rozbudowane hasła słownika, strona dla producentów przemysłowych | luki w pytaniach branżowych i hasła niezaindeksowane w Google |
 
@@ -89,12 +89,12 @@ Efekt tych zmian zmierzymy na tym samym zestawie pytań i dopiszemy go do tego a
 3. Zapisuj pełną odpowiedź, listę źródeł i datę. Odróżniaj wzmiankę od rekomendacji.
 4. Powtarzaj pomiar na tym samym zestawie pytań. Zmieniaj pytania tylko świadomie i z adnotacją.
 
-Pełny protokół jest w [metodologii](/metodologia/). Tego samego poziomu dowodów wymagaj przy [wyborze agencji GEO w Polsce](/blog/agencja-geo-polska/). Jeśli wolisz gotowy wynik z analizą źródeł i konkurentów, to właśnie robi [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Pełny protokół jest w [metodologii](/metodologia/). Tego samego poziomu dowodów wymagaj przy [wyborze agencji GEO w Polsce](/blog/agencja-geo-polska/). Jeśli wolisz gotowy wynik z analizą źródeł i konkurentów, to właśnie robi [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Zmierz, czy AI poleca Twoją firmę</h3>
 <p>Audyt Start: 20 pytań zakupowych w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i źródeł, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">
@@ -103,7 +103,7 @@ Pełny protokół jest w [metodologii](/metodologia/). Tego samego poziomu dowod
 <li><a href="/metodologia/">Metodologia pomiaru GeoLead</a></li>
 <li><a href="/badania/gotowosc-ai-2026/">Badanie: gotowość polskich firm na wyszukiwanie w AI (2026)</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/share-of-voice-ai/">Share of Voice w AI: słownik GEO</a></li>
 <li><a href="/slownik/cytowanie-w-ai/">Cytowanie w AI: słownik GEO</a></li>
 <li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>

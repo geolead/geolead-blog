@@ -86,7 +86,7 @@ Wybierając wykonawcę dla kliniki, sprawdź, czy [agencja GEO](/blog/agencja-ge
 <li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
 <li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO: cennik pozycjonowania w AI</a></li>
 <li><a href="/blog/geo-dla-hoteli-i-turystyki/">GEO dla hoteli i turystyki</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
 </ul>
 </div>

@@ -126,12 +126,12 @@ Ustalić, skąd pochodzi błąd. Systemy AI z wyszukiwaniem pokazują źródła 
 
 ### Jak sprawdzić, czy AI poleca mój obiekt?
 
-Samodzielnie: testem opisanym wyżej, z pytaniami z bezpłatnego [Generatora pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/blog/audyt-widocznosci-w-ai/).
+Samodzielnie: testem opisanym wyżej, z pytaniami z bezpłatnego [Generatora pytań zakupowych](/narzedzia/pytania-zakupowe/). Pomiar 20 pytań w 4 systemach AI z listą konkurentów i cytowanych źródeł to [Audyt Start za 990 zł netto](/audyt-widocznosci-w-ai/).
 
 <div class="article-cta glass">
 <h3>Sprawdź, czyimi słowami AI mówi o Twoim obiekcie</h3>
 <p>Audyt Start: 20 pytań gości i organizatorów w ChatGPT, Gemini, Perplexity i Google AI Overviews, lista konkurentów i źródeł, raport w 5 dni roboczych. 990 zł netto.</p>
-<a href="/blog/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
+<a href="/audyt-widocznosci-w-ai/" class="btn-nav" style="font-size:0.9rem;padding:0.7rem 1.6rem">Zamów Audyt Start</a>
 </div>
 
 <div class="related">
@@ -142,7 +142,7 @@ Samodzielnie: testem opisanym wyżej, z pytaniami z bezpłatnego [Generatora pyt
 <li><a href="/blog/jak-pojawic-sie-w-perplexity/">Jak pojawić się w Perplexity</a></li>
 <li><a href="/blog/geo-vs-seo/">GEO vs SEO: czym się różnią</a></li>
 <li><a href="/narzedzia/skaner-ai/">Skaner gotowości AI</a></li>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 </ul>
 </div>
 
