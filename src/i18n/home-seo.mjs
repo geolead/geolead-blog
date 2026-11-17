@@ -50,6 +50,7 @@ const LD = {
       ['AI Entity Audit', 'Measurement of how language models describe the brand today: mention frequency, context, hallucinations and knowledge gaps.'],
       ['Optimisation of AI-cited sources (RAG)', 'Distribution of structured company information to the sources AI models cite.'],
       ['Share of Model monitoring', 'Recurring prompt tests in ChatGPT, Perplexity and Claude with reporting of the brand’s share of answers.'],
+      ['Audyt Start: AI visibility audit', '20 buying questions checked in ChatGPT, Gemini, Perplexity and Google AI Overviews, a technical check and a report with 5 priorities in 5 business days. PLN 990 net, credited towards the subscription.'],
     ],
     jarekDescription: 'Co-founder of GeoLead, a GEO (Generative Engine Optimization) agency specialising in getting companies recommended in AI answers. 15+ years in finance and controlling at international manufacturing companies, previously audit and due diligence at Deloitte. Specialises in brand entity audits in language models, optimisation of the sources used by RAG systems and Share of Model measurement in ChatGPT, Perplexity, Claude, Gemini and Google AI Mode.',
     pawelJobTitle: 'Founder',
@@ -66,6 +67,7 @@ const LD = {
       ['KI-Entity-Audit', 'Messung, wie Sprachmodelle die Marke heute beschreiben: Nennungshäufigkeit, Kontext, Halluzinationen und Wissenslücken.'],
       ['Optimierung der von KI zitierten Quellen (RAG)', 'Verteilung strukturierter Unternehmensinformationen in die Quellen, die KI-Modelle zitieren.'],
       ['Share-of-Model-Monitoring', 'Regelmäßige Prompt-Tests in ChatGPT, Perplexity und Claude mit Reporting zum Anteil der Marke an den Antworten.'],
+      ['Audyt Start: KI-Sichtbarkeitsaudit', '20 Kauffragen geprüft in ChatGPT, Gemini, Perplexity und Google AI Overviews, technische Prüfung und Bericht mit 5 Prioritäten in 5 Werktagen. 990 PLN netto, wird auf das Abonnement angerechnet.'],
     ],
     jarekDescription: 'Mitgründer von GeoLead, einer GEO-Agentur (Generative Engine Optimization), die Unternehmen in KI-Antworten positioniert. Über 15 Jahre in Finanzen und Controlling internationaler Industrieunternehmen, zuvor Prüfung und Due Diligence bei Deloitte. Schwerpunkte: Entity-Audits von Marken in Sprachmodellen, Optimierung der von RAG-Systemen genutzten Quellen und Share-of-Model-Messung in ChatGPT, Perplexity, Claude, Gemini und Google AI Mode.',
     pawelJobTitle: 'Gründer',
@@ -82,6 +84,7 @@ const LD = {
       ['Audit d’entité IA', 'Mesure de la façon dont les modèles de langage décrivent la marque aujourd’hui : fréquence des mentions, contexte, hallucinations et lacunes de connaissance.'],
       ['Optimisation des sources citées par l’IA (RAG)', 'Diffusion d’informations structurées sur l’entreprise vers les sources citées par les modèles d’IA.'],
       ['Suivi du Share of Model', 'Tests de prompts récurrents dans ChatGPT, Perplexity et Claude avec reporting de la part de la marque dans les réponses.'],
+      ['Audyt Start : audit de visibilité IA', '20 questions d’achat vérifiées dans ChatGPT, Gemini, Perplexity et Google AI Overviews, contrôle technique et rapport avec 5 priorités en 5 jours ouvrés. 990 PLN HT, déduits de l’abonnement.'],
     ],
     jarekDescription: 'Cofondateur de GeoLead, agence GEO (Generative Engine Optimization) spécialisée dans le positionnement des entreprises dans les réponses de l’IA. Plus de 15 ans en finance et contrôle de gestion dans des groupes industriels internationaux, auparavant audit et due diligence chez Deloitte. Spécialisé dans l’audit d’entité de marque dans les modèles de langage, l’optimisation des sources utilisées par les systèmes RAG et la mesure du Share of Model dans ChatGPT, Perplexity, Claude, Gemini et Google AI Mode.',
     pawelJobTitle: 'Fondateur',
@@ -109,7 +112,9 @@ export function buildJsonLd(lang, t) {
   org.hasOfferCatalog.itemListElement.forEach((o, i) => {
     o.itemOffered.name = L.offers[i][0];
     o.itemOffered.description = L.offers[i][1];
-    o.url = url + o.url.slice(o.url.indexOf('#'));
+    // GL-259: oferta Audyt Start ma pełny URL strony audytu (bez kotwicy) — nie przepisujemy go
+    const hash = o.url.indexOf('#');
+    if (hash !== -1) o.url = url + o.url.slice(hash);
   });
   const jarek = byId('#jaroslaw-zagajewski');
   jarek.description = L.jarekDescription;

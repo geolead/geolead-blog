@@ -91,23 +91,6 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "url": "https://geolead.pl/blog/audyt-widocznosci-w-ai/",
-            "price": "990",
-            "priceCurrency": "PLN",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "990",
-              "priceCurrency": "PLN",
-              "valueAddedTaxIncluded": false
-            },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Audyt Start: audyt widoczności w AI",
-              "description": "20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna i raport z 5 priorytetami w 5 dni roboczych. 990 zł netto, zaliczany na poczet abonamentu."
-            }
-          },
-          {
-            "@type": "Offer",
             "url": "https://geolead.pl/#how",
             "itemOffered": {
               "@type": "Service",
@@ -131,6 +114,23 @@
               "@type": "Service",
               "name": "Monitoring Share of Model",
               "description": "Cykliczne testy promptów w ChatGPT, Perplexity i Claude wraz z raportowaniem udziału marki w odpowiedziach."
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://geolead.pl/blog/audyt-widocznosci-w-ai/",
+            "price": "990",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "990",
+              "priceCurrency": "PLN",
+              "valueAddedTaxIncluded": false
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audyt Start: audyt widoczności w AI",
+              "description": "20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna i raport z 5 priorytetami w 5 dni roboczych. 990 zł netto, zaliczany na poczet abonamentu."
             }
           }
         ]
