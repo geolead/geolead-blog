@@ -146,10 +146,11 @@ Orientacyjnie od 2–3 miesięcy w branżach o niskiej konkurencji i zasięgu lo
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI — 990 zł netto</a></li>
-<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
-<li><a href="/blog/geo-vs-seo/">GEO vs SEO — czym się różnią</a></li>
-<li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
+<li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: 990 zł netto</a></li>
+<li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
+<li><a href="/blog/geo-vs-seo/">GEO vs SEO: czym się różnią</a></li>
+<li><a href="/blog/czym-jest-geo/">Czym jest GEO: kompletny przewodnik 2026</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
 </ul>

@@ -90,11 +90,13 @@ Jeśli zlecasz tę pracę na zewnątrz, sprawdź, czy [agencja GEO](/blog/agencj
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
+<li><a href="/blog/czym-jest-geo/">Czym jest GEO: kompletny przewodnik 2026</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
-<li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
-<li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation): słownik GEO</a></li>
+<li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
+<li><a href="/slownik/cytowanie-w-ai/">Cytowanie w AI: słownik GEO</a></li>
+<li><a href="/slownik/grounding/">Grounding: słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>

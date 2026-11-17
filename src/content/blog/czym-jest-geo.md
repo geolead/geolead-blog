@@ -1,5 +1,6 @@
 ---
-title: "Czym jest GEO (Generative Engine Optimization) — kompletny przewodnik 2026"
+title: "Czym jest GEO (Generative Engine Optimization): kompletny przewodnik 2026"
+seoTitle: "Czym jest GEO (Generative Engine Optimization)? Przewodnik"
 description: "GEO to optymalizacja firmy pod modele AI — ChatGPT, Perplexity, Claude. Wyjaśniamy, jak działa, czym różni się od SEO i jak zacząć budować widoczność w AI."
 pubDate: 2026-06-18
 author: "GeoLead"
@@ -149,11 +150,14 @@ Jeśli planujesz zlecić GEO na zewnątrz, zanim podpiszesz umowę, sprawdź, cz
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/geo-vs-seo/">GEO vs SEO — czym się różnią i dlaczego potrzebujesz obu</a></li>
+<li><a href="/blog/geo-vs-seo/">GEO vs SEO: czym się różnią i dlaczego potrzebujesz obu</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić klientowi</a></li>
-<li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
-<li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation) — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
+<li><a href="/slownik/rag/">RAG (Retrieval-Augmented Generation): słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
+<li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
+<li><a href="/slownik/aeo/">AEO (Answer Engine Optimization): słownik GEO</a></li>
+<li><a href="/slownik/share-of-voice-ai/">Share of Voice w AI: słownik GEO</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 <li><a href="/slownik/vector-embedding/">Vector Embedding: słownik GEO</a></li>

@@ -1,5 +1,6 @@
 ---
 title: "Pomiar widoczności w AI na własnej marce: 3 tygodnie danych GeoLead"
+seoTitle: "Pomiar widoczności w AI: 3 tygodnie danych GeoLead"
 description: "Mierzymy, czy AI poleca GeoLead: 166 odpowiedzi w 4 systemach, 14% wzmianek, 50% w pytaniach o agencję. Wyniki, błędy pomiaru i co zmieniliśmy na stronie."
 pubDate: 2026-10-26
 pillar: "edukacja"
@@ -103,6 +104,9 @@ Pełny protokół jest w [metodologii](/metodologia/). Tego samego poziomu dowod
 <li><a href="/badania/gotowosc-ai-2026/">Badanie: gotowość polskich firm na wyszukiwanie w AI (2026)</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
+<li><a href="/slownik/share-of-voice-ai/">Share of Voice w AI: słownik GEO</a></li>
+<li><a href="/slownik/cytowanie-w-ai/">Cytowanie w AI: słownik GEO</a></li>
+<li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 </ul>
 </div>

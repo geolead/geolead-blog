@@ -1,5 +1,6 @@
 ---
-title: "GEO dla klinik medycyny estetycznej — jak AI poleca gabinety pacjentom"
+title: "GEO dla klinik medycyny estetycznej: jak AI poleca gabinety pacjentom"
+seoTitle: "GEO dla klinik medycyny estetycznej: jak AI poleca gabinety"
 description: "Pacjenci pytają ChatGPT o bezpieczeństwo zabiegów i wybór kliniki. Wyjaśniamy, jak AI poleca gabinety medycyny estetycznej i jak sprawić, by wskazywało Twój."
 pubDate: 2026-06-19
 author: "GeoLead"
@@ -77,11 +78,14 @@ Wybierając wykonawcę dla kliniki, sprawdź, czy [agencja GEO](/blog/agencja-ge
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
+<li><a href="/blog/czym-jest-geo/">Czym jest GEO: kompletny przewodnik 2026</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
-<li><a href="/slownik/halucynacje-ai/">Halucynacje AI — słownik GEO</a></li>
-<li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/slownik/halucynacje-ai/">Halucynacje AI: słownik GEO</a></li>
+<li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
+<li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
+<li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO: cennik pozycjonowania w AI</a></li>
+<li><a href="/blog/geo-dla-hoteli-i-turystyki/">GEO dla hoteli i turystyki</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
 </ul>

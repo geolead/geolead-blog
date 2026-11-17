@@ -8,7 +8,7 @@ Ten sam obszar kompetencji bywa nazywany: AI SEO, AI Search Optimization, LLM Op
 
 Metodyka pracy obejmuje trzy warstwy: audyt encji marki w modelach językowych, optymalizacja źródeł cytowanych przez AI, z których korzystają systemy RAG (Retrieval-Augmented Generation) oraz cykliczny pomiar Share of Model.
 
-Klienci: firmy B2B i marki premium — kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS i usługi profesjonalne. Rynki: Polska, DACH, Francja, rynki anglojęzyczne.
+Klienci: firmy B2B i marki premium: kliniki medycyny estetycznej, kancelarie prawne, software house'y, spółki SaaS, producenci przemysłowi, firmy budowlane, automatyka przemysłowa, hotele i usługi profesjonalne. Rynki: Polska, DACH, Francja, rynki anglojęzyczne.
 
 Założyciel: Paweł Zagajewski (właściciel działalności geolead.pl Paweł Zagajewski). Współzałożyciel: Jarosław Zagajewski, Co-founder & GEO Strategist — ponad 15 lat w finansach i controllingu międzynarodowych firm produkcyjnych, wcześniej audyt i due diligence w Deloitte; absolwent SGH. Klient pracuje bezpośrednio ze współzałożycielem (model butikowy).
 

@@ -1,5 +1,6 @@
 ---
-title: "GEO dla kancelarii prawnych i doradztwa podatkowego — jak AI poleca ekspertów"
+title: "GEO dla kancelarii prawnych i doradztwa podatkowego: jak AI poleca ekspertów"
+seoTitle: "GEO dla kancelarii prawnych: jak AI poleca ekspertów"
 description: "Klienci pytają AI o kancelarie w wąskich specjalizacjach. Wyjaśniamy, jak AI ocenia autorytet prawny i jak sprawić, by polecało Twoją kancelarię."
 pubDate: 2026-06-19
 author: "GeoLead"
@@ -69,11 +70,13 @@ Wybierając wykonawcę dla kancelarii, sprawdź, czy [agencja GEO](/blog/agencja
 <div class="related">
 <h4>Czytaj dalej</h4>
 <ul>
-<li><a href="/blog/czym-jest-geo/">Czym jest GEO — kompletny przewodnik 2026</a></li>
+<li><a href="/blog/czym-jest-geo/">Czym jest GEO: kompletny przewodnik 2026</a></li>
 <li><a href="/blog/jak-chatgpt-wybiera-firmy/">Jak ChatGPT decyduje, którą firmę polecić</a></li>
-<li><a href="/slownik/entity-salience/">Entity Salience — słownik GEO</a></li>
-<li><a href="/slownik/knowledge-graph/">Knowledge Graph — słownik GEO</a></li>
-<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO — 7 pytań przed umową</a></li>
+<li><a href="/slownik/entity-salience/">Entity Salience: słownik GEO</a></li>
+<li><a href="/slownik/knowledge-graph/">Knowledge Graph: słownik GEO</a></li>
+<li><a href="/blog/agencja-geo-polska/">Jak wybrać agencję GEO: 7 pytań przed umową</a></li>
+<li><a href="/blog/pozycjonowanie-w-chatgpt/">Pozycjonowanie w ChatGPT: za co płacisz i jak to sprawdzić</a></li>
+<li><a href="/blog/ile-kosztuje-geo/">Ile kosztuje GEO: cennik pozycjonowania w AI</a></li>
 <li><a href="/blog/audyt-widocznosci-w-ai/">Audyt widoczności w AI: Audyt Start za 990 zł netto</a></li>
 <li><a href="/slownik/llm/">LLM (Large Language Model): słownik GEO</a></li>
 </ul>

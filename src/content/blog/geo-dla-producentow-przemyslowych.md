@@ -1,5 +1,6 @@
 ---
 title: "GEO dla producentów przemysłowych B2B: jak sprawić, by AI wskazywało Cię jako dostawcę"
+seoTitle: "GEO dla producentów przemysłowych B2B: dostawca w AI"
 description: "69% stron producentów z naszego badania nie mówi maszynom, kim jest firma. Jak producent B2B może być wskazywany przez ChatGPT i Gemini jako dostawca."
 pubDate: 2026-10-26
 pillar: "branze"

@@ -859,7 +859,7 @@ a.lb{text-decoration:none;display:inline-block}
         <div class="text-sm leading-relaxed" style="color:var(--text)" data-i18n="s3_p" set:html={t["s3_p"]}></div>
       </div>
     </div>
-    <!-- LINKOWANIE WEWNETRZNE: homepage -> 10 podstron (zrodlo: sitemap-0.xml)
+    <!-- LINKOWANIE WEWNETRZNE: homepage -> 15 podstron (GL-259) (zrodlo: sitemap-0.xml)
          Tytuly artykulow celowo BEZ data-i18n - strony docelowe sa po polsku,
          tlumaczenie etykiety linku do polskiej tresci wprowadzaloby w blad. -->
     <nav class="ilink-wrap sr" aria-label={t.ilink_lbl}>
@@ -873,6 +873,8 @@ a.lb{text-decoration:none;display:inline-block}
           <a class="ilink" href="/blog/jak-chatgpt-wybiera-firmy/" hreflang="pl"><i class="fa-solid fa-robot" aria-hidden="true"></i>Jak ChatGPT wybiera firmy{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/jak-pojawic-sie-w-perplexity/" hreflang="pl"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>Jak pojawić się w Perplexity{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/audyt-widocznosci-w-ai/" hreflang="pl"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Audyt Start: 990 zł netto{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/ile-kosztuje-geo/" hreflang="pl"><i class="fa-solid fa-tags" aria-hidden="true"></i>Ile kosztuje GEO: cennik{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/pozycjonowanie-w-chatgpt/" hreflang="pl"><i class="fa-solid fa-comments" aria-hidden="true"></i>Pozycjonowanie w ChatGPT{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/pomiar-widocznosci-geolead-w-ai/" hreflang="pl"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Pomiar GeoLead w AI: 166 odpowiedzi{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/badania/gotowosc-ai-2026/" hreflang="pl"><i class="fa-solid fa-flask" aria-hidden="true"></i><span data-i18n="ilink_research" set:html={t["ilink_research"]}></span>{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
         </div>
@@ -882,6 +884,9 @@ a.lb{text-decoration:none;display:inline-block}
           <a class="ilink" href="/blog/geo-dla-kancelarii-prawnych/" hreflang="pl"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>Kancelarie prawne{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/geo-dla-saas/" hreflang="pl"><i class="fa-solid fa-microchip" aria-hidden="true"></i>Firmy SaaS{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/geo-dla-producentow-przemyslowych/" hreflang="pl"><i class="fa-solid fa-industry" aria-hidden="true"></i>Producenci przemysłowi B2B{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-dla-firm-budowlanych/" hreflang="pl"><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>Firmy budowlane{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-dla-automatyki-przemyslowej/" hreflang="pl"><i class="fa-solid fa-gears" aria-hidden="true"></i>Automatyka przemysłowa{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
+          <a class="ilink" href="/blog/geo-dla-hoteli-i-turystyki/" hreflang="pl"><i class="fa-solid fa-hotel" aria-hidden="true"></i>Hotele i turystyka{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/slownik/" hreflang="pl"><i class="fa-solid fa-book" aria-hidden="true"></i>Słownik pojęć GEO{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
           <a class="ilink" href="/blog/" hreflang="pl"><i class="fa-solid fa-newspaper" aria-hidden="true"></i>Wszystkie artykuły{lang !== "pl" && <span class="ilink-pl" style="opacity:.55;font-size:.85em;margin-left:.3em">(PL)</span>}</a>
         </div>
@@ -1164,6 +1169,7 @@ a.lb{text-decoration:none;display:inline-block}
       <a href="/narzedzia/pytania-zakupowe/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_tool" set:html={t["nav_tool"]}></a>
       <a href="/narzedzia/skaner-ai/" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_scan" set:html={t["nav_scan"]}></a>
       <a href="/blog/audyt-widocznosci-w-ai/" hreflang="pl" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_audit" set:html={t["nav_audit"]}></a>
+      <a href="/blog/ile-kosztuje-geo/" hreflang="pl" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_pricing" set:html={t["nav_pricing"]}></a>
       <a href="/badania/gotowosc-ai-2026/" hreflang="pl" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_research" set:html={t["nav_research"]}></a>
       <a href="#faq" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_faq" set:html={t["nav_faq"]}></a>
       <a href="#contact" style="font-size:0.76rem;color:var(--text-lo);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--f)'" onmouseout="this.style.color='var(--text-lo)'" data-i18n="nav_contact" set:html={t["nav_contact"]}></a>

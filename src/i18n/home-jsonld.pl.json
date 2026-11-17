@@ -91,6 +91,23 @@
         "itemListElement": [
           {
             "@type": "Offer",
+            "url": "https://geolead.pl/blog/audyt-widocznosci-w-ai/",
+            "price": "990",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "990",
+              "priceCurrency": "PLN",
+              "valueAddedTaxIncluded": false
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audyt Start: audyt widoczności w AI",
+              "description": "20 pytań zakupowych sprawdzonych w ChatGPT, Gemini, Perplexity i Google AI Overviews, kontrola techniczna i raport z 5 priorytetami w 5 dni roboczych. 990 zł netto, zaliczany na poczet abonamentu."
+            }
+          },
+          {
+            "@type": "Offer",
             "url": "https://geolead.pl/#how",
             "itemOffered": {
               "@type": "Service",
